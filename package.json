@@ -1,0 +1,30 @@
+{
+  "name": "logistics-routing-system",
+  "version": "1.0.0",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node backend/server.js",
+    "dev": "nodemon backend/server.js",
+    "test:db": "node backend/test-supabase.js",
+    "import:destinations": "node backend/scripts/import-destinations.js",
+    "update:coordinates": "node backend/scripts/update-coordinates.js",
+    "cleanup:reimport": "node backend/scripts/cleanup-and-reimport.js",
+    "update:duplicates": "node backend/scripts/update-duplicate-addresses.js",
+    "import:trips": "node backend/scripts/import-csv-trips.js"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "description": "",
+  "dependencies": {
+    "@supabase/supabase-js": "^2.39.0",
+    "axios": "^1.6.2",
+    "cors": "^2.8.5",
+    "dotenv": "^16.3.1",
+    "express": "^4.18.2",
+    "xlsx": "^0.18.5"
+  },
+  "devDependencies": {
+    "nodemon": "^3.0.2"
+  }
+}

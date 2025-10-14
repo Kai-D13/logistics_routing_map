@@ -1,0 +1,347 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Logistics Routing System - Quản lý Tuyến Đường</title>
+    
+    <!-- Leaflet CSS -->
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" />
+    
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+    <!-- Header -->
+    <header class="header">
+        <div class="container">
+            <h1>🚚 Logistics Routing System</h1>
+            <p>Hệ thống quản lý tuyến đường vận chuyển</p>
+        </div>
+    </header>
+
+    <!-- Main Content -->
+    <div class="container">
+        <!-- Control Panel -->
+        <div class="control-panel">
+            <div class="stats-cards">
+                <div class="stat-card">
+                    <div class="stat-icon">🏠</div>
+                    <div class="stat-info">
+                        <h3 id="departer-count">0</h3>
+                        <p>Hub Chính</p>
+                    </div>
+                </div>
+                <div class="stat-card">
+                    <div class="stat-icon">📍</div>
+                    <div class="stat-info">
+                        <h3 id="destination-count">0</h3>
+                        <p>Điểm Giao Hàng</p>
+                    </div>
+                </div>
+                <div class="stat-card">
+                    <div class="stat-icon">🚚</div>
+                    <div class="stat-info">
+                        <h3 id="trip-count">0</h3>
+                        <p>Chuyến Đi</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Feature Tabs -->
+            <div class="feature-tabs">
+                <button class="tab-btn active" data-tab="map">🗺️ Bản Đồ</button>
+                <button class="tab-btn" data-tab="routes">📋 Quản Lý Routes</button>
+                <button class="tab-btn" data-tab="vrp">🚀 Tối Ưu VRP</button>
+            </div>
+
+            <!-- Tab Contents -->
+            <div class="tab-content active" id="map-tab">
+                <div class="action-buttons">
+                    <button class="btn btn-primary" onclick="openAddDeparterModal()">
+                        <span>➕</span> Thêm Hub Chính
+                    </button>
+                    <button class="btn btn-success" onclick="openAddDestinationModal()">
+                        <span>➕</span> Thêm Điểm Giao Hàng
+                    </button>
+                    <button class="btn btn-warning" onclick="openCalculateDistanceModal()">
+                        <span>📏</span> Tính Khoảng Cách
+                    </button>
+                    <button class="btn btn-info" onclick="refreshMap()">
+                        <span>🔄</span> Làm Mới
+                    </button>
+                </div>
+            </div>
+
+            <div class="tab-content" id="routes-tab">
+                <div class="routes-panel">
+                    <h3>🔍 Tìm Kiếm Route</h3>
+                    <div class="form-group">
+                        <label for="route-select">Chọn Route:</label>
+                        <select id="route-select" class="form-control">
+                            <option value="">-- Chọn Route --</option>
+                        </select>
+                    </div>
+                </div>
+            </div>
+
+            <div class="tab-content" id="vrp-tab">
+                <div class="vrp-panel">
+                    <h3>🚀 Tối Ưu Tuyến Đường (VRP)</h3>
+
+                    <div class="form-group">
+                        <label for="vrp-departer-select">Điểm Xuất Phát:</label>
+                        <select id="vrp-departer-select" class="form-control">
+                            <option value="">-- Chọn điểm xuất phát --</option>
+                        </select>
+                    </div>
+
+                    <div class="form-group">
+                        <label>Chọn Điểm Đến:</label>
+                        <div class="destinations-actions">
+                            <button id="select-all-destinations" class="btn btn-sm">Chọn tất cả</button>
+                            <button id="deselect-all-destinations" class="btn btn-sm">Bỏ chọn</button>
+                        </div>
+                        <div id="vrp-destinations-list" class="destinations-list"></div>
+                    </div>
+
+                    <div class="vrp-actions">
+                        <button id="calculate-route-btn" class="btn btn-success">
+                            📏 Tính Khoảng Cách
+                        </button>
+                        <button id="optimize-route-btn" class="btn btn-primary">
+                            🚀 Tối Ưu Tuyến Đường
+                        </button>
+                        <button id="clear-vrp-btn" class="btn btn-secondary">
+                            🗑️ Xóa
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Map Container -->
+        <div class="map-container">
+            <div id="map"></div>
+        </div>
+
+        <!-- Locations List -->
+        <div class="locations-panel">
+            <h2>📋 Danh Sách Điểm Giao Hàng</h2>
+            <div class="search-box">
+                <input type="text" id="search-input" placeholder="🔍 Tìm kiếm theo tên, tỉnh..." onkeyup="filterLocations()">
+            </div>
+            <div id="locations-list" class="locations-list">
+                <!-- Locations will be loaded here -->
+            </div>
+        </div>
+    </div>
+
+    <!-- Modal: Add Departer -->
+    <div id="departerModal" class="modal">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h2>➕ Thêm Hub Chính</h2>
+                <span class="close" onclick="closeDeparterModal()">&times;</span>
+            </div>
+            <div class="modal-body">
+                <form id="departerForm" onsubmit="submitDeparter(event)">
+                    <div class="form-group">
+                        <label for="departer-name">Tên Hub *</label>
+                        <input type="text" id="departer-name" required placeholder="VD: Hub Chính Hà Nội">
+                    </div>
+                    <div class="form-group">
+                        <label for="departer-address">Địa Chỉ *</label>
+                        <input type="text" id="departer-address" required placeholder="VD: 123 Đường ABC, Quận XYZ">
+                        <small>Địa chỉ sẽ được tự động geocode để lấy tọa độ</small>
+                    </div>
+                    <div class="form-actions">
+                        <button type="button" class="btn btn-secondary" onclick="closeDeparterModal()">Hủy</button>
+                        <button type="submit" class="btn btn-primary">Thêm Hub</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+
+    <!-- Modal: Add Destination -->
+    <div id="destinationModal" class="modal">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h2>➕ Thêm Điểm Giao Hàng</h2>
+                <span class="close" onclick="closeDestinationModal()">&times;</span>
+            </div>
+            <div class="modal-body">
+                <form id="destinationForm" onsubmit="submitDestination(event)">
+                    <div class="form-group">
+                        <label for="destination-carrier">Tên Carrier *</label>
+                        <input type="text" id="destination-carrier" required placeholder="VD: NVCT Hub Hà Nội">
+                    </div>
+                    <div class="form-group">
+                        <label for="destination-address">Địa Chỉ *</label>
+                        <input type="text" id="destination-address" required placeholder="VD: 456 Đường DEF">
+                    </div>
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label for="destination-ward">Phường/Xã</label>
+                            <input type="text" id="destination-ward" placeholder="VD: Phường 1">
+                        </div>
+                        <div class="form-group">
+                            <label for="destination-district">Quận/Huyện</label>
+                            <input type="text" id="destination-district" placeholder="VD: Quận 1">
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label for="destination-province">Tỉnh/Thành Phố *</label>
+                        <input type="text" id="destination-province" required placeholder="VD: Thành phố Hà Nội">
+                    </div>
+                    <div class="form-group">
+                        <label for="destination-departer">Hub Chính *</label>
+                        <select id="destination-departer" required>
+                            <option value="">-- Chọn Hub Chính --</option>
+                        </select>
+                    </div>
+                    <div class="form-actions">
+                        <button type="button" class="btn btn-secondary" onclick="closeDestinationModal()">Hủy</button>
+                        <button type="submit" class="btn btn-success">Thêm Điểm Giao Hàng</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+
+    <!-- Modal: Location Details -->
+    <div id="detailsModal" class="modal">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h2 id="details-title">📍 Chi Tiết</h2>
+                <span class="close" onclick="closeDetailsModal()">&times;</span>
+            </div>
+            <div class="modal-body" id="details-body">
+                <!-- Details will be loaded here -->
+            </div>
+        </div>
+    </div>
+
+    <!-- Modal: Calculate Distance Between Two Points -->
+    <div id="calculateDistanceModal" class="modal">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h2>📏 Tính Khoảng Cách Giữa 2 Điểm</h2>
+                <span class="close" onclick="closeCalculateDistanceModal()">&times;</span>
+            </div>
+            <div class="modal-body">
+                <form id="calculateDistanceForm" onsubmit="submitCalculateDistance(event)">
+                    <div class="form-group">
+                        <label for="origin-location">Điểm Xuất Phát *</label>
+                        <select id="origin-location" required>
+                            <option value="">-- Chọn điểm xuất phát --</option>
+                        </select>
+                        <small>Chọn Hub hoặc điểm giao hàng làm điểm xuất phát</small>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="destination-location">Điểm Đến *</label>
+                        <select id="destination-location" required>
+                            <option value="">-- Chọn điểm đến --</option>
+                        </select>
+                        <small>Chọn Hub hoặc điểm giao hàng làm điểm đến</small>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="vehicle-type">Phương Tiện</label>
+                        <select id="vehicle-type">
+                            <option value="truck" selected>🚚 Xe Tải (Truck)</option>
+                            <option value="car">🚗 Xe Hơi (Car)</option>
+                            <option value="bike">🏍️ Xe Máy (Bike)</option>
+                        </select>
+                    </div>
+
+                    <!-- Result Display -->
+                    <div id="distance-result" class="distance-result" style="display: none;">
+                        <h3 style="color: #667eea; margin-bottom: 15px;">📊 Kết Quả</h3>
+                        <div class="result-grid">
+                            <div class="result-item">
+                                <div class="result-icon">🛣️</div>
+                                <div class="result-info">
+                                    <p class="result-label">Khoảng Cách</p>
+                                    <p class="result-value" id="result-distance">-</p>
+                                </div>
+                            </div>
+                            <div class="result-item">
+                                <div class="result-icon">⏱️</div>
+                                <div class="result-info">
+                                    <p class="result-label">Thời Gian</p>
+                                    <p class="result-value" id="result-duration">-</p>
+                                </div>
+                            </div>
+                            <div class="result-item">
+                                <div class="result-icon">🚚</div>
+                                <div class="result-info">
+                                    <p class="result-label">Phương Tiện</p>
+                                    <p class="result-value" id="result-vehicle">-</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="form-actions">
+                        <button type="button" class="btn btn-secondary" onclick="closeCalculateDistanceModal()">Đóng</button>
+                        <button type="submit" class="btn btn-warning">🔍 Tính Toán</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+
+    <!-- Loading Overlay -->
+    <div id="loading" class="loading-overlay" style="display: none;">
+        <div class="spinner"></div>
+        <p>Đang xử lý...</p>
+    </div>
+
+    <!-- Toast Notification -->
+    <div id="toast" class="toast"></div>
+
+    <!-- Route Details Panel -->
+    <div id="route-details-panel" class="side-panel">
+        <div class="side-panel-header">
+            <h3>📋 Chi Tiết Route</h3>
+            <button id="close-route-details" class="close-btn">&times;</button>
+        </div>
+        <div class="side-panel-content">
+            <div id="trip-info" class="trip-info"></div>
+            <h4 style="margin-top: 20px; margin-bottom: 10px;">📍 Timeline Giao Hàng</h4>
+            <div id="destinations-timeline"></div>
+        </div>
+    </div>
+
+    <!-- VRP Result Panel -->
+    <div id="vrp-result-panel" class="side-panel">
+        <div class="side-panel-header">
+            <h3>🚀 Kết Quả Tối Ưu</h3>
+            <button id="close-vrp-result" class="close-btn">&times;</button>
+        </div>
+        <div class="side-panel-content">
+            <div id="vrp-route-info"></div>
+            <h4 style="margin-top: 20px; margin-bottom: 10px;">📍 Lộ Trình</h4>
+            <div id="vrp-route-steps"></div>
+        </div>
+    </div>
+
+    <!-- Leaflet JS -->
+    <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+
+    <!-- Leaflet Polyline Decorator (for arrows) -->
+    <script src="https://unpkg.com/leaflet-polylinedecorator@1.6.0/dist/leaflet.polylineDecorator.js"></script>
+
+    <!-- Custom JS -->
+    <script src="js/api.js"></script>
+    <script src="js/map.js"></script>
+    <script src="js/ui.js"></script>
+    <script src="js/routes.js"></script>
+    <script src="js/vrp.js"></script>
+    <script src="js/app.js"></script>
+</body>
+</html>
+

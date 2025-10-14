@@ -1,0 +1,250 @@
+[
+  {
+    "destination": "Nguyễn Sinh Sắc Xã Tân Phú Huyện Sa Đéc Tỉnh Đồng Tháp",
+    "ward_name": "Xã Tân Phú Đông",
+    "district_name": "Thành phố Sa Đéc",
+    "province_name": "Tỉnh Đồng Tháp",
+    "carrier_name": "NVCT Hub Sa Đéc_Child",
+    "departer": "Mai Chí Thọ Phường Phú Thứ Quận Cái Răng Thành phố Cần Thơ"
+  },
+  {
+    "destination": "Nguyễn Huệ Phường 2 Thành phố Vĩnh Long Tỉnh Vĩnh Long",
+    "ward_name": "Phường 2",
+    "district_name": "Thành phố Vĩnh Long",
+    "province_name": "Tỉnh Vĩnh Long",
+    "carrier_name": "NVCT Hub Trà Ôn-CT",
+    "departer": "Mai Chí Thọ Phường Phú Thứ Quận Cái Răng Thành phố Cần Thơ"
+  },
+  {
+    "destination": "Nguyễn Huệ Phường 2 Thành phố Vĩnh Long Tỉnh Vĩnh Long",
+    "ward_name": "Phường 2",
+    "district_name": "Thành phố Vĩnh Long",
+    "province_name": "Tỉnh Vĩnh Long",
+    "carrier_name": "NVCT Hub Bình Minh-CT",
+    "departer": "Mai Chí Thọ Phường Phú Thứ Quận Cái Răng Thành phố Cần Thơ"
+  },
+  {
+    "destination": "Nguyễn Văn Cừ Phường An Thới Thành phố Phú Quốc Tỉnh Kiên Giang",
+    "ward_name": "Phường An Thới",
+    "district_name": "Thành phố Phú Quốc",
+    "province_name": "Tỉnh Kiên Giang",
+    "carrier_name": "NVCT Hub An Thới 2 - Phú Quốc - Child",
+    "departer": "Mai Chí Thọ Phường Phú Thứ Quận Cái Răng Thành phố Cần Thơ"
+  },
+  {
+    "destination": "Xã Tắc Vân Thành phố Cà Mau Tỉnh Cà Mau",
+    "ward_name": "Xã Tắc Vân",
+    "district_name": "Thành phố Cà Mau",
+    "province_name": "Tỉnh Cà Mau",
+    "carrier_name": "NVCT Hub Thành Phố Cà Mau_Child",
+    "departer": "Mai Chí Thọ Phường Phú Thứ Quận Cái Răng Thành phố Cần Thơ"
+  },
+  {
+    "destination": "Phường Thới An Quận Ô Môn Thành phố Cần Thơ",
+    "ward_name": "Phường Thới An",
+    "district_name": "Quận Ô Môn",
+    "province_name": "Thành phố Cần Thơ",
+    "carrier_name": "NVCT Hub Ô Môn-CT",
+    "departer": "Mai Chí Thọ Phường Phú Thứ Quận Cái Răng Thành phố Cần Thơ"
+  },
+  {
+    "destination": "Thị trấn Thới Bình Huyện Thới Bình Tỉnh Cà Mau",
+    "ward_name": "Thị trấn Thới Bình",
+    "district_name": "Huyện Thới Bình",
+    "province_name": "Tỉnh Cà Mau",
+    "carrier_name": "NVCT Hub Thới Bình - Cà Mau Child",
+    "departer": "Mai Chí Thọ Phường Phú Thứ Quận Cái Răng Thành phố Cần Thơ"
+  },
+  {
+    "destination": "Thị trấn Nhà Bàng Huyện Tịnh Biên Tỉnh An Giang",
+    "ward_name": "Thị trấn Nhà Bàng",
+    "district_name": "Huyện Tịnh Biên",
+    "province_name": "Tỉnh An Giang",
+    "carrier_name": "NVCT Hub Tịnh Biên - An Giang Child",
+    "departer": "Mai Chí Thọ Phường Phú Thứ Quận Cái Răng Thành phố Cần Thơ"
+  },
+  {
+    "destination": "Bà Huyện Thanh Quan Phường 7 Thành phố Bạc Liêu Tỉnh Bạc Liêu",
+    "ward_name": "Phường 7",
+    "district_name": "Thành phố Bạc Liêu",
+    "province_name": "Tỉnh Bạc Liêu",
+    "carrier_name": "NVCT Hub TP Bạc Liêu",
+    "departer": "Mai Chí Thọ Phường Phú Thứ Quận Cái Răng Thành phố Cần Thơ"
+  },
+  {
+    "destination": "Mương Lớn Phường An Lộc Thành phố Hồng Ngự Tỉnh Đồng Tháp",
+    "ward_name": "Phường An Lộc",
+    "district_name": "Thành phố Hồng Ngự",
+    "province_name": "Tỉnh Đồng Tháp",
+    "carrier_name": "NVCT Hub Hồng Ngự - Đồng Tháp",
+    "departer": "Mai Chí Thọ Phường Phú Thứ Quận Cái Răng Thành phố Cần Thơ"
+  },
+  {
+    "destination": "Thị trấn Phước Long Huyện Phước Long Tỉnh Bạc Liêu",
+    "ward_name": "Thị trấn Phước Long",
+    "district_name": "Huyện Phước Long",
+    "province_name": "Tỉnh Bạc Liêu",
+    "carrier_name": "NVCT Hub Phước Long - Bạc Liêu",
+    "departer": "Mai Chí Thọ Phường Phú Thứ Quận Cái Răng Thành phố Cần Thơ"
+  },
+  {
+    "destination": "QL80 Xã Kiên Bình Huyện Kiên Lương Tỉnh Kiên Giang",
+    "ward_name": "Xã Kiên Bình",
+    "district_name": "Huyện Kiên Lương",
+    "province_name": "Tỉnh Kiên Giang",
+    "carrier_name": "NVCT Hub Kiên Lương - Kiên Giang",
+    "departer": "Mai Chí Thọ Phường Phú Thứ Quận Cái Răng Thành phố Cần Thơ"
+  },
+  {
+    "destination": "Giồng Riềng Thị Trấn Giồng Riềng Huyện Giồng Riềng Tỉnh Kiên Giang",
+    "ward_name": "Thị Trấn Giồng Riềng",
+    "district_name": "Huyện Giồng Riềng",
+    "province_name": "Tỉnh Kiên Giang",
+    "carrier_name": "NVCT Hub Giồng Riềng - Kiên Giang",
+    "departer": "Mai Chí Thọ Phường Phú Thứ Quận Cái Răng Thành phố Cần Thơ"
+  },
+  {
+    "destination": "Phường 2 Thị xã Duyên Hải Tỉnh Trà Vinh",
+    "ward_name": "Phường 2",
+    "district_name": "Thị xã Duyên Hải",
+    "province_name": "Tỉnh Trà Vinh",
+    "carrier_name": "NVCT Hub Duyên Hải - Trà Vinh",
+    "departer": "Mai Chí Thọ Phường Phú Thứ Quận Cái Răng Thành phố Cần Thơ"
+  },
+  {
+    "destination": "Xã Phú Cần Huyện Tiểu Cần Tỉnh Trà Vinh",
+    "ward_name": "Xã Phú Cần",
+    "district_name": "Huyện Tiểu Cần",
+    "province_name": "Tỉnh Trà Vinh",
+    "carrier_name": "NVCT Hub Tiểu Cần-Trà Vinh",
+    "departer": "Mai Chí Thọ Phường Phú Thứ Quận Cái Răng Thành phố Cần Thơ"
+  },
+  {
+    "destination": "Phạm Hùng Phường 1 Thành phố Sóc Trăng Tỉnh Sóc Trăng",
+    "ward_name": "Phường 1",
+    "district_name": "Thành phố Sóc Trăng",
+    "province_name": "Tỉnh Sóc Trăng",
+    "carrier_name": "NVCT Hub Sóc Trăng-CT",
+    "departer": "Mai Chí Thọ Phường Phú Thứ Quận Cái Răng Thành phố Cần Thơ"
+  },
+  {
+    "destination": "Trần Hoàng Na Phường Hưng Phú Quận Cái Răng Thành phố Cần Thơ",
+    "ward_name": "Phường Hưng Phú",
+    "district_name": "Quận Cái Răng",
+    "province_name": "Thành phố Cần Thơ",
+    "carrier_name": "NVCT Hub Vĩnh Tường-CT",
+    "departer": "Mai Chí Thọ Phường Phú Thứ Quận Cái Răng Thành phố Cần Thơ"
+  },
+  {
+    "destination": "Xã Trung Ngãi Huyện Vũng Liêm Tỉnh Vĩnh Long",
+    "ward_name": "Xã Trung Ngãi",
+    "district_name": "Huyện Vũng Liêm",
+    "province_name": "Tỉnh Vĩnh Long",
+    "carrier_name": "NVCT Hub Vũng Liêm-CT",
+    "departer": "Mai Chí Thọ Phường Phú Thứ Quận Cái Răng Thành phố Cần Thơ"
+  },
+  {
+    "destination": "Nguyễn Huệ Phường 2 Thành phố Vĩnh Long Tỉnh Vĩnh Long",
+    "ward_name": "Phường 2",
+    "district_name": "Thành phố Vĩnh Long",
+    "province_name": "Tỉnh Vĩnh Long",
+    "carrier_name": "NVCT Hub Vĩnh Long-CT",
+    "departer": "Mai Chí Thọ Phường Phú Thứ Quận Cái Răng Thành phố Cần Thơ"
+  },
+  {
+    "destination": "Trần Hoàng Na Phường Hưng Phú Quận Cái Răng Thành phố Cần Thơ",
+    "ward_name": "Phường Hưng Phú",
+    "district_name": "Quận Cái Răng",
+    "province_name": "Thành phố Cần Thơ",
+    "carrier_name": "NVCT Hub Thốt Nốt-CT",
+    "departer": "Mai Chí Thọ Phường Phú Thứ Quận Cái Răng Thành phố Cần Thơ"
+  },
+  {
+    "destination": "Đường số 2 Phường Châu Phú A Thành phố Châu Đốc Tỉnh An Giang",
+    "ward_name": "Phường Châu Phú A",
+    "district_name": "Thành phố Châu Đốc",
+    "province_name": "Tỉnh An Giang",
+    "carrier_name": "NVCT Hub Châu Đốc_Child",
+    "departer": "Mai Chí Thọ Phường Phú Thứ Quận Cái Răng Thành phố Cần Thơ"
+  },
+  {
+    "destination": "Thị trấn Phú Mỹ Huyện Phú Tân Tỉnh An Giang",
+    "ward_name": "Thị trấn Phú Mỹ",
+    "district_name": "Huyện Phú Tân",
+    "province_name": "Tỉnh An Giang",
+    "carrier_name": "NVCT Hub Phú Tân_Child",
+    "departer": "Mai Chí Thọ Phường Phú Thứ Quận Cái Răng Thành phố Cần Thơ"
+  },
+  {
+    "destination": "Xã Tắc Vân Thành phố Cà Mau Tỉnh Cà Mau",
+    "ward_name": "Xã Tắc Vân",
+    "district_name": "Thành phố Cà Mau",
+    "province_name": "Tỉnh Cà Mau",
+    "carrier_name": "NVCT Hub Cà Mau_Child",
+    "departer": "Mai Chí Thọ Phường Phú Thứ Quận Cái Răng Thành phố Cần Thơ"
+  },
+  {
+    "destination": "Đường Cái Tắc Xã Hòa An Huyện Cao Lãnh Tỉnh Đồng Tháp",
+    "ward_name": "Xã Hòa An",
+    "district_name": "Thành phố Cao Lãnh",
+    "province_name": "Tỉnh Đồng Tháp",
+    "carrier_name": "NVCT Hub Cao Lãnh - Đồng Tháp",
+    "departer": "Mai Chí Thọ Phường Phú Thứ Quận Cái Răng Thành phố Cần Thơ"
+  },
+  {
+    "destination": "Xã Thuận Hòa Huyện An Minh Tỉnh Kiên Giang",
+    "ward_name": "Xã Thuận Hoà",
+    "district_name": "Huyện An Minh",
+    "province_name": "Tỉnh Kiên Giang",
+    "carrier_name": "NVCT Hub An Minh_Child",
+    "departer": "Mai Chí Thọ Phường Phú Thứ Quận Cái Răng Thành phố Cần Thơ"
+  },
+  {
+    "destination": "Nguyễn Du Xã Lương Hòa Huyện Châu Thành Tỉnh Trà Vinh",
+    "ward_name": "Xã Lương Hòa",
+    "district_name": "Huyện Châu Thành",
+    "province_name": "Tỉnh Trà Vinh",
+    "carrier_name": "NVCT Hub Trà Vinh",
+    "departer": "Mai Chí Thọ Phường Phú Thứ Quận Cái Răng Thành phố Cần Thơ"
+  },
+  {
+    "destination": "Mạc Thiên Tích Phường Dương Đông Thành phố Phú Quốc Tỉnh Kiên Giang",
+    "ward_name": "Phường Dương Đông",
+    "district_name": "Thành phố Phú Quốc",
+    "province_name": "Tỉnh Kiên Giang",
+    "carrier_name": "NVCT Hub Phú Quốc - Kiên Giang",
+    "departer": "Mai Chí Thọ Phường Phú Thứ Quận Cái Răng Thành phố Cần Thơ"
+  },
+  {
+    "destination": "đường số 9 Phường Bình Khánh Thành phố Long Xuyên Tỉnh An Giang",
+    "ward_name": "Phường Bình Khánh",
+    "district_name": "Thành phố Long Xuyên",
+    "province_name": "Tỉnh An Giang",
+    "carrier_name": "NVCT Hub Long Xuyên - An Giang",
+    "departer": "Mai Chí Thọ Phường Phú Thứ Quận Cái Răng Thành phố Cần Thơ"
+  },
+  {
+    "destination": "Cây Dừa Xã Tân Phong Thị xã Giá Rai Tỉnh Bạc Liêu",
+    "ward_name": "Xã Tân Phong",
+    "district_name": "Thị xã Giá Rai",
+    "province_name": "Tỉnh Bạc Liêu",
+    "carrier_name": "NVCT Hub Giá Rai - Bạc Liêu",
+    "departer": "Mai Chí Thọ Phường Phú Thứ Quận Cái Răng Thành phố Cần Thơ"
+  },
+  {
+    "destination": "Phố Đức Chính Phường An Hòa Thành phố Rạch Giá Tỉnh Kiên Giang",
+    "ward_name": "Phường An Hòa",
+    "district_name": "Thành phố Rạch Giá",
+    "province_name": "Tỉnh Kiên Giang",
+    "carrier_name": "NVCT Hub Rạch Giá - Kiên Giang",
+    "departer": "Mai Chí Thọ Phường Phú Thứ Quận Cái Răng Thành phố Cần Thơ"
+  },
+  {
+    "destination": "Xã Tân Phước Hưng Huyện Phụng Hiệp Tỉnh Hậu Giang",
+    "ward_name": "Xã Tân Phước Hưng",
+    "district_name": "Huyện Phụng Hiệp",
+    "province_name": "Tỉnh Hậu Giang",
+    "carrier_name": "NV công ty - Hub Hậu Giang - HCM",
+    "departer": "Mai Chí Thọ Phường Phú Thứ Quận Cái Răng Thành phố Cần Thơ"
+  }
+]
