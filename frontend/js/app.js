@@ -81,14 +81,16 @@ window.addEventListener('resize', () => {
 });
 
 // Log application info
+const environment = window.location.hostname === 'localhost' ? 'Development' : 'Production';
+const apiUrl = API_BASE_URL.replace('/api', '') + '/api';
 console.log(`
 ╔═══════════════════════════════════════════════════════════╗
 ║                                                           ║
 ║   🚚 LOGISTICS ROUTING SYSTEM                            ║
 ║                                                           ║
 ║   Version: 1.0.0                                         ║
-║   Environment: Development                               ║
-║   API: http://localhost:5000/api                         ║
+║   Environment: ${environment.padEnd(40)}║
+║   API: ${apiUrl.padEnd(48)}║
 ║                                                           ║
 ╚═══════════════════════════════════════════════════════════╝
 `);

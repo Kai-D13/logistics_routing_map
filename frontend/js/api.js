@@ -1,5 +1,7 @@
-// API Base URL
-const API_BASE_URL = 'http://localhost:5000/api';
+// API Base URL - Auto-detect based on environment
+const API_BASE_URL = window.location.hostname === 'localhost' 
+    ? 'http://localhost:5000/api'  // Development
+    : '/api';  // Production (Vercel) - relative URL
 
 // API Client
 const API = {
