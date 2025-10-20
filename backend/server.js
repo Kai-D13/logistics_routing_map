@@ -74,18 +74,20 @@ app.use((err, req, res, next) => {
   });
 });
 
-// Start Server
-const PORT = config.PORT;
-app.listen(PORT, () => {
-  console.log('='.repeat(50));
-  console.log('🚀 Logistics Routing System Server Started');
-  console.log('='.repeat(50));
-  console.log(`📍 Environment: ${config.NODE_ENV}`);
-  console.log(`🌐 Server running on: http://localhost:${PORT}`);
-  console.log(`🏥 Health check: http://localhost:${PORT}/api/health`);
-  console.log(`🔧 Config test: http://localhost:${PORT}/api/config/test`);
-  console.log('='.repeat(50));
-});
+// Start Server (only if not running on Vercel)
+if (process.env.NODE_ENV !== 'production' || !process.env.VERCEL) {
+  const PORT = config.PORT;
+  app.listen(PORT, () => {
+    console.log('='.repeat(50));
+    console.log('🚀 Logistics Routing System Server Started');
+    console.log('='.repeat(50));
+    console.log(`📍 Environment: ${config.NODE_ENV}`);
+    console.log(`🌐 Server running on: http://localhost:${PORT}`);
+    console.log(`🏥 Health check: http://localhost:${PORT}/api/health`);
+    console.log(`🔧 Config test: http://localhost:${PORT}/api/config/test`);
+    console.log('='.repeat(50));
+  });
+}
 
 module.exports = app;
 
