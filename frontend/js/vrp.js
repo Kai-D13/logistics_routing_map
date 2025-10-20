@@ -101,12 +101,6 @@ class VRPManager {
       });
     }
 
-    // Calculate route button
-    const calculateBtn = document.getElementById('calculate-route-btn');
-    if (calculateBtn) {
-      calculateBtn.addEventListener('click', () => this.calculateRoute());
-    }
-
     // Optimize button
     const optimizeBtn = document.getElementById('optimize-route-btn');
     if (optimizeBtn) {
@@ -161,120 +155,7 @@ class VRPManager {
     return Array.from(checkboxes).map(cb => cb.value);
   }
 
-  /**
-   * Calculate route (without optimization - just sequential)
-   */
-  async calculateRoute() {
-    // Validate inputs
-    if (!this.selectedDeparter) {
-      showNotification('Vui lòng chọn điểm xuất phát', 'warning');
-      return;
-    }
 
-    const selectedDestIds = this.getSelectedDestinations();
-    if (selectedDestIds.length === 0) {
-      showNotification('Vui lòng chọn ít nhất 1 điểm đến', 'warning');
-      return;
-    }
-
-    if (selectedDestIds.length > 20) {
-      showNotification('Tối đa 20 điểm đến', 'warning');
-      return;
-    }
-
-    try {
-      showNotification('Đang tính toán khoảng cách...', 'info');
-
-      // Get departer
-      const departer = this.departers.find(d => d.id === this.selectedDeparter);
-      if (!departer) {
-        showNotification('Không tìm thấy điểm xuất phát', 'error');
-        return;
-      }
-
-      // Get selected destinations in order
-      const selectedDests = this.destinations.filter(d => selectedDestIds.includes(d.id));
-
-      // Calculate distances sequentially
-      const route = [];
-      let totalDistance = 0;
-      let totalDuration = 0;
-      let currentLocation = { lat: departer.lat, lng: departer.lng };
-
-      // Add departer as first stop
-      route.push({
-        stop_number: 0,
-        location: {
-          id: departer.id,
-          name: departer.name || departer.carrier_name,
-          lat: departer.lat,
-          lng: departer.lng
-        },
-        distance_from_previous: 0,
-        duration_from_previous: 0,
-        cumulative_distance: 0,
-        cumulative_duration: 0
-      });
-
-      // Calculate distance to each destination
-      for (let i = 0; i < selectedDests.length; i++) {
-        const dest = selectedDests[i];
-
-        const distanceResult = await API.calculateDistance(
-          currentLocation,
-          { lat: dest.lat, lng: dest.lng },
-          'truck'
-        );
-
-        if (distanceResult.success) {
-          const distance = distanceResult.data.distance_meters;
-          const duration = distanceResult.data.duration_seconds;
-
-          totalDistance += distance;
-          totalDuration += duration;
-
-          route.push({
-            stop_number: i + 1,
-            location: {
-              id: dest.id,
-              name: dest.carrier_name,
-              lat: dest.lat,
-              lng: dest.lng,
-              address: dest.address
-            },
-            distance_from_previous: distance,
-            duration_from_previous: duration,
-            cumulative_distance: totalDistance,
-            cumulative_duration: totalDuration
-          });
-
-          currentLocation = { lat: dest.lat, lng: dest.lng };
-        }
-      }
-
-      // Display result
-      const result = {
-        route,
-        summary: {
-          total_stops: route.length,
-          total_distance_meters: totalDistance,
-          total_distance_km: (totalDistance / 1000).toFixed(2),
-          total_duration_seconds: totalDuration,
-          total_duration_minutes: Math.round(totalDuration / 60),
-          total_duration_formatted: this.formatDuration(totalDuration),
-          vehicle_type: 'truck'
-        }
-      };
-
-      this.optimizedRoute = result;
-      this.displayOptimizedRoute(result, 'sequential');
-      showNotification('Tính toán hoàn tất!', 'success');
-
-    } catch (error) {
-      console.error('Error calculating route:', error);
-      showNotification('Lỗi khi tính toán khoảng cách', 'error');
-    }
-  }
 
   /**
    * Optimize route

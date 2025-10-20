@@ -75,13 +75,59 @@
 
             <div class="tab-content" id="routes-tab">
                 <div class="routes-panel">
-                    <h3>🔍 Tìm Kiếm Route</h3>
-                    <div class="form-group">
-                        <label for="route-select">Chọn Route:</label>
-                        <select id="route-select" class="form-control">
-                            <option value="">-- Chọn Route --</option>
-                        </select>
+                    <!-- Header -->
+                    <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 20px;">
+                        <h3 style="margin: 0;">🔍 Quản Lý Routes</h3>
+                        <button class="btn btn-primary" onclick="openCreateRouteModal()" style="background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); border: none; padding: 10px 20px; font-weight: 600;">
+                            ➕ Tạo Route Mới
+                        </button>
                     </div>
+
+                    <!-- Search Filters -->
+                    <div class="search-filters" style="background: #f8f9fa; padding: 20px; border-radius: 8px; margin-bottom: 20px;">
+                        <div class="row">
+                            <div class="col-md-4">
+                                <div class="form-group">
+                                    <label for="route-select">Chọn Route:</label>
+                                    <select id="route-select" class="form-control">
+                                        <option value="">-- Chọn Route --</option>
+                                    </select>
+                                </div>
+                            </div>
+                            <div class="col-md-4">
+                                <div class="form-group">
+                                    <label for="filter-departer">Hub Xuất Phát:</label>
+                                    <select id="filter-departer" class="form-control">
+                                        <option value="">-- Tất cả Hub --</option>
+                                    </select>
+                                </div>
+                            </div>
+                            <div class="col-md-4">
+                                <div class="form-group">
+                                    <label for="filter-note">Loại Giao Hàng:</label>
+                                    <select id="filter-note" class="form-control">
+                                        <option value="">-- Tất cả --</option>
+                                        <option value="D">D (Trong ngày)</option>
+                                        <option value="D+1">D+1 (Ngày hôm sau)</option>
+                                        <option value="D+2">D+2 (2 ngày sau)</option>
+                                    </select>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-md-12" style="text-align: right; margin-top: 10px;">
+                                <button id="search-routes-btn" class="btn btn-info" style="margin-right: 10px;">
+                                    🔍 Tìm Kiếm
+                                </button>
+                                <button id="clear-filters-btn" class="btn btn-secondary">
+                                    🔄 Xóa Bộ Lọc
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Route Details Container -->
+                    <div id="route-details-container"></div>
                 </div>
             </div>
 
@@ -106,9 +152,6 @@
                     </div>
 
                     <div class="vrp-actions">
-                        <button id="calculate-route-btn" class="btn btn-success">
-                            📏 Tính Khoảng Cách
-                        </button>
                         <button id="optimize-route-btn" class="btn btn-primary">
                             🚀 Tối Ưu Tuyến Đường
                         </button>
@@ -223,34 +266,62 @@
         </div>
     </div>
 
-    <!-- Modal: Calculate Distance Between Two Points -->
+    <!-- Modal: Calculate Distance (Multi-Destination) -->
     <div id="calculateDistanceModal" class="modal">
-        <div class="modal-content">
+        <div class="modal-content" style="max-width: 1100px; max-height: 90vh; overflow-y: auto;">
             <div class="modal-header">
-                <h2>📏 Tính Khoảng Cách Giữa 2 Điểm</h2>
+                <h2>📏 Tính Khoảng Cách</h2>
                 <span class="close" onclick="closeCalculateDistanceModal()">&times;</span>
             </div>
             <div class="modal-body">
                 <form id="calculateDistanceForm" onsubmit="submitCalculateDistance(event)">
                     <div class="form-group">
-                        <label for="origin-location">Điểm Xuất Phát *</label>
-                        <select id="origin-location" required>
-                            <option value="">-- Chọn điểm xuất phát --</option>
+                        <label for="calc-departer-select">Điểm Xuất Phát (Hub Chính) *</label>
+                        <select id="calc-departer-select" class="form-control" required>
+                            <option value="">-- Chọn Hub chính --</option>
                         </select>
-                        <small>Chọn Hub hoặc điểm giao hàng làm điểm xuất phát</small>
+                        <small style="color: #64748b;">Chỉ cho phép chọn Hub chính làm điểm xuất phát</small>
                     </div>
 
                     <div class="form-group">
-                        <label for="destination-location">Điểm Đến *</label>
-                        <select id="destination-location" required>
-                            <option value="">-- Chọn điểm đến --</option>
-                        </select>
-                        <small>Chọn Hub hoặc điểm giao hàng làm điểm đến</small>
+                        <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 10px;">
+                            <label style="margin: 0;">Chọn Điểm Đến *</label>
+                            <span id="calc-selected-count" style="background: #667eea; color: white; padding: 4px 12px; border-radius: 20px; font-size: 13px; font-weight: 600;">
+                                Đã chọn: 0/20
+                            </span>
+                        </div>
+
+                        <!-- Search Box -->
+                        <div style="margin-bottom: 10px;">
+                            <input
+                                type="text"
+                                id="calc-search-destinations"
+                                class="form-control"
+                                placeholder="🔍 Tìm kiếm điểm đến..."
+                                style="padding: 10px; border: 1px solid #e2e8f0; border-radius: 8px; width: 100%;"
+                            >
+                        </div>
+
+                        <!-- Action Buttons -->
+                        <div class="destinations-actions" style="display: flex; gap: 10px; margin-bottom: 10px;">
+                            <button type="button" id="calc-select-all" class="btn btn-sm" style="flex: 1; background: #10b981; color: white; border: none; padding: 8px; border-radius: 6px; font-weight: 500;">
+                                ✓ Chọn tất cả
+                            </button>
+                            <button type="button" id="calc-deselect-all" class="btn btn-sm" style="flex: 1; background: #ef4444; color: white; border: none; padding: 8px; border-radius: 6px; font-weight: 500;">
+                                ✗ Bỏ chọn
+                            </button>
+                        </div>
+
+                        <!-- Destinations List -->
+                        <div id="calc-destinations-list" class="destinations-list" style="max-height: 400px; overflow-y: auto; border: 2px solid #e2e8f0; border-radius: 8px; padding: 12px; background: #f9fafb;">
+                            <!-- Destinations will be loaded here -->
+                        </div>
+                        <small style="color: #64748b;">Chọn ít nhất 1 điểm đến (tối đa 20 điểm)</small>
                     </div>
 
                     <div class="form-group">
-                        <label for="vehicle-type">Phương Tiện</label>
-                        <select id="vehicle-type">
+                        <label for="calc-vehicle-type">Phương Tiện</label>
+                        <select id="calc-vehicle-type" class="form-control">
                             <option value="truck" selected>🚚 Xe Tải (Truck)</option>
                             <option value="car">🚗 Xe Hơi (Car)</option>
                             <option value="bike">🏍️ Xe Máy (Bike)</option>
@@ -258,36 +329,168 @@
                     </div>
 
                     <!-- Result Display -->
-                    <div id="distance-result" class="distance-result" style="display: none;">
-                        <h3 style="color: #667eea; margin-bottom: 15px;">📊 Kết Quả</h3>
-                        <div class="result-grid">
-                            <div class="result-item">
-                                <div class="result-icon">🛣️</div>
-                                <div class="result-info">
-                                    <p class="result-label">Khoảng Cách</p>
-                                    <p class="result-value" id="result-distance">-</p>
+                    <div id="calc-distance-result" class="distance-result" style="display: none; margin-top: 20px;">
+                        <h3 style="color: #667eea; margin-bottom: 15px; font-size: 18px; font-weight: 600;">📊 Kết Quả Tính Toán</h3>
+                        <div class="result-summary" style="background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); padding: 20px; border-radius: 12px; margin-bottom: 15px; box-shadow: 0 4px 6px rgba(0,0,0,0.1);">
+                            <div style="display: grid; grid-template-columns: repeat(3, 1fr); gap: 20px;">
+                                <div style="text-align: center;">
+                                    <p style="margin: 0; color: rgba(255,255,255,0.9); font-size: 13px; font-weight: 500;">Tổng Khoảng Cách</p>
+                                    <p style="margin: 8px 0 0 0; color: white; font-size: 28px; font-weight: 700;" id="calc-total-distance">-</p>
+                                </div>
+                                <div style="text-align: center;">
+                                    <p style="margin: 0; color: rgba(255,255,255,0.9); font-size: 13px; font-weight: 500;">Tổng Thời Gian</p>
+                                    <p style="margin: 8px 0 0 0; color: white; font-size: 28px; font-weight: 700;" id="calc-total-duration">-</p>
+                                </div>
+                                <div style="text-align: center;">
+                                    <p style="margin: 0; color: rgba(255,255,255,0.9); font-size: 13px; font-weight: 500;">Số Điểm Đến</p>
+                                    <p style="margin: 8px 0 0 0; color: white; font-size: 28px; font-weight: 700;" id="calc-total-stops">-</p>
                                 </div>
                             </div>
-                            <div class="result-item">
-                                <div class="result-icon">⏱️</div>
-                                <div class="result-info">
-                                    <p class="result-label">Thời Gian</p>
-                                    <p class="result-value" id="result-duration">-</p>
+                        </div>
+                        <div id="calc-route-details" style="max-height: 500px; overflow-y: auto; border: 2px solid #e2e8f0; border-radius: 8px; padding: 15px; background: white;">
+                            <!-- Route details will be displayed here -->
+                        </div>
+                    </div>
+
+                    <div class="form-actions" style="margin-top: 20px;">
+                        <button type="button" class="btn btn-secondary" onclick="closeCalculateDistanceModal()">Đóng</button>
+                        <button type="submit" class="btn btn-warning">🔍 Tính Toán</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+
+    <!-- Modal: Create Route -->
+    <div id="createRouteModal" class="modal">
+        <div class="modal-content" style="max-width: 1100px; max-height: 90vh; overflow-y: auto;">
+            <div class="modal-header">
+                <h2>➕ Tạo Route Mới</h2>
+                <span class="close" onclick="closeCreateRouteModal()">&times;</span>
+            </div>
+            <div class="modal-body">
+                <form id="createRouteForm" onsubmit="submitCreateRoute(event)">
+                    <!-- Route Name -->
+                    <div class="form-group">
+                        <label for="new-route-name">Tên Route *</label>
+                        <input
+                            type="text"
+                            id="new-route-name"
+                            class="form-control"
+                            placeholder="Ví dụ: Cần Thơ - Vĩnh Long - Tiền Giang R2"
+                            required
+                        >
+                        <small style="color: #64748b;">Đặt tên theo format: Hub Chính - Hub 1 - Hub 2 - ... RX</small>
+                    </div>
+
+                    <!-- Hub Chính (Origin) -->
+                    <div class="form-group">
+                        <label for="new-route-hub">Hub Chính (Điểm Xuất Phát) *</label>
+                        <select id="new-route-hub" class="form-control" required>
+                            <option value="">-- Chọn Hub Chính --</option>
+                        </select>
+                        <small style="color: #64748b;">Hub chính sẽ là điểm xuất phát của route</small>
+                    </div>
+
+                    <!-- Destinations -->
+                    <div class="form-group">
+                        <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 10px;">
+                            <label style="margin: 0;">Chọn Điểm Đến (Destinations) *</label>
+                            <span id="new-route-selected-count" style="background: #667eea; color: white; padding: 4px 12px; border-radius: 20px; font-size: 13px; font-weight: 600;">
+                                Đã chọn: 0
+                            </span>
+                        </div>
+
+                        <!-- Search Box -->
+                        <div style="margin-bottom: 10px;">
+                            <input
+                                type="text"
+                                id="new-route-search-destinations"
+                                class="form-control"
+                                placeholder="🔍 Tìm kiếm điểm đến..."
+                                style="padding: 10px; border: 1px solid #e2e8f0; border-radius: 8px; width: 100%;"
+                            >
+                        </div>
+
+                        <!-- Destinations List -->
+                        <div id="new-route-destinations-list" class="destinations-list" style="max-height: 300px; overflow-y: auto; border: 2px solid #e2e8f0; border-radius: 8px; padding: 12px; background: #f9fafb;">
+                            <!-- Destinations will be loaded here -->
+                        </div>
+                        <small style="color: #64748b;">Chọn ít nhất 1 điểm đến</small>
+                    </div>
+
+                    <!-- Selected Destinations Order (Drag & Drop) -->
+                    <div class="form-group" id="new-route-order-section" style="display: none;">
+                        <label>Thứ Tự Điểm Đến (Kéo thả để sắp xếp)</label>
+                        <div id="new-route-order-list" class="route-order-list" style="border: 2px solid #e2e8f0; border-radius: 8px; padding: 12px; background: white; min-height: 100px;">
+                            <!-- Selected destinations will appear here for ordering -->
+                        </div>
+                        <small style="color: #64748b;">Kéo thả để thay đổi thứ tự điểm đến</small>
+                    </div>
+
+                    <!-- Vehicle Type -->
+                    <div class="form-group">
+                        <label for="new-route-vehicle">Phương Tiện</label>
+                        <select id="new-route-vehicle" class="form-control">
+                            <option value="truck" selected>🚚 Xe Tải (Truck)</option>
+                            <option value="car">🚗 Xe Hơi (Car)</option>
+                            <option value="bike">🏍️ Xe Máy (Bike)</option>
+                        </select>
+                    </div>
+
+                    <!-- Before/After Comparison (Edit Mode Only) -->
+                    <div id="route-comparison" class="route-comparison" style="display: none; margin-top: 20px;">
+                        <h3 style="color: #667eea; margin-bottom: 15px; font-size: 18px; font-weight: 600;">📊 So Sánh Thay Đổi</h3>
+                        <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 20px;">
+                            <!-- Before -->
+                            <div style="border: 2px solid #e2e8f0; border-radius: 8px; padding: 15px; background: #fef2f2;">
+                                <h4 style="color: #ef4444; margin-bottom: 10px;">❌ Trước Khi Sửa</h4>
+                                <div id="comparison-before-metrics" style="font-size: 14px; color: #64748b;">
+                                    <!-- Original metrics -->
                                 </div>
                             </div>
-                            <div class="result-item">
-                                <div class="result-icon">🚚</div>
-                                <div class="result-info">
-                                    <p class="result-label">Phương Tiện</p>
-                                    <p class="result-value" id="result-vehicle">-</p>
+                            <!-- After -->
+                            <div style="border: 2px solid #e2e8f0; border-radius: 8px; padding: 15px; background: #f0fdf4;">
+                                <h4 style="color: #10b981; margin-bottom: 10px;">✅ Sau Khi Sửa</h4>
+                                <div id="comparison-after-metrics" style="font-size: 14px; color: #64748b;">
+                                    <!-- New metrics -->
                                 </div>
                             </div>
                         </div>
                     </div>
 
-                    <div class="form-actions">
-                        <button type="button" class="btn btn-secondary" onclick="closeCalculateDistanceModal()">Đóng</button>
-                        <button type="submit" class="btn btn-warning">🔍 Tính Toán</button>
+                    <!-- Preview Section -->
+                    <div id="new-route-preview" class="route-preview" style="display: none; margin-top: 20px;">
+                        <h3 style="color: #667eea; margin-bottom: 15px; font-size: 18px; font-weight: 600;">📊 Preview Route</h3>
+                        <div class="result-summary" style="background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); padding: 20px; border-radius: 12px; margin-bottom: 15px; box-shadow: 0 4px 6px rgba(0,0,0,0.1);">
+                            <div style="display: grid; grid-template-columns: repeat(3, 1fr); gap: 20px;">
+                                <div style="text-align: center;">
+                                    <p style="margin: 0; color: rgba(255,255,255,0.9); font-size: 13px; font-weight: 500;">Tổng Khoảng Cách</p>
+                                    <p style="margin: 8px 0 0 0; color: white; font-size: 28px; font-weight: 700;" id="new-route-total-distance">-</p>
+                                </div>
+                                <div style="text-align: center;">
+                                    <p style="margin: 0; color: rgba(255,255,255,0.9); font-size: 13px; font-weight: 500;">Tổng Thời Gian</p>
+                                    <p style="margin: 8px 0 0 0; color: white; font-size: 28px; font-weight: 700;" id="new-route-total-duration">-</p>
+                                </div>
+                                <div style="text-align: center;">
+                                    <p style="margin: 0; color: rgba(255,255,255,0.9); font-size: 13px; font-weight: 500;">Số Điểm Đến</p>
+                                    <p style="margin: 8px 0 0 0; color: white; font-size: 28px; font-weight: 700;" id="new-route-total-stops">-</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div id="new-route-details" style="max-height: 400px; overflow-y: auto; border: 2px solid #e2e8f0; border-radius: 8px; padding: 15px; background: white;">
+                            <!-- Route details will be displayed here -->
+                        </div>
+                    </div>
+
+                    <div class="form-actions" style="margin-top: 20px; display: flex; gap: 10px;">
+                        <button type="button" class="btn btn-secondary" onclick="closeCreateRouteModal()">Đóng</button>
+                        <button type="button" class="btn btn-warning" onclick="previewNewRoute()" style="flex: 1;">
+                            👁️ Preview Route
+                        </button>
+                        <button type="button" class="btn btn-success" onclick="exportNewRoute()" id="export-new-route-btn" style="display: none;">
+                            💾 Export JSON
+                        </button>
                     </div>
                 </form>
             </div>
@@ -311,6 +514,16 @@
         </div>
         <div class="side-panel-content">
             <div id="trip-info" class="trip-info"></div>
+
+            <!-- Edit Route Button -->
+            <button
+                id="edit-route-btn"
+                class="btn btn-primary"
+                onclick="openEditRouteModal()"
+                style="width: 100%; margin: 15px 0; background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); border: none; padding: 12px; font-weight: 600;">
+                ✏️ Chỉnh Sửa Route
+            </button>
+
             <h4 style="margin-top: 20px; margin-bottom: 10px;">📍 Timeline Giao Hàng</h4>
             <div id="destinations-timeline"></div>
         </div>
@@ -332,6 +545,9 @@
     <!-- Leaflet JS -->
     <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
 
+    <!-- Leaflet Polyline Encoded -->
+    <script src="https://unpkg.com/polyline-encoded@0.0.9/Polyline.encoded.js"></script>
+
     <!-- Leaflet Polyline Decorator (for arrows) -->
     <script src="https://unpkg.com/leaflet-polylinedecorator@1.6.0/dist/leaflet.polylineDecorator.js"></script>
 
@@ -340,6 +556,8 @@
     <script src="js/map.js"></script>
     <script src="js/ui.js"></script>
     <script src="js/routes.js"></script>
+    <script src="js/route-builder.js"></script>
+    <script src="js/route-management.js"></script>
     <script src="js/vrp.js"></script>
     <script src="js/app.js"></script>
 </body>

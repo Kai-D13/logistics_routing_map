@@ -1,0 +1,2142 @@
+[
+  {
+    "hub_departer": "Hub VSIP II",
+    "route_name": "VSIP - Đồng Nai - Vũng Tàu R1",
+    "hub_destination": "KTLS Bửu Hòa - Đồng Nai",
+    "Giờ xuất phát": "01:00:00",
+    "Giờ đến hub destination": "01:50:00",
+    "tổng quãng đường": null,
+    "tổng thời gian": null,
+    "note": "D"
+  },
+  {
+    "hub_departer": "Hub VSIP II",
+    "route_name": "VSIP - Đồng Nai - Vũng Tàu R1",
+    "hub_destination": "KTLS - ĐỒNG NAI",
+    "Giờ xuất phát": "01:00:00",
+    "Giờ đến hub destination": "03:25:00",
+    "tổng quãng đường": null,
+    "tổng thời gian": null,
+    "note": "D"
+  },
+  {
+    "hub_departer": "Hub VSIP II",
+    "route_name": "VSIP - Đồng Nai - Vũng Tàu R1",
+    "hub_destination": "KTLS Xuân Lộc - Đồng Nai",
+    "Giờ xuất phát": "01:00:00",
+    "Giờ đến hub destination": "04:55:00",
+    "tổng quãng đường": null,
+    "tổng thời gian": null,
+    "note": "D"
+  },
+  {
+    "hub_departer": "Hub VSIP II",
+    "route_name": "VSIP - Đồng Nai - Vũng Tàu R1",
+    "hub_destination": "KTLS Vũng Tàu",
+    "Giờ xuất phát": "01:00:00",
+    "Giờ đến hub destination": "06:55:00",
+    "tổng quãng đường": null,
+    "tổng thời gian": null,
+    "note": "D"
+  },
+  {
+    "hub_departer": "Hub VSIP II",
+    "route_name": "VSIP - Đồng Nai - Vũng Tàu R1",
+    "hub_destination": "KTLS Nhơn Trạch - Đồng Nai",
+    "Giờ xuất phát": "01:00:00",
+    "Giờ đến hub destination": "08:45:00",
+    "tổng quãng đường": null,
+    "tổng thời gian": null,
+    "note": "D"
+  },
+  {
+    "hub_departer": "Hub VSIP II",
+    "route_name": "VSIP - Quận 2 - Nady R1",
+    "hub_destination": "KTLS - QUẬN 2",
+    "Giờ xuất phát": "02:00:00",
+    "Giờ đến hub destination": "03:30:00",
+    "tổng quãng đường": null,
+    "tổng thời gian": null,
+    "note": "D"
+  },
+  {
+    "hub_departer": "Hub VSIP II",
+    "route_name": "VSIP - Quận 2 - Nady R1",
+    "hub_destination": "NV Công Ty - HCM",
+    "Giờ xuất phát": "02:00:00",
+    "Giờ đến hub destination": "06:20:00",
+    "tổng quãng đường": null,
+    "tổng thời gian": null,
+    "note": "D"
+  },
+  {
+    "hub_departer": "Hub VSIP II",
+    "route_name": "VSIP - Long An - Bến Lức- Bến Tre - Mỹ Tho",
+    "hub_destination": "KTLS Long An",
+    "Giờ xuất phát": "03:00:00",
+    "Giờ đến hub destination": "05:30:00",
+    "tổng quãng đường": null,
+    "tổng thời gian": null,
+    "note": "D"
+  },
+  {
+    "hub_departer": "Hub VSIP II",
+    "route_name": "VSIP - Long An - Bến Lức- Bến Tre - Mỹ Tho",
+    "hub_destination": "NVCT Hub Bến Lức - Long An",
+    "Giờ xuất phát": "03:00:00",
+    "Giờ đến hub destination": "05:55:00",
+    "tổng quãng đường": null,
+    "tổng thời gian": null,
+    "note": "D"
+  },
+  {
+    "hub_departer": "Hub VSIP II",
+    "route_name": "VSIP - Long An - Bến Lức- Bến Tre - Mỹ Tho",
+    "hub_destination": "NVCT Hub Mỹ Tho - Tiền Giang",
+    "Giờ xuất phát": "03:00:00",
+    "Giờ đến hub destination": "09:00:00",
+    "tổng quãng đường": null,
+    "tổng thời gian": null,
+    "note": "D"
+  },
+  {
+    "hub_departer": "Hub VSIP II",
+    "route_name": "VSIP - Long An - Bến Lức- Bến Tre - Mỹ Tho",
+    "hub_destination": "NVCT Hub Bến Tre",
+    "Giờ xuất phát": "03:00:00",
+    "Giờ đến hub destination": "07:35:00",
+    "tổng quãng đường": null,
+    "tổng thời gian": null,
+    "note": "D"
+  },
+  {
+    "hub_departer": "Hub VSIP II",
+    "route_name": "VSIP - Long An - Bến Lức- Bến Tre - Mỹ Tho",
+    "hub_destination": "NVCT Hub Bình Đại_Child",
+    "Giờ xuất phát": "03:00:00",
+    "Giờ đến hub destination": "07:35:00",
+    "tổng quãng đường": null,
+    "tổng thời gian": null,
+    "note": "D"
+  },
+  {
+    "hub_departer": "Hub VSIP II",
+    "route_name": "VSIP - Long An - Bến Lức- Bến Tre - Mỹ Tho",
+    "hub_destination": "NVCT Hub Thạnh Phú_Child",
+    "Giờ xuất phát": "03:00:00",
+    "Giờ đến hub destination": "07:35:00",
+    "tổng quãng đường": null,
+    "tổng thời gian": null,
+    "note": "D"
+  },
+  {
+    "hub_departer": "Hub VSIP II",
+    "route_name": "VSIP - Châu Thành - Tân An - Gò Công - Thạnh Hóa",
+    "hub_destination": "NVCT Hub Tân An - Long An",
+    "Giờ xuất phát": "03:00:00",
+    "Giờ đến hub destination": "05:30:00",
+    "tổng quãng đường": null,
+    "tổng thời gian": null,
+    "note": "D"
+  },
+  {
+    "hub_departer": "Hub VSIP II",
+    "route_name": "VSIP - Châu Thành - Tân An - Gò Công - Thạnh Hóa",
+    "hub_destination": "NVCT Hub Châu Thành - Long An",
+    "Giờ xuất phát": "03:00:00",
+    "Giờ đến hub destination": "05:55:00",
+    "tổng quãng đường": null,
+    "tổng thời gian": null,
+    "note": "D"
+  },
+  {
+    "hub_departer": "Hub VSIP II",
+    "route_name": "VSIP - Châu Thành - Tân An - Gò Công - Thạnh Hóa",
+    "hub_destination": "NVCT Hub Gò Công Tây",
+    "Giờ xuất phát": "03:00:00",
+    "Giờ đến hub destination": "07:10:00",
+    "tổng quãng đường": null,
+    "tổng thời gian": null,
+    "note": "D"
+  },
+  {
+    "hub_departer": "Hub VSIP II",
+    "route_name": "VSIP - Châu Thành - Tân An - Gò Công - Thạnh Hóa",
+    "hub_destination": "NVCT Hub Tân Phú Đông - Tiền Giang 2 Child",
+    "Giờ xuất phát": "03:00:00",
+    "Giờ đến hub destination": "07:10:00",
+    "tổng quãng đường": null,
+    "tổng thời gian": null,
+    "note": "D"
+  },
+  {
+    "hub_departer": "Hub VSIP II",
+    "route_name": "VSIP - Châu Thành - Tân An - Gò Công - Thạnh Hóa",
+    "hub_destination": "KTLS Thạnh Hóa - Long An",
+    "Giờ xuất phát": "03:00:00",
+    "Giờ đến hub destination": "09:30:00",
+    "tổng quãng đường": null,
+    "tổng thời gian": null,
+    "note": "D"
+  },
+  {
+    "hub_departer": "Hub VSIP II",
+    "route_name": "VSIP - Tây Ninh - Tân Châu R1",
+    "hub_destination": "KTLS - TÂY NINH",
+    "Giờ xuất phát": "04:30:00",
+    "Giờ đến hub destination": "06:00:00",
+    "tổng quãng đường": null,
+    "tổng thời gian": null,
+    "note": "D"
+  },
+  {
+    "hub_departer": "Hub VSIP II",
+    "route_name": "VSIP - Tây Ninh - Tân Châu R1",
+    "hub_destination": "KTLS Tân Châu - Tây Ninh",
+    "Giờ xuất phát": "04:30:00",
+    "Giờ đến hub destination": "06:50:00",
+    "tổng quãng đường": null,
+    "tổng thời gian": null,
+    "note": "D"
+  },
+  {
+    "hub_departer": "Hub VSIP II",
+    "route_name": "VSIP - Hớn Quản - Bình Phước R2",
+    "hub_destination": "KTLS - HỚN QUẢN",
+    "Giờ xuất phát": "05:30:00",
+    "Giờ đến hub destination": "07:00:00",
+    "tổng quãng đường": null,
+    "tổng thời gian": null,
+    "note": "D"
+  },
+  {
+    "hub_departer": "Hub VSIP II",
+    "route_name": "VSIP - Hớn Quản - Bình Phước R2",
+    "hub_destination": "KTLS Bình Phước",
+    "Giờ xuất phát": "05:30:00",
+    "Giờ đến hub destination": "08:20:00",
+    "tổng quãng đường": null,
+    "tổng thời gian": null,
+    "note": "D"
+  },
+  {
+    "hub_departer": "Hub VSIP II",
+    "route_name": "VSIP - Hóc Môn R1",
+    "hub_destination": "KTLS - BÌNH DƯƠNG",
+    "Giờ xuất phát": "05:45:00",
+    "Giờ đến hub destination": "06:15:00",
+    "tổng quãng đường": null,
+    "tổng thời gian": null,
+    "note": "D"
+  },
+  {
+    "hub_departer": "Hub VSIP II",
+    "route_name": "VSIP - Hóc Môn R1",
+    "hub_destination": "KTLS - HÓC MÔN",
+    "Giờ xuất phát": "05:45:00",
+    "Giờ đến hub destination": "07:35:00",
+    "tổng quãng đường": null,
+    "tổng thời gian": null,
+    "note": "D"
+  },
+  {
+    "hub_departer": "Hub VSIP II",
+    "route_name": "VSIP - Quận 2 - TTN R2",
+    "hub_destination": "KTLS - QUẬN 2",
+    "Giờ xuất phát": "10:00:00",
+    "Giờ đến hub destination": "11:30:00",
+    "tổng quãng đường": null,
+    "tổng thời gian": null,
+    "note": "D"
+  },
+  {
+    "hub_departer": "Hub VSIP II",
+    "route_name": "VSIP - Quận 2 - TTN R2",
+    "hub_destination": "NV Công Ty - HCM",
+    "Giờ xuất phát": "10:00:00",
+    "Giờ đến hub destination": "12:50:00",
+    "tổng quãng đường": null,
+    "tổng thời gian": null,
+    "note": "D"
+  },
+  {
+    "hub_departer": "Hub VSIP II",
+    "route_name": "VSIP Bình Dương - Hóc Môn R2",
+    "hub_destination": "KTLS - BÌNH DƯƠNG",
+    "Giờ xuất phát": "12:30:00",
+    "Giờ đến hub destination": "13:00:00",
+    "tổng quãng đường": null,
+    "tổng thời gian": null,
+    "note": "D"
+  },
+  {
+    "hub_departer": "Hub VSIP II",
+    "route_name": "VSIP Bình Dương - Hóc Môn R2",
+    "hub_destination": "KTLS - HÓC MÔN",
+    "Giờ xuất phát": "12:30:00",
+    "Giờ đến hub destination": "14:20:00",
+    "tổng quãng đường": null,
+    "tổng thời gian": null,
+    "note": "D"
+  },
+  {
+    "hub_departer": "Hub VSIP II",
+    "route_name": "VSIP - Bình Dương - Hóc Môn R2",
+    "hub_destination": "KTLS - BÌNH DƯƠNG",
+    "Giờ xuất phát": "12:30:00",
+    "Giờ đến hub destination": "13:00:00",
+    "tổng quãng đường": null,
+    "tổng thời gian": null,
+    "note": "D"
+  },
+  {
+    "hub_departer": "Hub VSIP II",
+    "route_name": "VSIP - Bình Dương - Hóc Môn R2",
+    "hub_destination": "KTLS - HÓC MÔN",
+    "Giờ xuất phát": "12:30:00",
+    "Giờ đến hub destination": "14:20:00",
+    "tổng quãng đường": null,
+    "tổng thời gian": null,
+    "note": "D"
+  },
+  {
+    "hub_departer": "Hub VSIP II",
+    "route_name": "VSIP- Nadyphar (CUT 14:00)",
+    "hub_destination": "NV Công Ty - HCM",
+    "Giờ xuất phát": "14:15:00",
+    "Giờ đến hub destination": "17:00:00",
+    "tổng quãng đường": null,
+    "tổng thời gian": null,
+    "note": "D"
+  },
+  {
+    "hub_departer": "Hub VSIP II",
+    "route_name": "VSIP - Quận 2 R3 (CUT 14:30)",
+    "hub_destination": "KTLS - QUẬN 2",
+    "Giờ xuất phát": "15:00:00",
+    "Giờ đến hub destination": "17:30:00",
+    "tổng quãng đường": null,
+    "tổng thời gian": null,
+    "note": "D"
+  },
+  {
+    "hub_departer": "Hub VSIP II",
+    "route_name": "VSIP - Bình Dương - Hóc Môn R3",
+    "hub_destination": "KTLS - BÌNH DƯƠNG",
+    "Giờ xuất phát": "15:20:00",
+    "Giờ đến hub destination": "15:50:00",
+    "tổng quãng đường": null,
+    "tổng thời gian": null,
+    "note": "D"
+  },
+  {
+    "hub_departer": "Hub VSIP II",
+    "route_name": "VSIP - Bình Dương - Hóc Môn R3",
+    "hub_destination": "KTLS - HÓC MÔN",
+    "Giờ xuất phát": "15:20:00",
+    "Giờ đến hub destination": "17:10:00",
+    "tổng quãng đường": null,
+    "tổng thời gian": null,
+    "note": "D"
+  },
+  {
+    "hub_departer": "Hub VSIP II",
+    "route_name": "VSIP - Cân Thơ R1",
+    "hub_destination": "Hub Cần Thơ",
+    "Giờ xuất phát": "18:30:00",
+    "Giờ đến hub destination": "00:40:00",
+    "tổng quãng đường": null,
+    "tổng thời gian": null,
+    "note": "D+1"
+  },
+  {
+    "hub_departer": "Hub VSIP II",
+    "route_name": "VSIP - Q2 R4 (CUT 17:00)",
+    "hub_destination": "KTLS - QUẬN 2",
+    "Giờ xuất phát": "17:30:00",
+    "Giờ đến hub destination": "19:30:00",
+    "tổng quãng đường": null,
+    "tổng thời gian": null,
+    "note": "D"
+  },
+  {
+    "hub_departer": "Hub VSIP II",
+    "route_name": "VSIP - Nadyphar (CUT 17:00)",
+    "hub_destination": "NV Công Ty - HCM",
+    "Giờ xuất phát": "17:30:00",
+    "Giờ đến hub destination": "19:00:00",
+    "tổng quãng đường": null,
+    "tổng thời gian": null,
+    "note": "D"
+  },
+  {
+    "hub_departer": "Hub VSIP II",
+    "route_name": "VSIP - Bình Phước - Tây Nguyên",
+    "hub_destination": "KTLS - ĐỨC PHONG",
+    "Giờ xuất phát": "20:15:00",
+    "Giờ đến hub destination": "00:15:00",
+    "tổng quãng đường": null,
+    "tổng thời gian": null,
+    "note": "D+1"
+  },
+  {
+    "hub_departer": "Hub VSIP II",
+    "route_name": "VSIP - Bình Phước - Tây Nguyên",
+    "hub_destination": "KTLS - Gia Nghĩa",
+    "Giờ xuất phát": "20:15:00",
+    "Giờ đến hub destination": "02:30:00",
+    "tổng quãng đường": null,
+    "tổng thời gian": null,
+    "note": "D+1"
+  },
+  {
+    "hub_departer": "Hub VSIP II",
+    "route_name": "VSIP - Bình Phước - Tây Nguyên",
+    "hub_destination": "KTLS - BUÔN MA THUỘT",
+    "Giờ xuất phát": "20:15:00",
+    "Giờ đến hub destination": "05:40:00",
+    "tổng quãng đường": null,
+    "tổng thời gian": null,
+    "note": "D+1"
+  },
+  {
+    "hub_departer": "Hub VSIP II",
+    "route_name": "VSIP - Bình Phước - Tây Nguyên",
+    "hub_destination": "KTLS Buôn Hồ - Đắk Lắk",
+    "Giờ xuất phát": "20:15:00",
+    "Giờ đến hub destination": "07:05:00",
+    "tổng quãng đường": null,
+    "tổng thời gian": null,
+    "note": "D+1"
+  },
+  {
+    "hub_departer": "Hub VSIP II",
+    "route_name": "VSIP - Bình Phước - Tây Nguyên",
+    "hub_destination": "KTLS Chư Pưh",
+    "Giờ xuất phát": "20:15:00",
+    "Giờ đến hub destination": "08:55:00",
+    "tổng quãng đường": null,
+    "tổng thời gian": null,
+    "note": "D+1"
+  },
+  {
+    "hub_departer": "Hub VSIP II",
+    "route_name": "VSIP - Bình Phước - Tây Nguyên",
+    "hub_destination": "KTLS Pleiku",
+    "Giờ xuất phát": "20:15:00",
+    "Giờ đến hub destination": "10:35:00",
+    "tổng quãng đường": null,
+    "tổng thời gian": null,
+    "note": "D+1"
+  },
+  {
+    "hub_departer": "Hub VSIP II",
+    "route_name": "VSIP - Bình Phước - Tây Nguyên",
+    "hub_destination": "KTLS Đăk Hà",
+    "Giờ xuất phát": "20:15:00",
+    "Giờ đến hub destination": "12:05:00",
+    "tổng quãng đường": null,
+    "tổng thời gian": null,
+    "note": "D+1"
+  },
+  {
+    "hub_departer": "Hub VSIP II",
+    "route_name": "VSIP - Cần Thơ - Cái Bè - Cai Lậy R2",
+    "hub_destination": "NV công ty - Hub Cai Lậy - HCM",
+    "Giờ xuất phát": "01:00:00",
+    "Giờ đến hub destination": "03:00:00",
+    "tổng quãng đường": null,
+    "tổng thời gian": null,
+    "note": "D"
+  },
+  {
+    "hub_departer": "Hub VSIP II",
+    "route_name": "VSIP - Cần Thơ - Cái Bè - Cai Lậy R2",
+    "hub_destination": "NV công ty - Hub Cái Bè - Tiền Giang",
+    "Giờ xuất phát": "01:00:00",
+    "Giờ đến hub destination": "03:55:00",
+    "tổng quãng đường": null,
+    "tổng thời gian": null,
+    "note": "D"
+  },
+  {
+    "hub_departer": "Hub VSIP II",
+    "route_name": "VSIP - Cần Thơ - Cái Bè - Cai Lậy R2",
+    "hub_destination": "Hub Cần Thơ",
+    "Giờ xuất phát": "01:00:00",
+    "Giờ đến hub destination": "07:05:00",
+    "tổng quãng đường": null,
+    "tổng thời gian": null,
+    "note": "D"
+  },
+  {
+    "hub_departer": "Hub VSIP II",
+    "route_name": "VSIP - Nha Trang - Bình Định - Ngũ Hành Sơn R2",
+    "hub_destination": "NVCT Hub Nha Trang 2_Child",
+    "Giờ xuất phát": "21:00:00",
+    "Giờ đến hub destination": "05:00:00",
+    "tổng quãng đường": null,
+    "tổng thời gian": null,
+    "note": "D+1"
+  },
+  {
+    "hub_departer": "Hub VSIP II",
+    "route_name": "VSIP - Nha Trang - Bình Định - Ngũ Hành Sơn R2",
+    "hub_destination": "KTLS Quy Nhơn",
+    "Giờ xuất phát": "21:00:00",
+    "Giờ đến hub destination": "10:00:00",
+    "tổng quãng đường": null,
+    "tổng thời gian": null,
+    "note": "D+1"
+  },
+  {
+    "hub_departer": "Hub VSIP II",
+    "route_name": "VSIP - Nha Trang - Bình Định - Ngũ Hành Sơn R2",
+    "hub_destination": "KTLS Hoài Nhơn - Bình Định",
+    "Giờ xuất phát": "21:00:00",
+    "Giờ đến hub destination": "11:45:00",
+    "tổng quãng đường": null,
+    "tổng thời gian": null,
+    "note": "D+1"
+  },
+  {
+    "hub_departer": "Hub VSIP II",
+    "route_name": "VSIP - Nha Trang - Bình Định - Ngũ Hành Sơn R2",
+    "hub_destination": "KTLS Đà Nẵng",
+    "Giờ xuất phát": "21:00:00",
+    "Giờ đến hub destination": "17:00:00",
+    "tổng quãng đường": null,
+    "tổng thời gian": null,
+    "note": "D+1"
+  },
+  {
+    "hub_departer": "Hub VSIP II",
+    "route_name": "VSIP - Nam Trung Bộ",
+    "hub_destination": "KTLS Hàm Thuận Nam - Bình Thuận",
+    "Giờ xuất phát": "05:00:00",
+    "Giờ đến hub destination": "10:00:00",
+    "tổng quãng đường": null,
+    "tổng thời gian": null,
+    "note": "D"
+  },
+  {
+    "hub_departer": "Hub VSIP II",
+    "route_name": "VSIP - Nam Trung Bộ",
+    "hub_destination": "KTLS Phan Rí",
+    "Giờ xuất phát": "05:00:00",
+    "Giờ đến hub destination": "12:05:00",
+    "tổng quãng đường": null,
+    "tổng thời gian": null,
+    "note": "D"
+  },
+  {
+    "hub_departer": "Hub VSIP II",
+    "route_name": "VSIP - Nam Trung Bộ",
+    "hub_destination": "NVCT Hub Ninh Thuận Child",
+    "Giờ xuất phát": "05:00:00",
+    "Giờ đến hub destination": "14:10:00",
+    "tổng quãng đường": null,
+    "tổng thời gian": null,
+    "note": "D"
+  },
+  {
+    "hub_departer": "Hub VSIP II",
+    "route_name": "VSIP - Nam Trung Bộ",
+    "hub_destination": "NVCT Hub Cam Ranh 2 - Khánh Hòa Child",
+    "Giờ xuất phát": "05:00:00",
+    "Giờ đến hub destination": "15:30:00",
+    "tổng quãng đường": null,
+    "tổng thời gian": null,
+    "note": "D"
+  },
+  {
+    "hub_departer": "Hub VSIP II",
+    "route_name": "VSIP - Nam Trung Bộ",
+    "hub_destination": "NVCT Hub Nha Trang 2_Child",
+    "Giờ xuất phát": "05:00:00",
+    "Giờ đến hub destination": "17:00:00",
+    "tổng quãng đường": null,
+    "tổng thời gian": null,
+    "note": "D"
+  },
+  {
+    "hub_departer": "Hub VSIP II",
+    "route_name": "VSIP - Nam Trung Bộ",
+    "hub_destination": "NVCT Hub Khánh Vĩnh - Khánh Hòa Child",
+    "Giờ xuất phát": "05:00:00",
+    "Giờ đến hub destination": "18:00:00",
+    "tổng quãng đường": null,
+    "tổng thời gian": null,
+    "note": "D"
+  },
+  {
+    "hub_departer": "Hub VSIP II",
+    "route_name": "VSIP - Nam Trung Bộ",
+    "hub_destination": "NVCT Hub Diên Khánh 2 - Khánh Hòa Child",
+    "Giờ xuất phát": "05:00:00",
+    "Giờ đến hub destination": "18:00:00",
+    "tổng quãng đường": null,
+    "tổng thời gian": null,
+    "note": "D"
+  },
+  {
+    "hub_departer": "Hub VSIP II",
+    "route_name": "VSIP - Nam Trung Bộ",
+    "hub_destination": "NVCT Hub Ninh Hòa - Khánh Hòa Child",
+    "Giờ xuất phát": "05:00:00",
+    "Giờ đến hub destination": "19:15:00",
+    "tổng quãng đường": null,
+    "tổng thời gian": null,
+    "note": "D"
+  },
+  {
+    "hub_departer": "Hub VSIP II",
+    "route_name": "VSIP - Nam Trung Bộ",
+    "hub_destination": "NVCT Hub Vạn Ninh-Khánh Hòa_Child",
+    "Giờ xuất phát": "05:00:00",
+    "Giờ đến hub destination": "20:10:00",
+    "tổng quãng đường": null,
+    "tổng thời gian": null,
+    "note": "D"
+  },
+  {
+    "hub_departer": "Hub VSIP II",
+    "route_name": "VSIP - Nam Trung Bộ",
+    "hub_destination": "KTLS Phú Yên",
+    "Giờ xuất phát": "05:00:00",
+    "Giờ đến hub destination": "21:30:00",
+    "tổng quãng đường": null,
+    "tổng thời gian": null,
+    "note": "D"
+  },
+  {
+    "hub_departer": "Hub VSIP II",
+    "route_name": "VSIP - Nam Trung Bộ",
+    "hub_destination": "KTLS Quy Nhơn",
+    "Giờ xuất phát": "05:00:00",
+    "Giờ đến hub destination": "23:30:00",
+    "tổng quãng đường": null,
+    "tổng thời gian": null,
+    "note": "D"
+  },
+  {
+    "hub_departer": "Hub VSIP II",
+    "route_name": "VSIP - Nam Trung Bộ",
+    "hub_destination": "KTLS Hoài Nhơn - Bình Định",
+    "Giờ xuất phát": "05:00:00",
+    "Giờ đến hub destination": "01:10:00",
+    "tổng quãng đường": null,
+    "tổng thời gian": null,
+    "note": "D+1"
+  },
+  {
+    "hub_departer": "Hub VSIP II",
+    "route_name": "VSIP - Nam Trung Bộ",
+    "hub_destination": "KTLS Quảng Ngãi",
+    "Giờ xuất phát": "05:00:00",
+    "Giờ đến hub destination": "04:30:00",
+    "tổng quãng đường": null,
+    "tổng thời gian": null,
+    "note": "D+1"
+  },
+  {
+    "hub_departer": "Hub VSIP II",
+    "route_name": "VSIP - Nam Trung Bộ",
+    "hub_destination": "KTLS Thăng Bình - Quảng Nam",
+    "Giờ xuất phát": "05:00:00",
+    "Giờ đến hub destination": "06:20:00",
+    "tổng quãng đường": null,
+    "tổng thời gian": null,
+    "note": "D+1"
+  },
+  {
+    "hub_departer": "Hub VSIP II",
+    "route_name": "VSIP - Nam Trung Bộ",
+    "hub_destination": "KTLS Quế Sơn - Quảng Nam",
+    "Giờ xuất phát": "05:00:00",
+    "Giờ đến hub destination": "06:55:00",
+    "tổng quãng đường": null,
+    "tổng thời gian": null,
+    "note": "D+1"
+  },
+  {
+    "hub_departer": "Hub VSIP II",
+    "route_name": "VSIP - Nam Trung Bộ",
+    "hub_destination": "KTLS Đà Nẵng",
+    "Giờ xuất phát": "05:00:00",
+    "Giờ đến hub destination": "08:05:00",
+    "tổng quãng đường": null,
+    "tổng thời gian": null,
+    "note": "D+1"
+  },
+  {
+    "hub_departer": "Hub VSIP II",
+    "route_name": "VSIP - Tân Phú - Lâm Đồng R1",
+    "hub_destination": "KTLS Tân Phú - Đồng Nai",
+    "Giờ xuất phát": "22:45",
+    "Giờ đến hub destination": "01:45:00",
+    "tổng quãng đường": null,
+    "tổng thời gian": null,
+    "note": "D+1"
+  },
+  {
+    "hub_departer": "Hub VSIP II",
+    "route_name": "VSIP - Tân Phú - Lâm Đồng R1",
+    "hub_destination": "NVCT Hub Bảo Lộc_Child",
+    "Giờ xuất phát": "22:45",
+    "Giờ đến hub destination": "03:15:00",
+    "tổng quãng đường": null,
+    "tổng thời gian": null,
+    "note": "D+1"
+  },
+  {
+    "hub_departer": "Hub VSIP II",
+    "route_name": "VSIP - Tân Phú - Lâm Đồng R1",
+    "hub_destination": "NVCT Hub Di Linh - Lâm Đồng - Child",
+    "Giờ xuất phát": "22:45",
+    "Giờ đến hub destination": "04:10:00",
+    "tổng quãng đường": null,
+    "tổng thời gian": null,
+    "note": "D+1"
+  },
+  {
+    "hub_departer": "Hub VSIP II",
+    "route_name": "VSIP - Tân Phú - Lâm Đồng R1",
+    "hub_destination": "NVCT Hub Lâm Hà 2_Child",
+    "Giờ xuất phát": "22:45",
+    "Giờ đến hub destination": "05:45:00",
+    "tổng quãng đường": null,
+    "tổng thời gian": null,
+    "note": "D+1"
+  },
+  {
+    "hub_departer": "Hub VSIP II",
+    "route_name": "VSIP - Tân Phú - Lâm Đồng R1",
+    "hub_destination": "NVCT Hub Đức Trọng_Child",
+    "Giờ xuất phát": "22:45",
+    "Giờ đến hub destination": "06:40:00",
+    "tổng quãng đường": null,
+    "tổng thời gian": null,
+    "note": "D+1"
+  },
+  {
+    "hub_departer": "Hub VSIP II",
+    "route_name": "VSIP - Tân Phú - Lâm Đồng R1",
+    "hub_destination": "NVCT Hub Đơn Dương_Child",
+    "Giờ xuất phát": "22:45",
+    "Giờ đến hub destination": "07:45:00",
+    "tổng quãng đường": null,
+    "tổng thời gian": null,
+    "note": "D+1"
+  },
+  {
+    "hub_departer": "Hub VSIP II",
+    "route_name": "VSIP - Tân Phú - Lâm Đồng R1",
+    "hub_destination": "NVCT Hub Lạc Dương_Child",
+    "Giờ xuất phát": "22:45",
+    "Giờ đến hub destination": "09:30:00",
+    "tổng quãng đường": null,
+    "tổng thời gian": null,
+    "note": "D+1"
+  },
+  {
+    "hub_departer": "Hub VSIP II",
+    "route_name": "VSIP - Tân Phú - Lâm Đồng R1",
+    "hub_destination": "NVCT Hub Đà Lạt_Child",
+    "Giờ xuất phát": "22:45",
+    "Giờ đến hub destination": "09:30:00",
+    "tổng quãng đường": null,
+    "tổng thời gian": null,
+    "note": "D+1"
+  },
+  {
+    "hub_departer": "Hub VSIP Bắc Ninh",
+    "route_name": "Bắc Ninh - Ba Vì (cutoff 07:00)",
+    "hub_destination": "HUBPHUXUYEN_HANOI_CHILD",
+    "Giờ xuất phát": "07:15:00",
+    "Giờ đến hub destination": "08:15:00",
+    "tổng quãng đường": null,
+    "tổng thời gian": null,
+    "note": "D"
+  },
+  {
+    "hub_departer": "Hub VSIP Bắc Ninh",
+    "route_name": "Bắc Ninh - Ba Vì (cutoff 07:00)",
+    "hub_destination": "Hub Thanh Oai_Hà Nội_Child",
+    "Giờ xuất phát": "07:15:00",
+    "Giờ đến hub destination": "09:20:00",
+    "tổng quãng đường": null,
+    "tổng thời gian": null,
+    "note": "D"
+  },
+  {
+    "hub_departer": "Hub VSIP Bắc Ninh",
+    "route_name": "Bắc Ninh - Ba Vì (cutoff 07:00)",
+    "hub_destination": "KTLS Thạch Thất - Hà Nội",
+    "Giờ xuất phát": "07:15:00",
+    "Giờ đến hub destination": "10:15:00",
+    "tổng quãng đường": null,
+    "tổng thời gian": null,
+    "note": "D"
+  },
+  {
+    "hub_departer": "Hub VSIP Bắc Ninh",
+    "route_name": "Bắc Ninh - Ba Vì (cutoff 07:00)",
+    "hub_destination": "HUBBAVI_HANOI_CHILD",
+    "Giờ xuất phát": "07:15:00",
+    "Giờ đến hub destination": "10:55:00",
+    "tổng quãng đường": null,
+    "tổng thời gian": null,
+    "note": "D"
+  },
+  {
+    "hub_departer": "Hub VSIP Bắc Ninh",
+    "route_name": "Bắc Ninh - Chợ thuốc Hapudico (cutoff 7:00)",
+    "hub_destination": "KTLS - MELINH",
+    "Giờ xuất phát": "07:30:00",
+    "Giờ đến hub destination": "08:15:00",
+    "tổng quãng đường": null,
+    "tổng thời gian": null,
+    "note": "D"
+  },
+  {
+    "hub_departer": "Hub VSIP Bắc Ninh",
+    "route_name": "Bắc Ninh - Chợ thuốc Hapudico (cutoff 7:00)",
+    "hub_destination": "NV Công ty - Hub Minh Khai",
+    "Giờ xuất phát": "07:30:00",
+    "Giờ đến hub destination": "09:00:00",
+    "tổng quãng đường": null,
+    "tổng thời gian": null,
+    "note": "D"
+  },
+  {
+    "hub_departer": "Hub VSIP Bắc Ninh",
+    "route_name": "Bắc Ninh - Chợ thuốc Hapudico (cutoff 7:00)",
+    "hub_destination": "KTLS - Đống Đa",
+    "Giờ xuất phát": "07:30:00",
+    "Giờ đến hub destination": "10:30:00",
+    "tổng quãng đường": null,
+    "tổng thời gian": null,
+    "note": "D"
+  },
+  {
+    "hub_departer": "Hub VSIP Bắc Ninh",
+    "route_name": "Bắc Ninh - Chợ thuốc Hapudico (cutoff 7:00)",
+    "hub_destination": "Hub Nghĩa Lô_Yên Bái_Child",
+    "Giờ xuất phát": "07:30:00",
+    "Giờ đến hub destination": "13:00:00",
+    "tổng quãng đường": null,
+    "tổng thời gian": null,
+    "note": "Ngày D+1"
+  },
+  {
+    "hub_departer": "Hub VSIP Bắc Ninh",
+    "route_name": "Bắc Ninh - Chợ thuốc Hapudico (cutoff 7:00)",
+    "hub_destination": "Hub Lục Yên _ Yên Bái _ Child",
+    "Giờ xuất phát": "07:30:00",
+    "Giờ đến hub destination": "14:00:00",
+    "tổng quãng đường": null,
+    "tổng thời gian": null,
+    "note": "Ngày D+1"
+  },
+  {
+    "hub_departer": "Hub VSIP Bắc Ninh",
+    "route_name": "Bắc Ninh - Chợ thuốc Hapudico (cutoff 7:00)",
+    "hub_destination": "Hub Bắc Sơn_Lạng Sơn_Child",
+    "Giờ xuất phát": "07:30:00",
+    "Giờ đến hub destination": "14:00:00",
+    "tổng quãng đường": null,
+    "tổng thời gian": null,
+    "note": "Ngày D+1"
+  },
+  {
+    "hub_departer": "Hub VSIP Bắc Ninh",
+    "route_name": "Bắc Ninh - Chợ thuốc Hapudico (cutoff 7:00)",
+    "hub_destination": "HUBYENBINH_YENBAI_CHILD",
+    "Giờ xuất phát": "07:30:00",
+    "Giờ đến hub destination": "18:00:00",
+    "tổng quãng đường": null,
+    "tổng thời gian": null,
+    "note": "D"
+  },
+  {
+    "hub_departer": "Hub VSIP Bắc Ninh",
+    "route_name": "Bắc Ninh - Chợ thuốc Hapudico (cutoff 7:00)",
+    "hub_destination": "HUBTUYENQUANG_CHILD",
+    "Giờ xuất phát": "07:30:00",
+    "Giờ đến hub destination": "18:00:00",
+    "tổng quãng đường": null,
+    "tổng thời gian": null,
+    "note": "D"
+  },
+  {
+    "hub_departer": "Hub VSIP Bắc Ninh",
+    "route_name": "Bắc Ninh - Chợ thuốc Hapudico (cutoff 7:00)",
+    "hub_destination": "Hub TP Lạng Sơn",
+    "Giờ xuất phát": "07:30:00",
+    "Giờ đến hub destination": "18:00:00",
+    "tổng quãng đường": null,
+    "tổng thời gian": null,
+    "note": "D"
+  },
+  {
+    "hub_departer": "Hub VSIP Bắc Ninh",
+    "route_name": "Bắc Ninh - Bắc Giang (cutoff 8:00)",
+    "hub_destination": "NV công ty - Hub Tiên Du",
+    "Giờ xuất phát": "08:00:00",
+    "Giờ đến hub destination": "08:20:00",
+    "tổng quãng đường": null,
+    "tổng thời gian": null,
+    "note": "D"
+  },
+  {
+    "hub_departer": "Hub VSIP Bắc Ninh",
+    "route_name": "Bắc Ninh - Bắc Giang (cutoff 8:00)",
+    "hub_destination": "NVCT Hub Bắc Giang_Child",
+    "Giờ xuất phát": "08:00:00",
+    "Giờ đến hub destination": "09:30:00",
+    "tổng quãng đường": null,
+    "tổng thời gian": null,
+    "note": "D"
+  },
+  {
+    "hub_departer": "Hub VSIP Bắc Ninh",
+    "route_name": "Bắc Ninh - Bắc Giang (cutoff 8:00)",
+    "hub_destination": "NVCT Hub Hưng Yên_Child",
+    "Giờ xuất phát": "08:00:00",
+    "Giờ đến hub destination": "11:25:00",
+    "tổng quãng đường": null,
+    "tổng thời gian": null,
+    "note": "D"
+  },
+  {
+    "hub_departer": "Hub VSIP Bắc Ninh",
+    "route_name": "Bắc Ninh - Lào Cai, Điện Biên (cutoff 12h05)",
+    "hub_destination": "NV Công ty - Hub Minh Khai",
+    "Giờ xuất phát": "12:20:00",
+    "Giờ đến hub destination": "13:10:00",
+    "tổng quãng đường": null,
+    "tổng thời gian": null,
+    "note": "D"
+  },
+  {
+    "hub_departer": "Hub VSIP Bắc Ninh",
+    "route_name": "Bắc Ninh - Lào Cai, Điện Biên (cutoff 12h05)",
+    "hub_destination": "KTLS - Đống Đa",
+    "Giờ xuất phát": "12:20:00",
+    "Giờ đến hub destination": "13:10:00",
+    "tổng quãng đường": null,
+    "tổng thời gian": null,
+    "note": "D"
+  },
+  {
+    "hub_departer": "Hub VSIP Bắc Ninh",
+    "route_name": "Bắc Ninh - Lào Cai, Điện Biên (cutoff 12h05)",
+    "hub_destination": "NVCT Hub Lào Cai_Child",
+    "Giờ xuất phát": "12:20:00",
+    "Giờ đến hub destination": "08:00:00",
+    "tổng quãng đường": null,
+    "tổng thời gian": null,
+    "note": "Ngày D+1"
+  },
+  {
+    "hub_departer": "Hub VSIP Bắc Ninh",
+    "route_name": "Bắc Ninh - Lào Cai, Điện Biên (cutoff 12h05)",
+    "hub_destination": "Hub Bảo Thắng_Lào Cai_Child",
+    "Giờ xuất phát": "12:20:00",
+    "Giờ đến hub destination": "11:00:00",
+    "tổng quãng đường": null,
+    "tổng thời gian": null,
+    "note": "Ngày D+1"
+  },
+  {
+    "hub_departer": "Hub VSIP Bắc Ninh",
+    "route_name": "Bắc Ninh - Lào Cai, Điện Biên (cutoff 12h05)",
+    "hub_destination": "HUBTUANGIAO_DIENBIEN_CHILD",
+    "Giờ xuất phát": "12:20:00",
+    "Giờ đến hub destination": "09:00:00",
+    "tổng quãng đường": null,
+    "tổng thời gian": null,
+    "note": "Ngày D+1"
+  },
+  {
+    "hub_departer": "Hub VSIP Bắc Ninh",
+    "route_name": "Bắc Ninh - Lào Cai, Điện Biên (cutoff 12h05)",
+    "hub_destination": "Hub Mường Lói_Điện Biên_Child",
+    "Giờ xuất phát": "12:20:00",
+    "Giờ đến hub destination": "09:00:00",
+    "tổng quãng đường": null,
+    "tổng thời gian": null,
+    "note": "Ngày D+1"
+  },
+  {
+    "hub_departer": "Hub VSIP Bắc Ninh",
+    "route_name": "Bắc Ninh - Lào Cai, Điện Biên (cutoff 12h05)",
+    "hub_destination": "HUBDIENBIEN_CHILD",
+    "Giờ xuất phát": "12:20:00",
+    "Giờ đến hub destination": "09:00:00",
+    "tổng quãng đường": null,
+    "tổng thời gian": null,
+    "note": "Ngày D+1"
+  },
+  {
+    "hub_departer": "Hub VSIP Bắc Ninh",
+    "route_name": "Bắc Ninh - Lào Cai, Điện Biên (cutoff 12h05)",
+    "hub_destination": "HUBTUACHUA_DIENBIEN_CHILD",
+    "Giờ xuất phát": "12:20:00",
+    "Giờ đến hub destination": "11:00:00",
+    "tổng quãng đường": null,
+    "tổng thời gian": null,
+    "note": "Ngày D+1"
+  },
+  {
+    "hub_departer": "Hub VSIP Bắc Ninh",
+    "route_name": "Bắc Ninh - Hub Tiên Du",
+    "hub_destination": "NV công ty - Hub Tiên Du",
+    "Giờ xuất phát": "13:00:00",
+    "Giờ đến hub destination": "13:20:00",
+    "tổng quãng đường": null,
+    "tổng thời gian": null,
+    "note": "D"
+  },
+  {
+    "hub_departer": "Hub VSIP Bắc Ninh",
+    "route_name": "Bắc Ninh - Mê Linh (cutoff 13h30)",
+    "hub_destination": "HUBTPLAICHAU_CHILD",
+    "Giờ xuất phát": "13:30:30",
+    "Giờ đến hub destination": "07:00:00",
+    "tổng quãng đường": null,
+    "tổng thời gian": null,
+    "note": "Ngày D+1"
+  },
+  {
+    "hub_departer": "Hub VSIP Bắc Ninh",
+    "route_name": "Bắc Ninh - Mê Linh (cutoff 13h30)",
+    "hub_destination": "Hub TP Bắc Kạn",
+    "Giờ xuất phát": "13:30:30",
+    "Giờ đến hub destination": "06:00:00",
+    "tổng quãng đường": null,
+    "tổng thời gian": null,
+    "note": "Ngày D+1"
+  },
+  {
+    "hub_departer": "Hub VSIP Bắc Ninh",
+    "route_name": "Bắc Ninh - Mê Linh (cutoff 13h30)",
+    "hub_destination": "Hub Đồng Văn_Hà Giang_Child",
+    "Giờ xuất phát": "13:30:30",
+    "Giờ đến hub destination": "06:00:00",
+    "tổng quãng đường": null,
+    "tổng thời gian": null,
+    "note": "Ngày D+1"
+  },
+  {
+    "hub_departer": "Hub VSIP Bắc Ninh",
+    "route_name": "Bắc Ninh - Mê Linh (cutoff 13h30)",
+    "hub_destination": "Hub Mèo Vạc_Hà Giang_Child",
+    "Giờ xuất phát": "13:30:30",
+    "Giờ đến hub destination": "06:00:00",
+    "tổng quãng đường": null,
+    "tổng thời gian": null,
+    "note": "Ngày D+1"
+  },
+  {
+    "hub_departer": "Hub VSIP Bắc Ninh",
+    "route_name": "Bắc Ninh - Mê Linh (cutoff 13h30)",
+    "hub_destination": "Hub Yên Minh_Hà Giang_Child",
+    "Giờ xuất phát": "13:30:30",
+    "Giờ đến hub destination": "06:00:00",
+    "tổng quãng đường": null,
+    "tổng thời gian": null,
+    "note": "Ngày D+1"
+  },
+  {
+    "hub_departer": "Hub VSIP Bắc Ninh",
+    "route_name": "Bắc Ninh - Mê Linh (cutoff 13h30)",
+    "hub_destination": "Hub TP Hà Giang_Child",
+    "Giờ xuất phát": "13:30:30",
+    "Giờ đến hub destination": "06:00:00",
+    "tổng quãng đường": null,
+    "tổng thời gian": null,
+    "note": "Ngày D+1"
+  },
+  {
+    "hub_departer": "Hub VSIP Bắc Ninh",
+    "route_name": "Bắc Ninh - Mê Linh (cutoff 13h30)",
+    "hub_destination": "Hub Quản Bạ_Hà Giang_Child",
+    "Giờ xuất phát": "13:30:30",
+    "Giờ đến hub destination": "06:00:00",
+    "tổng quãng đường": null,
+    "tổng thời gian": null,
+    "note": "Ngày D+1"
+  },
+  {
+    "hub_departer": "Hub VSIP Bắc Ninh",
+    "route_name": "Bắc Ninh - Mê Linh (cutoff 13h30)",
+    "hub_destination": "Hub TP Cao Bằng",
+    "Giờ xuất phát": "13:30:30",
+    "Giờ đến hub destination": "07:30:00",
+    "tổng quãng đường": null,
+    "tổng thời gian": null,
+    "note": "Ngày D+1"
+  },
+  {
+    "hub_departer": "Hub VSIP Bắc Ninh",
+    "route_name": "Bắc Ninh - Mê Linh (cutoff 13h30)",
+    "hub_destination": "Hub Phong Thổ_Lai Châu_Child",
+    "Giờ xuất phát": "13:30:30",
+    "Giờ đến hub destination": "09:00:00",
+    "tổng quãng đường": null,
+    "tổng thời gian": null,
+    "note": "Ngày D+1"
+  },
+  {
+    "hub_departer": "Hub VSIP Bắc Ninh",
+    "route_name": "Bắc Ninh - Mê Linh (cutoff 13h30)",
+    "hub_destination": "Hub Tân Uyên_Lai Châu_Child",
+    "Giờ xuất phát": "13:30:30",
+    "Giờ đến hub destination": "10:00:00",
+    "tổng quãng đường": null,
+    "tổng thời gian": null,
+    "note": "Ngày D+1"
+  },
+  {
+    "hub_departer": "Hub VSIP Bắc Ninh",
+    "route_name": "Bắc Ninh - Mê Linh (cutoff 13h30)",
+    "hub_destination": "Hub Than Uyên_Lai Châu_Child",
+    "Giờ xuất phát": "13:30:30",
+    "Giờ đến hub destination": "11:00:00",
+    "tổng quãng đường": null,
+    "tổng thời gian": null,
+    "note": "Ngày D+1"
+  },
+  {
+    "hub_departer": "Hub VSIP Bắc Ninh",
+    "route_name": "Bắc Ninh - Mê Linh (cutoff 13h30)",
+    "hub_destination": "Hub Mường Tè_Lai Châu_Child",
+    "Giờ xuất phát": "13:30:30",
+    "Giờ đến hub destination": "15:00:00",
+    "tổng quãng đường": null,
+    "tổng thời gian": null,
+    "note": "Ngày D+1"
+  },
+  {
+    "hub_departer": "Hub VSIP Bắc Ninh",
+    "route_name": "Bắc Ninh - Mê Linh (cutoff 13h30)",
+    "hub_destination": "Hub Sìn Hồ_Lai Châu_Child",
+    "Giờ xuất phát": "13:30:30",
+    "Giờ đến hub destination": "10:00:00",
+    "tổng quãng đường": null,
+    "tổng thời gian": null,
+    "note": "Ngày D+1"
+  },
+  {
+    "hub_departer": "Hub VSIP Bắc Ninh",
+    "route_name": "Bắc Ninh - Mê Linh (cutoff 13h30)",
+    "hub_destination": "KTLS - MELINH",
+    "Giờ xuất phát": "13:30:30",
+    "Giờ đến hub destination": "14:20:00",
+    "tổng quãng đường": null,
+    "tổng thời gian": null,
+    "note": "Ngày D+1"
+  },
+  {
+    "hub_departer": "Hub VSIP Bắc Ninh",
+    "route_name": "Bắc Ninh - Sơn La, Minh Khai (cutoff 14h30)",
+    "hub_destination": "NV Công ty - Hub Minh Khai",
+    "Giờ xuất phát": "14:30:00",
+    "Giờ đến hub destination": "03:30:00",
+    "tổng quãng đường": null,
+    "tổng thời gian": null,
+    "note": "Ngày D+1"
+  },
+  {
+    "hub_departer": "Hub VSIP Bắc Ninh",
+    "route_name": "Bắc Ninh - Sơn La, Minh Khai (cutoff 14h30)",
+    "hub_destination": "KTLS - Đống Đa",
+    "Giờ xuất phát": "14:30:00",
+    "Giờ đến hub destination": "03:30:00",
+    "tổng quãng đường": null,
+    "tổng thời gian": null,
+    "note": "Ngày D+1"
+  },
+  {
+    "hub_departer": "Hub VSIP Bắc Ninh",
+    "route_name": "Bắc Ninh - Sơn La, Minh Khai (cutoff 14h30)",
+    "hub_destination": "HUBMAISON_SONLA_CHILD",
+    "Giờ xuất phát": "14:30:00",
+    "Giờ đến hub destination": "07:00:00",
+    "tổng quãng đường": null,
+    "tổng thời gian": null,
+    "note": "Ngày D+1"
+  },
+  {
+    "hub_departer": "Hub VSIP Bắc Ninh",
+    "route_name": "Bắc Ninh - Sơn La, Minh Khai (cutoff 14h30)",
+    "hub_destination": "HUBMOCCHAU_SONLA_CHILD",
+    "Giờ xuất phát": "14:30:00",
+    "Giờ đến hub destination": "07:00:00",
+    "tổng quãng đường": null,
+    "tổng thời gian": null,
+    "note": "Ngày D+1"
+  },
+  {
+    "hub_departer": "Hub VSIP Bắc Ninh",
+    "route_name": "Bắc Ninh - Sơn La, Minh Khai (cutoff 14h30)",
+    "hub_destination": "HUBTPSONLA_SONLA_CHILD",
+    "Giờ xuất phát": "14:30:00",
+    "Giờ đến hub destination": "12:00:00",
+    "tổng quãng đường": null,
+    "tổng thời gian": null,
+    "note": "Ngày D+1"
+  },
+  {
+    "hub_departer": "Hub VSIP Bắc Ninh",
+    "route_name": "Bắc Ninh - Hà Tĩnh (cutoff 19:00)",
+    "hub_destination": "HUBPHUXUYEN_HANOI_CHILD",
+    "Giờ xuất phát": "19:00:00",
+    "Giờ đến hub destination": "20:20:00",
+    "tổng quãng đường": null,
+    "tổng thời gian": null,
+    "note": "D"
+  },
+  {
+    "hub_departer": "Hub VSIP Bắc Ninh",
+    "route_name": "Bắc Ninh - Hà Tĩnh (cutoff 19:00)",
+    "hub_destination": "HUBPHULY_HANAM_CHILD",
+    "Giờ xuất phát": "19:00:00",
+    "Giờ đến hub destination": "21:30:00",
+    "tổng quãng đường": null,
+    "tổng thời gian": null,
+    "note": "D"
+  },
+  {
+    "hub_departer": "Hub VSIP Bắc Ninh",
+    "route_name": "Bắc Ninh - Hà Tĩnh (cutoff 19:00)",
+    "hub_destination": "KTLS Hoa Lư - Ninh Bình",
+    "Giờ xuất phát": "19:00:00",
+    "Giờ đến hub destination": "22:30:00",
+    "tổng quãng đường": null,
+    "tổng thời gian": null,
+    "note": "D"
+  },
+  {
+    "hub_departer": "Hub VSIP Bắc Ninh",
+    "route_name": "Bắc Ninh - Hà Tĩnh (cutoff 19:00)",
+    "hub_destination": "NVCT Hub Thanh Hóa-Child",
+    "Giờ xuất phát": "19:00:00",
+    "Giờ đến hub destination": "01:00:00",
+    "tổng quãng đường": null,
+    "tổng thời gian": null,
+    "note": "Ngày D+1"
+  },
+  {
+    "hub_departer": "Hub VSIP Bắc Ninh",
+    "route_name": "Bắc Ninh - Hà Tĩnh (cutoff 19:00)",
+    "hub_destination": "HUBYENDINH_THANHHOA_CHILD",
+    "Giờ xuất phát": "19:00:00",
+    "Giờ đến hub destination": "07:00:00",
+    "tổng quãng đường": null,
+    "tổng thời gian": null,
+    "note": "Ngày D+1"
+  },
+  {
+    "hub_departer": "Hub VSIP Bắc Ninh",
+    "route_name": "Bắc Ninh - Hà Tĩnh (cutoff 19:00)",
+    "hub_destination": "HUBHOANGHOA_THANHHOA_CHILD",
+    "Giờ xuất phát": "19:00:00",
+    "Giờ đến hub destination": "02:00:00",
+    "tổng quãng đường": null,
+    "tổng thời gian": null,
+    "note": "Ngày D+1"
+  },
+  {
+    "hub_departer": "Hub VSIP Bắc Ninh",
+    "route_name": "Bắc Ninh - Hà Tĩnh (cutoff 19:00)",
+    "hub_destination": "HUB Hoàng Mai - Nghệ An - Child",
+    "Giờ xuất phát": "19:00:00",
+    "Giờ đến hub destination": "02:35:00",
+    "tổng quãng đường": null,
+    "tổng thời gian": null,
+    "note": "Ngày D+1"
+  },
+  {
+    "hub_departer": "Hub VSIP Bắc Ninh",
+    "route_name": "Bắc Ninh - Hà Tĩnh (cutoff 19:00)",
+    "hub_destination": "HUB Diễn Châu - Nghệ An - Child",
+    "Giờ xuất phát": "19:00:00",
+    "Giờ đến hub destination": "03:35:00",
+    "tổng quãng đường": null,
+    "tổng thời gian": null,
+    "note": "Ngày D+1"
+  },
+  {
+    "hub_departer": "Hub VSIP Bắc Ninh",
+    "route_name": "Bắc Ninh - Hà Tĩnh (cutoff 19:00)",
+    "hub_destination": "HUBCUALO_NGHEAN_CHILD",
+    "Giờ xuất phát": "19:00:00",
+    "Giờ đến hub destination": "04:15:00",
+    "tổng quãng đường": null,
+    "tổng thời gian": null,
+    "note": "Ngày D+1"
+  },
+  {
+    "hub_departer": "Hub VSIP Bắc Ninh",
+    "route_name": "Bắc Ninh - Hà Tĩnh (cutoff 19:00)",
+    "hub_destination": "NVCT Hub Vinh_Child",
+    "Giờ xuất phát": "19:00:00",
+    "Giờ đến hub destination": "05:30:00",
+    "tổng quãng đường": null,
+    "tổng thời gian": null,
+    "note": "Ngày D+1"
+  },
+  {
+    "hub_departer": "Hub VSIP Bắc Ninh",
+    "route_name": "Bắc Ninh - Hà Tĩnh (cutoff 19:00)",
+    "hub_destination": "HUBYENTHANH_NGHEAN_CHILD",
+    "Giờ xuất phát": "19:00:00",
+    "Giờ đến hub destination": "10:00:00",
+    "tổng quãng đường": null,
+    "tổng thời gian": null,
+    "note": "Ngày D+1"
+  },
+  {
+    "hub_departer": "Hub VSIP Bắc Ninh",
+    "route_name": "Bắc Ninh - Hà Tĩnh (cutoff 19:00)",
+    "hub_destination": "Hub Đô Lương_Nghệ An_Child",
+    "Giờ xuất phát": "19:00:00",
+    "Giờ đến hub destination": "12:00:00",
+    "tổng quãng đường": null,
+    "tổng thời gian": null,
+    "note": "Ngày D+1"
+  },
+  {
+    "hub_departer": "Hub VSIP Bắc Ninh",
+    "route_name": "Bắc Ninh - Hà Tĩnh (cutoff 19:00)",
+    "hub_destination": "Hub Hồng Lĩnh_Hà Tĩnh",
+    "Giờ xuất phát": "19:00:00",
+    "Giờ đến hub destination": "06:00:00",
+    "tổng quãng đường": null,
+    "tổng thời gian": null,
+    "note": "Ngày D+1"
+  },
+  {
+    "hub_departer": "Hub VSIP Bắc Ninh",
+    "route_name": "Bắc Ninh - Hà Tĩnh (cutoff 19:00)",
+    "hub_destination": "NVCT Hub Hà Tĩnh_child",
+    "Giờ xuất phát": "19:00:00",
+    "Giờ đến hub destination": "07:00:00",
+    "tổng quãng đường": null,
+    "tổng thời gian": null,
+    "note": "Ngày D+1"
+  },
+  {
+    "hub_departer": "Hub VSIP Bắc Ninh",
+    "route_name": "Bắc Ninh - Hà Tĩnh (cutoff 19:00)",
+    "hub_destination": "NVCT Hub Quảng Bình_Child",
+    "Giờ xuất phát": "19:00:00",
+    "Giờ đến hub destination": "10:00:00",
+    "tổng quãng đường": null,
+    "tổng thời gian": null,
+    "note": "Ngày D+1"
+  },
+  {
+    "hub_departer": "Hub VSIP Bắc Ninh",
+    "route_name": "Bắc Ninh - Hà Tĩnh (cutoff 19:00)",
+    "hub_destination": "KTLS - Đông Hà",
+    "Giờ xuất phát": "19:00:00",
+    "Giờ đến hub destination": "12:00:00",
+    "tổng quãng đường": null,
+    "tổng thời gian": null,
+    "note": "Ngày D+1"
+  },
+  {
+    "hub_departer": "Hub VSIP Bắc Ninh",
+    "route_name": "Bắc Ninh - Hà Tĩnh (cutoff 19:00)",
+    "hub_destination": "HUBHUONGTRA_HUE_CHILD",
+    "Giờ xuất phát": "19:00:00",
+    "Giờ đến hub destination": "13:00:00",
+    "tổng quãng đường": null,
+    "tổng thời gian": null,
+    "note": "Ngày D+1"
+  },
+  {
+    "hub_departer": "Hub VSIP Bắc Ninh",
+    "route_name": "Bắc Ninh - Hà Tĩnh (cutoff 19:00)",
+    "hub_destination": "KTLS - TP Huế",
+    "Giờ xuất phát": "19:00:00",
+    "Giờ đến hub destination": "13:30:00",
+    "tổng quãng đường": null,
+    "tổng thời gian": null,
+    "note": "Ngày D+1"
+  },
+  {
+    "hub_departer": "Hub VSIP Bắc Ninh",
+    "route_name": "Bắc Ninh - Hà Tĩnh (cutoff 19:00)",
+    "hub_destination": "Hub Phú Lộc_Huế_Child",
+    "Giờ xuất phát": "19:00:00",
+    "Giờ đến hub destination": "14:00:00",
+    "tổng quãng đường": null,
+    "tổng thời gian": null,
+    "note": "Ngày D+1"
+  },
+  {
+    "hub_departer": "Hub VSIP Bắc Ninh",
+    "route_name": "Bắc Ninh - Hải Phòng (Đêm) (cutoff 22:00)",
+    "hub_destination": "NVCT Hub Hưng Yên_Child",
+    "Giờ xuất phát": "22:00:00",
+    "Giờ đến hub destination": "23:00:00",
+    "tổng quãng đường": null,
+    "tổng thời gian": null,
+    "note": "D"
+  },
+  {
+    "hub_departer": "Hub VSIP Bắc Ninh",
+    "route_name": "Bắc Ninh - Hải Phòng (Đêm) (cutoff 22:00)",
+    "hub_destination": "KTLS - Nam Định",
+    "Giờ xuất phát": "22:00:00",
+    "Giờ đến hub destination": "00:00:00",
+    "tổng quãng đường": null,
+    "tổng thời gian": null,
+    "note": "Ngày D+1"
+  },
+  {
+    "hub_departer": "Hub VSIP Bắc Ninh",
+    "route_name": "Bắc Ninh - Hải Phòng (Đêm) (cutoff 22:00)",
+    "hub_destination": "KTLSNAMTRUC_NAMDINH",
+    "Giờ xuất phát": "22:00:00",
+    "Giờ đến hub destination": "00:50:00",
+    "tổng quãng đường": null,
+    "tổng thời gian": null,
+    "note": "Ngày D+1"
+  },
+  {
+    "hub_departer": "Hub VSIP Bắc Ninh",
+    "route_name": "Bắc Ninh - Hải Phòng (Đêm) (cutoff 22:00)",
+    "hub_destination": "KTLS Thái Bình",
+    "Giờ xuất phát": "22:00:00",
+    "Giờ đến hub destination": "01:30:00",
+    "tổng quãng đường": null,
+    "tổng thời gian": null,
+    "note": "Ngày D+1"
+  },
+  {
+    "hub_departer": "Hub VSIP Bắc Ninh",
+    "route_name": "Bắc Ninh - Hải Phòng (Đêm) (cutoff 22:00)",
+    "hub_destination": "NVCT - Hub Vĩnh Bảo-Child",
+    "Giờ xuất phát": "22:00:00",
+    "Giờ đến hub destination": "02:20:00",
+    "tổng quãng đường": null,
+    "tổng thời gian": null,
+    "note": "Ngày D+1"
+  },
+  {
+    "hub_departer": "Hub VSIP Bắc Ninh",
+    "route_name": "Bắc Ninh - Hải Phòng (Đêm) (cutoff 22:00)",
+    "hub_destination": "NVCT Hub Hải Phòng",
+    "Giờ xuất phát": "22:00:00",
+    "Giờ đến hub destination": "03:30:00",
+    "tổng quãng đường": null,
+    "tổng thời gian": null,
+    "note": "Ngày D+1"
+  },
+  {
+    "hub_departer": "Hub VSIP Bắc Ninh",
+    "route_name": "Bắc Ninh - Hải Phòng (Đêm) (cutoff 22:00)",
+    "hub_destination": "KTLS - Đông Triều",
+    "Giờ xuất phát": "22:00:00",
+    "Giờ đến hub destination": "04:50:00",
+    "tổng quãng đường": null,
+    "tổng thời gian": null,
+    "note": "Ngày D+1"
+  },
+  {
+    "hub_departer": "Hub VSIP Bắc Ninh",
+    "route_name": "Bắc Ninh - Hải Phòng (Đêm) (cutoff 22:00)",
+    "hub_destination": "NVCT Hub Hải Dương-Child",
+    "Giờ xuất phát": "22:00:00",
+    "Giờ đến hub destination": "06:30:00",
+    "tổng quãng đường": null,
+    "tổng thời gian": null,
+    "note": "Ngày D+1"
+  },
+  {
+    "hub_departer": "Hub VSIP Bắc Ninh",
+    "route_name": "Bắc Ninh - Thái Nguyên (cutoff 23:00)",
+    "hub_destination": "NVCT Hub Bắc Giang_Child",
+    "Giờ xuất phát": "22:30:00",
+    "Giờ đến hub destination": "23:30:00",
+    "tổng quãng đường": null,
+    "tổng thời gian": null,
+    "note": "D"
+  },
+  {
+    "hub_departer": "Hub VSIP Bắc Ninh",
+    "route_name": "Bắc Ninh - Thái Nguyên (cutoff 23:00)",
+    "hub_destination": "KTLSPHOYEN_THAINGUYEN_CHILD",
+    "Giờ xuất phát": "22:30:00",
+    "Giờ đến hub destination": "00:45:00",
+    "tổng quãng đường": null,
+    "tổng thời gian": null,
+    "note": "Ngày D+1"
+  },
+  {
+    "hub_departer": "Hub VSIP Bắc Ninh",
+    "route_name": "Bắc Ninh - Thái Nguyên (cutoff 23:00)",
+    "hub_destination": "NVCT Hub Đại Từ - Thái Nguyên - Child",
+    "Giờ xuất phát": "22:30:00",
+    "Giờ đến hub destination": "01:30:00",
+    "tổng quãng đường": null,
+    "tổng thời gian": null,
+    "note": "Ngày D+1"
+  },
+  {
+    "hub_departer": "Hub VSIP Bắc Ninh",
+    "route_name": "Bắc Ninh - Thái Nguyên (cutoff 23:00)",
+    "hub_destination": "KTLS_VINHPHUC",
+    "Giờ xuất phát": "22:30:00",
+    "Giờ đến hub destination": "03:00:00",
+    "tổng quãng đường": null,
+    "tổng thời gian": null,
+    "note": "Ngày D+1"
+  },
+  {
+    "hub_departer": "Hub VSIP Bắc Ninh",
+    "route_name": "Bắc Ninh - Thái Nguyên (cutoff 23:00)",
+    "hub_destination": "HUB Việt Trì - Phú Thọ",
+    "Giờ xuất phát": "22:30:00",
+    "Giờ đến hub destination": "04:00:00",
+    "tổng quãng đường": null,
+    "tổng thời gian": null,
+    "note": "Ngày D+1"
+  },
+  {
+    "hub_departer": "Hub VSIP Bắc Ninh",
+    "route_name": "Bắc Ninh - Thái Nguyên (cutoff 23:00)",
+    "hub_destination": "NVCT Hub Phù Ninh-Phú Thọ_Child",
+    "Giờ xuất phát": "22:30:00",
+    "Giờ đến hub destination": "04:25:00",
+    "tổng quãng đường": null,
+    "tổng thời gian": null,
+    "note": "Ngày D+1"
+  },
+  {
+    "hub_departer": "Hub VSIP Bắc Ninh",
+    "route_name": "Bắc Ninh - Thái Nguyên (cutoff 23:00)",
+    "hub_destination": "HUBBAVI_HANOI_CHILD",
+    "Giờ xuất phát": "22:30:00",
+    "Giờ đến hub destination": "05:15:00",
+    "tổng quãng đường": null,
+    "tổng thời gian": null,
+    "note": "Ngày D+1"
+  },
+  {
+    "hub_departer": "Hub VSIP Bắc Ninh",
+    "route_name": "Bắc Ninh - Thái Nguyên (cutoff 23:00)",
+    "hub_destination": "KTLS Thạch Thất - Hà Nội",
+    "Giờ xuất phát": "22:30:00",
+    "Giờ đến hub destination": "06:00:00",
+    "tổng quãng đường": null,
+    "tổng thời gian": null,
+    "note": "Ngày D+1"
+  },
+  {
+    "hub_departer": "Hub Cần Thơ",
+    "route_name": "Cần Thơ - Sóc Trăng - Bạc Liêu R1",
+    "hub_destination": "NVCT Hub Sóc Trăng-CT",
+    "Giờ xuất phát": "23:30:00",
+    "Giờ đến hub destination": "01:10:00",
+    "tổng quãng đường": null,
+    "tổng thời gian": null,
+    "note": "D+1"
+  },
+  {
+    "hub_departer": "Hub Cần Thơ",
+    "route_name": "Cần Thơ - Sóc Trăng - Bạc Liêu R1",
+    "hub_destination": "NVCT Hub TP Bạc Liêu",
+    "Giờ xuất phát": "23:30:00",
+    "Giờ đến hub destination": "02:30:00",
+    "tổng quãng đường": null,
+    "tổng thời gian": null,
+    "note": "D+1"
+  },
+  {
+    "hub_departer": "Hub Cần Thơ",
+    "route_name": "Cần Thơ - Long Xuyên - Phú Tân - Châu Đốc - Tịnh Biên R1",
+    "hub_destination": "NVCT Hub Long Xuyên - An Giang",
+    "Giờ xuất phát": "00:05:00",
+    "Giờ đến hub destination": "02:05:00",
+    "tổng quãng đường": null,
+    "tổng thời gian": null,
+    "note": "D"
+  },
+  {
+    "hub_departer": "Hub Cần Thơ",
+    "route_name": "Cần Thơ - Long Xuyên - Phú Tân - Châu Đốc - Tịnh Biên R1",
+    "hub_destination": "NVCT Hub Tịnh Biên - An Giang Child",
+    "Giờ xuất phát": "00:05:00",
+    "Giờ đến hub destination": "03:50:00",
+    "tổng quãng đường": null,
+    "tổng thời gian": null,
+    "note": "D"
+  },
+  {
+    "hub_departer": "Hub Cần Thơ",
+    "route_name": "Cần Thơ - Long Xuyên - Phú Tân - Châu Đốc - Tịnh Biên R1",
+    "hub_destination": "NVCT Hub Châu Đốc_Child",
+    "Giờ xuất phát": "00:05:00",
+    "Giờ đến hub destination": "04:50:00",
+    "tổng quãng đường": null,
+    "tổng thời gian": null,
+    "note": "D"
+  },
+  {
+    "hub_departer": "Hub Cần Thơ",
+    "route_name": "Cần Thơ - Long Xuyên - Phú Tân - Châu Đốc - Tịnh Biên R1",
+    "hub_destination": "NVCT Hub Phú Tân_Child",
+    "Giờ xuất phát": "00:05:00",
+    "Giờ đến hub destination": "06:20:00",
+    "tổng quãng đường": null,
+    "tổng thời gian": null,
+    "note": "D"
+  },
+  {
+    "hub_departer": "Hub Cần Thơ",
+    "route_name": "Cần Thơ -Vĩnh Tường - Giá Rai - Cà Mau - Phước Long R1",
+    "hub_destination": "NVCT Hub Vĩnh Tường-CT",
+    "Giờ xuất phát": "23:50:00",
+    "Giờ đến hub destination": "01:10:00",
+    "tổng quãng đường": null,
+    "tổng thời gian": null,
+    "note": "D"
+  },
+  {
+    "hub_departer": "Hub Cần Thơ",
+    "route_name": "Cần Thơ -Vĩnh Tường - Giá Rai - Cà Mau - Phước Long R1",
+    "hub_destination": "NVCT Hub Giá Rai - Bạc Liêu",
+    "Giờ xuất phát": "23:50:00",
+    "Giờ đến hub destination": "03:50:00",
+    "tổng quãng đường": null,
+    "tổng thời gian": null,
+    "note": "D"
+  },
+  {
+    "hub_departer": "Hub Cần Thơ",
+    "route_name": "Cần Thơ -Vĩnh Tường - Giá Rai - Cà Mau - Phước Long R1",
+    "hub_destination": "NVCT Hub Thành Phố Cà Mau_Child",
+    "Giờ xuất phát": "23:50:00",
+    "Giờ đến hub destination": "04:45:00",
+    "tổng quãng đường": null,
+    "tổng thời gian": null,
+    "note": "D"
+  },
+  {
+    "hub_departer": "Hub Cần Thơ",
+    "route_name": "Cần Thơ -Vĩnh Tường - Giá Rai - Cà Mau - Phước Long R1",
+    "hub_destination": "NVCT Hub Thới Bình - Cà Mau Child",
+    "Giờ xuất phát": "23:50:00",
+    "Giờ đến hub destination": "04:50:00",
+    "tổng quãng đường": null,
+    "tổng thời gian": null,
+    "note": "D"
+  },
+  {
+    "hub_departer": "Hub Cần Thơ",
+    "route_name": "Cần Thơ -Vĩnh Tường - Giá Rai - Cà Mau - Phước Long R1",
+    "hub_destination": "Hub TP Cà Mau- Cà Mau R2",
+    "Giờ xuất phát": "23:50:00",
+    "Giờ đến hub destination": "04:55:00",
+    "tổng quãng đường": null,
+    "tổng thời gian": null,
+    "note": "D"
+  },
+  {
+    "hub_departer": "Hub Cần Thơ",
+    "route_name": "Cần Thơ -Vĩnh Tường - Giá Rai - Cà Mau - Phước Long R1",
+    "hub_destination": "NVCT Hub Phước Long - Bạc Liêu",
+    "Giờ xuất phát": "23:50:00",
+    "Giờ đến hub destination": "05:55:00",
+    "tổng quãng đường": null,
+    "tổng thời gian": null,
+    "note": "D"
+  },
+  {
+    "hub_departer": "NVCT Hub Thành Phố Cà Mau_Child",
+    "route_name": "Tp. Cà Mau - Đầm Dơi - Cái Nước - Năn Căn - Trần Văn Thời - U Minh",
+    "hub_destination": "Hub Đầm Dơi - Cà Mau",
+    "Giờ xuất phát": "05:00:00",
+    "Giờ đến hub destination": "05:55:00",
+    "tổng quãng đường": null,
+    "tổng thời gian": null,
+    "note": "D"
+  },
+  {
+    "hub_departer": "NVCT Hub Thành Phố Cà Mau_Child",
+    "route_name": "Tp. Cà Mau - Đầm Dơi - Cái Nước - Năn Căn - Trần Văn Thời - U Minh",
+    "hub_destination": "Hub Cái Nước - Cà Mau",
+    "Giờ xuất phát": "05:00:00",
+    "Giờ đến hub destination": "06:35:00",
+    "tổng quãng đường": null,
+    "tổng thời gian": null,
+    "note": "D"
+  },
+  {
+    "hub_departer": "NVCT Hub Thành Phố Cà Mau_Child",
+    "route_name": "Tp. Cà Mau - Đầm Dơi - Cái Nước - Năn Căn - Trần Văn Thời - U Minh",
+    "hub_destination": "Hub Năm Căn - Cà Mau",
+    "Giờ xuất phát": "05:00:00",
+    "Giờ đến hub destination": "07:40:00",
+    "tổng quãng đường": null,
+    "tổng thời gian": null,
+    "note": "D"
+  },
+  {
+    "hub_departer": "NVCT Hub Thành Phố Cà Mau_Child",
+    "route_name": "Tp. Cà Mau - Đầm Dơi - Cái Nước - Năn Căn - Trần Văn Thời - U Minh",
+    "hub_destination": "Hub Trần Văn Thời - Cà Mau",
+    "Giờ xuất phát": "05:00:00",
+    "Giờ đến hub destination": "09:45:00",
+    "tổng quãng đường": null,
+    "tổng thời gian": null,
+    "note": "D"
+  },
+  {
+    "hub_departer": "NVCT Hub Thành Phố Cà Mau_Child",
+    "route_name": "Tp. Cà Mau - Đầm Dơi - Cái Nước - Năn Căn - Trần Văn Thời - U Minh",
+    "hub_destination": "Hub U Minh - Cà Mau",
+    "Giờ xuất phát": "05:00:00",
+    "Giờ đến hub destination": "10:21:00",
+    "tổng quãng đường": null,
+    "tổng thời gian": null,
+    "note": "D"
+  },
+  {
+    "hub_departer": "Hub Cần Thơ",
+    "route_name": "Cần Thơ - Rạch Giá - Kiên Lương - An Minh - Giồng Riềng R1",
+    "hub_destination": "NVCT Hub Rạch Giá - Kiên Giang",
+    "Giờ xuất phát": "00:03:00",
+    "Giờ đến hub destination": "03:30:00",
+    "tổng quãng đường": null,
+    "tổng thời gian": null,
+    "note": "D"
+  },
+  {
+    "hub_departer": "Hub Cần Thơ",
+    "route_name": "Cần Thơ - Rạch Giá - Kiên Lương - An Minh - Giồng Riềng R1",
+    "hub_destination": "NVCT Hub Kiên Lương - Kiên Giang",
+    "Giờ xuất phát": "00:03:00",
+    "Giờ đến hub destination": "03:30:00",
+    "tổng quãng đường": null,
+    "tổng thời gian": null,
+    "note": "D"
+  },
+  {
+    "hub_departer": "Hub Cần Thơ",
+    "route_name": "Cần Thơ - Rạch Giá - Kiên Lương - An Minh - Giồng Riềng R1",
+    "hub_destination": "NVCT Hub An Minh_Child",
+    "Giờ xuất phát": "00:03:00",
+    "Giờ đến hub destination": "05:00:00",
+    "tổng quãng đường": null,
+    "tổng thời gian": null,
+    "note": "D"
+  },
+  {
+    "hub_departer": "Hub Cần Thơ",
+    "route_name": "Cần Thơ - Rạch Giá - Kiên Lương - An Minh - Giồng Riềng R1",
+    "hub_destination": "NVCT Hub Giồng Riềng - Kiên Giang",
+    "Giờ xuất phát": "00:03:00",
+    "Giờ đến hub destination": "06:15:00",
+    "tổng quãng đường": null,
+    "tổng thời gian": null,
+    "note": "D"
+  },
+  {
+    "hub_departer": "Hub Cần Thơ",
+    "route_name": "Hub Kiên Lương (Gửi chành)",
+    "hub_destination": "NVCT Hub Kiên Lương - Kiên Giang",
+    "Giờ xuất phát": "05:00:00",
+    "Giờ đến hub destination": "08:00:00",
+    "tổng quãng đường": null,
+    "tổng thời gian": null,
+    "note": "D"
+  },
+  {
+    "hub_departer": "Hub Cần Thơ",
+    "route_name": "Cần Thơ -Sa Đéc- Cao Lãnh- Hồng Ngự R1",
+    "hub_destination": "NVCT Hub Sa Đéc_Child",
+    "Giờ xuất phát": "00:45:00",
+    "Giờ đến hub destination": "02:10:00",
+    "tổng quãng đường": null,
+    "tổng thời gian": null,
+    "note": "D"
+  },
+  {
+    "hub_departer": "Hub Cần Thơ",
+    "route_name": "Cần Thơ -Sa Đéc- Cao Lãnh- Hồng Ngự R1",
+    "hub_destination": "NVCT Hub Cao Lãnh - Đồng Tháp",
+    "Giờ xuất phát": "00:45:00",
+    "Giờ đến hub destination": "02:55:00",
+    "tổng quãng đường": null,
+    "tổng thời gian": null,
+    "note": "D"
+  },
+  {
+    "hub_departer": "Hub Cần Thơ",
+    "route_name": "Cần Thơ -Sa Đéc- Cao Lãnh- Hồng Ngự R1",
+    "hub_destination": "Hub Thanh Bình - Đồng Tháp",
+    "Giờ xuất phát": "00:45:00",
+    "Giờ đến hub destination": "03:25:00",
+    "tổng quãng đường": null,
+    "tổng thời gian": null,
+    "note": "D"
+  },
+  {
+    "hub_departer": "Hub Cần Thơ",
+    "route_name": "Cần Thơ -Sa Đéc- Cao Lãnh- Hồng Ngự R1",
+    "hub_destination": "NVCT Hub Hồng Ngự - Đồng Tháp",
+    "Giờ xuất phát": "00:45:00",
+    "Giờ đến hub destination": "03:40:00",
+    "tổng quãng đường": null,
+    "tổng thời gian": null,
+    "note": "D"
+  },
+  {
+    "hub_departer": "Hub Cần Thơ",
+    "route_name": "Cần Thơ -Sa Đéc- Cao Lãnh- Hồng Ngự R1",
+    "hub_destination": "Hub Tam Nông - Đồng Tháp",
+    "Giờ xuất phát": "00:45:00",
+    "Giờ đến hub destination": "04:55:00",
+    "tổng quãng đường": null,
+    "tổng thời gian": null,
+    "note": "D"
+  },
+  {
+    "hub_departer": "Hub Cần Thơ",
+    "route_name": "Cần Thơ -Sa Đéc- Cao Lãnh- Hồng Ngự R1",
+    "hub_destination": "Hub Tân Hồng - Đồng Tháp",
+    "Giờ xuất phát": "00:45:00",
+    "Giờ đến hub destination": "05:35:00",
+    "tổng quãng đường": null,
+    "tổng thời gian": null,
+    "note": "D"
+  },
+  {
+    "hub_departer": "Hub Cần Thơ",
+    "route_name": "Cần Thơ -Sa Đéc- Cao Lãnh- Hồng Ngự R1",
+    "hub_destination": "Hub Tháp Mười - Đồng Tháp",
+    "Giờ xuất phát": "00:45:00",
+    "Giờ đến hub destination": "07:30:00",
+    "tổng quãng đường": null,
+    "tổng thời gian": null,
+    "note": "D"
+  },
+  {
+    "hub_departer": "Hub Cần Thơ",
+    "route_name": "Cần Thơ - Trà Ôn- Tiểu Cần - Duyên Hải - R2",
+    "hub_destination": "NVCT Hub Trà Ôn-CT",
+    "Giờ xuất phát": "06:07:00",
+    "Giờ đến hub destination": "07:05:00",
+    "tổng quãng đường": null,
+    "tổng thời gian": null,
+    "note": "D"
+  },
+  {
+    "hub_departer": "Hub Cần Thơ",
+    "route_name": "Cần Thơ - Trà Ôn- Tiểu Cần - Duyên Hải - R2",
+    "hub_destination": "NVCT Hub Tiểu Cần-Trà Vinh",
+    "Giờ xuất phát": "06:07:00",
+    "Giờ đến hub destination": "08:40:00",
+    "tổng quãng đường": null,
+    "tổng thời gian": null,
+    "note": "D"
+  },
+  {
+    "hub_departer": "Hub Cần Thơ",
+    "route_name": "Cần Thơ - Trà Ôn- Tiểu Cần - Duyên Hải - R2",
+    "hub_destination": "NVCT Hub Duyên Hải - Trà Vinh",
+    "Giờ xuất phát": "06:07:00",
+    "Giờ đến hub destination": "10:03:00",
+    "tổng quãng đường": null,
+    "tổng thời gian": null,
+    "note": "D"
+  },
+  {
+    "hub_departer": "Hub Cần Thơ",
+    "route_name": "Cần Thơ - TP Vĩnh Long- Vũng Liêm - Trà Vinh R2",
+    "hub_destination": "NVCT Hub Vĩnh Long-CT",
+    "Giờ xuất phát": "06:39:00",
+    "Giờ đến hub destination": "07:40:00",
+    "tổng quãng đường": null,
+    "tổng thời gian": null,
+    "note": "D"
+  },
+  {
+    "hub_departer": "Hub Cần Thơ",
+    "route_name": "Cần Thơ - TP Vĩnh Long- Vũng Liêm - Trà Vinh R2",
+    "hub_destination": "Hub Vĩnh Long 2 - Vĩnh Long",
+    "Giờ xuất phát": "06:39:00",
+    "Giờ đến hub destination": "08:23:00",
+    "tổng quãng đường": null,
+    "tổng thời gian": null,
+    "note": "D"
+  },
+  {
+    "hub_departer": "Hub Cần Thơ",
+    "route_name": "Cần Thơ - TP Vĩnh Long- Vũng Liêm - Trà Vinh R2",
+    "hub_destination": "NVCT Hub Vũng Liêm-CT",
+    "Giờ xuất phát": "06:39:00",
+    "Giờ đến hub destination": "09:25:00",
+    "tổng quãng đường": null,
+    "tổng thời gian": null,
+    "note": "D"
+  },
+  {
+    "hub_departer": "Hub Cần Thơ",
+    "route_name": "Cần Thơ - TP Vĩnh Long- Vũng Liêm - Trà Vinh R2",
+    "hub_destination": "NVCT Hub Trà Vinh",
+    "Giờ xuất phát": "06:39:00",
+    "Giờ đến hub destination": "10:20:00",
+    "tổng quãng đường": null,
+    "tổng thời gian": null,
+    "note": "D"
+  },
+  {
+    "hub_departer": "Hub Cần Thơ",
+    "route_name": "Cần Thơ - Long Xuyên - Phú Tân - Châu Đốc - Tịnh Biên R2",
+    "hub_destination": "NVCT Hub Ô Môn-CT",
+    "Giờ xuất phát": "07:07:00",
+    "Giờ đến hub destination": "08:25:00",
+    "tổng quãng đường": null,
+    "tổng thời gian": null,
+    "note": "D"
+  },
+  {
+    "hub_departer": "Hub Cần Thơ",
+    "route_name": "Cần Thơ - Long Xuyên - Phú Tân - Châu Đốc - Tịnh Biên R2",
+    "hub_destination": "NVCT Hub Thốt Nốt-CT",
+    "Giờ xuất phát": "07:07:00",
+    "Giờ đến hub destination": "09:13:00",
+    "tổng quãng đường": null,
+    "tổng thời gian": null,
+    "note": "D"
+  },
+  {
+    "hub_departer": "Hub Cần Thơ",
+    "route_name": "Cần Thơ - Long Xuyên - Phú Tân - Châu Đốc - Tịnh Biên R2",
+    "hub_destination": "NVCT Hub Long Xuyên - An Giang",
+    "Giờ xuất phát": "07:07:00",
+    "Giờ đến hub destination": "10:00:00",
+    "tổng quãng đường": null,
+    "tổng thời gian": null,
+    "note": "D"
+  },
+  {
+    "hub_departer": "Hub Cần Thơ",
+    "route_name": "Cần Thơ - Long Xuyên - Phú Tân - Châu Đốc - Tịnh Biên R2",
+    "hub_destination": "NVCT Hub Phú Tân_Child",
+    "Giờ xuất phát": "07:07:00",
+    "Giờ đến hub destination": "11:10:00",
+    "tổng quãng đường": null,
+    "tổng thời gian": null,
+    "note": "D"
+  },
+  {
+    "hub_departer": "Hub Cần Thơ",
+    "route_name": "Cần Thơ - Long Xuyên - Phú Tân - Châu Đốc - Tịnh Biên R2",
+    "hub_destination": "NVCT Hub Châu Đốc_Child",
+    "Giờ xuất phát": "07:07:00",
+    "Giờ đến hub destination": "12:55:00",
+    "tổng quãng đường": null,
+    "tổng thời gian": null,
+    "note": "D"
+  },
+  {
+    "hub_departer": "Hub Cần Thơ",
+    "route_name": "Cần Thơ - Long Xuyên - Phú Tân - Châu Đốc - Tịnh Biên R2",
+    "hub_destination": "NVCT Hub Tịnh Biên - An Giang Child",
+    "Giờ xuất phát": "07:07:00",
+    "Giờ đến hub destination": "14:20:00",
+    "tổng quãng đường": null,
+    "tổng thời gian": null,
+    "note": "D"
+  },
+  {
+    "hub_departer": "Hub Cần Thơ",
+    "route_name": "Cần Thơ - Hậu Giang - Sóc Trăng - Bạc Liêu - Giá Rai - Cà Mau - Phước Long R2",
+    "hub_destination": "NV công ty - Hub Hậu Giang - HCM",
+    "Giờ xuất phát": "08:20:00",
+    "Giờ đến hub destination": "09:25:00",
+    "tổng quãng đường": null,
+    "tổng thời gian": null,
+    "note": "D"
+  },
+  {
+    "hub_departer": "Hub Cần Thơ",
+    "route_name": "Cần Thơ - Hậu Giang - Sóc Trăng - Bạc Liêu - Giá Rai - Cà Mau - Phước Long R2",
+    "hub_destination": "NVCT Hub Sóc Trăng-CT",
+    "Giờ xuất phát": "08:20:00",
+    "Giờ đến hub destination": "10:23:00",
+    "tổng quãng đường": null,
+    "tổng thời gian": null,
+    "note": "D"
+  },
+  {
+    "hub_departer": "Hub Cần Thơ",
+    "route_name": "Cần Thơ - Hậu Giang - Sóc Trăng - Bạc Liêu - Giá Rai - Cà Mau - Phước Long R2",
+    "hub_destination": "Hub Thạnh Trị-Sóc Trăng",
+    "Giờ xuất phát": "08:20:00",
+    "Giờ đến hub destination": "11:17:00",
+    "tổng quãng đường": null,
+    "tổng thời gian": null,
+    "note": "D"
+  },
+  {
+    "hub_departer": "Hub Cần Thơ",
+    "route_name": "Cần Thơ - Hậu Giang - Sóc Trăng - Bạc Liêu - Giá Rai - Cà Mau - Phước Long R2",
+    "hub_destination": "NVCT Hub TP Bạc Liêu",
+    "Giờ xuất phát": "08:20:00",
+    "Giờ đến hub destination": "11:55:00",
+    "tổng quãng đường": null,
+    "tổng thời gian": null,
+    "note": "D"
+  },
+  {
+    "hub_departer": "Hub Cần Thơ",
+    "route_name": "Cần Thơ - Hậu Giang - Sóc Trăng - Bạc Liêu - Giá Rai - Cà Mau - Phước Long R2",
+    "hub_destination": "NVCT Hub Giá Rai - Bạc Liêu",
+    "Giờ xuất phát": "08:20:00",
+    "Giờ đến hub destination": "13:02:00",
+    "tổng quãng đường": null,
+    "tổng thời gian": null,
+    "note": "D"
+  },
+  {
+    "hub_departer": "Hub Cần Thơ",
+    "route_name": "Cần Thơ - Hậu Giang - Sóc Trăng - Bạc Liêu - Giá Rai - Cà Mau - Phước Long R2",
+    "hub_destination": "Hub TP Cà Mau- Cà Mau R2",
+    "Giờ xuất phát": "08:20:00",
+    "Giờ đến hub destination": "13:45:00",
+    "tổng quãng đường": null,
+    "tổng thời gian": null,
+    "note": "D"
+  },
+  {
+    "hub_departer": "Hub Cần Thơ",
+    "route_name": "Cần Thơ - Hậu Giang - Sóc Trăng - Bạc Liêu - Giá Rai - Cà Mau - Phước Long R2",
+    "hub_destination": "NVCT Hub Phước Long - Bạc Liêu",
+    "Giờ xuất phát": "08:20:00",
+    "Giờ đến hub destination": "14:50:00",
+    "tổng quãng đường": null,
+    "tổng thời gian": null,
+    "note": "D"
+  },
+  {
+    "hub_departer": "NVCT Hub Sóc Trăng-CT",
+    "route_name": "Sóc Trăng - Mỹ Xuyên - Vĩnh Châu - Trần Đề R2",
+    "hub_destination": "Hub Mỹ Xuyên - Sóc Trăng",
+    "Giờ xuất phát": "10:30:00",
+    "Giờ đến hub destination": "11:15:00",
+    "tổng quãng đường": null,
+    "tổng thời gian": null,
+    "note": "D"
+  },
+  {
+    "hub_departer": "NVCT Hub Sóc Trăng-CT",
+    "route_name": "Sóc Trăng - Mỹ Xuyên - Vĩnh Châu - Trần Đề R2",
+    "hub_destination": "Hub Vĩnh Châu - Sóc Trăng",
+    "Giờ xuất phát": "10:30:00",
+    "Giờ đến hub destination": "12:20:00",
+    "tổng quãng đường": null,
+    "tổng thời gian": null,
+    "note": "D"
+  },
+  {
+    "hub_departer": "NVCT Hub Sóc Trăng-CT",
+    "route_name": "Sóc Trăng - Mỹ Xuyên - Vĩnh Châu - Trần Đề R2",
+    "hub_destination": "Hub Trần Đề - Sóc Trăng",
+    "Giờ xuất phát": "10:30:00",
+    "Giờ đến hub destination": "14:00:00",
+    "tổng quãng đường": null,
+    "tổng thời gian": null,
+    "note": "D"
+  },
+  {
+    "hub_departer": "Hub Cần Thơ",
+    "route_name": "Cần Thơ - Vĩnh Tường - Giồng Riềng - Rạch Giá R2",
+    "hub_destination": "NVCT Hub Vĩnh Tường-CT",
+    "Giờ xuất phát": "09:33:00",
+    "Giờ đến hub destination": "11:00:00",
+    "tổng quãng đường": null,
+    "tổng thời gian": null,
+    "note": "D"
+  },
+  {
+    "hub_departer": "Hub Cần Thơ",
+    "route_name": "Cần Thơ - Vĩnh Tường - Giồng Riềng - Rạch Giá R2",
+    "hub_destination": "NVCT Hub Giồng Riềng - Kiên Giang",
+    "Giờ xuất phát": "09:33:00",
+    "Giờ đến hub destination": "12:25:00",
+    "tổng quãng đường": null,
+    "tổng thời gian": null,
+    "note": "D"
+  },
+  {
+    "hub_departer": "Hub Cần Thơ",
+    "route_name": "Cần Thơ - Vĩnh Tường - Giồng Riềng - Rạch Giá R2",
+    "hub_destination": "NVCT Hub Rạch Giá - Kiên Giang",
+    "Giờ xuất phát": "09:33:00",
+    "Giờ đến hub destination": "13:25:00",
+    "tổng quãng đường": null,
+    "tổng thời gian": null,
+    "note": "D"
+  },
+  {
+    "hub_departer": "Hub Cần Thơ",
+    "route_name": "Cần Thơ - Bình Minh -Sa Đéc - Cao Lãnh R2",
+    "hub_destination": "NVCT Hub Bình Minh-CT",
+    "Giờ xuất phát": "09:48:00",
+    "Giờ đến hub destination": "10:30:00",
+    "tổng quãng đường": null,
+    "tổng thời gian": null,
+    "note": "D"
+  },
+  {
+    "hub_departer": "Hub Cần Thơ",
+    "route_name": "Cần Thơ - Bình Minh -Sa Đéc - Cao Lãnh R2",
+    "hub_destination": "NVCT Hub Sa Đéc_Child",
+    "Giờ xuất phát": "09:48:00",
+    "Giờ đến hub destination": "11:46:00",
+    "tổng quãng đường": null,
+    "tổng thời gian": null,
+    "note": "D"
+  },
+  {
+    "hub_departer": "Hub Cần Thơ",
+    "route_name": "Cần Thơ - Bình Minh -Sa Đéc - Cao Lãnh R2",
+    "hub_destination": "NVCT Hub Cao Lãnh - Đồng Tháp",
+    "Giờ xuất phát": "09:48:00",
+    "Giờ đến hub destination": "12:55:00",
+    "tổng quãng đường": null,
+    "tổng thời gian": null,
+    "note": "D"
+  },
+  {
+    "hub_departer": "Hub Cần Thơ",
+    "route_name": "Hub Phú Quốc (Gửi chành)",
+    "hub_destination": "NVCT Hub Phú Quốc - Kiên Giang",
+    "Giờ xuất phát": "17:00",
+    "Giờ đến hub destination": "12:00",
+    "tổng quãng đường": null,
+    "tổng thời gian": null,
+    "note": "D+1"
+  },
+  {
+    "hub_departer": "Hub Cần Thơ",
+    "route_name": "Hub Dương Đông (Gửi Chành)",
+    "hub_destination": "NVCT Hub Dương Đông - Phú Quốc - Child",
+    "Giờ xuất phát": "17:00",
+    "Giờ đến hub destination": "13:00",
+    "tổng quãng đường": null,
+    "tổng thời gian": null,
+    "note": "D+1"
+  }
+]

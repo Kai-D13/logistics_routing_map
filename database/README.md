@@ -1,121 +1,250 @@
-# 🗄️ Database Setup Guide
+# 📁 Database Directory
 
-## 📋 Hướng dẫn tạo Database trên Supabase
+## 📊 **Data Files**
 
-### Bước 1: Mở Supabase SQL Editor
+### **1. route.json**
+- **Purpose:** Route data với 214 segments, 47 routes
+- **Status:** ✅ Active - Đã import vào database
+- **Schema:**
+  ```json
+  {
+    "hub_departer": "Hub VSIP II",
+    "route_name": "VSIP - Đồng Nai - Vũng Tàu R1",
+    "hub_destination": "KTLS Bửu Hòa - Đồng Nai",
+    "Giờ xuất phát": "01:00:00",
+    "Giờ đến hub destination": "01:50:00",
+    "tổng quãng đường": null,
+    "tổng thời gian": null,
+    "note": "D"
+  }
+  ```
 
-1. Truy cập: https://supabase.com/dashboard/project/attuecqofefmrjqtgzgo
-2. Click vào **SQL Editor** ở sidebar bên trái
-3. Click **New Query**
-
-### Bước 2: Copy & Paste SQL Schema
-
-1. Mở file `database/schema.sql`
-2. Copy toàn bộ nội dung
-3. Paste vào SQL Editor
-4. Click **Run** (hoặc nhấn Ctrl+Enter)
-
-### Bước 3: Kiểm tra kết quả
-
-Sau khi chạy SQL, bạn sẽ thấy:
-- ✅ Table `locations` đã được tạo
-- ✅ 6 sample locations đã được insert (1 departer + 5 destinations)
-
-### Bước 4: Xem dữ liệu
-
-1. Click vào **Table Editor** ở sidebar
-2. Chọn table `locations`
-3. Bạn sẽ thấy 6 locations mẫu
+### **2. new_marker.json**
+- **Purpose:** Hub data với 178 hubs (3 departers + 175 destinations)
+- **Status:** ✅ Active - Đã import vào database
+- **Schema:**
+  ```json
+  {
+    "carrier_name": "Hub VSIP II",
+    "Hub_name": "Hub VSIP II",
+    "address": "18 L2-1, Đường Tạo Lực 5...",
+    "ward_name": "Phường Hoà Phú",
+    "district_name": "Thành phố Thủ Dầu Một",
+    "province_name": "Tỉnh Bình Dương",
+    "destination": "departer",
+    "latitude": 11.075138,
+    "longitude": 106.688543,
+    "departer": ""
+  }
+  ```
 
 ---
 
-## 🧪 Test Database Connection
+## 🗄️ **SQL Scripts**
 
-Sau khi tạo xong database, chạy lệnh sau để test:
+### **Setup Scripts**
 
-```bash
-node backend/test-supabase.js
+#### **force-clean.sql**
+- **Purpose:** Xóa sạch TẤT CẢ route management objects
+- **Usage:**
+  ```powershell
+  Get-Content database\force-clean.sql | Set-Clipboard
+  # Paste vào Supabase SQL Editor và Run
+  ```
+- **What it does:**
+  - Drop all views (route_summary, hub_connections)
+  - Drop all functions (calculate_actual_arrival)
+  - Drop all constraints (unique_route_segment)
+  - Drop all indexes
+  - Drop all tables (route_schedules, hub_tiers)
+
+#### **create-schema.sql**
+- **Purpose:** Tạo schema mới cho route management
+- **Usage:**
+  ```powershell
+  Get-Content database\create-schema.sql | Set-Clipboard
+  # Paste vào Supabase SQL Editor và Run
+  ```
+- **What it creates:**
+  - Table: `route_schedules` (214 segments)
+  - Table: `hub_tiers` (5 hubs)
+  - View: `route_summary`
+  - View: `hub_connections`
+  - Function: `calculate_actual_arrival()`
+
+#### **import-routes.sql**
+- **Purpose:** Import 214 route segments từ route.json
+- **Usage:**
+  ```powershell
+  Get-Content database\import-routes.sql | Set-Clipboard
+  # Paste vào Supabase SQL Editor và Run
+  ```
+- **Result:**
+  - 214 segments imported
+  - 47 unique routes
+  - 5 departers
+  - 171 destinations
+
+---
+
+## 📋 **Documentation**
+
+### **ROUTE_MANAGEMENT_PLAN.md**
+- **Purpose:** Full implementation plan cho Route Management System
+- **Content:**
+  - Phase 1: Database Setup ✅ COMPLETE
+  - Phase 2: Backend API (Next)
+  - Phase 3: Frontend - Route Search Tab
+  - Phase 4: Frontend - Route Details Tab
+  - Phase 5: Frontend - Create Route Tab
+  - Phase 6: Frontend - Edit Route Tab
+  - Phase 7: Advanced Features
+
+---
+
+## 🚀 **Quick Start**
+
+### **Setup Database (First Time)**
+
+```powershell
+# Step 1: Clean database
+Get-Content database\force-clean.sql | Set-Clipboard
+# Paste vào Supabase → Run
+
+# Step 2: Create schema
+Get-Content database\create-schema.sql | Set-Clipboard
+# Paste vào Supabase → Run
+
+# Step 3: Import routes
+Get-Content database\import-routes.sql | Set-Clipboard
+# Paste vào Supabase → Run
 ```
 
-Kết quả mong đợi:
-```
-==================================================
-🧪 Testing Supabase Connection
-==================================================
+### **Verify Data**
 
-📡 Test 1: Testing connection...
-✅ Connection successful
+```sql
+-- Check total segments
+SELECT COUNT(*) FROM route_schedules;
+-- Expected: 214
 
-📍 Test 2: Fetching all locations...
-✅ Found 6 locations
+-- Check unique routes
+SELECT COUNT(DISTINCT route_name) FROM route_schedules;
+-- Expected: 47
 
-📋 Locations:
-   🏠 1. Hub Cần Thơ (departer)
-      Address: Số 1 Đường 3/2, Xuân Khánh, Ninh Kiều, Cần Thơ
-      Coordinates: 10.0452, 105.7469
-      Distance: 0 km, Duration: 0 min
-   📍 2. Hub Sa Đéc (destination)
-      ...
+-- Check route summary
+SELECT * FROM route_summary LIMIT 10;
 
-✅ All tests completed!
+-- Check hub connections
+SELECT * FROM hub_connections WHERE hub_name LIKE '%Cà Mau%';
 ```
 
 ---
 
-## 📊 Database Schema
+## 📊 **Database Schema**
 
-### Table: `locations`
+### **Tables**
 
-| Column | Type | Description |
-|--------|------|-------------|
-| `id` | UUID | Primary key (auto-generated) |
-| `carrier_name` | VARCHAR(255) | Tên hiển thị của hub |
-| `address` | TEXT | Địa chỉ đầy đủ |
-| `latitude` | DECIMAL(10,8) | Vĩ độ |
-| `longitude` | DECIMAL(11,8) | Kinh độ |
-| `location_type` | VARCHAR(50) | 'departer' hoặc 'destination' |
-| `distance_km` | DECIMAL(10,2) | Khoảng cách từ hub chính (km) |
-| `duration_minutes` | INTEGER | Thời gian di chuyển (phút) |
-| `is_active` | BOOLEAN | Trạng thái hoạt động |
-| `created_at` | TIMESTAMP | Thời gian tạo |
-| `updated_at` | TIMESTAMP | Thời gian cập nhật |
-| `metadata` | JSONB | Thông tin bổ sung (JSON) |
+#### **route_schedules**
+```sql
+CREATE TABLE route_schedules (
+  id SERIAL PRIMARY KEY,
+  route_name VARCHAR(255) NOT NULL,
+  hub_departer VARCHAR(255) NOT NULL,
+  hub_destination VARCHAR(255) NOT NULL,
+  departure_time TIME NOT NULL,
+  arrival_time TIME NOT NULL,
+  day_offset INTEGER DEFAULT 0,  -- 0=D, 1=D+1, 2=D+2
+  distance_km DECIMAL(10, 2),
+  duration_hours DECIMAL(10, 2),
+  note VARCHAR(10),
+  created_at TIMESTAMP DEFAULT NOW(),
+  updated_at TIMESTAMP DEFAULT NOW()
+);
+```
 
----
+#### **hub_tiers**
+```sql
+CREATE TABLE hub_tiers (
+  id SERIAL PRIMARY KEY,
+  hub_name VARCHAR(255) NOT NULL UNIQUE,
+  tier INTEGER NOT NULL,  -- 1=Primary, 2=Secondary, 3=Final
+  description TEXT,
+  created_at TIMESTAMP DEFAULT NOW()
+);
+```
 
-## 🔧 Troubleshooting
+### **Views**
 
-### Lỗi: "relation 'locations' does not exist"
-➡️ Bạn chưa chạy SQL schema. Hãy làm theo Bước 1-2 ở trên.
+#### **route_summary**
+- Aggregate route information
+- Shows: route_name, hub_departer, first_departure, total_destinations, etc.
 
-### Lỗi: "Invalid API key"
-➡️ Kiểm tra lại `SUPABASE_URL` và `SUPABASE_ANON_KEY` trong file `.env`
+#### **hub_connections**
+- Shows all connections for each hub
+- Direction: INBOUND / OUTBOUND
 
-### Lỗi: "Connection timeout"
-➡️ Kiểm tra kết nối internet và firewall
+### **Functions**
 
----
-
-## 📝 Thêm dữ liệu 30 locations
-
-Sau khi test thành công, bạn có thể:
-
-1. **Thêm thủ công qua Table Editor:**
-   - Vào Table Editor → locations
-   - Click "Insert row"
-   - Điền thông tin
-
-2. **Thêm bằng SQL:**
-   ```sql
-   INSERT INTO locations (carrier_name, address, latitude, longitude, location_type) 
-   VALUES ('Hub Mới', 'Địa chỉ đầy đủ', 10.1234, 105.5678, 'destination');
-   ```
-
-3. **Thêm qua API (sẽ làm ở bước sau):**
-   - Sử dụng form trên frontend
-   - Tự động geocoding địa chỉ
+#### **calculate_actual_arrival(departure_time, arrival_time, day_offset)**
+- Calculates actual arrival interval
+- Handles overnight deliveries
+- Handles D+1, D+2 offsets
 
 ---
 
-**Tiếp theo:** Sau khi database setup xong, chúng ta sẽ tích hợp Goong API để geocoding và tính khoảng cách.
+## 📈 **Statistics**
+
+### **Route Data**
+- Total Segments: **214**
+- Unique Routes: **47**
+- Unique Departers: **5**
+- Unique Destinations: **171**
+
+### **Hub Hierarchy**
+- **Tier 1 (Primary):** 3 hubs
+  - Hub VSIP II
+  - Hub VSIP Bắc Ninh
+  - Hub Cần Thơ
+- **Tier 2 (Secondary):** 2 hubs
+  - NVCT Hub Thành Phố Cà Mau_Child
+  - NVCT Hub Sóc Trăng-CT
+- **Tier 3 (Final):** 166 hubs
+
+### **Note Distribution**
+- D (same day): 127 segments (59%)
+- D+1 (next day): 87 segments (41%)
+
+---
+
+## 🔄 **Maintenance**
+
+### **Reset Database**
+```powershell
+# Clean all
+Get-Content database\force-clean.sql | Set-Clipboard
+
+# Recreate schema
+Get-Content database\create-schema.sql | Set-Clipboard
+
+# Reimport data
+Get-Content database\import-routes.sql | Set-Clipboard
+```
+
+### **Update Route Data**
+1. Edit `route.json`
+2. Run `backend/scripts/import-routes.js` to regenerate SQL
+3. Run `import-routes.sql` on Supabase
+
+---
+
+## 📞 **Support**
+
+For issues or questions, refer to:
+- `ROUTE_MANAGEMENT_PLAN.md` - Full implementation plan
+- Backend scripts in `backend/scripts/`
+- Frontend code in `frontend/js/`
+
+---
+
+**Last Updated:** Phase 1 Complete ✅
 

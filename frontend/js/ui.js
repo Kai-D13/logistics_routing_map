@@ -76,92 +76,102 @@ function closeDetailsModal() {
     document.getElementById('detailsModal').style.display = 'none';
 }
 
-// Modal Functions - Calculate Distance
+// Modal Functions - Calculate Distance (Multi-Destination)
 async function openCalculateDistanceModal() {
     document.getElementById('calculateDistanceModal').style.display = 'block';
     document.getElementById('calculateDistanceForm').reset();
-    document.getElementById('distance-result').style.display = 'none';
+    document.getElementById('calc-distance-result').style.display = 'none';
 
-    // Load all locations (departers + destinations) for dropdowns
+    // Load departers and destinations
     try {
         const [departersResult, destinationsResult] = await Promise.all([
             API.getDeparters(),
             API.getDestinations()
         ]);
 
-        const originSelect = document.getElementById('origin-location');
-        const destinationSelect = document.getElementById('destination-location');
+        // Populate departer dropdown (only Hub Chính)
+        const departerSelect = document.getElementById('calc-departer-select');
+        departerSelect.innerHTML = '<option value="">-- Chọn Hub chính --</option>';
 
-        // Clear existing options
-        originSelect.innerHTML = '<option value="">-- Chọn điểm xuất phát --</option>';
-        destinationSelect.innerHTML = '<option value="">-- Chọn điểm đến --</option>';
-
-        // Add departers (Hub Chính)
-        if (departersResult.success && departersResult.data) {
-            const departerGroup = document.createElement('optgroup');
-            departerGroup.label = '🏠 Hub Chính';
-
-            departersResult.data.forEach(departer => {
-                const option1 = document.createElement('option');
-                option1.value = JSON.stringify({
-                    id: departer.id,
-                    name: departer.name,
-                    lat: departer.lat,
-                    lng: departer.lng,
-                    type: 'departer'
-                });
-                option1.textContent = departer.name;
-                departerGroup.appendChild(option1);
-
-                const option2 = option1.cloneNode(true);
-                destinationSelect.appendChild(option2.cloneNode(true));
+        if (departersResult.success && departersResult.data && departersResult.data.length > 0) {
+            departersResult.data.forEach(dep => {
+                const option = document.createElement('option');
+                option.value = dep.id;
+                option.textContent = dep.name || dep.carrier_name;
+                option.dataset.lat = dep.lat;
+                option.dataset.lng = dep.lng;
+                departerSelect.appendChild(option);
             });
-
-            originSelect.appendChild(departerGroup);
-            const departerGroup2 = departerGroup.cloneNode(true);
-            departerGroup2.querySelectorAll('option').forEach((opt, idx) => {
-                opt.value = departersResult.data[idx] ? JSON.stringify({
-                    id: departersResult.data[idx].id,
-                    name: departersResult.data[idx].name,
-                    lat: departersResult.data[idx].lat,
-                    lng: departersResult.data[idx].lng,
-                    type: 'departer'
-                }) : '';
-            });
-            destinationSelect.appendChild(departerGroup2);
         }
 
-        // Add destinations (Điểm Giao Hàng)
-        if (destinationsResult.success && destinationsResult.data) {
-            const destGroup = document.createElement('optgroup');
-            destGroup.label = '📍 Điểm Giao Hàng';
+        // Populate destinations list with checkboxes
+        const destinationsList = document.getElementById('calc-destinations-list');
+        destinationsList.innerHTML = '';
 
+        if (destinationsResult.success && destinationsResult.data && destinationsResult.data.length > 0) {
             destinationsResult.data.forEach(dest => {
-                const option1 = document.createElement('option');
-                option1.value = JSON.stringify({
-                    id: dest.id,
-                    name: dest.carrier_name,
-                    lat: dest.lat,
-                    lng: dest.lng,
-                    type: 'destination'
-                });
-                option1.textContent = `${dest.carrier_name} - ${dest.province_name}`;
-                destGroup.appendChild(option1);
+                const div = document.createElement('div');
+                div.className = 'destination-checkbox-item';
+                div.innerHTML = `
+                    <label style="display: flex; align-items: center; padding: 10px; cursor: pointer; border-radius: 6px; transition: all 0.2s; margin-bottom: 4px; background: white; border: 1px solid #e2e8f0;">
+                        <input type="checkbox" value="${dest.id}" data-name="${dest.carrier_name}" data-lat="${dest.lat}" data-lng="${dest.lng}"
+                               style="margin-right: 12px; width: 18px; height: 18px; cursor: pointer;"
+                               onchange="updateSelectedCount()">
+                        <span style="font-size: 14px; color: #1f2937;">${dest.carrier_name}</span>
+                    </label>
+                `;
+                destinationsList.appendChild(div);
             });
 
-            originSelect.appendChild(destGroup);
-            const destGroup2 = destGroup.cloneNode(true);
-            destGroup2.querySelectorAll('option').forEach((opt, idx) => {
-                opt.value = destinationsResult.data[idx] ? JSON.stringify({
-                    id: destinationsResult.data[idx].id,
-                    name: destinationsResult.data[idx].carrier_name,
-                    lat: destinationsResult.data[idx].lat,
-                    lng: destinationsResult.data[idx].lng,
-                    type: 'destination'
-                }) : '';
+            // Add hover effect
+            document.querySelectorAll('.destination-checkbox-item label').forEach(label => {
+                label.addEventListener('mouseenter', function() {
+                    this.style.background = '#f0f9ff';
+                    this.style.borderColor = '#667eea';
+                });
+                label.addEventListener('mouseleave', function() {
+                    this.style.background = 'white';
+                    this.style.borderColor = '#e2e8f0';
+                });
             });
-            destinationSelect.appendChild(destGroup2);
+        } else {
+            destinationsList.innerHTML = '<p style="text-align: center; color: #718096; padding: 20px;">Chưa có điểm giao hàng nào</p>';
         }
+
+        // Setup select all / deselect all buttons
+        document.getElementById('calc-select-all').onclick = () => {
+            const visibleCheckboxes = Array.from(document.querySelectorAll('#calc-destinations-list .destination-checkbox-item'))
+                .filter(item => item.style.display !== 'none')
+                .map(item => item.querySelector('input[type="checkbox"]'));
+
+            visibleCheckboxes.forEach(cb => cb.checked = true);
+            updateSelectedCount();
+        };
+
+        document.getElementById('calc-deselect-all').onclick = () => {
+            document.querySelectorAll('#calc-destinations-list input[type="checkbox"]').forEach(cb => cb.checked = false);
+            updateSelectedCount();
+        };
+
+        // Setup search functionality
+        const searchInput = document.getElementById('calc-search-destinations');
+        searchInput.addEventListener('input', function() {
+            const searchTerm = this.value.toLowerCase();
+            const items = document.querySelectorAll('.destination-checkbox-item');
+
+            items.forEach(item => {
+                const text = item.textContent.toLowerCase();
+                if (text.includes(searchTerm)) {
+                    item.style.display = '';
+                } else {
+                    item.style.display = 'none';
+                }
+            });
+        });
+
+        // Initialize counter
+        updateSelectedCount();
+
     } catch (error) {
         console.error('Error loading locations:', error);
         showToast('❌ Lỗi khi tải danh sách điểm', 'error');
@@ -170,6 +180,26 @@ async function openCalculateDistanceModal() {
 
 function closeCalculateDistanceModal() {
     document.getElementById('calculateDistanceModal').style.display = 'none';
+}
+
+// Update selected destinations counter
+function updateSelectedCount() {
+    const checkboxes = document.querySelectorAll('#calc-destinations-list input[type="checkbox"]');
+    const checkedCount = Array.from(checkboxes).filter(cb => cb.checked).length;
+    const counterElement = document.getElementById('calc-selected-count');
+
+    if (counterElement) {
+        counterElement.textContent = `Đã chọn: ${checkedCount}/20`;
+
+        // Change color based on count
+        if (checkedCount === 0) {
+            counterElement.style.background = '#94a3b8';
+        } else if (checkedCount > 20) {
+            counterElement.style.background = '#ef4444';
+        } else {
+            counterElement.style.background = '#667eea';
+        }
+    }
 }
 
 // Close modals when clicking outside
@@ -252,65 +282,160 @@ async function submitDestination(event) {
     }
 }
 
-// Submit Calculate Distance
+// Submit Calculate Distance (Multi-Destination)
 async function submitCalculateDistance(event) {
     event.preventDefault();
 
-    const originValue = document.getElementById('origin-location').value;
-    const destinationValue = document.getElementById('destination-location').value;
-    const vehicle = document.getElementById('vehicle-type').value;
+    // Get departer
+    const departerSelect = document.getElementById('calc-departer-select');
+    const departerId = departerSelect.value;
 
-    if (!originValue || !destinationValue) {
-        showToast('❌ Vui lòng chọn cả điểm xuất phát và điểm đến', 'error');
+    if (!departerId) {
+        showToast('❌ Vui lòng chọn điểm xuất phát', 'error');
         return;
     }
 
-    const origin = JSON.parse(originValue);
-    const destination = JSON.parse(destinationValue);
+    const selectedOption = departerSelect.options[departerSelect.selectedIndex];
+    const departer = {
+        id: departerId,
+        name: selectedOption.textContent,
+        lat: parseFloat(selectedOption.dataset.lat),
+        lng: parseFloat(selectedOption.dataset.lng)
+    };
 
-    if (origin.id === destination.id) {
-        showToast('❌ Điểm xuất phát và điểm đến không được trùng nhau', 'error');
+    // Get selected destinations
+    const checkboxes = document.querySelectorAll('#calc-destinations-list input[type="checkbox"]:checked');
+
+    if (checkboxes.length === 0) {
+        showToast('❌ Vui lòng chọn ít nhất 1 điểm đến', 'error');
         return;
     }
+
+    if (checkboxes.length > 20) {
+        showToast('❌ Tối đa 20 điểm đến', 'error');
+        return;
+    }
+
+    const destinations = Array.from(checkboxes).map(cb => ({
+        id: cb.value,
+        name: cb.dataset.name,
+        lat: parseFloat(cb.dataset.lat),
+        lng: parseFloat(cb.dataset.lng)
+    }));
+
+    const vehicle = document.getElementById('calc-vehicle-type').value;
 
     showLoading();
 
     try {
-        const result = await API.calculateDistance(
-            { lat: origin.lat, lng: origin.lng },
-            { lat: destination.lat, lng: destination.lng },
-            vehicle
-        );
+        showToast('⏳ Đang tính toán khoảng cách...', 'info');
 
-        if (result.success && result.data) {
-            const { distance_meters, duration_seconds } = result.data;
-            const distanceKm = (distance_meters / 1000).toFixed(2);
-            const durationMinutes = Math.round(duration_seconds / 60);
-            const formattedTime = formatTimeToHHMM(durationMinutes);
+        // Calculate distances sequentially
+        const route = [];
+        let totalDistance = 0;
+        let totalDuration = 0;
+        let currentLocation = { lat: departer.lat, lng: departer.lng };
 
-            // Display vehicle name in Vietnamese
-            const vehicleNames = {
-                'truck': '🚚 Xe Tải',
-                'car': '🚗 Xe Hơi',
-                'bike': '🏍️ Xe Máy'
-            };
+        // Add departer as first stop
+        route.push({
+            stop_number: 0,
+            location: departer,
+            distance_from_previous: 0,
+            duration_from_previous: 0,
+            cumulative_distance: 0,
+            cumulative_duration: 0
+        });
 
-            // Show result
-            document.getElementById('result-distance').textContent = `${distanceKm} km`;
-            document.getElementById('result-duration').textContent = formattedTime;
-            document.getElementById('result-vehicle').textContent = vehicleNames[vehicle] || vehicle;
-            document.getElementById('distance-result').style.display = 'block';
+        // Calculate distance to each destination
+        for (let i = 0; i < destinations.length; i++) {
+            const dest = destinations[i];
 
-            showToast('✅ Tính toán thành công!');
-        } else {
-            showToast(`❌ Lỗi: ${result.error || 'Không thể tính khoảng cách'}`, 'error');
+            const distanceResult = await API.calculateDistance(
+                currentLocation,
+                { lat: dest.lat, lng: dest.lng },
+                vehicle
+            );
+
+            if (distanceResult.success && distanceResult.data) {
+                const { distance_meters, duration_seconds } = distanceResult.data;
+
+                totalDistance += distance_meters;
+                totalDuration += duration_seconds;
+
+                route.push({
+                    stop_number: i + 1,
+                    location: dest,
+                    distance_from_previous: distance_meters,
+                    duration_from_previous: duration_seconds,
+                    cumulative_distance: totalDistance,
+                    cumulative_duration: totalDuration
+                });
+
+                currentLocation = { lat: dest.lat, lng: dest.lng };
+            } else {
+                showToast(`❌ Lỗi khi tính khoảng cách đến ${dest.name}`, 'error');
+                hideLoading();
+                return;
+            }
+
+            // Small delay to avoid rate limiting
+            if (i < destinations.length - 1) {
+                await new Promise(resolve => setTimeout(resolve, 300));
+            }
         }
+
+        // Display results
+        displayCalculateDistanceResults(route, totalDistance, totalDuration, vehicle);
+        showToast('✅ Tính toán thành công!', 'success');
+
     } catch (error) {
         console.error('Error calculating distance:', error);
         showToast('❌ Lỗi khi tính khoảng cách', 'error');
     } finally {
         hideLoading();
     }
+}
+
+// Display Calculate Distance Results
+function displayCalculateDistanceResults(route, totalDistance, totalDuration, vehicle) {
+    const totalDistanceKm = (totalDistance / 1000).toFixed(2);
+    const totalDurationMin = Math.round(totalDuration / 60);
+    const formattedTime = formatTimeToHHMM(totalDurationMin);
+
+    // Update summary
+    document.getElementById('calc-total-distance').textContent = `${totalDistanceKm} km`;
+    document.getElementById('calc-total-duration').textContent = formattedTime;
+    document.getElementById('calc-total-stops').textContent = route.length - 1; // Exclude departer
+
+    // Build route details HTML
+    let html = '<div class="route-steps">';
+
+    route.forEach((stop, index) => {
+        const location = stop.location;
+        const distanceKm = (stop.distance_from_previous / 1000).toFixed(2);
+        const durationMin = Math.round(stop.duration_from_previous / 60);
+
+        html += `
+            <div class="route-step" style="display: flex; gap: 15px; padding: 15px; border-bottom: 1px solid #e2e8f0;">
+                <div class="step-number" style="flex-shrink: 0; width: 40px; height: 40px; background: ${index === 0 ? '#667eea' : '#48bb78'}; color: white; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-weight: bold; font-size: 18px;">
+                    ${index}
+                </div>
+                <div class="step-content" style="flex: 1;">
+                    <h4 style="margin: 0 0 8px 0; color: #2d3748;">${location.name}</h4>
+                    ${index > 0 ? `
+                        <div class="step-metrics" style="display: flex; gap: 20px; color: #64748b; font-size: 14px;">
+                            <span>📏 ${distanceKm} km</span>
+                            <span>⏱️ ${durationMin} phút</span>
+                        </div>
+                    ` : '<div class="step-label" style="color: #667eea; font-weight: 500;">Điểm xuất phát</div>'}
+                </div>
+            </div>
+        `;
+    });
+
+    html += '</div>';
+    document.getElementById('calc-route-details').innerHTML = html;
+    document.getElementById('calc-distance-result').style.display = 'block';
 }
 
 // Show Details

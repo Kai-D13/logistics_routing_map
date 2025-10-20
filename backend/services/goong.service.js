@@ -161,7 +161,7 @@ class GoongService {
   async calculateDistanceMatrix(origins, destinations, vehicle = 'truck') {
     try {
       const url = `${this.baseURL}/DistanceMatrix`;
-      
+
       // Format origins and destinations
       const originsStr = origins.map(o => `${o.lat},${o.lng}`).join('|');
       const destinationsStr = destinations.map(d => `${d.lat},${d.lng}`).join('|');
@@ -192,6 +192,99 @@ class GoongService {
       }
     } catch (err) {
       console.error('Distance matrix error:', err.message);
+      return {
+        success: false,
+        error: err.response?.data?.error_message || err.message,
+      };
+    }
+  }
+
+  /**
+   * Get directions (route polyline) between multiple waypoints
+   * @param {Array} waypoints - Array of { lat, lng, name } - First is origin, last is destination, middle are waypoints
+   * @param {string} vehicle - Vehicle type: 'car', 'bike', 'truck' (default: 'truck')
+   * @returns {Object} { success, data: { polyline, distance_meters, duration_seconds, legs } }
+   */
+  async getDirections(waypoints, vehicle = 'truck') {
+    try {
+      if (!waypoints || waypoints.length < 2) {
+        return {
+          success: false,
+          error: 'At least 2 waypoints required (origin and destination)',
+        };
+      }
+
+      const url = `${this.baseURL}/Direction`;
+
+      // First waypoint is origin
+      const origin = `${waypoints[0].lat},${waypoints[0].lng}`;
+
+      // Last waypoint is destination
+      const destination = `${waypoints[waypoints.length - 1].lat},${waypoints[waypoints.length - 1].lng}`;
+
+      // Middle waypoints (if any)
+      const waypointsParam = waypoints.length > 2
+        ? waypoints.slice(1, -1).map(w => `${w.lat},${w.lng}`).join('|')
+        : null;
+
+      const params = {
+        origin: origin,
+        destination: destination,
+        vehicle: vehicle,
+        api_key: this.apiKey,
+      };
+
+      if (waypointsParam) {
+        params.waypoints = waypointsParam;
+      }
+
+      const response = await axios.get(url, { params });
+
+      if (response.data.routes && response.data.routes.length > 0) {
+        const route = response.data.routes[0];
+
+        // Calculate total distance and duration
+        let totalDistance = 0;
+        let totalDuration = 0;
+
+        route.legs.forEach(leg => {
+          totalDistance += leg.distance.value;
+          totalDuration += leg.duration.value;
+        });
+
+        return {
+          success: true,
+          data: {
+            polyline: route.overview_polyline.points,
+            distance_meters: totalDistance,
+            distance_km: (totalDistance / 1000).toFixed(2),
+            duration_seconds: totalDuration,
+            duration_minutes: Math.round(totalDuration / 60),
+            legs: route.legs.map((leg, index) => ({
+              start_location: leg.start_location,
+              end_location: leg.end_location,
+              start_address: leg.start_address,
+              end_address: leg.end_address,
+              distance_meters: leg.distance.value,
+              distance_km: (leg.distance.value / 1000).toFixed(2),
+              distance_text: leg.distance.text,
+              duration_seconds: leg.duration.value,
+              duration_minutes: Math.round(leg.duration.value / 60),
+              duration_text: leg.duration.text,
+              steps: leg.steps.length,
+            })),
+            summary: route.summary,
+            bounds: route.bounds,
+          },
+        };
+      } else {
+        return {
+          success: false,
+          error: 'No route found',
+        };
+      }
+    } catch (err) {
+      console.error('Directions API error:', err.message);
       return {
         success: false,
         error: err.response?.data?.error_message || err.message,

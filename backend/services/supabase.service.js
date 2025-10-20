@@ -157,10 +157,11 @@ class SupabaseService {
   // ============================================
 
   /**
-   * Get all destinations
+   * Get all destinations with route information (distance, duration)
    */
   async getDestinations(activeOnly = true, departerId = null) {
     try {
+      // First, get destinations
       let query = supabase
         .from('destinations')
         .select('*, departers(*)')
@@ -174,10 +175,32 @@ class SupabaseService {
         query = query.eq('departer_id', departerId);
       }
 
-      const { data, error } = await query;
+      const { data: destinations, error } = await query;
       if (error) throw error;
 
-      return { success: true, data };
+      // Then, get routes for each destination to include distance/duration
+      const destinationsWithRoutes = await Promise.all(
+        destinations.map(async (dest) => {
+          // Get route information for this destination
+          const { data: route } = await supabase
+            .from('routes')
+            .select('distance_km, duration_minutes, distance_meters, duration_seconds')
+            .eq('departer_id', dest.departer_id)
+            .eq('destination_id', dest.id)
+            .single();
+
+          // Merge route data with destination
+          return {
+            ...dest,
+            distance_km: route?.distance_km || null,
+            duration_minutes: route?.duration_minutes || null,
+            distance_meters: route?.distance_meters || null,
+            duration_seconds: route?.duration_seconds || null,
+          };
+        })
+      );
+
+      return { success: true, data: destinationsWithRoutes };
     } catch (err) {
       console.error('Error fetching destinations:', err);
       return { success: false, error: err.message };
