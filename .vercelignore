@@ -1,26 +1,39 @@
+# Dependencies
 node_modules
+
+# Environment
 .env
 .env.local
+
+# Logs
 *.log
+
+# OS
 .DS_Store
+Thumbs.db
+
+# Scripts (not needed in production)
 backend/scripts
-database
-departer_destination.xlsx
+
+# Database files (not needed in production)
+database/*.sql
+database/*.json
+database/*.md
+
+# Excel files
+*.xlsx
+
+# Documentation (not needed in production)
 *.md
 !README.md
-CHANGELOG.md
-CONTRIBUTING.md
-CREATE-TABLE-INSTRUCTIONS.md
-DEPLOYMENT.md
-FINAL-FIXES.md
-FIXES-APPLIED.md
-IMPLEMENTATION-COMPLETE.md
-IMPLEMENTATION-STATUS.md
-PROJECT_SUMMARY.md
-QUICK_START.md
-ROUTE-AVERAGES-IMPLEMENTATION.md
-ROUTE-MANAGEMENT-FIXES.md
-TESTING-GUIDE.md
-UPDATES.md
-CLEANUP-SQL-RUN-THIS.sql
+
+# Test files
+test-output.txt
+
+# Clone folders
+logistics-routing-system-clone
+
+# IDE
+.vscode
+.idea
 
