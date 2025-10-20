@@ -24,3 +24,12 @@ Thumbs.db
 dist/
 build/
 
+# Test output
+test-output.txt
+
+# Clone folders
+logistics-routing-system-clone/
+
+# Vercel
+.vercel
+
