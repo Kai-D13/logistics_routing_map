@@ -11,17 +11,8 @@ app.use(cors());
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
 
-// Serve static files from frontend with no-cache headers for development
-app.use(express.static(path.join(__dirname, '../frontend'), {
-  setHeaders: (res, path) => {
-    // Disable caching for HTML files in development
-    if (path.endsWith('.html')) {
-      res.setHeader('Cache-Control', 'no-cache, no-store, must-revalidate');
-      res.setHeader('Pragma', 'no-cache');
-      res.setHeader('Expires', '0');
-    }
-  }
-}));
+// Serve static files from frontend
+app.use(express.static(path.join(__dirname, '../frontend')));
 
 // Health check endpoint
 app.get('/api/health', (req, res) => {
@@ -51,11 +42,9 @@ app.get('/api/config/test', (req, res) => {
 app.use('/api/locations', require('./routes/locations'));
 app.use('/api/geocode', require('./routes/geocoding'));
 app.use('/api/distance', require('./routes/distance'));
-app.use('/api/directions', require('./routes/directions'));
 app.use('/api/trips', require('./routes/trips'));
 app.use('/api/vrp', require('./routes/vrp'));
 app.use('/api/route-segments', require('./routes/route-segments'));
-app.use('/api/routes', require('./routes/routes'));
 
 // 404 Handler
 app.use((req, res) => {
@@ -74,20 +63,17 @@ app.use((err, req, res, next) => {
   });
 });
 
-// Start Server (only if not running on Vercel)
-if (process.env.NODE_ENV !== 'production' || !process.env.VERCEL) {
-  const PORT = config.PORT;
-  app.listen(PORT, () => {
-    console.log('='.repeat(50));
-    console.log('🚀 Logistics Routing System Server Started');
-    console.log('='.repeat(50));
-    console.log(`📍 Environment: ${config.NODE_ENV}`);
-    console.log(`🌐 Server running on: http://localhost:${PORT}`);
-    console.log(`🏥 Health check: http://localhost:${PORT}/api/health`);
-    console.log(`🔧 Config test: http://localhost:${PORT}/api/config/test`);
-    console.log('='.repeat(50));
-  });
-}
+// Start Server
+const PORT = config.PORT;
+app.listen(PORT, () => {
+  console.log('='.repeat(50));
+  console.log('🚀 Logistics Routing System Server Started');
+  console.log('='.repeat(50));
+  console.log(`📍 Environment: ${config.NODE_ENV}`);
+  console.log(`🌐 Server running on: http://localhost:${PORT}`);
+  console.log(`🏥 Health check: http://localhost:${PORT}/api/health`);
+  console.log(`🔧 Config test: http://localhost:${PORT}/api/config/test`);
+  console.log('='.repeat(50));
+});
 
 module.exports = app;
-
