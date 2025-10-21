@@ -142,3 +142,8 @@ function highlightMarker(id, type) {
     });
 }
 
+// Expose functions to window for global access
+window.map = map;
+window.clearMarkers = clearMarkers;
+window.fitMapToMarkers = fitMapToMarkers;
+window.loadMapData = loadMapData;

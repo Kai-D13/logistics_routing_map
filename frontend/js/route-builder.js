@@ -285,6 +285,9 @@ async function previewNewRoute() {
   // Call Directions API
   showLoading();
   try {
+    console.log('📡 Calling Directions API for preview...');
+    console.log('📡 Waypoints:', waypoints);
+    
     const response = await fetch(`${API_BASE_URL}/directions`, {
       method: 'POST',
       headers: { 'Content-Type': 'application/json' },
@@ -292,17 +295,22 @@ async function previewNewRoute() {
     });
 
     const result = await response.json();
+    console.log('📡 Directions API raw response:', result);
 
     if (result.success) {
+      console.log('✅ Directions API success, data keys:', Object.keys(result.data));
+      console.log('📊 Full data:', JSON.stringify(result.data, null, 2));
+      
       routeBuilder.previewData = result.data;
       displayNewRoutePreview(routeName, hubOption.dataset.name, waypoints, result.data);
       document.getElementById('export-new-route-btn').style.display = 'block';
       showToast('✅ Preview route thành công!', 'success');
     } else {
+      console.error('❌ Directions API error:', result.error);
       showToast('❌ Lỗi: ' + result.error, 'error');
     }
   } catch (error) {
-    console.error('Error previewing route:', error);
+    console.error('❌ Error previewing route:', error);
     showToast('❌ Lỗi khi preview route', 'error');
   } finally {
     hideLoading();
@@ -313,12 +321,31 @@ async function previewNewRoute() {
  * Display preview
  */
 function displayNewRoutePreview(routeName, hubName, waypoints, directionsData) {
+  console.log('📊 Displaying preview with data:', directionsData);
+  
   const previewSection = document.getElementById('new-route-preview');
   previewSection.style.display = 'block';
 
-  // Update summary
-  document.getElementById('new-route-total-distance').textContent = directionsData.distance_km + ' km';
-  document.getElementById('new-route-total-duration').textContent = directionsData.duration_minutes + ' phút';
+  // Update summary - Use correct field names from backend with validation
+  let totalDistanceKm = '0.00';
+  let totalDurationText = '0 phút';
+  
+  if (directionsData.total_distance_km) {
+    totalDistanceKm = directionsData.total_distance_km;
+  } else if (directionsData.total_distance_meters) {
+    totalDistanceKm = (directionsData.total_distance_meters / 1000).toFixed(2);
+  }
+  
+  if (directionsData.total_duration_text) {
+    totalDurationText = directionsData.total_duration_text;
+  } else if (directionsData.total_duration_hours) {
+    totalDurationText = directionsData.total_duration_hours + ' giờ';
+  } else if (directionsData.total_duration_seconds) {
+    totalDurationText = Math.round(directionsData.total_duration_seconds / 60) + ' phút';
+  }
+  
+  document.getElementById('new-route-total-distance').textContent = totalDistanceKm + ' km';
+  document.getElementById('new-route-total-duration').textContent = totalDurationText;
   document.getElementById('new-route-total-stops').textContent = waypoints.length;
 
   // Update details
@@ -339,22 +366,24 @@ function displayNewRoutePreview(routeName, hubName, waypoints, directionsData) {
   `;
 
   // Legs
-  directionsData.legs.forEach((leg, index) => {
-    html += `
-      <div class="timeline-item">
-        <div class="timeline-marker destination">
-          <div class="marker-number">${index + 1}</div>
-        </div>
-        <div class="timeline-content">
-          <h4>📍 ${waypoints[index + 1].name}</h4>
-          <div class="route-metrics">
-            <span class="metric">📏 ${leg.distance_km} km</span>
-            <span class="metric">⏱️ ${leg.duration_minutes} phút</span>
+  if (directionsData.legs && directionsData.legs.length > 0) {
+    directionsData.legs.forEach((leg, index) => {
+      html += `
+        <div class="timeline-item">
+          <div class="timeline-marker destination">
+            <div class="marker-number">${index + 1}</div>
+          </div>
+          <div class="timeline-content">
+            <h4>📍 ${waypoints[index + 1].name}</h4>
+            <div class="route-metrics">
+              <span class="metric">📏 ${leg.distance_km} km</span>
+              <span class="metric">⏱️ ${leg.duration_minutes || leg.duration_text} phút</span>
+            </div>
           </div>
         </div>
-      </div>
-    `;
-  });
+      `;
+    });
+  }
 
   html += '</div>';
   detailsContainer.innerHTML = html;
@@ -364,8 +393,16 @@ function displayNewRoutePreview(routeName, hubName, waypoints, directionsData) {
     displayComparison(directionsData);
   }
 
-  // Draw polyline on map
-  drawPreviewRouteOnMap(waypoints, directionsData.polyline);
+  // Draw polyline on map - Use overview_polyline
+  if (directionsData.overview_polyline) {
+    console.log('🗺️ Drawing preview with overview_polyline');
+    drawPreviewRouteOnMap(waypoints, directionsData.overview_polyline);
+  } else {
+    console.warn('⚠️ No polyline data in directions response');
+    console.log('📊 Available directionsData fields:', Object.keys(directionsData));
+    console.log('📊 Full directionsData:', directionsData);
+    showToast('⚠️ Không có dữ liệu polyline từ Goong API', 'warning');
+  }
 }
 
 /**
@@ -430,10 +467,61 @@ function displayComparison(newData) {
 }
 
 /**
+ * Decode Google/Goong polyline format
+ */
+function decodePolyline(encoded) {
+  const points = [];
+  let index = 0, len = encoded.length;
+  let lat = 0, lng = 0;
+
+  while (index < len) {
+    let b, shift = 0, result = 0;
+    do {
+      b = encoded.charCodeAt(index++) - 63;
+      result |= (b & 0x1f) << shift;
+      shift += 5;
+    } while (b >= 0x20);
+    const dlat = ((result & 1) ? ~(result >> 1) : (result >> 1));
+    lat += dlat;
+
+    shift = 0;
+    result = 0;
+    do {
+      b = encoded.charCodeAt(index++) - 63;
+      result |= (b & 0x1f) << shift;
+      shift += 5;
+    } while (b >= 0x20);
+    const dlng = ((result & 1) ? ~(result >> 1) : (result >> 1));
+    lng += dlng;
+
+    points.push([lat / 1e5, lng / 1e5]);
+  }
+
+  return points;
+}
+
+/**
  * Draw preview route on map with polyline
  */
 function drawPreviewRouteOnMap(waypoints, polylineEncoded) {
-  if (!window.map) return;
+  if (!window.map) {
+    console.error('❌ Map not initialized');
+    return;
+  }
+
+  console.log('🗺️ Drawing preview route on map...');
+
+  // Clear ALL existing layers first
+  if (window.clearMarkers && typeof window.clearMarkers === 'function') {
+    window.clearMarkers();
+    console.log('✅ Cleared existing markers');
+  }
+
+  // Clear route management layers if any
+  if (window.RouteManagement && window.RouteManagement.clearRouteDisplay) {
+    window.RouteManagement.clearRouteDisplay();
+    console.log('✅ Cleared route management display');
+  }
 
   // Clear existing preview layers
   if (window.previewRouteLayer) {
@@ -444,7 +532,8 @@ function drawPreviewRouteOnMap(waypoints, polylineEncoded) {
   window.previewRouteLayer = L.layerGroup().addTo(window.map);
 
   // Decode polyline
-  const polylineCoords = L.Polyline.fromEncoded(polylineEncoded).getLatLngs();
+  const polylineCoords = decodePolyline(polylineEncoded);
+  console.log(`✅ Decoded ${polylineCoords.length} polyline points`);
 
   // Draw polyline
   const polyline = L.polyline(polylineCoords, {

@@ -453,6 +453,118 @@ class GoongService {
       };
     }
   }
+
+  /**
+   * Get Directions (routing) between multiple waypoints using Goong Directions API v2
+   * @param {Array} waypoints - Array of waypoints [{ lat, lng, name }, ...]
+   * @param {string} vehicle - 'car', 'bike', 'truck', 'taxi', 'hd' (default: 'truck')
+   * @returns {Object} { success, data: { polyline, distance_km, duration_hours, legs } }
+   */
+  async getDirections(waypoints, vehicle = 'truck') {
+    try {
+      if (!waypoints || waypoints.length < 2) {
+        return {
+          success: false,
+          error: 'At least 2 waypoints required',
+        };
+      }
+
+      // Goong Directions API v2
+      const url = `${this.baseURL}/Direction`;
+
+      // Build origin and destination
+      const origin = `${waypoints[0].lat},${waypoints[0].lng}`;
+      const destination = `${waypoints[waypoints.length - 1].lat},${waypoints[waypoints.length - 1].lng}`;
+
+      // Build waypoints string (exclude first and last)
+      let waypointsParam = null;
+      if (waypoints.length > 2) {
+        const middlePoints = waypoints.slice(1, -1);
+        waypointsParam = middlePoints.map(w => `${w.lat},${w.lng}`).join('|');
+      }
+
+      const params = {
+        origin: origin,
+        destination: destination,
+        vehicle: vehicle,
+        api_key: this.apiKey,
+      };
+
+      if (waypointsParam) {
+        params.waypoints = waypointsParam;
+      }
+
+      const response = await axios.get(url, { params });
+
+      if (response.data && response.data.routes && response.data.routes.length > 0) {
+        const route = response.data.routes[0];
+        const overview_polyline = route.overview_polyline?.points;
+
+        // Calculate totals
+        let total_distance = 0;
+        let total_duration = 0;
+        const legs = [];
+
+        route.legs.forEach((leg, index) => {
+          total_distance += leg.distance?.value || 0;
+          total_duration += leg.duration?.value || 0;
+
+          legs.push({
+            from: waypoints[index].name || `Point ${index}`,
+            to: waypoints[index + 1].name || `Point ${index + 1}`,
+            distance_meters: leg.distance?.value || 0,
+            distance_km: ((leg.distance?.value || 0) / 1000).toFixed(2),
+            distance_text: leg.distance?.text || '',
+            duration_seconds: leg.duration?.value || 0,
+            duration_minutes: Math.round((leg.duration?.value || 0) / 60),
+            duration_text: leg.duration?.text || '',
+            polyline: leg.polyline?.points || null,
+          });
+        });
+
+        return {
+          success: true,
+          data: {
+            overview_polyline: overview_polyline,
+            total_distance_meters: total_distance,
+            total_distance_km: (total_distance / 1000).toFixed(2),
+            total_duration_seconds: total_duration,
+            total_duration_hours: (total_duration / 3600).toFixed(2),
+            total_duration_text: this.formatDuration(total_duration),
+            vehicle: vehicle,
+            legs: legs,
+            waypoints_count: waypoints.length,
+          },
+        };
+      } else {
+        return {
+          success: false,
+          error: 'No route found',
+        };
+      }
+    } catch (err) {
+      console.error('Goong Directions API error:', err.message);
+      return {
+        success: false,
+        error: err.response?.data?.error_message || err.message,
+      };
+    }
+  }
+
+  /**
+   * Format duration in seconds to readable text
+   * @param {number} seconds
+   * @returns {string}
+   */
+  formatDuration(seconds) {
+    const hours = Math.floor(seconds / 3600);
+    const minutes = Math.floor((seconds % 3600) / 60);
+
+    if (hours > 0) {
+      return `${hours} giờ ${minutes} phút`;
+    }
+    return `${minutes} phút`;
+  }
 }
 
 module.exports = new GoongService();

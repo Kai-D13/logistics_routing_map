@@ -83,45 +83,17 @@
                         </button>
                     </div>
 
-                    <!-- Search Filters -->
+                    <!-- Search Filters - Simplified -->
                     <div class="search-filters" style="background: #f8f9fa; padding: 20px; border-radius: 8px; margin-bottom: 20px;">
                         <div class="row">
-                            <div class="col-md-4">
+                            <div class="col-md-12">
                                 <div class="form-group">
                                     <label for="route-select">Chọn Route:</label>
-                                    <select id="route-select" class="form-control">
+                                    <select id="route-select" class="form-control" style="font-size: 16px; padding: 10px;">
                                         <option value="">-- Chọn Route --</option>
                                     </select>
+                                    <small class="form-text text-muted">Chọn route để xem chi tiết và hiển thị trên bản đồ</small>
                                 </div>
-                            </div>
-                            <div class="col-md-4">
-                                <div class="form-group">
-                                    <label for="filter-departer">Hub Xuất Phát:</label>
-                                    <select id="filter-departer" class="form-control">
-                                        <option value="">-- Tất cả Hub --</option>
-                                    </select>
-                                </div>
-                            </div>
-                            <div class="col-md-4">
-                                <div class="form-group">
-                                    <label for="filter-note">Loại Giao Hàng:</label>
-                                    <select id="filter-note" class="form-control">
-                                        <option value="">-- Tất cả --</option>
-                                        <option value="D">D (Trong ngày)</option>
-                                        <option value="D+1">D+1 (Ngày hôm sau)</option>
-                                        <option value="D+2">D+2 (2 ngày sau)</option>
-                                    </select>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="row">
-                            <div class="col-md-12" style="text-align: right; margin-top: 10px;">
-                                <button id="search-routes-btn" class="btn btn-info" style="margin-right: 10px;">
-                                    🔍 Tìm Kiếm
-                                </button>
-                                <button id="clear-filters-btn" class="btn btn-secondary">
-                                    🔄 Xóa Bộ Lọc
-                                </button>
                             </div>
                         </div>
                     </div>
@@ -275,12 +247,13 @@
             </div>
             <div class="modal-body">
                 <form id="calculateDistanceForm" onsubmit="submitCalculateDistance(event)">
+                    <!-- Optional: Hub Chính -->
                     <div class="form-group">
-                        <label for="calc-departer-select">Điểm Xuất Phát (Hub Chính) *</label>
-                        <select id="calc-departer-select" class="form-control" required>
-                            <option value="">-- Chọn Hub chính --</option>
+                        <label for="calc-departer-select">Điểm Xuất Phát (Hub Chính) - Tùy chọn</label>
+                        <select id="calc-departer-select" class="form-control">
+                            <option value="">-- Không chọn (tự động) --</option>
                         </select>
-                        <small style="color: #64748b;">Chỉ cho phép chọn Hub chính làm điểm xuất phát</small>
+                        <small style="color: #64748b;">Nếu không chọn, hệ thống sẽ tính từ điểm đầu tiên bạn chọn bên dưới</small>
                     </div>
 
                     <div class="form-group">
@@ -290,6 +263,7 @@
                                 Đã chọn: 0/20
                             </span>
                         </div>
+                        <small style="color: #64748b; margin-bottom: 10px; display: block;">Chọn ít nhất 1 điểm (hoặc 2 điểm nếu không chọn Hub Chính)</small>
 
                         <!-- Search Box -->
                         <div style="margin-bottom: 10px;">

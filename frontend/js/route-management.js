@@ -14,10 +14,25 @@ const RouteManagement = {
    * Initialize route management
    */
   async init() {
-    console.log('🚀 Initializing Route Management...');
     await this.loadRoutes();
-    await this.loadDeparters();
     this.setupEventListeners();
+  },
+
+  /**
+   * Populate route select dropdown
+   */
+  populateRouteSelect() {
+    const select = document.getElementById('route-select');
+    if (!select) return;
+
+    select.innerHTML = '<option value="">-- Chọn Route --</option>';
+
+    this.allRoutes.forEach(route => {
+      const option = document.createElement('option');
+      option.value = route.route_name;
+      option.textContent = `${route.route_name} (${route.total_destinations} điểm)`;
+      select.appendChild(option);
+    });
   },
 
   /**
@@ -40,58 +55,6 @@ const RouteManagement = {
   },
 
   /**
-   * Load all departers for filter
-   */
-  async loadDeparters() {
-    try {
-      const response = await fetch(`${API_BASE_URL}/routes/departers`);
-      const result = await response.json();
-
-      if (result.success) {
-        this.allDeparters = result.data;
-        this.populateDeparterFilter();
-        console.log(`✅ Loaded ${result.total} departers`);
-      }
-    } catch (error) {
-      console.error('Error loading departers:', error);
-    }
-  },
-
-  /**
-   * Populate route select dropdown
-   */
-  populateRouteSelect() {
-    const select = document.getElementById('route-select');
-    if (!select) return;
-
-    select.innerHTML = '<option value="">-- Chọn Route --</option>';
-
-    this.allRoutes.forEach(route => {
-      const option = document.createElement('option');
-      option.value = route.route_name;
-      option.textContent = `${route.route_name} (${route.total_destinations} điểm)`;
-      select.appendChild(option);
-    });
-  },
-
-  /**
-   * Populate departer filter
-   */
-  populateDeparterFilter() {
-    const select = document.getElementById('filter-departer');
-    if (!select) return;
-
-    select.innerHTML = '<option value="">-- Tất cả Hub --</option>';
-
-    this.allDeparters.forEach(departer => {
-      const option = document.createElement('option');
-      option.value = departer;
-      option.textContent = departer;
-      select.appendChild(option);
-    });
-  },
-
-  /**
    * Setup event listeners
    */
   setupEventListeners() {
@@ -105,18 +68,6 @@ const RouteManagement = {
           this.clearRouteDisplay();
         }
       });
-    }
-
-    // Search filters
-    const searchBtn = document.getElementById('search-routes-btn');
-    if (searchBtn) {
-      searchBtn.addEventListener('click', () => this.searchRoutes());
-    }
-
-    // Clear filters
-    const clearBtn = document.getElementById('clear-filters-btn');
-    if (clearBtn) {
-      clearBtn.addEventListener('click', () => this.clearFilters());
     }
   },
 
@@ -240,7 +191,7 @@ const RouteManagement = {
   },
 
   /**
-   * Display route on map
+   * Display route on map with Goong Directions API
    */
   async displayRouteOnMap() {
     // Clear previous markers and polylines
@@ -250,67 +201,180 @@ const RouteManagement = {
 
     const { segments } = this.currentRoute;
     const bounds = [];
+    const orderedWaypoints = [];
+    const seenHubs = new Set();
 
-    // Get coordinates for all hubs
-    for (const segment of segments) {
+    console.log(`📍 Building route map for ${segments.length} segments`);
+
+    // Step 1: Build ORDERED waypoints following the route sequence
+    for (let i = 0; i < segments.length; i++) {
+      const segment = segments[i];
+      
       try {
-        // Get departer coordinates
-        const departerCoords = await this.getHubCoordinates(segment.hub_departer);
-        if (departerCoords) {
-          const marker = L.marker([departerCoords.lat, departerCoords.lng], {
-            icon: L.divIcon({
-              className: 'custom-marker departer-marker',
-              html: '<div>🏠</div>',
-              iconSize: [30, 30]
-            })
-          }).addTo(map);
-
-          marker.bindPopup(`<b>${segment.hub_departer}</b><br>Xuất phát: ${segment.departure_time}`);
-          this.routeMarkers.push(marker);
-          bounds.push([departerCoords.lat, departerCoords.lng]);
+        // Add departer if not already added
+        if (!seenHubs.has(segment.hub_departer)) {
+          const departerCoords = await this.getHubCoordinates(segment.hub_departer);
+          if (departerCoords) {
+            orderedWaypoints.push({
+              name: segment.hub_departer,
+              lat: departerCoords.lat,
+              lng: departerCoords.lng,
+              type: 'departer',
+              order: orderedWaypoints.length + 1
+            });
+            seenHubs.add(segment.hub_departer);
+            bounds.push([departerCoords.lat, departerCoords.lng]);
+          }
         }
 
-        // Get destination coordinates
-        const destCoords = await this.getHubCoordinates(segment.hub_destination);
-        if (destCoords) {
-          const marker = L.marker([destCoords.lat, destCoords.lng], {
-            icon: L.divIcon({
-              className: 'custom-marker destination-marker',
-              html: '<div>📍</div>',
-              iconSize: [30, 30]
-            })
-          }).addTo(map);
-
-          marker.bindPopup(`
-            <b>${segment.hub_destination}</b><br>
-            Đến: ${segment.arrival_time}<br>
-            ${segment.distance_km ? 'Khoảng cách: ' + segment.distance_km + ' km' : ''}
-          `);
-          this.routeMarkers.push(marker);
-          bounds.push([destCoords.lat, destCoords.lng]);
-
-          // Draw polyline if both coordinates exist
-          if (departerCoords) {
-            const polyline = L.polyline([
-              [departerCoords.lat, departerCoords.lng],
-              [destCoords.lat, destCoords.lng]
-            ], {
-              color: '#667eea',
-              weight: 3,
-              opacity: 0.7
-            }).addTo(map);
-
-            this.routePolylines.push(polyline);
+        // Add destination
+        if (!seenHubs.has(segment.hub_destination)) {
+          const destCoords = await this.getHubCoordinates(segment.hub_destination);
+          if (destCoords) {
+            orderedWaypoints.push({
+              name: segment.hub_destination,
+              lat: destCoords.lat,
+              lng: destCoords.lng,
+              type: 'destination',
+              order: orderedWaypoints.length + 1,
+              arrival_time: segment.arrival_time,
+              distance_km: segment.distance_km
+            });
+            seenHubs.add(segment.hub_destination);
+            bounds.push([destCoords.lat, destCoords.lng]);
           }
         }
       } catch (error) {
-        console.error('Error displaying segment:', error);
+        console.error(`Error processing segment ${i}:`, error);
       }
     }
 
-    // Fit map to bounds
+    console.log(`✅ Collected ${orderedWaypoints.length} unique waypoints`);
+
+    // Step 2: Add NUMBERED markers for route sequence
+    orderedWaypoints.forEach((waypoint, index) => {
+      const markerIcon = waypoint.type === 'departer' 
+        ? L.divIcon({
+            className: 'custom-marker departer-marker',
+            html: `<div style="background: #ef4444; color: white; border-radius: 50%; width: 30px; height: 30px; display: flex; align-items: center; justify-content: center; font-weight: bold; border: 2px solid white; box-shadow: 0 2px 4px rgba(0,0,0,0.3);">${waypoint.order}</div>`,
+            iconSize: [30, 30]
+          })
+        : L.divIcon({
+            className: 'custom-marker destination-marker',
+            html: `<div style="background: #3b82f6; color: white; border-radius: 50%; width: 30px; height: 30px; display: flex; align-items: center; justify-content: center; font-weight: bold; border: 2px solid white; box-shadow: 0 2px 4px rgba(0,0,0,0.3);">${waypoint.order}</div>`,
+            iconSize: [30, 30]
+          });
+
+      const marker = L.marker([waypoint.lat, waypoint.lng], {
+        icon: markerIcon
+      }).addTo(map);
+
+      const popupContent = `
+        <div style="min-width: 150px;">
+          <strong>${waypoint.order}. ${waypoint.name}</strong><br>
+          <span style="color: #64748b;">
+            ${waypoint.type === 'departer' ? '🏠 Hub Chính' : '📍 Điểm Đến'}
+          </span>
+          ${waypoint.arrival_time ? `<br>⏰ ${waypoint.arrival_time}` : ''}
+          ${waypoint.distance_km ? `<br>📏 ${waypoint.distance_km} km` : ''}
+        </div>
+      `;
+      marker.bindPopup(popupContent);
+      this.routeMarkers.push(marker);
+    });
+
+    // Step 3: Get realistic routing from Goong Directions API
+    if (orderedWaypoints.length >= 2) {
+      try {
+        // Build waypoints array for API (only lat/lng)
+        const apiWaypoints = orderedWaypoints.map(w => ({ 
+          lat: w.lat, 
+          lng: w.lng 
+        }));
+        
+        console.log('📡 Calling Directions API with', apiWaypoints.length, 'waypoints');
+        
+        // Call Directions API
+        const response = await fetch(`${API_BASE_URL}/directions`, {
+          method: 'POST',
+          headers: { 'Content-Type': 'application/json' },
+          body: JSON.stringify({
+            waypoints: apiWaypoints,
+            vehicle: 'truck'
+          })
+        });
+
+        const result = await response.json();
+        console.log('📡 Directions API response:', result);
+
+        if (result.success && result.data && result.data.overview_polyline) {
+          // Decode polyline and draw on map
+          const decodedPoints = this.decodePolyline(result.data.overview_polyline);
+          
+          console.log(`✅ Decoded ${decodedPoints.length} polyline points`);
+          
+          const polyline = L.polyline(decodedPoints, {
+            color: '#667eea',
+            weight: 4,
+            opacity: 0.8,
+            smoothFactor: 1
+          }).addTo(map);
+
+          this.routePolylines.push(polyline);
+
+          // Show route info
+          const totalDistance = result.data.total_distance_km || 
+                                (result.data.total_distance_meters / 1000).toFixed(2);
+          const totalDuration = result.data.total_duration_text || 
+                                result.data.total_duration_hours + ' giờ';
+          
+          showNotification(
+            `✅ Tuyến đường: ${totalDistance} km • Thời gian: ${totalDuration}`,
+            'success',
+            5000
+          );
+        } else {
+          // Fallback: draw simple lines if Directions API fails
+          console.warn('⚠️ Directions API failed:', result.error || 'No polyline data');
+          console.log('📊 Full response data:', result.data);
+          showNotification('⚠️ Không thể tải đường đi từ Goong API, sử dụng đường thẳng', 'warning');
+          this.drawFallbackPolylines(orderedWaypoints);
+        }
+      } catch (error) {
+        console.error('❌ Error calling Directions API:', error);
+        showNotification('❌ Lỗi kết nối Goong API, sử dụng đường thẳng', 'error');
+        this.drawFallbackPolylines(orderedWaypoints);
+      }
+    }
+
+    // Step 4: Fit map to bounds
     if (bounds.length > 0) {
       map.fitBounds(bounds, { padding: [50, 50] });
+    }
+  },
+
+  /**
+   * Fallback method: Draw straight polylines if Directions API fails
+   */
+  drawFallbackPolylines(orderedWaypoints) {
+    if (!orderedWaypoints || orderedWaypoints.length < 2) return;
+
+    // Draw straight lines between consecutive waypoints
+    for (let i = 0; i < orderedWaypoints.length - 1; i++) {
+      const from = orderedWaypoints[i];
+      const to = orderedWaypoints[i + 1];
+
+      const polyline = L.polyline([
+        [from.lat, from.lng],
+        [to.lat, to.lng]
+      ], {
+        color: '#94a3b8',
+        weight: 3,
+        opacity: 0.6,
+        dashArray: '10, 10'
+      }).addTo(map);
+
+      this.routePolylines.push(polyline);
     }
   },
 
@@ -442,49 +506,37 @@ const RouteManagement = {
   },
 
   /**
-   * Search routes with filters
+   * Decode Google/Goong polyline format
    */
-  async searchRoutes() {
-    const departer = document.getElementById('filter-departer')?.value || '';
-    const note = document.getElementById('filter-note')?.value || '';
+  decodePolyline(encoded) {
+    const points = [];
+    let index = 0, len = encoded.length;
+    let lat = 0, lng = 0;
 
-    try {
-      let url = `${API_BASE_URL}/routes/search?`;
-      if (departer) url += `hub_departer=${encodeURIComponent(departer)}&`;
-      if (note) url += `note=${encodeURIComponent(note)}&`;
+    while (index < len) {
+      let b, shift = 0, result = 0;
+      do {
+        b = encoded.charCodeAt(index++) - 63;
+        result |= (b & 0x1f) << shift;
+        shift += 5;
+      } while (b >= 0x20);
+      const dlat = ((result & 1) ? ~(result >> 1) : (result >> 1));
+      lat += dlat;
 
-      const response = await fetch(url);
-      const result = await response.json();
+      shift = 0;
+      result = 0;
+      do {
+        b = encoded.charCodeAt(index++) - 63;
+        result |= (b & 0x1f) << shift;
+        shift += 5;
+      } while (b >= 0x20);
+      const dlng = ((result & 1) ? ~(result >> 1) : (result >> 1));
+      lng += dlng;
 
-      if (result.success) {
-        // Update route select with search results
-        const routeNames = [...new Set(result.data.map(r => r.route_name))];
-        const select = document.getElementById('route-select');
-
-        select.innerHTML = '<option value="">-- Chọn Route --</option>';
-        routeNames.forEach(name => {
-          const option = document.createElement('option');
-          option.value = name;
-          option.textContent = name;
-          select.appendChild(option);
-        });
-
-        showNotification(`Tìm thấy ${routeNames.length} routes`, 'success');
-      }
-    } catch (error) {
-      console.error('Error searching routes:', error);
-      showNotification('Lỗi khi tìm kiếm', 'error');
+      points.push([lat / 1e5, lng / 1e5]);
     }
-  },
 
-  /**
-   * Clear filters
-   */
-  clearFilters() {
-    document.getElementById('filter-departer').value = '';
-    document.getElementById('filter-note').value = '';
-    this.populateRouteSelect();
-    showNotification('Đã xóa bộ lọc', 'info');
+    return points;
   }
 };
 
@@ -510,4 +562,7 @@ if (document.readyState === 'loading') {
 } else {
   RouteManagement.init();
 }
+
+// Expose to window for external access
+window.RouteManagement = RouteManagement;
 

@@ -89,9 +89,9 @@ async function openCalculateDistanceModal() {
             API.getDestinations()
         ]);
 
-        // Populate departer dropdown (only Hub Chính)
+        // Populate departer dropdown (optional now)
         const departerSelect = document.getElementById('calc-departer-select');
-        departerSelect.innerHTML = '<option value="">-- Chọn Hub chính --</option>';
+        departerSelect.innerHTML = '<option value="">-- Không chọn (tự động) --</option>';
 
         if (departersResult.success && departersResult.data && departersResult.data.length > 0) {
             departersResult.data.forEach(dep => {
@@ -282,31 +282,36 @@ async function submitDestination(event) {
     }
 }
 
-// Submit Calculate Distance (Multi-Destination)
+// Submit Calculate Distance (Multi-Destination) - Hub Chính is OPTIONAL
 async function submitCalculateDistance(event) {
     event.preventDefault();
 
-    // Get departer
+    // Get departer (OPTIONAL)
     const departerSelect = document.getElementById('calc-departer-select');
     const departerId = departerSelect.value;
+    let departer = null;
 
-    if (!departerId) {
-        showToast('❌ Vui lòng chọn điểm xuất phát', 'error');
-        return;
+    if (departerId) {
+        const selectedOption = departerSelect.options[departerSelect.selectedIndex];
+        departer = {
+            id: departerId,
+            name: selectedOption.textContent,
+            lat: parseFloat(selectedOption.dataset.lat),
+            lng: parseFloat(selectedOption.dataset.lng)
+        };
     }
-
-    const selectedOption = departerSelect.options[departerSelect.selectedIndex];
-    const departer = {
-        id: departerId,
-        name: selectedOption.textContent,
-        lat: parseFloat(selectedOption.dataset.lat),
-        lng: parseFloat(selectedOption.dataset.lng)
-    };
 
     // Get selected destinations
     const checkboxes = document.querySelectorAll('#calc-destinations-list input[type="checkbox"]:checked');
 
-    if (checkboxes.length === 0) {
+    // Validation: if no departer, need at least 2 destinations
+    if (!departer && checkboxes.length < 2) {
+        showToast('❌ Vui lòng chọn Hub Chính hoặc chọn ít nhất 2 điểm đến', 'error');
+        return;
+    }
+
+    // If has departer, need at least 1 destination
+    if (departer && checkboxes.length === 0) {
         showToast('❌ Vui lòng chọn ít nhất 1 điểm đến', 'error');
         return;
     }
@@ -334,20 +339,36 @@ async function submitCalculateDistance(event) {
         const route = [];
         let totalDistance = 0;
         let totalDuration = 0;
-        let currentLocation = { lat: departer.lat, lng: departer.lng };
-
-        // Add departer as first stop
-        route.push({
-            stop_number: 0,
-            location: departer,
-            distance_from_previous: 0,
-            duration_from_previous: 0,
-            cumulative_distance: 0,
-            cumulative_duration: 0
-        });
+        
+        // Determine starting point
+        let currentLocation;
+        if (departer) {
+            // If departer selected, start from there
+            currentLocation = { lat: departer.lat, lng: departer.lng };
+            route.push({
+                stop_number: 0,
+                location: departer,
+                distance_from_previous: 0,
+                duration_from_previous: 0,
+                cumulative_distance: 0,
+                cumulative_duration: 0
+            });
+        } else {
+            // If no departer, start from first destination
+            currentLocation = { lat: destinations[0].lat, lng: destinations[0].lng };
+            route.push({
+                stop_number: 0,
+                location: destinations[0],
+                distance_from_previous: 0,
+                duration_from_previous: 0,
+                cumulative_distance: 0,
+                cumulative_duration: 0
+            });
+        }
 
         // Calculate distance to each destination
-        for (let i = 0; i < destinations.length; i++) {
+        const startIndex = departer ? 0 : 1; // Skip first if no departer
+        for (let i = startIndex; i < destinations.length; i++) {
             const dest = destinations[i];
 
             const distanceResult = await API.calculateDistance(
