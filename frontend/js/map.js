@@ -44,11 +44,20 @@ function addDeparterMarker(departer) {
                 <h3 style="color: #f56565; margin-bottom: 10px;">🏠 ${departer.name}</h3>
                 <p style="margin: 5px 0;"><strong>Địa chỉ:</strong><br>${departer.address}</p>
                 <p style="margin: 5px 0;"><strong>Tọa độ:</strong><br>${departer.lat.toFixed(6)}, ${departer.lng.toFixed(6)}</p>
-                <button onclick="showDeparterDetails('${departer.id}')" style="margin-top: 10px; padding: 8px 16px; background: #f56565; color: white; border: none; border-radius: 5px; cursor: pointer;">
-                    Xem Chi Tiết
-                </button>
+                <div style="display: flex; gap: 5px; margin-top: 10px;">
+                    <button onclick="editHub('${departer.id}', 'departer')" style="flex: 1; padding: 8px 12px; background: #3b82f6; color: white; border: none; border-radius: 5px; cursor: pointer; font-size: 13px;">
+                        ✏️ Sửa
+                    </button>
+                    <button onclick="showDeparterDetails('${departer.id}')" style="flex: 1; padding: 8px 12px; background: #f56565; color: white; border: none; border-radius: 5px; cursor: pointer; font-size: 13px;">
+                        👁️ Chi Tiết
+                    </button>
+                </div>
             </div>
         `);
+
+    // Store departer data in marker for easy access
+    marker.hubData = departer;
+    marker.hubType = 'departer';
 
     departerMarkers.push(marker);
     markers.push(marker);
@@ -71,11 +80,20 @@ function addDestinationMarker(destination) {
                         <p style="margin: 3px 0; color: #667eea;"><strong>⏱️ Thời gian:</strong> ${destination.duration_minutes} phút</p>
                     </div>
                 ` : ''}
-                <button onclick="showDestinationDetails('${destination.id}')" style="margin-top: 10px; padding: 8px 16px; background: #48bb78; color: white; border: none; border-radius: 5px; cursor: pointer;">
-                    Xem Chi Tiết
-                </button>
+                <div style="display: flex; gap: 5px; margin-top: 10px;">
+                    <button onclick="editHub('${destination.id}', 'destination')" style="flex: 1; padding: 8px 12px; background: #3b82f6; color: white; border: none; border-radius: 5px; cursor: pointer; font-size: 13px;">
+                        ✏️ Sửa
+                    </button>
+                    <button onclick="showDestinationDetails('${destination.id}')" style="flex: 1; padding: 8px 12px; background: #48bb78; color: white; border: none; border-radius: 5px; cursor: pointer; font-size: 13px;">
+                        👁️ Chi Tiết
+                    </button>
+                </div>
             </div>
         `);
+
+    // Store destination data in marker for easy access
+    marker.hubData = destination;
+    marker.hubType = 'destination';
 
     destinationMarkers.push(marker);
     markers.push(marker);
@@ -142,8 +160,38 @@ function highlightMarker(id, type) {
     });
 }
 
+/**
+ * Edit hub - Open edit modal
+ * Called from marker popup buttons
+ */
+async function editHub(hubId, hubType) {
+    try {
+        // Find marker with this hub
+        const markersList = hubType === 'departer' ? departerMarkers : destinationMarkers;
+        const marker = markersList.find(m => m.hubData && m.hubData.id === hubId);
+
+        if (!marker || !marker.hubData) {
+            console.error('Hub not found:', hubId, hubType);
+            showNotification('❌ Không tìm thấy hub', 'error');
+            return;
+        }
+
+        // Open edit modal
+        if (typeof HubEditor !== 'undefined') {
+            HubEditor.openModal(marker.hubData, hubType, marker);
+        } else {
+            console.error('HubEditor not loaded');
+            showNotification('❌ Chức năng chỉnh sửa chưa sẵn sàng', 'error');
+        }
+    } catch (error) {
+        console.error('Error opening edit modal:', error);
+        showNotification('❌ Lỗi khi mở form chỉnh sửa', 'error');
+    }
+}
+
 // Expose functions to window for global access
 window.map = map;
 window.clearMarkers = clearMarkers;
 window.fitMapToMarkers = fitMapToMarkers;
 window.loadMapData = loadMapData;
+window.editHub = editHub;

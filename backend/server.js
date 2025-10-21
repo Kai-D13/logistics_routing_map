@@ -47,6 +47,7 @@ app.use('/api/vrp', require('./routes/vrp'));
 app.use('/api/route-segments', require('./routes/route-segments'));
 app.use('/api/routes', require('./routes/routes'));  // Route Management API
 app.use('/api/directions', require('./routes/directions'));  // Directions API
+app.use('/api/polylines', require('./routes/polylines'));  // Polyline Cache API
 
 // 404 Handler
 app.use((req, res) => {

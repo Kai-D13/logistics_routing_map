@@ -202,66 +202,65 @@ const RouteManagement = {
     const { segments } = this.currentRoute;
     const bounds = [];
     const orderedWaypoints = [];
-    const seenHubs = new Set();
 
     console.log(`📍 Building route map for ${segments.length} segments`);
 
-    // Step 1: Build ORDERED waypoints following the route sequence
+    // Step 1: Build ORDERED waypoints following EXACT segment sequence
+    // First waypoint: Hub Chính (departer from first segment)
+    if (segments.length > 0) {
+      const firstSegment = segments[0];
+      const departerCoords = await this.getHubCoordinates(firstSegment.hub_departer);
+
+      if (departerCoords) {
+        orderedWaypoints.push({
+          name: firstSegment.hub_departer,
+          lat: departerCoords.lat,
+          lng: departerCoords.lng,
+          type: 'departer',
+          order: 1,
+          departure_time: firstSegment.departure_time
+        });
+        bounds.push([departerCoords.lat, departerCoords.lng]);
+      }
+    }
+
+    // Subsequent waypoints: Destinations from each segment in order
     for (let i = 0; i < segments.length; i++) {
       const segment = segments[i];
-      
-      try {
-        // Add departer if not already added
-        if (!seenHubs.has(segment.hub_departer)) {
-          const departerCoords = await this.getHubCoordinates(segment.hub_departer);
-          if (departerCoords) {
-            orderedWaypoints.push({
-              name: segment.hub_departer,
-              lat: departerCoords.lat,
-              lng: departerCoords.lng,
-              type: 'departer',
-              order: orderedWaypoints.length + 1
-            });
-            seenHubs.add(segment.hub_departer);
-            bounds.push([departerCoords.lat, departerCoords.lng]);
-          }
-        }
 
-        // Add destination
-        if (!seenHubs.has(segment.hub_destination)) {
-          const destCoords = await this.getHubCoordinates(segment.hub_destination);
-          if (destCoords) {
-            orderedWaypoints.push({
-              name: segment.hub_destination,
-              lat: destCoords.lat,
-              lng: destCoords.lng,
-              type: 'destination',
-              order: orderedWaypoints.length + 1,
-              arrival_time: segment.arrival_time,
-              distance_km: segment.distance_km
-            });
-            seenHubs.add(segment.hub_destination);
-            bounds.push([destCoords.lat, destCoords.lng]);
-          }
+      try {
+        const destCoords = await this.getHubCoordinates(segment.hub_destination);
+        if (destCoords) {
+          orderedWaypoints.push({
+            name: segment.hub_destination,
+            lat: destCoords.lat,
+            lng: destCoords.lng,
+            type: 'destination',
+            order: orderedWaypoints.length + 1,
+            arrival_time: segment.arrival_time,
+            distance_km: null,  // Will be filled from API
+            segment_index: i
+          });
+          bounds.push([destCoords.lat, destCoords.lng]);
         }
       } catch (error) {
         console.error(`Error processing segment ${i}:`, error);
       }
     }
 
-    console.log(`✅ Collected ${orderedWaypoints.length} unique waypoints`);
+    console.log(`✅ Built ${orderedWaypoints.length} waypoints in exact segment order`);
 
     // Step 2: Add NUMBERED markers for route sequence
     orderedWaypoints.forEach((waypoint, index) => {
-      const markerIcon = waypoint.type === 'departer' 
+      const markerIcon = waypoint.type === 'departer'
         ? L.divIcon({
             className: 'custom-marker departer-marker',
-            html: `<div style="background: #ef4444; color: white; border-radius: 50%; width: 30px; height: 30px; display: flex; align-items: center; justify-content: center; font-weight: bold; border: 2px solid white; box-shadow: 0 2px 4px rgba(0,0,0,0.3);">${waypoint.order}</div>`,
-            iconSize: [30, 30]
+            html: `<div style="background: #ef4444; color: white; border-radius: 50%; width: 35px; height: 35px; display: flex; align-items: center; justify-content: center; font-weight: bold; font-size: 14px; border: 3px solid white; box-shadow: 0 2px 6px rgba(0,0,0,0.4);">${waypoint.order}</div>`,
+            iconSize: [35, 35]
           })
         : L.divIcon({
             className: 'custom-marker destination-marker',
-            html: `<div style="background: #3b82f6; color: white; border-radius: 50%; width: 30px; height: 30px; display: flex; align-items: center; justify-content: center; font-weight: bold; border: 2px solid white; box-shadow: 0 2px 4px rgba(0,0,0,0.3);">${waypoint.order}</div>`,
+            html: `<div style="background: #3b82f6; color: white; border-radius: 50%; width: 30px; height: 30px; display: flex; align-items: center; justify-content: center; font-weight: bold; font-size: 12px; border: 2px solid white; box-shadow: 0 2px 4px rgba(0,0,0,0.3);">${waypoint.order}</div>`,
             iconSize: [30, 30]
           });
 
@@ -269,82 +268,95 @@ const RouteManagement = {
         icon: markerIcon
       }).addTo(map);
 
+      // Popup will be updated later with distance from API
       const popupContent = `
         <div style="min-width: 150px;">
           <strong>${waypoint.order}. ${waypoint.name}</strong><br>
           <span style="color: #64748b;">
             ${waypoint.type === 'departer' ? '🏠 Hub Chính' : '📍 Điểm Đến'}
           </span>
-          ${waypoint.arrival_time ? `<br>⏰ ${waypoint.arrival_time}` : ''}
-          ${waypoint.distance_km ? `<br>📏 ${waypoint.distance_km} km` : ''}
+          ${waypoint.departure_time ? `<br>🕐 Xuất phát: ${waypoint.departure_time}` : ''}
+          ${waypoint.arrival_time ? `<br>⏰ Đến: ${waypoint.arrival_time}` : ''}
+          <span id="distance-${waypoint.order}"></span>
         </div>
       `;
       marker.bindPopup(popupContent);
       this.routeMarkers.push(marker);
+
+      // Store marker reference for updating popup later
+      waypoint.marker = marker;
     });
 
-    // Step 3: Get realistic routing from Goong Directions API
+    // Step 3: Draw polylines for EACH SEGMENT with caching
     if (orderedWaypoints.length >= 2) {
-      try {
-        // Build waypoints array for API (only lat/lng)
-        const apiWaypoints = orderedWaypoints.map(w => ({ 
-          lat: w.lat, 
-          lng: w.lng 
-        }));
-        
-        console.log('📡 Calling Directions API with', apiWaypoints.length, 'waypoints');
-        
-        // Call Directions API
-        const response = await fetch(`${API_BASE_URL}/directions`, {
-          method: 'POST',
-          headers: { 'Content-Type': 'application/json' },
-          body: JSON.stringify({
-            waypoints: apiWaypoints,
-            vehicle: 'truck'
-          })
-        });
+      console.log(`🎨 Drawing polylines for ${orderedWaypoints.length - 1} segments`);
 
-        const result = await response.json();
-        console.log('📡 Directions API response:', result);
+      let totalDistance = 0;
+      let totalDuration = 0;
+      const colors = this.getGradientColors(orderedWaypoints.length - 1);
 
-        if (result.success && result.data && result.data.overview_polyline) {
-          // Decode polyline and draw on map
-          const decodedPoints = this.decodePolyline(result.data.overview_polyline);
-          
-          console.log(`✅ Decoded ${decodedPoints.length} polyline points`);
-          
-          const polyline = L.polyline(decodedPoints, {
-            color: '#667eea',
-            weight: 4,
-            opacity: 0.8,
-            smoothFactor: 1
-          }).addTo(map);
+      for (let i = 0; i < orderedWaypoints.length - 1; i++) {
+        const from = orderedWaypoints[i];
+        const to = orderedWaypoints[i + 1];
 
-          this.routePolylines.push(polyline);
+        console.log(`\n[${i + 1}/${orderedWaypoints.length - 1}] ${from.name} → ${to.name}`);
 
-          // Show route info
-          const totalDistance = result.data.total_distance_km || 
-                                (result.data.total_distance_meters / 1000).toFixed(2);
-          const totalDuration = result.data.total_duration_text || 
-                                result.data.total_duration_hours + ' giờ';
-          
-          showNotification(
-            `✅ Tuyến đường: ${totalDistance} km • Thời gian: ${totalDuration}`,
-            'success',
-            5000
+        try {
+          // Get polyline with hybrid cache (LocalStorage + DB + API)
+          const polylineData = await this.getSegmentPolylineWithCache(
+            from.name,
+            to.name,
+            { lat: from.lat, lng: from.lng },
+            { lat: to.lat, lng: to.lng }
           );
-        } else {
-          // Fallback: draw simple lines if Directions API fails
-          console.warn('⚠️ Directions API failed:', result.error || 'No polyline data');
-          console.log('📊 Full response data:', result.data);
-          showNotification('⚠️ Không thể tải đường đi từ Goong API, sử dụng đường thẳng', 'warning');
-          this.drawFallbackPolylines(orderedWaypoints);
+
+          if (polylineData && polylineData.polyline_encoded) {
+            // Decode and draw polyline
+            const decodedPoints = this.decodePolyline(polylineData.polyline_encoded);
+
+            const polyline = L.polyline(decodedPoints, {
+              color: colors[i],
+              weight: 4,
+              opacity: 0.8,
+              smoothFactor: 1
+            }).addTo(map);
+
+            this.routePolylines.push(polyline);
+
+            // Update waypoint with distance
+            to.distance_km = polylineData.distance_km;
+
+            // Update popup with distance
+            this.updateWaypointPopup(to);
+
+            // Accumulate totals
+            totalDistance += parseFloat(polylineData.distance_km || 0);
+            totalDuration += parseInt(polylineData.duration_minutes || 0);
+
+            console.log(`   ✅ ${polylineData.distance_km} km, ${polylineData.duration_text || polylineData.duration_minutes + ' phút'}`);
+          } else {
+            // Fallback: straight line
+            console.warn(`   ⚠️ No polyline data, drawing straight line`);
+            this.drawStraightLine(from, to, colors[i]);
+          }
+        } catch (error) {
+          console.error(`   ❌ Error drawing segment:`, error);
+          this.drawStraightLine(from, to, colors[i]);
         }
-      } catch (error) {
-        console.error('❌ Error calling Directions API:', error);
-        showNotification('❌ Lỗi kết nối Goong API, sử dụng đường thẳng', 'error');
-        this.drawFallbackPolylines(orderedWaypoints);
       }
+
+      // Show summary
+      const totalHours = Math.floor(totalDuration / 60);
+      const totalMinutes = totalDuration % 60;
+      const durationText = totalHours > 0
+        ? `${totalHours}h ${totalMinutes}m`
+        : `${totalMinutes}m`;
+
+      showNotification(
+        `✅ Route: ${totalDistance.toFixed(1)} km • ${durationText} • ${orderedWaypoints.length} điểm`,
+        'success',
+        5000
+      );
     }
 
     // Step 4: Fit map to bounds
@@ -376,6 +388,162 @@ const RouteManagement = {
 
       this.routePolylines.push(polyline);
     }
+  },
+
+  /**
+   * Get segment polyline with hybrid cache (LocalStorage + DB + API)
+   */
+  async getSegmentPolylineWithCache(hubFrom, hubTo, fromCoords, toCoords, vehicle = 'truck') {
+    // Step 1: Check LocalStorage cache first (fastest)
+    const cacheKey = `polyline_${hubFrom}_${hubTo}_${vehicle}`;
+    const localCache = localStorage.getItem(cacheKey);
+
+    if (localCache) {
+      try {
+        const data = JSON.parse(localCache);
+        // Cache valid for 7 days
+        if (Date.now() - data.timestamp < 7 * 24 * 60 * 60 * 1000) {
+          console.log('   ✅ Using LocalStorage cache');
+          return data;
+        }
+      } catch (e) {
+        // Invalid cache, continue
+      }
+    }
+
+    // Step 2: Check Database cache (medium speed)
+    try {
+      const response = await fetch(
+        `${API_BASE_URL}/polylines/${encodeURIComponent(hubFrom)}/${encodeURIComponent(hubTo)}?vehicle=${vehicle}`
+      );
+
+      if (response.ok) {
+        const result = await response.json();
+        if (result.success) {
+          console.log(`   ✅ Using Database cache (${result.data.cache_age_days} days old)`);
+
+          // Save to LocalStorage for next time
+          const cacheData = {
+            ...result.data,
+            timestamp: Date.now()
+          };
+          localStorage.setItem(cacheKey, JSON.stringify(cacheData));
+
+          return result.data;
+        }
+      }
+    } catch (error) {
+      console.warn('   ⚠️ Database cache miss:', error.message);
+    }
+
+    // Step 3: Call Goong API and cache result (slowest, costs money)
+    console.log('   📡 Calling Goong API (no cache found)');
+
+    try {
+      const response = await fetch(`${API_BASE_URL}/polylines/fetch-and-cache`, {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({
+          route_name: this.currentRoute?.route_name,
+          hub_from: hubFrom,
+          hub_to: hubTo,
+          from_coords: fromCoords,
+          to_coords: toCoords,
+          vehicle: vehicle
+        })
+      });
+
+      const result = await response.json();
+
+      if (result.success) {
+        console.log('   💾 Fetched from API and cached');
+
+        // Save to LocalStorage
+        const cacheData = {
+          ...result.data,
+          timestamp: Date.now()
+        };
+        localStorage.setItem(cacheKey, JSON.stringify(cacheData));
+
+        return result.data;
+      }
+    } catch (error) {
+      console.error('   ❌ API call failed:', error);
+    }
+
+    return null;
+  },
+
+  /**
+   * Update waypoint popup with distance
+   */
+  updateWaypointPopup(waypoint) {
+    if (!waypoint.marker) return;
+
+    const popupContent = `
+      <div style="min-width: 150px;">
+        <strong>${waypoint.order}. ${waypoint.name}</strong><br>
+        <span style="color: #64748b;">
+          ${waypoint.type === 'departer' ? '🏠 Hub Chính' : '📍 Điểm Đến'}
+        </span>
+        ${waypoint.departure_time ? `<br>🕐 Xuất phát: ${waypoint.departure_time}` : ''}
+        ${waypoint.arrival_time ? `<br>⏰ Đến: ${waypoint.arrival_time}` : ''}
+        ${waypoint.distance_km ? `<br>📏 ${waypoint.distance_km} km (từ điểm trước)` : ''}
+      </div>
+    `;
+
+    waypoint.marker.setPopupContent(popupContent);
+  },
+
+  /**
+   * Draw straight line between two waypoints (fallback)
+   */
+  drawStraightLine(from, to, color = '#94a3b8') {
+    const polyline = L.polyline([
+      [from.lat, from.lng],
+      [to.lat, to.lng]
+    ], {
+      color: color,
+      weight: 3,
+      opacity: 0.6,
+      dashArray: '10, 10'
+    }).addTo(map);
+
+    this.routePolylines.push(polyline);
+  },
+
+  /**
+   * Get gradient colors for polylines
+   */
+  getGradientColors(count) {
+    // Gradient from red → orange → yellow → green → blue
+    const colors = [
+      '#ef4444', // red
+      '#f97316', // orange
+      '#f59e0b', // amber
+      '#eab308', // yellow
+      '#84cc16', // lime
+      '#22c55e', // green
+      '#10b981', // emerald
+      '#14b8a6', // teal
+      '#06b6d4', // cyan
+      '#0ea5e9', // sky
+      '#3b82f6', // blue
+      '#6366f1', // indigo
+      '#8b5cf6', // violet
+      '#a855f7', // purple
+    ];
+
+    if (count <= colors.length) {
+      return colors.slice(0, count);
+    }
+
+    // If more segments than colors, repeat colors
+    const result = [];
+    for (let i = 0; i < count; i++) {
+      result.push(colors[i % colors.length]);
+    }
+    return result;
   },
 
   /**

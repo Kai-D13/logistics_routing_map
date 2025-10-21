@@ -100,5 +100,15 @@ const API = {
         const response = await fetch(`${API_BASE_URL}/trips`);
         return await response.json();
     },
+
+    // Update Location (Hub)
+    async updateLocation(id, data) {
+        const response = await fetch(`${API_BASE_URL}/locations/${id}`, {
+            method: 'PUT',
+            headers: { 'Content-Type': 'application/json' },
+            body: JSON.stringify(data),
+        });
+        return await response.json();
+    },
 };
 
