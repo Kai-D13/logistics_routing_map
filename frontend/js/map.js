@@ -165,26 +165,38 @@ function highlightMarker(id, type) {
  * Called from marker popup buttons
  */
 async function editHub(hubId, hubType) {
+    console.log('🔧 editHub called:', { hubId, hubType });
+
     try {
         // Find marker with this hub
         const markersList = hubType === 'departer' ? departerMarkers : destinationMarkers;
-        const marker = markersList.find(m => m.hubData && m.hubData.id === hubId);
+        console.log('📋 Markers list:', markersList.length, 'markers');
+        console.log('📋 Looking for hubId:', hubId);
+
+        const marker = markersList.find(m => {
+            console.log('  Checking marker:', m.hubData?.id, '===', hubId);
+            return m.hubData && m.hubData.id === hubId;
+        });
 
         if (!marker || !marker.hubData) {
-            console.error('Hub not found:', hubId, hubType);
+            console.error('❌ Hub not found:', hubId, hubType);
+            console.error('Available markers:', markersList.map(m => ({ id: m.hubData?.id, name: m.hubData?.name || m.hubData?.carrier_name })));
             showNotification('❌ Không tìm thấy hub', 'error');
             return;
         }
 
+        console.log('✅ Found marker:', marker.hubData);
+
         // Open edit modal
         if (typeof HubEditor !== 'undefined') {
+            console.log('✅ HubEditor found, opening modal...');
             HubEditor.openModal(marker.hubData, hubType, marker);
         } else {
-            console.error('HubEditor not loaded');
+            console.error('❌ HubEditor not loaded');
             showNotification('❌ Chức năng chỉnh sửa chưa sẵn sàng', 'error');
         }
     } catch (error) {
-        console.error('Error opening edit modal:', error);
+        console.error('❌ Error opening edit modal:', error);
         showNotification('❌ Lỗi khi mở form chỉnh sửa', 'error');
     }
 }

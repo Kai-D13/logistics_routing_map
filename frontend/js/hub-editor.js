@@ -159,6 +159,8 @@ const HubEditor = {
    * Open edit modal for a hub
    */
   openModal(hubData, hubType, marker = null) {
+    console.log('🔧 HubEditor.openModal called:', { hubData, hubType });
+
     this.currentHub = hubData;
     this.currentMarker = marker;
     this.isEditMode = true;
@@ -166,7 +168,7 @@ const HubEditor = {
     // Set form values
     document.getElementById('hub-edit-id').value = hubData.id || '';
     document.getElementById('hub-edit-type').value = hubType; // 'departer' or 'destination'
-    
+
     if (hubType === 'departer') {
       document.getElementById('hub-edit-name').value = hubData.name || '';
       document.getElementById('hub-edit-province-group').style.display = 'none';
@@ -175,14 +177,17 @@ const HubEditor = {
       document.getElementById('hub-edit-province').value = hubData.province_name || '';
       document.getElementById('hub-edit-province-group').style.display = 'block';
     }
-    
+
     document.getElementById('hub-edit-address').value = hubData.address || '';
     document.getElementById('hub-edit-lat').value = hubData.lat || '';
     document.getElementById('hub-edit-lng').value = hubData.lng || '';
 
+    console.log('✅ Form populated');
+
     // Show modal with active class
     const modal = document.getElementById('hub-edit-modal');
     modal.classList.add('active');
+    console.log('✅ Modal shown, classList:', modal.classList);
 
     // Initialize map preview
     setTimeout(() => this.initMapPreview(), 100);
