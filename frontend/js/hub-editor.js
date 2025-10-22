@@ -159,8 +159,6 @@ const HubEditor = {
    * Open edit modal for a hub
    */
   openModal(hubData, hubType, marker = null) {
-    console.log('🔧 HubEditor.openModal called:', { hubData, hubType });
-
     this.currentHub = hubData;
     this.currentMarker = marker;
     this.isEditMode = true;
@@ -182,12 +180,9 @@ const HubEditor = {
     document.getElementById('hub-edit-lat').value = hubData.lat || '';
     document.getElementById('hub-edit-lng').value = hubData.lng || '';
 
-    console.log('✅ Form populated');
-
     // Show modal with active class
     const modal = document.getElementById('hub-edit-modal');
     modal.classList.add('active');
-    console.log('✅ Modal shown, classList:', modal.classList);
 
     // Initialize map preview
     setTimeout(() => this.initMapPreview(), 100);
@@ -369,11 +364,15 @@ const HubEditor = {
 
       if (result.success) {
         showNotification('✅ Đã lưu thành công!', 'success', 3000);
-        
+
+        // Update current hub data with new values
+        const updatedHub = { ...this.currentHub, ...updateData };
+
         // Update marker on main map
         if (this.currentMarker) {
           this.currentMarker.setLatLng([lat, lng]);
-          this.currentMarker.setPopupContent(this.generatePopupContent(updateData, hubType));
+          this.currentMarker.hubData = updatedHub; // Update marker's stored data
+          this.currentMarker.setPopupContent(this.generatePopupContent(updatedHub, hubType));
         }
 
         // Close modal
@@ -402,6 +401,14 @@ const HubEditor = {
           <h3 style="color: #f56565; margin-bottom: 10px;">🏠 ${hubData.name}</h3>
           <p style="margin: 5px 0;"><strong>Địa chỉ:</strong><br>${hubData.address}</p>
           <p style="margin: 5px 0;"><strong>Tọa độ:</strong><br>${hubData.lat.toFixed(6)}, ${hubData.lng.toFixed(6)}</p>
+          <div style="display: flex; gap: 5px; margin-top: 10px;">
+            <button onclick="editHub('${hubData.id}', 'departer')" style="flex: 1; padding: 8px 12px; background: #3b82f6; color: white; border: none; border-radius: 5px; cursor: pointer; font-size: 13px;">
+              ✏️ Sửa
+            </button>
+            <button onclick="showDeparterDetails('${hubData.id}')" style="flex: 1; padding: 8px 12px; background: #f56565; color: white; border: none; border-radius: 5px; cursor: pointer; font-size: 13px;">
+              👁️ Chi Tiết
+            </button>
+          </div>
         </div>
       `;
     } else {
@@ -409,8 +416,16 @@ const HubEditor = {
         <div style="min-width: 250px;">
           <h3 style="color: #48bb78; margin-bottom: 10px;">📍 ${hubData.carrier_name}</h3>
           <p style="margin: 5px 0;"><strong>Địa chỉ:</strong><br>${hubData.address}</p>
-          <p style="margin: 5px 0;"><strong>Tỉnh:</strong> ${hubData.province_name}</p>
+          <p style="margin: 5px 0;"><strong>Tỉnh:</strong> ${hubData.province_name || 'N/A'}</p>
           <p style="margin: 5px 0;"><strong>Tọa độ:</strong><br>${hubData.lat.toFixed(6)}, ${hubData.lng.toFixed(6)}</p>
+          <div style="display: flex; gap: 5px; margin-top: 10px;">
+            <button onclick="editHub('${hubData.id}', 'destination')" style="flex: 1; padding: 8px 12px; background: #3b82f6; color: white; border: none; border-radius: 5px; cursor: pointer; font-size: 13px;">
+              ✏️ Sửa
+            </button>
+            <button onclick="showDestinationDetails('${hubData.id}')" style="flex: 1; padding: 8px 12px; background: #48bb78; color: white; border: none; border-radius: 5px; cursor: pointer; font-size: 13px;">
+              👁️ Chi Tiết
+            </button>
+          </div>
         </div>
       `;
     }
