@@ -7,9 +7,10 @@
     "district_name": "Quận Thốt Nốt",
     "province_name": "Thành Phố Cần Thơ",
     "destination": "",
-    "latitude": 10.270848799003979,
-    "longitude": 105.5311704551778,
-    "departer": "Mai Chí Thọ Phường Phú Thứ Quận Cái Răng Thành phố Cần Thơ"
+    "tọa độ": "10.27085935592941, 105.53110607972218",
+    "departer": "Mai Chí Thọ Phường Phú Thứ Quận Cái Răng Thành phố Cần Thơ",
+    "_latitude": 10.27085935592941,
+    "_longitude": 105.53110607972218
   },
   {
     "carrier_name": "NVCT Hub Ô Môn-CT",
@@ -19,9 +20,10 @@
     "district_name": "Quận Ô Môn",
     "province_name": "Thành Phố Cần Thơ",
     "destination": "",
-    "latitude": 10.120863245381827,
-    "longitude": 105.60678882855838,
-    "departer": "Mai Chí Thọ Phường Phú Thứ Quận Cái Răng Thành phố Cần Thơ"
+    "tọa độ": "10.12072178980682, 105.60675633739189",
+    "departer": "Mai Chí Thọ Phường Phú Thứ Quận Cái Răng Thành phố Cần Thơ",
+    "_latitude": 10.12072178980682,
+    "_longitude": 105.60675633739189
   },
   {
     "carrier_name": "NVCT Hub Vĩnh Long-CT",
@@ -31,9 +33,10 @@
     "district_name": "Long Hồ",
     "province_name": "Tỉnh Vĩnh Long",
     "destination": "",
-    "latitude": 10.265287384027044,
-    "longitude": 105.92638345096692,
-    "departer": "Mai Chí Thọ Phường Phú Thứ Quận Cái Răng Thành phố Cần Thơ"
+    "tọa độ": "10.264489432736957, 105.92633963739345",
+    "departer": "Mai Chí Thọ Phường Phú Thứ Quận Cái Răng Thành phố Cần Thơ",
+    "_latitude": 10.264489432736957,
+    "_longitude": 105.92633963739345
   },
   {
     "carrier_name": "NVCT Hub Vũng Liêm-CT",
@@ -43,9 +46,10 @@
     "district_name": "Huyện Vũng Liêm",
     "province_name": "Tỉnh Vĩnh Long",
     "destination": "",
-    "latitude": 10.060781295701494,
-    "longitude": 106.19632794553563,
-    "departer": "Mai Chí Thọ Phường Phú Thứ Quận Cái Răng Thành phố Cần Thơ"
+    "tọa độ": "10.059837281728077, 106.19674999506249",
+    "departer": "Mai Chí Thọ Phường Phú Thứ Quận Cái Răng Thành phố Cần Thơ",
+    "_latitude": 10.059837281728077,
+    "_longitude": 106.19674999506249
   },
   {
     "carrier_name": "NVCT Hub Bình Minh-CT",
@@ -55,9 +59,10 @@
     "district_name": "Thị Xã Bình Minh",
     "province_name": "Tỉnh Vĩnh Long",
     "destination": "",
-    "latitude": 10.070119307532714,
-    "longitude": 105.81368798325472,
-    "departer": "Mai Chí Thọ Phường Phú Thứ Quận Cái Răng Thành phố Cần Thơ"
+    "tọa độ": "10.06982355361181, 105.81368799506255",
+    "departer": "Mai Chí Thọ Phường Phú Thứ Quận Cái Răng Thành phố Cần Thơ",
+    "_latitude": 10.06982355361181,
+    "_longitude": 105.81368799506255
   },
   {
     "carrier_name": "NVCT Hub Trà Ôn-CT",
@@ -67,9 +72,10 @@
     "district_name": "Huyện Trà Ôn",
     "province_name": "Tỉnh Vĩnh Long",
     "destination": "",
-    "latitude": 10.05759514240794,
-    "longitude": 105.98888127193517,
-    "departer": "Mai Chí Thọ Phường Phú Thứ Quận Cái Răng Thành phố Cần Thơ"
+    "tọa độ": "10.06786623590101, 105.98515931680836",
+    "departer": "Mai Chí Thọ Phường Phú Thứ Quận Cái Răng Thành phố Cần Thơ",
+    "_latitude": 10.06786623590101,
+    "_longitude": 105.98515931680836
   },
   {
     "carrier_name": "NVCT Hub Vĩnh Tường-CT",
@@ -79,9 +85,10 @@
     "district_name": "Huyện Long Mỹ",
     "province_name": "Tỉnh Hậu Giang",
     "destination": "",
-    "latitude": 9.736774921964367,
-    "longitude": 105.57528599565032,
-    "departer": "Mai Chí Thọ Phường Phú Thứ Quận Cái Răng Thành phố Cần Thơ"
+    "tọa độ": "9.736595159025203, 105.5753825527304",
+    "departer": "Mai Chí Thọ Phường Phú Thứ Quận Cái Răng Thành phố Cần Thơ",
+    "_latitude": 9.736595159025203,
+    "_longitude": 105.5753825527304
   },
   {
     "carrier_name": "NV công ty - Hub Hậu Giang - HCM",
@@ -91,9 +98,10 @@
     "district_name": "Thành phố Ngã Bảy",
     "province_name": "Tỉnh Hậu Giang",
     "destination": "",
-    "latitude": 9.811062394920354,
-    "longitude": 105.81061515239263,
-    "departer": "Mai Chí Thọ Phường Phú Thứ Quận Cái Răng Thành phố Cần Thơ"
+    "tọa độ": "9.810622937776527, 105.81063889505985",
+    "departer": "Mai Chí Thọ Phường Phú Thứ Quận Cái Răng Thành phố Cần Thơ",
+    "_latitude": 9.810622937776527,
+    "_longitude": 105.81063889505985
   },
   {
     "carrier_name": "NVCT Hub Sóc Trăng-CT",
@@ -103,9 +111,10 @@
     "district_name": "Thành Phố Sóc Trăng",
     "province_name": "Tỉnh Sóc Trăng",
     "destination": "",
-    "latitude": 9.610609639828258,
-    "longitude": 105.99167961021587,
-    "departer": "Mai Chí Thọ Phường Phú Thứ Quận Cái Răng Thành phố Cần Thơ"
+    "tọa độ": "9.61056735136, 105.99172253738648",
+    "departer": "Mai Chí Thọ Phường Phú Thứ Quận Cái Răng Thành phố Cần Thơ",
+    "_latitude": 9.61056735136,
+    "_longitude": 105.99172253738648
   },
   {
     "carrier_name": "Hub Thạnh Trị-Sóc Trăng",
@@ -115,9 +124,10 @@
     "district_name": "Huyện Thạnh Trị",
     "province_name": "Tỉnh Sóc Trăng",
     "destination": "",
-    "latitude": 9.433547828090823,
-    "longitude": 105.74886064167937,
-    "departer": "Mai Chí Thọ Phường Phú Thứ Quận Cái Răng Thành phố Cần Thơ"
+    "tọa độ": "9.433653665514111, 105.74877480854916",
+    "departer": "Mai Chí Thọ Phường Phú Thứ Quận Cái Răng Thành phố Cần Thơ",
+    "_latitude": 9.433653665514111,
+    "_longitude": 105.74877480854916
   },
   {
     "carrier_name": "NVCT Hub Long Xuyên - An Giang",
@@ -127,9 +137,10 @@
     "district_name": "Thành Phố Long Xuyên",
     "province_name": "Tỉnh An Giang",
     "destination": "",
-    "latitude": 10.392728599086391,
-    "longitude": 105.41395245517855,
-    "departer": "Mai Chí Thọ Phường Phú Thứ Quận Cái Răng Thành phố Cần Thơ"
+    "tọa độ": "10.39272859909634, 105.41386662205231",
+    "departer": "Mai Chí Thọ Phường Phú Thứ Quận Cái Răng Thành phố Cần Thơ",
+    "_latitude": 10.39272859909634,
+    "_longitude": 105.41386662205231
   },
   {
     "carrier_name": "NVCT Hub Phú Tân_Child",
@@ -139,9 +150,10 @@
     "district_name": "Huyện Phú Tân",
     "province_name": "Tỉnh An Giang",
     "destination": "",
-    "latitude": 10.58934849714545,
-    "longitude": 105.35104758509854,
-    "departer": "Mai Chí Thọ Phường Phú Thứ Quận Cái Răng Thành phố Cần Thơ"
+    "tọa độ": "10.587499259469677, 105.35101072390405",
+    "departer": "Mai Chí Thọ Phường Phú Thứ Quận Cái Răng Thành phố Cần Thơ",
+    "_latitude": 10.587499259469677,
+    "_longitude": 105.35101072390405
   },
   {
     "carrier_name": "Hub Châu Phú-An Giang",
@@ -151,9 +163,10 @@
     "district_name": "Huyện Châu Phú",
     "province_name": "Tỉnh An Giang",
     "destination": "",
-    "latitude": 10.574390935738165,
-    "longitude": 105.24158329750828,
-    "departer": "Mai Chí Thọ Phường Phú Thứ Quận Cái Răng Thành phố Cần Thơ"
+    "tọa độ": "10.574369842481216, 105.24154037972562",
+    "departer": "Mai Chí Thọ Phường Phú Thứ Quận Cái Răng Thành phố Cần Thơ",
+    "_latitude": 10.574369842481216,
+    "_longitude": 105.24154037972562
   },
   {
     "carrier_name": "NVCT Hub Châu Đốc_Child",
@@ -163,9 +176,10 @@
     "district_name": "Thành Phố Châu Đốc",
     "province_name": "Tỉnh An Giang",
     "destination": "",
-    "latitude": 10.695047026443568,
-    "longitude": 105.13785232449369,
-    "departer": "Mai Chí Thọ Phường Phú Thứ Quận Cái Răng Thành phố Cần Thơ"
+    "tọa độ": "10.695036483989776, 105.13791669506955",
+    "departer": "Mai Chí Thọ Phường Phú Thứ Quận Cái Răng Thành phố Cần Thơ",
+    "_latitude": 10.695036483989776,
+    "_longitude": 105.13791669506955
   },
   {
     "carrier_name": "NVCT Hub Tịnh Biên - An Giang Child",
@@ -175,9 +189,10 @@
     "district_name": "Huyện Tịnh Biên",
     "province_name": "Tỉnh An Giang",
     "destination": "",
-    "latitude": 10.531553814961429,
-    "longitude": 105.03078413983609,
-    "departer": "Mai Chí Thọ Phường Phú Thứ Quận Cái Răng Thành phố Cần Thơ"
+    "tọa độ": "10.531511622559789, 105.03078413739637",
+    "departer": "Mai Chí Thọ Phường Phú Thứ Quận Cái Răng Thành phố Cần Thơ",
+    "_latitude": 10.531511622559789,
+    "_longitude": 105.03078413739637
   },
   {
     "carrier_name": "NVCT Hub Thành Phố Cà Mau_Child",
@@ -187,9 +202,10 @@
     "district_name": "Thành Phố Cà Mau",
     "province_name": "Tỉnh Cà Mau",
     "destination": "",
-    "latitude": 9.157517432810359,
-    "longitude": 105.14867742633368,
-    "departer": "Mai Chí Thọ Phường Phú Thứ Quận Cái Răng Thành phố Cần Thơ"
+    "tọa độ": "9.157443288169341, 105.14866669505346",
+    "departer": "Mai Chí Thọ Phường Phú Thứ Quận Cái Răng Thành phố Cần Thơ",
+    "_latitude": 9.157443288169341,
+    "_longitude": 105.14866669505346
   },
   {
     "carrier_name": "Hub Đầm Dơi - Cà Mau",
@@ -199,9 +215,10 @@
     "district_name": "Huyện Đầm Dơi",
     "province_name": "Tỉnh Cà Mau",
     "destination": "",
-    "latitude": 8.956255469389394,
-    "longitude": 105.10816416680888,
-    "departer": "Mai Chí Thọ Phường Phú Thứ Quận Cái Răng Thành phố Cần Thơ"
+    "tọa độ": "8.956329655562538, 105.10822853738028",
+    "departer": "Mai Chí Thọ Phường Phú Thứ Quận Cái Răng Thành phố Cần Thơ",
+    "_latitude": 8.956329655562538,
+    "_longitude": 105.10822853738028
   },
   {
     "carrier_name": "Hub Cái Nước - Cà Mau",
@@ -211,9 +228,10 @@
     "district_name": "Huyện Cái Nước",
     "province_name": "Tỉnh Cà Mau",
     "destination": "",
-    "latitude": 8.920077069988288,
-    "longitude": 104.97968562448044,
-    "departer": "Mai Chí Thọ Phường Phú Thứ Quận Cái Răng Thành phố Cần Thơ"
+    "tọa độ": "8.929792761101591, 105.01322219505133",
+    "departer": "Mai Chí Thọ Phường Phú Thứ Quận Cái Răng Thành phố Cần Thơ",
+    "_latitude": 8.929792761101591,
+    "_longitude": 105.01322219505133
   },
   {
     "carrier_name": "Hub Năm Căn - Cà Mau",
@@ -223,9 +241,10 @@
     "district_name": "Huyện Năm Căn",
     "province_name": "Tỉnh Cà Mau",
     "destination": "",
-    "latitude": 8.854128710956228,
-    "longitude": 105.0243674398239,
-    "departer": "Mai Chí Thọ Phường Phú Thứ Quận Cái Răng Thành phố Cần Thơ"
+    "tọa độ": "8.854139311950789, 105.02428160669423",
+    "departer": "Mai Chí Thọ Phường Phú Thứ Quận Cái Răng Thành phố Cần Thơ",
+    "_latitude": 8.854139311950789,
+    "_longitude": 105.02428160669423
   },
   {
     "carrier_name": "Hub Trần Văn Thời - Cà Mau",
@@ -235,9 +254,10 @@
     "district_name": "Huyện Trần Văn Thời",
     "province_name": "Tỉnh Cà Mau",
     "destination": "",
-    "latitude": 9.073270009892058,
-    "longitude": 104.97103657051275,
-    "departer": "Mai Chí Thọ Phường Phú Thứ Quận Cái Răng Thành phố Cần Thơ"
+    "tọa độ": "9.073291199083696, 104.97100438155955",
+    "departer": "Mai Chí Thọ Phường Phú Thứ Quận Cái Răng Thành phố Cần Thơ",
+    "_latitude": 9.073291199083696,
+    "_longitude": 104.97100438155955
   },
   {
     "carrier_name": "Hub U Minh - Cà Mau",
@@ -247,9 +267,10 @@
     "district_name": "Huyện U Minh",
     "province_name": "Tỉnh Cà Mau",
     "destination": "",
-    "latitude": 9.411496110260186,
-    "longitude": 104.97005111099162,
-    "departer": "Mai Chí Thọ Phường Phú Thứ Quận Cái Răng Thành phố Cần Thơ"
+    "tọa độ": "9.411506694688969, 104.97006183738456",
+    "departer": "Mai Chí Thọ Phường Phú Thứ Quận Cái Răng Thành phố Cần Thơ",
+    "_latitude": 9.411506694688969,
+    "_longitude": 104.97006183738456
   },
   {
     "carrier_name": "NVCT Hub Thới Bình - Cà Mau Child",
@@ -259,9 +280,10 @@
     "district_name": "Huyện Thới Bình",
     "province_name": "Tỉnh Cà Mau",
     "destination": "",
-    "latitude": 9.303101904811273,
-    "longitude": 105.20264142818608,
-    "departer": "Mai Chí Thọ Phường Phú Thứ Quận Cái Răng Thành phố Cần Thơ"
+    "tọa độ": "9.303144255695155, 105.20246976436972",
+    "departer": "Mai Chí Thọ Phường Phú Thứ Quận Cái Răng Thành phố Cần Thơ",
+    "_latitude": 9.303144255695155,
+    "_longitude": 105.20246976436972
   },
   {
     "carrier_name": "NVCT Hub Hồng Ngự - Đồng Tháp",
@@ -271,9 +293,10 @@
     "district_name": "Thành Phố Hồng Ngự",
     "province_name": "Tỉnh Đồng Tháp",
     "destination": "",
-    "latitude": 10.811177241695173,
-    "longitude": 105.35024999751022,
-    "departer": "Mai Chí Thọ Phường Phú Thứ Quận Cái Răng Thành phố Cần Thơ"
+    "tọa độ": "10.810955935091485, 105.35028218157784",
+    "departer": "Mai Chí Thọ Phường Phú Thứ Quận Cái Răng Thành phố Cần Thơ",
+    "_latitude": 10.810955935091485,
+    "_longitude": 105.35028218157784
   },
   {
     "carrier_name": "Hub Thanh Bình - Đồng Tháp",
@@ -283,9 +306,10 @@
     "district_name": "Huyện Thanh Bình",
     "province_name": "Tỉnh Đồng Tháp",
     "destination": "",
-    "latitude": 10.57172326337448,
-    "longitude": 105.54871781100053,
-    "departer": "Mai Chí Thọ Phường Phú Thứ Quận Cái Răng Thành phố Cần Thơ"
+    "tọa độ": "10.571744356833113, 105.5486963508899",
+    "departer": "Mai Chí Thọ Phường Phú Tháp",
+    "_latitude": 10.571744356833113,
+    "_longitude": 105.5486963508899
   },
   {
     "carrier_name": "Hub Tam Nông - Đồng Tháp",
@@ -295,9 +319,10 @@
     "district_name": "Huyện Thanh Bình",
     "province_name": "Tỉnh Đồng Tháp",
     "destination": "",
-    "latitude": 10.609569225199266,
-    "longitude": 105.57785232449287,
-    "departer": "Mai Chí Thọ Phường Phú Thứ Quận Cái Răng Thành phố Cần Thơ"
+    "tọa độ": "10.60942158926217, 105.57783086438354",
+    "departer": "Mai Chí Thọ Phường Phú Thứ Quận Cái Răng Thành phố Cần Thơ",
+    "_latitude": 10.60942158926217,
+    "_longitude": 105.57783086438354
   },
   {
     "carrier_name": "Hub Tân Hồng - Đồng Tháp",
@@ -307,9 +332,10 @@
     "district_name": "Huyện Tân Hồng",
     "province_name": "Tỉnh Đồng Tháp",
     "destination": "",
-    "latitude": 10.89758292126731,
-    "longitude": 105.50516989864306,
-    "departer": "Mai Chí Thọ Phường Phú Thứ Quận Cái Răng Thành phố Cần Thơ"
+    "tọa độ": "10.897572413613046, 105.505126995072",
+    "departer": "Mai Chí Thọ Phường Phú Thứ Quận Cái Răng Thành phố Cần Thơ",
+    "_latitude": 10.897572413613046,
+    "_longitude": 105.505126995072
   },
   {
     "carrier_name": "NVCT Hub Cao Lãnh - Đồng Tháp",
@@ -319,9 +345,10 @@
     "district_name": "Thành Phố Cao Lãnh",
     "province_name": "Tỉnh Đồng Tháp",
     "destination": "",
-    "latitude": 10.475142090426043,
-    "longitude": 105.64717293983563,
-    "departer": "Mai Chí Thọ Phường Phú Thứ Quận Cái Răng Thành phố Cần Thơ"
+    "tọa độ": "10.475026040108803, 105.6471943950671",
+    "departer": "Mai Chí Thọ Phường Phú Thứ Quận Cái Răng Thành phố Cần Thơ",
+    "_latitude": 10.475026040108803,
+    "_longitude": 105.6471943950671
   },
   {
     "carrier_name": "Hub Tháp Mười - Đồng Tháp",
@@ -331,9 +358,10 @@
     "district_name": "Huyện Tháp Mười",
     "province_name": "Tỉnh Đồng Tháp",
     "destination": "",
-    "latitude": 10.51692931590862,
-    "longitude": 105.84270512634377,
-    "departer": "Mai Chí Thọ Phường Phú Thứ Quận Cái Răng Thành phố Cần Thơ"
+    "tọa độ": "10.516960961723933, 105.84261929321804",
+    "departer": "Mai Chí Thọ Phường Phú Thứ Quận Cái Răng Thành phố Cần Thơ",
+    "_latitude": 10.516960961723933,
+    "_longitude": 105.84261929321804
   },
   {
     "carrier_name": "NVCT Hub Trà Vinh",
@@ -343,9 +371,10 @@
     "district_name": "Huyện Châu Thành",
     "province_name": "Tỉnh Trà Vinh",
     "destination": "",
-    "latitude": 9.917346355027746,
-    "longitude": 106.30118815517504,
-    "departer": "Mai Chí Thọ Phường Phú Thứ Quận Cái Răng Thành phố Cần Thơ"
+    "tọa độ": "9.917346355037656, 106.30117742389659",
+    "departer": "Mai Chí Thọ Phường Phú Thứ Quận Cái Răng Thành phố Cần Thơ",
+    "_latitude": 9.917346355037656,
+    "_longitude": 106.30117742389659
   },
   {
     "carrier_name": "NVCT Hub Tiểu Cần-Trà Vinh",
@@ -355,9 +384,10 @@
     "district_name": "Huyện Tiểu Cần",
     "province_name": "Tỉnh Trà Vinh",
     "destination": "",
-    "latitude": 10.120605608965265,
-    "longitude": 105.60682071284832,
-    "departer": "Mai Chí Thọ Phường Phú Thứ Quận Cái Răng Thành phố Cần Thơ"
+    "tọa độ": "10.120552799492597, 105.6067885238988",
+    "departer": "Mai Chí Thọ Phường Phú Thứ Quận Cái Răng Thành phố Cần Thơ",
+    "_latitude": 10.120552799492597,
+    "_longitude": 105.6067885238988
   },
   {
     "carrier_name": "NVCT Hub Duyên Hải - Trà Vinh",
@@ -367,9 +397,10 @@
     "district_name": "Thị Xã Duyên Hải",
     "province_name": "Tỉnh Trà Vinh",
     "destination": "",
-    "latitude": 9.68653695268891,
-    "longitude": 106.50053160914216,
-    "departer": "Mai Chí Thọ Phường Phú Thứ Quận Cái Răng Thành phố Cần Thơ"
+    "tọa độ": "9.686399466293278, 106.500628166223",
+    "departer": "Mai Chí Thọ Phường Phú Thứ Quận Cái Răng Thành phố Cần Thơ",
+    "_latitude": 9.686399466293278,
+    "_longitude": 106.500628166223
   },
   {
     "carrier_name": "NVCT Hub TP Bạc Liêu",
@@ -379,9 +410,10 @@
     "district_name": "Thành Phố Bạc Liêu",
     "province_name": "Tỉnh Bạc Liêu",
     "destination": "",
-    "latitude": 9.29387579083515,
-    "longitude": 105.71459655702203,
-    "departer": "Mai Chí Thọ Phường Phú Thứ Quận Cái Răng Thành phố Cần Thơ"
+    "tọa độ": "9.293867336002148, 105.71446936334276",
+    "departer": "Mai Chí Thọ Phường Phú Thứ Quận Cái Răng Thành phố Cần Thơ",
+    "_latitude": 9.293867336002148,
+    "_longitude": 105.71446936334276
   },
   {
     "carrier_name": "NVCT Hub Giá Rai - Bạc Liêu",
@@ -391,9 +423,10 @@
     "district_name": "Thị Xã Giá Rai",
     "province_name": "Tỉnh Bạc Liêu",
     "destination": "",
-    "latitude": 9.198739608146726,
-    "longitude": 105.3358181821542,
-    "departer": "Mai Chí Thọ Phường Phú Thứ Quận Cái Răng Thành phố Cần Thơ"
+    "tọa độ": "9.198612517805786, 105.3358396373825",
+    "departer": "Mai Chí Thọ Phường Phú Thứ Quận Cái Răng Thành phố Cần Thơ",
+    "_latitude": 9.198612517805786,
+    "_longitude": 105.3358396373825
   },
   {
     "carrier_name": "NVCT Hub Phước Long - Bạc Liêu",
@@ -403,9 +436,10 @@
     "district_name": "Huyện Phước Long",
     "province_name": "Tỉnh Bạc Liêu",
     "destination": "",
-    "latitude": 9.43340211439841,
-    "longitude": 105.46435671099188,
-    "departer": "Mai Chí Thọ Phường Phú Thứ Quận Cái Răng Thành phố Cần Thơ"
+    "tọa độ": "9.433359779416104, 105.46438889505606",
+    "departer": "Mai Chí Thọ Phường Phú Thứ Quận Cái Răng Thành phố Cần Thơ",
+    "_latitude": 9.433359779416104,
+    "_longitude": 105.46438889505606
   },
   {
     "carrier_name": "NVCT Hub Bến Tre",
@@ -415,9 +449,10 @@
     "district_name": "Thành Phố Bến Tre",
     "province_name": "Tỉnh Bến Tre",
     "destination": "",
-    "latitude": 10.233597243924892,
-    "longitude": 106.3823377840135,
-    "departer": "Mai Chí Thọ Phường Phú Thứ Quận Cái Răng Thành phố Cần Thơ"
+    "tọa độ": "10.233459987861162, 106.3823055950643",
+    "departer": "Mai Chí Thọ Phường Phú Thứ Quận Cái Răng Thành phố Cần Thơ",
+    "_latitude": 10.233459987861162,
+    "_longitude": 106.3823055950643
   },
   {
     "carrier_name": "NVCT Hub Thạnh Phú_Child",
@@ -427,9 +462,10 @@
     "district_name": "Huyện Thạnh Phú",
     "province_name": "Tỉnh Bến Tre",
     "destination": "",
-    "latitude": 9.977032429662058,
-    "longitude": 106.4965678813985,
-    "departer": "Mai Chí Thọ Phường Phú Thứ Quận Cái Răng Thành phố Cần Thơ"
+    "tọa độ": "9.976873956288667, 106.49662153739033",
+    "departer": "Mai Chí Thọ Phường Phú Thứ Quận Cái Răng Thành phố Cần Thơ",
+    "_latitude": 9.976873956288667,
+    "_longitude": 106.49662153739033
   },
   {
     "carrier_name": "NVCT Hub Rạch Giá - Kiên Giang",
@@ -439,9 +475,10 @@
     "district_name": "Thành Phố Rạch Giá",
     "province_name": "Tỉnh Kiên Giang",
     "destination": "",
-    "latitude": 9.965944096084273,
-    "longitude": 105.10133963983169,
-    "departer": "Mai Chí Thọ Phường Phú Thứ Quận Cái Răng Thành phố Cần Thơ"
+    "tọa độ": "9.966508888248924, 105.10151977637025",
+    "departer": "Mai Chí Thọ Phường Phú Thứ Quận Cái Răng Thành phố Cần Thơ",
+    "_latitude": 9.966508888248924,
+    "_longitude": 105.10151977637025
   },
   {
     "carrier_name": "NVCT Hub Giồng Riềng - Kiên Giang",
@@ -451,9 +488,10 @@
     "district_name": "Huyện Giồng Riềng",
     "province_name": "Tỉnh Kiên Giang",
     "destination": "",
-    "latitude": 9.867646483491614,
-    "longitude": 105.26463255517463,
-    "departer": "Mai Chí Thọ Phường Phú Thứ Quận Cái Răng Thành phố Cần Thơ"
+    "tọa độ": "9.867413940863768, 105.26460036622478",
+    "departer": "Mai Chí Thọ Phường Phú Thứ Quận Cái Răng Thành phố Cần Thơ",
+    "_latitude": 9.867413940863768,
+    "_longitude": 105.26460036622478
   },
   {
     "carrier_name": "NVCT Hub An Minh_Child",
@@ -463,9 +501,10 @@
     "district_name": "Huyện An Minh",
     "province_name": "Tỉnh Kiên Giang",
     "destination": "",
-    "latitude": 9.752342423502334,
-    "longitude": 105.00716855332236,
-    "departer": "Mai Chí Thọ Phường Phú Thứ Quận Cái Răng Thành phố Cần Thơ"
+    "tọa độ": "9.75231070212605, 105.00723292389482",
+    "departer": "Mai Chí Thọ Phường Phú Thứ Quận Cái Răng Thành phố Cần Thơ",
+    "_latitude": 9.75231070212605,
+    "_longitude": 105.00723292389482
   },
   {
     "carrier_name": "NVCT Hub Kiên Lương - Kiên Giang",
@@ -475,21 +514,10 @@
     "district_name": "Thành Phố Rạch Giá",
     "province_name": "Tỉnh Kiên Giang",
     "destination": "",
-    "latitude": 9.965838426604844,
-    "longitude": 105.10130745332388,
-    "departer": "Mai Chí Thọ Phường Phú Thứ Quận Cái Răng Thành phố Cần Thơ"
-  },
-  {
-    "carrier_name": "Hub Cộng Sự- Kiên Giang",
-    "Hub_name": "Hub Cộng Sự- Kiên Giang",
-    "address": "Ấp Cạn Ngọn",
-    "ward_name": "Xã Thạnh Yên",
-    "district_name": "Huyện U Minh Thượng",
-    "province_name": "Tỉnh Kiên Giang",
-    "destination": "",
-    "latitude": 9.705750569945153,
-    "longitude": 105.1369922409081,
-    "departer": "Mai Chí Thọ Phường Phú Thứ Quận Cái Răng Thành phố Cần Thơ"
+    "tọa độ": "9.96581729271486, 105.10135036622587",
+    "departer": "Mai Chí Thọ Phường Phú Thứ Quận Cái Răng Thành phố Cần Thơ",
+    "_latitude": 9.96581729271486,
+    "_longitude": 105.10135036622587
   },
   {
     "carrier_name": "NV công ty - Hub Cai Lậy - HCM",
@@ -499,9 +527,10 @@
     "district_name": "Thị Xã Cai Lậy",
     "province_name": "Tỉnh Tiền Giang",
     "destination": "",
-    "latitude": 10.395512517034154,
-    "longitude": 106.1498867091477,
-    "departer": "Mai Chí Thọ Phường Phú Thứ Quận Cái Răng Thành phố Cần Thơ"
+    "tọa độ": "10.395501964315388, 106.1499510797236",
+    "departer": "Mai Chí Thọ Phường Phú Thứ Quận Cái Răng Thành phố Cần Thơ",
+    "_latitude": 10.395501964315388,
+    "_longitude": 106.1499510797236
   },
   {
     "carrier_name": "NVCT Hub Mỹ Tho - Tiền Giang",
@@ -511,9 +540,10 @@
     "district_name": "Thành Phố Mỹ Tho",
     "province_name": "Tỉnh Tiền Giang",
     "destination": "",
-    "latitude": 10.370450507731029,
-    "longitude": 106.37987435702996,
-    "departer": "Mai Chí Thọ Phường Phú Thứ Quận Cái Răng Thành phố Cần Thơ"
+    "tọa độ": "10.370471614888872, 106.37982071040838",
+    "departer": "Mai Chí Thọ Phường Phú Thứ Quận Cái Răng Thành phố Cần Thơ",
+    "_latitude": 10.370471614888872,
+    "_longitude": 106.37982071040838
   },
   {
     "carrier_name": "NVCT Hub Sa Đéc_Child",
@@ -523,9 +553,10 @@
     "district_name": "Sa Đéc",
     "province_name": "Tỉnh Đồng Tháp",
     "destination": "",
-    "latitude": 10.284322697711957,
-    "longitude": 105.74591659860978,
-    "departer": "Mai Chí Thọ Phường Phú Thứ Quận Cái Răng Thành phố Cần Thơ"
+    "tọa độ": "10.284159112391189, 105.7458415",
+    "departer": "Mai Chí Thọ Phường Phú Thứ Quận Cái Răng Thành phố Cần Thơ",
+    "_latitude": 10.284159112391189,
+    "_longitude": 105.7458415
   },
   {
     "carrier_name": "Hub Vĩnh Long 2 - Vĩnh Long",
@@ -535,9 +566,10 @@
     "district_name": "Long Hồ",
     "province_name": "Tỉnh Vĩnh Long",
     "destination": "",
-    "latitude": 10.228627856409464,
-    "longitude": 105.98717293983384,
-    "departer": "Mai Chí Thọ Phường Phú Thứ Quận Cái Răng Thành phố Cần Thơ"
+    "tọa độ": "10.22848003986985, 105.98716220855746",
+    "departer": "Mai Chí Thọ Phường Phú Thứ Quận Cái Răng Thành phố Cần Thơ",
+    "_latitude": 10.22848003986985,
+    "_longitude": 105.98716220855746
   },
   {
     "carrier_name": "Hub Mỹ Xuyên - Sóc Trăng",
@@ -547,9 +579,10 @@
     "district_name": "Thành Phố Sóc Trăng",
     "province_name": "Tỉnh Sóc Trăng",
     "destination": "",
-    "latitude": 9.392977171501123,
-    "longitude": 105.88767315253322,
-    "departer": "Mai Chí Thọ Phường Phú Thứ Quận Cái Răng Thành phố Cần Thơ"
+    "tọa độ": "9.39339426225934, 105.88627457896416",
+    "departer": "Mai Chí Thọ Phường Phú Thứ Quận Cái Răng Thành phố Cần Thơ",
+    "_latitude": 9.39339426225934,
+    "_longitude": 105.88627457896416
   },
   {
     "carrier_name": "Hub Vĩnh Châu - Sóc Trăng",
@@ -559,9 +592,10 @@
     "district_name": "Thị Xã Vĩnh Châu",
     "province_name": "Tỉnh Sóc Trăng",
     "destination": "",
-    "latitude": 9.281971709303887,
-    "longitude": 105.84044338400642,
-    "departer": "Mai Chí Thọ Phường Phú Thứ Quận Cái Răng Thành phố Cần Thơ"
+    "tọa độ": "9.28133863594311, 105.8421359159133",
+    "departer": "Mai Chí Thọ Phường Phú Thứ Quận Cái Răng Thành phố Cần Thơ",
+    "_latitude": 9.28133863594311,
+    "_longitude": 105.8421359159133
   },
   {
     "carrier_name": "Hub Trần Đề - Sóc Trăng",
@@ -571,9 +605,10 @@
     "district_name": "Thành Phố Sóc Trăng",
     "province_name": "Tỉnh Sóc Trăng",
     "destination": "",
-    "latitude": 9.537692479053405,
-    "longitude": 106.19644510914101,
-    "departer": "Mai Chí Thọ Phường Phú Thứ Quận Cái Răng Thành phố Cần Thơ"
+    "tọa độ": "9.53651875481172, 106.1963982520069",
+    "departer": "Mai Chí Thọ Phường Phú Thứ Quận Cái Răng Thành phố Cần Thơ",
+    "_latitude": 9.53651875481172,
+    "_longitude": 106.1963982520069
   },
   {
     "carrier_name": "Hub TP Cà Mau- Cà Mau R2",
@@ -583,9 +618,10 @@
     "district_name": "Thành Phố Cà Mau",
     "province_name": "Tỉnh Cà Mau",
     "destination": "",
-    "latitude": 9.168441968699804,
-    "longitude": 105.26337153982603,
-    "departer": "Mai Chí Thọ Phường Phú Thứ Quận Cái Răng Thành phố Cần Thơ"
+    "tọa độ": "9.168251316868073, 105.26340372388916",
+    "departer": "Mai Chí Thọ Phường Phú Thứ Quận Cái Răng Thành phố Cần Thơ",
+    "_latitude": 9.168251316868073,
+    "_longitude": 105.26340372388916
   },
   {
     "carrier_name": "NVCT Hub Bình Đại_Child",
@@ -595,9 +631,10 @@
     "district_name": "Huyện Bình Đại",
     "province_name": "Tỉnh Bến Tre",
     "destination": "",
-    "latitude": 10.12549290997965,
-    "longitude": 106.70598049565321,
-    "departer": "Mai Chí Thọ Phường Phú Thứ Quận Cái Răng Thành phố Cần Thơ"
+    "tọa độ": "10.125228866510232, 106.70602340855626",
+    "departer": "Mai Chí Thọ Phường Phú Thứ Quận Cái Răng Thành phố Cần Thơ",
+    "_latitude": 10.125228866510232,
+    "_longitude": 106.70602340855626
   },
   {
     "carrier_name": "Hub Tri Tôn - An Giang",
@@ -607,9 +644,10 @@
     "district_name": "Huyện Tri Tôn",
     "province_name": "Tỉnh An Giang",
     "destination": "",
-    "latitude": 10.412603789272444,
-    "longitude": 105.00139767052258,
-    "departer": "Mai Chí Thọ Phường Phú Thứ Quận Cái Răng Thành phố Cần Thơ"
+    "tọa độ": "10.412392746199812, 105.00132256623071",
+    "departer": "Mai Chí Thọ Phường Phú Thứ Quận Cái Răng Thành phố Cần Thơ",
+    "_latitude": 10.412392746199812,
+    "_longitude": 105.00132256623071
   },
   {
     "carrier_name": "Hub Phong Điền - Cần Thơ",
@@ -619,9 +657,10 @@
     "district_name": "Huyện Châu Thành A",
     "province_name": "Tỉnh Hậu Giang",
     "destination": "",
-    "latitude": 9.946687444349145,
-    "longitude": 105.61638002448773,
-    "departer": "Mai Chí Thọ Phường Phú Thứ Quận Cái Răng Thành phố Cần Thơ"
+    "tọa độ": "9.946465525320637, 105.61643366622562",
+    "departer": "Mai Chí Thọ Phường Phú Thứ Quận Cái Răng Thành phố Cần Thơ",
+    "_latitude": 9.946465525320637,
+    "_longitude": 105.61643366622562
   },
   {
     "carrier_name": "NVCT Hub Phú Quốc - Kiên Giang",
@@ -631,9 +670,10 @@
     "district_name": "Thành phố Phú Quốc",
     "province_name": "Tỉnh Kiên Giang",
     "destination": "",
-    "latitude": 103.96954804031657,
-    "longitude": 10.224216791782007,
-    "departer": "Mai Chí Thọ Phường Phú Thứ Quận Cái Răng Thành phố Cần Thơ"
+    "tọa độ": "10.224058414721421, 103.96950510961899",
+    "departer": "Mai Chí Thọ Phường Phú Thứ Quận Cái Răng Thành phố Cần Thơ",
+    "_latitude": 10.224058414721421,
+    "_longitude": 103.96950510961899
   },
   {
     "carrier_name": "NVCT Hub Dương Đông - Phú Quốc - Child",
@@ -643,9 +683,10 @@
     "district_name": "Thành phố Phú Quốc",
     "province_name": "Tỉnh Kiên Giang",
     "destination": "",
-    "latitude": 104.01683745507191,
-    "longitude": 10.030032592798639,
-    "departer": "Mai Chí Thọ Phường Phú Thứ Quận Cái Răng Thành phố Cần Thơ"
+    "tọa độ": "10.029948073890353, 104.01680526622648",
+    "departer": "Mai Chí Thọ Phường Phú Thứ Quận Cái Răng Thành phố Cần Thơ",
+    "_latitude": 10.029948073890353,
+    "_longitude": 104.01680526622648
   },
   {
     "carrier_name": "NVCT Hub Lâm Hà 2_Child",
@@ -655,9 +696,10 @@
     "district_name": "Huyện Lâm Hà",
     "province_name": "Tỉnh Lâm Đồng",
     "destination": "",
-    "latitude": 11.752592117248541,
-    "longitude": 108.20052555541223,
-    "departer": "Số 18 L1-5 (Log 19), VSIP II , Đường số 3, KCN Việt Nam Singapore II, Phường Hòa Phú, Thành Phố Thủ Dầu Một, Tỉnh Bình Dương"
+    "tọa độ": "11.7481124019114, 108.19661093793844",
+    "departer": "Số 18 L1-5 (Log 19), VSIP II , Đường số 3, KCN Việt Nam Singapore II, Phường Hòa Phú, Thành Phố Thủ Dầu Một, Tỉnh Bình Dương",
+    "_latitude": 11.7481124019114,
+    "_longitude": 108.19661093793844
   },
   {
     "carrier_name": "KTLSNAMTRUC_NAMDINH",
@@ -667,9 +709,10 @@
     "district_name": "Huyện Nam Trực",
     "province_name": "Tỉnh Nam Định",
     "destination": "",
-    "latitude": 20.28826296430592,
-    "longitude": 106.17794754989463,
-    "departer": "Kho Logos khu công nghiệp VSIP Bắc Ninh, 93 Đường Hữu Nghị, Xã Đại Đồng, Huyện Tiên Du, Tỉnh Bắc Ninh"
+    "tọa độ": "20.43971513369275, 106.16981509329378",
+    "departer": "Kho Logos khu công nghiệp VSIP Bắc Ninh, 93 Đường Hữu Nghị, Xã Đại Đồng, Huyện Tiên Du, Tỉnh Bắc Ninh",
+    "_latitude": 20.43971513369275,
+    "_longitude": 106.16981509329378
   },
   {
     "carrier_name": "NV công ty - Hub Cái Bè - Tiền Giang",
@@ -679,9 +722,10 @@
     "district_name": "Thị xã Cai Lậy",
     "province_name": "Tỉnh Tiền Giang",
     "destination": "",
-    "latitude": 10.394991898575656,
-    "longitude": 106.14990464032454,
-    "departer": "Số 18 L1-5 (Log 19), VSIP II , Đường số 3, KCN Việt Nam Singapore II, Phường Hòa Phú, Thành Phố Thủ Dầu Một, Tỉnh Bình Dương"
+    "tọa độ": "10.394717553523154, 106.14988319506614",
+    "departer": "Số 18 L1-5 (Log 19), VSIP II , Đường số 3, KCN Việt Nam Singapore II, Phường Hòa Phú, Thành Phố Thủ Dầu Một, Tỉnh Bình Dương",
+    "_latitude": 10.394717553523154,
+    "_longitude": 106.14988319506614
   },
   {
     "carrier_name": "NVCT Hub Tân Phú Đông - Tiền Giang 2 Child",
@@ -691,9 +735,10 @@
     "district_name": "Huyện Gò Công Tây",
     "province_name": "Tỉnh Tiền Giang",
     "destination": "",
-    "latitude": 10.341244317315253,
-    "longitude": 106.64441928205683,
-    "departer": "Số 18 L1-5 (Log 19), VSIP II , Đường số 3, KCN Việt Nam Singapore II, Phường Hòa Phú, Thành Phố Thủ Dầu Một, Tỉnh Bình Dương"
+    "tọa độ": "10.34126542643392, 106.64448365273691",
+    "departer": "Số 18 L1-5 (Log 19), VSIP II , Đường số 3, KCN Việt Nam Singapore II, Phường Hòa Phú, Thành Phố Thủ Dầu Một, Tỉnh Bình Dương",
+    "_latitude": 10.34126542643392,
+    "_longitude": 106.64448365273691
   },
   {
     "carrier_name": "Hub TP Bắc Kạn",
@@ -703,9 +748,10 @@
     "district_name": "Huyện Bạch Thông",
     "province_name": "Tỉnh Bắc Kạn",
     "destination": "",
-    "latitude": 22.11705063210186,
-    "longitude": 105.768624969921,
-    "departer": "Kho Logos khu công nghiệp VSIP Bắc Ninh, 93 Đường Hữu Nghị, Xã Đại Đồng, Huyện Tiên Du, Tỉnh Bắc Ninh"
+    "tọa độ": "22.123310424913985, 105.7688199240206",
+    "departer": "Kho Logos khu công nghiệp VSIP Bắc Ninh, 93 Đường Hữu Nghị, Xã Đại Đồng, Huyện Tiên Du, Tỉnh Bắc Ninh",
+    "_latitude": 22.123310424913985,
+    "_longitude": 105.7688199240206
   },
   {
     "carrier_name": "Hub TP Cao Bằng",
@@ -715,9 +761,10 @@
     "district_name": "Thành phố Cao Bằng",
     "province_name": "Tỉnh Cao Bằng",
     "destination": "",
-    "latitude": 22.663796581655898,
-    "longitude": 106.23210666814458,
-    "departer": "Kho Logos khu công nghiệp VSIP Bắc Ninh, 93 Đường Hữu Nghị, Xã Đại Đồng, Huyện Tiên Du, Tỉnh Bắc Ninh"
+    "tọa độ": "22.663518383857973, 106.23253556683967",
+    "departer": "Kho Logos khu công nghiệp VSIP Bắc Ninh, 93 Đường Hữu Nghị, Xã Đại Đồng, Huyện Tiên Du, Tỉnh Bắc Ninh",
+    "_latitude": 22.663518383857973,
+    "_longitude": 106.23253556683967
   },
   {
     "carrier_name": "NVCT Hub An Thới 2 - Phú Quốc - Child",
@@ -727,9 +774,10 @@
     "district_name": "Thành phố Phú Quốc",
     "province_name": "Tỉnh Kiên Giang",
     "destination": "",
-    "latitude": 10.025347229927956,
-    "longitude": 104.01760425565125,
-    "departer": "Số 18 L1-5 (Log 19), VSIP II , Đường số 3, KCN Việt Nam Singapore II, Phường Hòa Phú, Thành Phố Thủ Dầu Một, Tỉnh Bình Dương"
+    "tọa độ": "22.663900525100626, 106.23156074781795",
+    "departer": "Số 18 L1-5 (Log 19), VSIP II , Đường số 3, KCN Việt Nam Singapore II, Phường Hòa Phú, Thành Phố Thủ Dầu Một, Tỉnh Bình Dương",
+    "_latitude": 22.663900525100626,
+    "_longitude": 106.23156074781795
   },
   {
     "carrier_name": "Hub Yên Minh_Hà Giang_Child",
@@ -739,9 +787,10 @@
     "district_name": "Huyện Yên Minh",
     "province_name": "Tỉnh Hà Giang",
     "destination": "",
-    "latitude": 23.12153378465824,
-    "longitude": 105.1348527821718,
-    "departer": "Kho Logos khu công nghiệp VSIP Bắc Ninh, 93 Đường Hữu Nghị, Xã Đại Đồng, Huyện Tiên Du, Tỉnh Bắc Ninh"
+    "tọa độ": "23.12153378465824",
+    "departer": "Kho Logos khu công nghiệp VSIP Bắc Ninh, 93 Đường Hữu Nghị, Xã Đại Đồng, Huyện Tiên Du, Tỉnh Bắc Ninh",
+    "_latitude": null,
+    "_longitude": null
   },
   {
     "carrier_name": "Hub Mèo Vạc_Hà Giang_Child",
@@ -751,9 +800,10 @@
     "district_name": "Huyện Mèo Vạc",
     "province_name": "Tỉnh Hà Giang",
     "destination": "",
-    "latitude": 23.16441024563942,
-    "longitude": 105.40974137053269,
-    "departer": "Kho Logos khu công nghiệp VSIP Bắc Ninh, 93 Đường Hữu Nghị, Xã Đại Đồng, Huyện Tiên Du, Tỉnh Bắc Ninh"
+    "tọa độ": "23.16441024563942",
+    "departer": "Kho Logos khu công nghiệp VSIP Bắc Ninh, 93 Đường Hữu Nghị, Xã Đại Đồng, Huyện Tiên Du, Tỉnh Bắc Ninh",
+    "_latitude": null,
+    "_longitude": null
   },
   {
     "carrier_name": "Hub Đồng Văn_Hà Giang_Child",
@@ -763,9 +813,10 @@
     "district_name": "Huyện Đồng Văn",
     "province_name": "Tỉnh Hà Giang",
     "destination": "",
-    "latitude": 23.247591895400525,
-    "longitude": 105.18958555955454,
-    "departer": "Kho Logos khu công nghiệp VSIP Bắc Ninh, 93 Đường Hữu Nghị, Xã Đại Đồng, Huyện Tiên Du, Tỉnh Bắc Ninh"
+    "tọa độ": "23.247591895400525",
+    "departer": "Kho Logos khu công nghiệp VSIP Bắc Ninh, 93 Đường Hữu Nghị, Xã Đại Đồng, Huyện Tiên Du, Tỉnh Bắc Ninh",
+    "_latitude": null,
+    "_longitude": null
   },
   {
     "carrier_name": "Hub Phong Thổ_Lai Châu_Child",
@@ -775,9 +826,10 @@
     "district_name": "Huyện Phong Thổ",
     "province_name": "Tỉnh Lai Châu",
     "destination": "",
-    "latitude": 22.542565097864482,
-    "longitude": 103.29126395332781,
-    "departer": "Kho Logos khu công nghiệp VSIP Bắc Ninh, 93 Đường Hữu Nghị, Xã Đại Đồng, Huyện Tiên Du, Tỉnh Bắc Ninh"
+    "tọa độ": "22.54257500696708, 103.29131759530962",
+    "departer": "Kho Logos khu công nghiệp VSIP Bắc Ninh, 93 Đường Hữu Nghị, Xã Đại Đồng, Huyện Tiên Du, Tỉnh Bắc Ninh",
+    "_latitude": 22.54257500696708,
+    "_longitude": 103.29131759530962
   },
   {
     "carrier_name": "Hub Quản Bạ_Hà Giang_Child",
@@ -787,9 +839,10 @@
     "district_name": "Huyện Quản Bạ",
     "province_name": "Tỉnh Hà Giang",
     "destination": "",
-    "latitude": 23.069474805122834,
-    "longitude": 104.99295885333503,
-    "departer": "Kho Logos khu công nghiệp VSIP Bắc Ninh, 93 Đường Hữu Nghị, Xã Đại Đồng, Huyện Tiên Du, Tỉnh Bắc Ninh"
+    "tọa độ": "23.069326742219925, 104.99299103765372",
+    "departer": "Kho Logos khu công nghiệp VSIP Bắc Ninh, 93 Đường Hữu Nghị, Xã Đại Đồng, Huyện Tiên Du, Tỉnh Bắc Ninh",
+    "_latitude": 23.069326742219925,
+    "_longitude": 104.99299103765372
   },
   {
     "carrier_name": "Hub TP Hà Giang_Child",
@@ -799,9 +852,10 @@
     "district_name": "Thành phố Hà Giang",
     "province_name": "Tỉnh Hà Giang",
     "destination": "",
-    "latitude": 22.834675127479013,
-    "longitude": 104.99015119751195,
-    "departer": "Kho Logos khu công nghiệp VSIP Bắc Ninh, 93 Đường Hữu Nghị, Xã Đại Đồng, Huyện Tiên Du, Tỉnh Bắc Ninh"
+    "tọa độ": "22.8346058581265, 104.99012971158449",
+    "departer": "Kho Logos khu công nghiệp VSIP Bắc Ninh, 93 Đường Hữu Nghị, Xã Đại Đồng, Huyện Tiên Du, Tỉnh Bắc Ninh",
+    "_latitude": 22.8346058581265,
+    "_longitude": 104.99012971158449
   },
   {
     "carrier_name": "Hub Tân Uyên_Lai Châu_Child",
@@ -811,9 +865,10 @@
     "district_name": "Huyện Tân Uyên",
     "province_name": "Tỉnh Lai Châu",
     "destination": "",
-    "latitude": 22.17099144890926,
-    "longitude": 103.7560862705192,
-    "departer": "Kho Logos khu công nghiệp VSIP Bắc Ninh, 93 Đường Hữu Nghị, Xã Đại Đồng, Huyện Tiên Du, Tỉnh Bắc Ninh"
+    "tọa độ": "22.080554693325265, 103.85922714216211",
+    "departer": "Kho Logos khu công nghiệp VSIP Bắc Ninh, 93 Đường Hữu Nghị, Xã Đại Đồng, Huyện Tiên Du, Tỉnh Bắc Ninh",
+    "_latitude": 22.080554693325265,
+    "_longitude": 103.85922714216211
   },
   {
     "carrier_name": "Hub Than Uyên_Lai Châu_Child",
@@ -823,9 +878,10 @@
     "district_name": "Huyện Than Uyên",
     "province_name": "Tỉnh Lai Châu",
     "destination": "",
-    "latitude": 21.95205293476813,
-    "longitude": 103.88331718400822,
-    "departer": "Kho Logos khu công nghiệp VSIP Bắc Ninh, 93 Đường Hữu Nghị, Xã Đại Đồng, Huyện Tiên Du, Tỉnh Bắc Ninh"
+    "tọa độ": "21.952003179947532, 103.88323135111469",
+    "departer": "Kho Logos khu công nghiệp VSIP Bắc Ninh, 93 Đường Hữu Nghị, Xã Đại Đồng, Huyện Tiên Du, Tỉnh Bắc Ninh",
+    "_latitude": 21.952003179947532,
+    "_longitude": 103.88323135111469
   },
   {
     "carrier_name": "Hub Sìn Hồ_Lai Châu_Child",
@@ -835,9 +891,10 @@
     "district_name": "Huyện Sìn Hồ",
     "province_name": "Tỉnh Lai Châu",
     "destination": "",
-    "latitude": 22.35930081288754,
-    "longitude": 103.25114172819376,
-    "departer": "Kho Logos khu công nghiệp VSIP Bắc Ninh, 93 Đường Hữu Nghị, Xã Đại Đồng, Huyện Tiên Du, Tỉnh Bắc Ninh"
+    "tọa độ": "22.35929035771238, 103.25113013401189",
+    "departer": "Kho Logos khu công nghiệp VSIP Bắc Ninh, 93 Đường Hữu Nghị, Xã Đại Đồng, Huyện Tiên Du, Tỉnh Bắc Ninh",
+    "_latitude": 22.35929035771238,
+    "_longitude": 103.25113013401189
   },
   {
     "carrier_name": "Hub Mường Tè_Lai Châu_Child",
@@ -847,9 +904,10 @@
     "district_name": "Huyện Mường Tè",
     "province_name": "Tỉnh Lai Châu",
     "destination": "",
-    "latitude": 22.383871468368543,
-    "longitude": 102.8020525128499,
-    "departer": "Kho Logos khu công nghiệp VSIP Bắc Ninh, 93 Đường Hữu Nghị, Xã Đại Đồng, Huyện Tiên Du, Tỉnh Bắc Ninh"
+    "tọa độ": "22.38372419621207, 102.80216535194612",
+    "departer": "Kho Logos khu công nghiệp VSIP Bắc Ninh, 93 Đường Hữu Nghị, Xã Đại Đồng, Huyện Tiên Du, Tỉnh Bắc Ninh",
+    "_latitude": 22.38372419621207,
+    "_longitude": 102.80216535194612
   },
   {
     "carrier_name": "Hub Phú Lộc_Huế_Child",
@@ -859,9 +917,10 @@
     "district_name": "Huyện Phú Lộc",
     "province_name": "Tỉnh Thừa Thiên Huế",
     "destination": "",
-    "latitude": 16.325172661584922,
-    "longitude": 107.77155789373452,
-    "departer": "Kho Logos khu công nghiệp VSIP Bắc Ninh, 93 Đường Hữu Nghị, Xã Đại Đồng, Huyện Tiên Du, Tỉnh Bắc Ninh"
+    "tọa độ": "16.32489462189671, 107.77166515270666",
+    "departer": "Kho Logos khu công nghiệp VSIP Bắc Ninh, 93 Đường Hữu Nghị, Xã Đại Đồng, Huyện Tiên Du, Tỉnh Bắc Ninh",
+    "_latitude": 16.32489462189671,
+    "_longitude": 107.77166515270666
   },
   {
     "carrier_name": "NVCT Hub Cam Ranh 2 - Khánh Hòa Child",
@@ -871,9 +930,10 @@
     "district_name": "Thành phố Cam Ranh",
     "province_name": "Tỉnh Khánh Hòa",
     "destination": "",
-    "latitude": 11.912289548560548,
-    "longitude": "10.915.133.107.042.400",
-    "departer": "Số 18 L1-5 (Log 19), VSIP II , Đường số 3, KCN Việt Nam Singapore II, Phường Hòa Phú, Thành Phố Thủ Dầu Một, Tỉnh Bình Dương"
+    "tọa độ": "11.920295874562798, 109.14597751534151",
+    "departer": "Số 18 L1-5 (Log 19), VSIP II , Đường số 3, KCN Việt Nam Singapore II, Phường Hòa Phú, Thành Phố Thủ Dầu Một, Tỉnh Bình Dương",
+    "_latitude": 11.920295874562798,
+    "_longitude": 109.14597751534151
   },
   {
     "carrier_name": "Hub Bảo Thắng_Lào Cai_Child",
@@ -883,9 +943,10 @@
     "district_name": "Huyện Bảo Thắng",
     "province_name": "Tỉnh Lào Cai",
     "destination": "",
-    "latitude": 22.323066701094934,
-    "longitude": 104.18147678401309,
-    "departer": "Kho Logos khu công nghiệp VSIP Bắc Ninh, 93 Đường Hữu Nghị, Xã Đại Đồng, Huyện Tiên Du, Tỉnh Bắc Ninh"
+    "tọa độ": "22.322960841726008, 104.18707930118686",
+    "departer": "Kho Logos khu công nghiệp VSIP Bắc Ninh, 93 Đường Hữu Nghị, Xã Đại Đồng, Huyện Tiên Du, Tỉnh Bắc Ninh",
+    "_latitude": 22.322960841726008,
+    "_longitude": 104.18707930118686
   },
   {
     "carrier_name": "KTLS Thăng Bình - Quảng Nam",
@@ -895,9 +956,10 @@
     "district_name": "Huyện Thăng Bình",
     "province_name": "Tỉnh Quảng Nam",
     "destination": "",
-    "latitude": 15.752475165508345,
-    "longitude": 108.38242849087153,
-    "departer": "Số 18 L1-5 (Log 19), VSIP II , Đường số 3, KCN Việt Nam Singapore II, Phường Hòa Phú, Thành Phố Thủ Dầu Một, Tỉnh Bình Dương"
+    "tọa độ": "16.394119342790834, 107.57077132970086",
+    "departer": "Số 18 L1-5 (Log 19), VSIP II , Đường số 3, KCN Việt Nam Singapore II, Phường Hòa Phú, Thành Phố Thủ Dầu Một, Tỉnh Bình Dương",
+    "_latitude": 16.394119342790834,
+    "_longitude": 107.57077132970086
   },
   {
     "carrier_name": "Hub Nghĩa Lô_Yên Bái_Child",
@@ -907,9 +969,10 @@
     "district_name": "Thị xã Nghĩa Lộ",
     "province_name": "Tỉnh Yên Bái",
     "destination": "",
-    "latitude": 21.603087276667914,
-    "longitude": 104.49867735713657,
-    "departer": "Kho Logos khu công nghiệp VSIP Bắc Ninh, 93 Đường Hữu Nghị, Xã Đại Đồng, Huyện Tiên Du, Tỉnh Bắc Ninh"
+    "tọa độ": "21.599747719891628, 104.49237550938285",
+    "departer": "Kho Logos khu công nghiệp VSIP Bắc Ninh, 93 Đường Hữu Nghị, Xã Đại Đồng, Huyện Tiên Du, Tỉnh Bắc Ninh",
+    "_latitude": 21.599747719891628,
+    "_longitude": 104.49237550938285
   },
   {
     "carrier_name": "Hub Thanh Oai_Hà Nội_Child",
@@ -919,9 +982,10 @@
     "district_name": "Huyện Thanh Oai",
     "province_name": "Thành phố Hà Nội",
     "destination": "",
-    "latitude": 20.945934638182596,
-    "longitude": 105.75706144166759,
-    "departer": "Kho Logos khu công nghiệp VSIP Bắc Ninh, 93 Đường Hữu Nghị, Xã Đại Đồng, Huyện Tiên Du, Tỉnh Bắc Ninh"
+    "tọa độ": "20.94580438001777, 105.75696487992295",
+    "departer": "Kho Logos khu công nghiệp VSIP Bắc Ninh, 93 Đường Hữu Nghị, Xã Đại Đồng, Huyện Tiên Du, Tỉnh Bắc Ninh",
+    "_latitude": 20.94580438001777,
+    "_longitude": 105.75696487992295
   },
   {
     "carrier_name": "Hub Hồng Lĩnh_Hà Tĩnh",
@@ -931,9 +995,10 @@
     "district_name": "Thị xã Hồng Lĩnh",
     "province_name": "Tỉnh Hà Tĩnh",
     "destination": "",
-    "latitude": 18.561832351331127,
-    "longitude": 105.67935964522442,
-    "departer": "Kho Logos khu công nghiệp VSIP Bắc Ninh, 93 Đường Hữu Nghị, Xã Đại Đồng, Huyện Tiên Du, Tỉnh Bắc Ninh"
+    "tọa độ": "18.561166150864494, 105.6793429142871",
+    "departer": "Kho Logos khu công nghiệp VSIP Bắc Ninh, 93 Đường Hữu Nghị, Xã Đại Đồng, Huyện Tiên Du, Tỉnh Bắc Ninh",
+    "_latitude": 18.561166150864494,
+    "_longitude": 105.6793429142871
   },
   {
     "carrier_name": "Hub Bắc Sơn_Lạng Sơn_Child",
@@ -943,9 +1008,10 @@
     "district_name": "Huyện Bắc Sơn",
     "province_name": "Tỉnh Lạng Sơn",
     "destination": "",
-    "latitude": 21.901313412531593,
-    "longitude": 106.32147919473799,
-    "departer": "Kho Logos khu công nghiệp VSIP Bắc Ninh, 93 Đường Hữu Nghị, Xã Đại Đồng, Huyện Tiên Du, Tỉnh Bắc Ninh"
+    "tọa độ": "21.90741654542574, 106.33002165296296",
+    "departer": "Kho Logos khu công nghiệp VSIP Bắc Ninh, 93 Đường Hữu Nghị, Xã Đại Đồng, Huyện Tiên Du, Tỉnh Bắc Ninh",
+    "_latitude": 21.90741654542574,
+    "_longitude": 106.33002165296296
   },
   {
     "carrier_name": "Hub Mường Lói_Điện Biên_Child",
@@ -955,9 +1021,10 @@
     "district_name": "Huyện Điện Biên",
     "province_name": "Tỉnh Điện Biên",
     "destination": "",
-    "latitude": 20.981485799179463,
-    "longitude": 103.19676812607736,
-    "departer": "Kho Logos khu công nghiệp VSIP Bắc Ninh, 93 Đường Hữu Nghị, Xã Đại Đồng, Huyện Tiên Du, Tỉnh Bắc Ninh"
+    "tọa độ": "20.981028332188476, 103.16378591464637",
+    "departer": "Kho Logos khu công nghiệp VSIP Bắc Ninh, 93 Đường Hữu Nghị, Xã Đại Đồng, Huyện Tiên Du, Tỉnh Bắc Ninh",
+    "_latitude": 20.981028332188476,
+    "_longitude": 103.16378591464637
   },
   {
     "carrier_name": "NVCT Hub Nha Trang 2_Child",
@@ -967,9 +1034,10 @@
     "district_name": "Thành phố Nha Trang",
     "province_name": "Tỉnh Khánh Hòa",
     "destination": "",
-    "latitude": 12.21606885498951,
-    "longitude": 109.18733072785356,
-    "departer": "Số 18 L1-5 (Log 19), VSIP II , Đường số 3, KCN Việt Nam Singapore II, Phường Hòa Phú, Thành Phố Thủ Dầu Một, Tỉnh Bình Dương"
+    "tọa độ": "12.215850732349018, 109.18917835143897",
+    "departer": "Số 18 L1-5 (Log 19), VSIP II , Đường số 3, KCN Việt Nam Singapore II, Phường Hòa Phú, Thành Phố Thủ Dầu Một, Tỉnh Bình Dương",
+    "_latitude": 12.215850732349018,
+    "_longitude": 109.18917835143897
   },
   {
     "carrier_name": "Hub Đô Lương_Nghệ An_Child",
@@ -979,9 +1047,10 @@
     "district_name": "Huyện Đô Lương",
     "province_name": "Tỉnh Nghệ An",
     "destination": "",
-    "latitude": 18.898116759160363,
-    "longitude": "10.532.978.357.945.400",
-    "departer": "Kho Logos khu công nghiệp VSIP Bắc Ninh, 93 Đường Hữu Nghị, Xã Đại Đồng, Huyện Tiên Du, Tỉnh Bắc Ninh"
+    "tọa độ": "18.879556190757008, 105.43311711596336",
+    "departer": "Kho Logos khu công nghiệp VSIP Bắc Ninh, 93 Đường Hữu Nghị, Xã Đại Đồng, Huyện Tiên Du, Tỉnh Bắc Ninh",
+    "_latitude": 18.879556190757008,
+    "_longitude": 105.43311711596336
   },
   {
     "carrier_name": "KTLS Thạnh Hóa - Long An",
@@ -991,9 +1060,10 @@
     "district_name": "Huyện Thạnh Hóa",
     "province_name": "Tỉnh Long An",
     "destination": "",
-    "latitude": 10.657475707577657,
-    "longitude": 106.18157721210945,
-    "departer": "Số 18 L1-5 (Log 19), VSIP II , Đường số 3, KCN Việt Nam Singapore II, Phường Hòa Phú, Thành Phố Thủ Dầu Một, Tỉnh Bình Dương"
+    "tọa độ": "10.657217308868448, 106.18635899506911",
+    "departer": "Số 18 L1-5 (Log 19), VSIP II , Đường số 3, KCN Việt Nam Singapore II, Phường Hòa Phú, Thành Phố Thủ Dầu Một, Tỉnh Bình Dương",
+    "_latitude": 10.657217308868448,
+    "_longitude": 106.18635899506911
   },
   {
     "carrier_name": "Hub Lục Yên _ Yên Bái _ Child",
@@ -1003,9 +1073,10 @@
     "district_name": "Huyện Lục Yên",
     "province_name": "Tỉnh Yên Bái",
     "destination": "",
-    "latitude": 22.123022124318037,
-    "longitude": 10.657475707577657,
-    "departer": "Kho Logos khu công nghiệp VSIP Bắc Ninh, 93 Đường Hữu Nghị, Xã Đại Đồng, Huyện Tiên Du, Tỉnh Bắc Ninh"
+    "tọa độ": "22.12674487998218, 104.71540269816727",
+    "departer": "Kho Logos khu công nghiệp VSIP Bắc Ninh, 93 Đường Hữu Nghị, Xã Đại Đồng, Huyện Tiên Du, Tỉnh Bắc Ninh",
+    "_latitude": 22.12674487998218,
+    "_longitude": 104.71540269816727
   },
   {
     "carrier_name": "Hub TP Lạng Sơn",
@@ -1015,9 +1086,10 @@
     "district_name": "Thành phố Lạng Sơn",
     "province_name": "Tỉnh Lạng Sơn",
     "destination": "",
-    "latitude": 21.850429751014843,
-    "longitude": 106.7474888263347,
-    "departer": "Kho Logos khu công nghiệp VSIP Bắc Ninh, 93 Đường Hữu Nghị, Xã Đại Đồng, Huyện Tiên Du, Tỉnh Bắc Ninh"
+    "tọa độ": "21.85037000263876, 106.74747809529009",
+    "departer": "Kho Logos khu công nghiệp VSIP Bắc Ninh, 93 Đường Hữu Nghị, Xã Đại Đồng, Huyện Tiên Du, Tỉnh Bắc Ninh",
+    "_latitude": 21.85037000263876,
+    "_longitude": 106.74747809529009
   },
   {
     "carrier_name": "HUBTUACHUA_DIENBIEN_CHILD",
@@ -1027,9 +1099,10 @@
     "district_name": "Huyện Tủa Chùa",
     "province_name": "Tỉnh Điện Biên",
     "destination": "",
-    "latitude": 21.859141501637417,
-    "longitude": 103.34176182633499,
-    "departer": "Kho Logos khu công nghiệp VSIP Bắc Ninh, 93 Đường Hữu Nghị, Xã Đại Đồng, Huyện Tiên Du, Tỉnh Bắc Ninh"
+    "tọa độ": "21.859131544187065, 103.34172963761907",
+    "departer": "Kho Logos khu công nghiệp VSIP Bắc Ninh, 93 Đường Hữu Nghị, Xã Đại Đồng, Huyện Tiên Du, Tỉnh Bắc Ninh",
+    "_latitude": 21.859131544187065,
+    "_longitude": 103.34172963761907
   },
   {
     "carrier_name": "HUBHOANGHOA_THANHHOA_CHILD",
@@ -1039,9 +1112,10 @@
     "district_name": "Huyện Hoằng Hóa",
     "province_name": "Tỉnh Thanh Hóa",
     "destination": "",
-    "latitude": 19.85196044169158,
-    "longitude": 105.87943332816292,
-    "departer": "Kho Logos khu công nghiệp VSIP Bắc Ninh, 93 Đường Hữu Nghị, Xã Đại Đồng, Huyện Tiên Du, Tỉnh Bắc Ninh"
+    "tọa độ": "19.85205126296776, 105.87942259708697",
+    "departer": "Kho Logos khu công nghiệp VSIP Bắc Ninh, 93 Đường Hữu Nghị, Xã Đại Đồng, Huyện Tiên Du, Tỉnh Bắc Ninh",
+    "_latitude": 19.85205126296776,
+    "_longitude": 105.87942259708697
   },
   {
     "carrier_name": "HUBTUANGIAO_DIENBIEN_CHILD",
@@ -1051,9 +1125,10 @@
     "district_name": "Huyện Tuần Giáo",
     "province_name": "Tỉnh Điện Biên",
     "destination": "",
-    "latitude": 21.55428640787578,
-    "longitude": 103.43248131458633,
-    "departer": "Kho Logos khu công nghiệp VSIP Bắc Ninh, 93 Đường Hữu Nghị, Xã Đại Đồng, Huyện Tiên Du, Tỉnh Bắc Ninh"
+    "tọa độ": "21.554267326533424, 103.43239080479702",
+    "departer": "Kho Logos khu công nghiệp VSIP Bắc Ninh, 93 Đường Hữu Nghị, Xã Đại Đồng, Huyện Tiên Du, Tỉnh Bắc Ninh",
+    "_latitude": 21.554267326533424,
+    "_longitude": 103.43239080479702
   },
   {
     "carrier_name": "HUBMAISON_SONLA_CHILD",
@@ -1063,9 +1138,10 @@
     "district_name": "Huyện Mai Sơn",
     "province_name": "Tỉnh Sơn La",
     "destination": "",
-    "latitude": 21.13248421009867,
-    "longitude": 104.16217248557557,
-    "departer": "Kho Logos khu công nghiệp VSIP Bắc Ninh, 93 Đường Hữu Nghị, Xã Đại Đồng, Huyện Tiên Du, Tỉnh Bắc Ninh"
+    "tọa độ": "21.153484941001306, 104.15833680263219",
+    "departer": "Kho Logos khu công nghiệp VSIP Bắc Ninh, 93 Đường Hữu Nghị, Xã Đại Đồng, Huyện Tiên Du, Tỉnh Bắc Ninh",
+    "_latitude": 21.153484941001306,
+    "_longitude": 104.15833680263219
   },
   {
     "carrier_name": "HUBTPSONLA_SONLA_CHILD",
@@ -1075,9 +1151,10 @@
     "district_name": "Thành phố Sơn La",
     "province_name": "Tỉnh Sơn La",
     "destination": "",
-    "latitude": 21.27108618238801,
-    "longitude": 103.98789829123736,
-    "departer": "Kho Logos khu công nghiệp VSIP Bắc Ninh, 93 Đường Hữu Nghị, Xã Đại Đồng, Huyện Tiên Du, Tỉnh Bắc Ninh"
+    "tọa độ": "21.28684304039953, 103.96682141932786",
+    "departer": "Kho Logos khu công nghiệp VSIP Bắc Ninh, 93 Đường Hữu Nghị, Xã Đại Đồng, Huyện Tiên Du, Tỉnh Bắc Ninh",
+    "_latitude": 21.28684304039953,
+    "_longitude": 103.96682141932786
   },
   {
     "carrier_name": "KTLS_VINHPHUC",
@@ -1087,9 +1164,10 @@
     "district_name": "Thành phố Vĩnh Yên",
     "province_name": "Tỉnh Vĩnh Phúc",
     "destination": "",
-    "latitude": 21.32135045977631,
-    "longitude": 105.61395359749208,
-    "departer": "Kho Logos khu công nghiệp VSIP Bắc Ninh, 93 Đường Hữu Nghị, Xã Đại Đồng, Huyện Tiên Du, Tỉnh Bắc Ninh"
+    "tọa độ": "21.30732293940123, 105.61545588497997",
+    "departer": "Kho Logos khu công nghiệp VSIP Bắc Ninh, 93 Đường Hữu Nghị, Xã Đại Đồng, Huyện Tiên Du, Tỉnh Bắc Ninh",
+    "_latitude": 21.30732293940123,
+    "_longitude": 105.61545588497997
   },
   {
     "carrier_name": "HUBMOCCHAU_SONLA_CHILD",
@@ -1099,9 +1177,10 @@
     "district_name": "Huyện Mộc Châu",
     "province_name": "Tỉnh Sơn La",
     "destination": "",
-    "latitude": 20.851932535768068,
-    "longitude": 104.62269550457026,
-    "departer": "Kho Logos khu công nghiệp VSIP Bắc Ninh, 93 Đường Hữu Nghị, Xã Đại Đồng, Huyện Tiên Du, Tỉnh Bắc Ninh"
+    "tọa độ": "20.860951443729356, 104.64568174456492",
+    "departer": "Kho Logos khu công nghiệp VSIP Bắc Ninh, 93 Đường Hữu Nghị, Xã Đại Đồng, Huyện Tiên Du, Tỉnh Bắc Ninh",
+    "_latitude": 20.860951443729356,
+    "_longitude": 104.64568174456492
   },
   {
     "carrier_name": "HUBDIENBIEN_CHILD",
@@ -1111,9 +1190,10 @@
     "district_name": "Thành phố Điện Biên Phủ",
     "province_name": "Tỉnh Điện Biên",
     "destination": "",
-    "latitude": 21.388861187076785,
-    "longitude": 103.02302486465906,
-    "departer": "Kho Logos khu công nghiệp VSIP Bắc Ninh, 93 Đường Hữu Nghị, Xã Đại Đồng, Huyện Tiên Du, Tỉnh Bắc Ninh"
+    "tọa độ": "21.391817074575687, 103.0235865510993",
+    "departer": "Kho Logos khu công nghiệp VSIP Bắc Ninh, 93 Đường Hữu Nghị, Xã Đại Đồng, Huyện Tiên Du, Tỉnh Bắc Ninh",
+    "_latitude": 21.391817074575687,
+    "_longitude": 103.0235865510993
   },
   {
     "carrier_name": "KTLS Quế Sơn - Quảng Nam",
@@ -1123,9 +1203,10 @@
     "district_name": "Huyện Quế Sơn",
     "province_name": "Tỉnh Quảng Nam",
     "destination": "",
-    "latitude": 15.814766775879457,
-    "longitude": 108.29587469928687,
-    "departer": "Số 18 L1-5 (Log 19), VSIP II , Đường số 3, KCN Việt Nam Singapore II, Phường Hòa Phú, Thành Phố Thủ Dầu Một, Tỉnh Bình Dương"
+    "tọa độ": "15.814673871331427, 108.29589615466924",
+    "departer": "Số 18 L1-5 (Log 19), VSIP II , Đường số 3, KCN Việt Nam Singapore II, Phường Hòa Phú, Thành Phố Thủ Dầu Một, Tỉnh Bình Dương",
+    "_latitude": 15.814673871331427,
+    "_longitude": 108.29589615466924
   },
   {
     "carrier_name": "HUBPHUXUYEN_HANOI_CHILD",
@@ -1135,9 +1216,10 @@
     "district_name": "Huyện Phú Xuyên",
     "province_name": "Thành phố Hà Nội",
     "destination": "",
-    "latitude": 20.768908477440593,
-    "longitude": 105.85018373981315,
-    "departer": "Kho Logos khu công nghiệp VSIP Bắc Ninh, 93 Đường Hữu Nghị, Xã Đại Đồng, Huyện Tiên Du, Tỉnh Bắc Ninh"
+    "tọa độ": "20.76885642400852, 105.85012950925906",
+    "departer": "Kho Logos khu công nghiệp VSIP Bắc Ninh, 93 Đường Hữu Nghị, Xã Đại Đồng, Huyện Tiên Du, Tỉnh Bắc Ninh",
+    "_latitude": 20.76885642400852,
+    "_longitude": 105.85012950925906
   },
   {
     "carrier_name": "HUBBAVI_HANOI_CHILD",
@@ -1147,9 +1229,10 @@
     "district_name": "Thị xã Sơn Tây",
     "province_name": "Thành phố Hà Nội",
     "destination": "",
-    "latitude": 21.116291774092446,
-    "longitude": 105.4550569821454,
-    "departer": "Kho Logos khu công nghiệp VSIP Bắc Ninh, 93 Đường Hữu Nghị, Xã Đại Đồng, Huyện Tiên Du, Tỉnh Bắc Ninh"
+    "tọa độ": "21.134828446027964, 105.43601703177868",
+    "departer": "Kho Logos khu công nghiệp VSIP Bắc Ninh, 93 Đường Hữu Nghị, Xã Đại Đồng, Huyện Tiên Du, Tỉnh Bắc Ninh",
+    "_latitude": 21.134828446027964,
+    "_longitude": 105.43601703177868
   },
   {
     "carrier_name": "HUBYENDINH_THANHHOA_CHILD",
@@ -1159,9 +1242,10 @@
     "district_name": "Huyện Yên Định",
     "province_name": "Tỉnh Thanh Hóa",
     "destination": "",
-    "latitude": 19.98172297307911,
-    "longitude": 105.64354468398406,
-    "departer": "Kho Logos khu công nghiệp VSIP Bắc Ninh, 93 Đường Hữu Nghị, Xã Đại Đồng, Huyện Tiên Du, Tỉnh Bắc Ninh"
+    "tọa độ": "19.981692724146605, 105.64351249524064",
+    "departer": "Kho Logos khu công nghiệp VSIP Bắc Ninh, 93 Đường Hữu Nghị, Xã Đại Đồng, Huyện Tiên Du, Tỉnh Bắc Ninh",
+    "_latitude": 19.981692724146605,
+    "_longitude": 105.64351249524064
   },
   {
     "carrier_name": "NVCT Hub Khánh Vĩnh - Khánh Hòa Child",
@@ -1171,9 +1255,10 @@
     "district_name": "Huyện Diên Khánh",
     "province_name": "Tỉnh Khánh Hòa",
     "destination": "",
-    "latitude": 12.260721854735625,
-    "longitude": 109.07869468206587,
-    "departer": "Số 18 L1-5 (Log 19), VSIP II , Đường số 3, KCN Việt Nam Singapore II, Phường Hòa Phú, Thành Phố Thủ Dầu Một, Tỉnh Bình Dương"
+    "tọa độ": "12.26076376030717, 109.07876975400985",
+    "departer": "Số 18 L1-5 (Log 19), VSIP II , Đường số 3, KCN Việt Nam Singapore II, Phường Hòa Phú, Thành Phố Thủ Dầu Một, Tỉnh Bình Dương",
+    "_latitude": 12.26076376030717,
+    "_longitude": 109.07876975400985
   },
   {
     "carrier_name": "NVCT Hub Diên Khánh 2 - Khánh Hòa Child",
@@ -1183,9 +1268,10 @@
     "district_name": "Huyện Diên Khánh",
     "province_name": "Tỉnh Khánh Hòa",
     "destination": "",
-    "latitude": 12.260776429482858,
-    "longitude": 109.07604155110253,
-    "departer": "Số 18 L1-5 (Log 19), VSIP II , Đường số 3, KCN Việt Nam Singapore II, Phường Hòa Phú, Thành Phố Thủ Dầu Một, Tỉnh Bình Dương"
+    "tọa độ": "12.260040354738758, 109.07960660318969",
+    "departer": "Số 18 L1-5 (Log 19), VSIP II , Đường số 3, KCN Việt Nam Singapore II, Phường Hòa Phú, Thành Phố Thủ Dầu Một, Tỉnh Bình Dương",
+    "_latitude": 12.260040354738758,
+    "_longitude": 109.07960660318969
   },
   {
     "carrier_name": "HUBTUYENQUANG_CHILD",
@@ -1195,9 +1281,10 @@
     "district_name": "Thành phố Tuyên Quang",
     "province_name": "Tỉnh Tuyên Quang",
     "destination": "",
-    "latitude": 21.77118727887987,
-    "longitude": 105.22482112818611,
-    "departer": "Kho Logos khu công nghiệp VSIP Bắc Ninh, 93 Đường Hữu Nghị, Xã Đại Đồng, Huyện Tiên Du, Tỉnh Bắc Ninh"
+    "tọa độ": "21.771197191093954, 105.22471381136003",
+    "departer": "Kho Logos khu công nghiệp VSIP Bắc Ninh, 93 Đường Hữu Nghị, Xã Đại Đồng, Huyện Tiên Du, Tỉnh Bắc Ninh",
+    "_latitude": 21.771197191093954,
+    "_longitude": 105.22471381136003
   },
   {
     "carrier_name": "HUBYENBINH_YENBAI_CHILD",
@@ -1207,9 +1294,10 @@
     "district_name": "Huyện Yên Bình",
     "province_name": "Tỉnh Yên Bái",
     "destination": "",
-    "latitude": 21.740613878453953,
-    "longitude": 104.97770803400553,
-    "departer": "Kho Logos khu công nghiệp VSIP Bắc Ninh, 93 Đường Hữu Nghị, Xã Đại Đồng, Huyện Tiên Du, Tỉnh Bắc Ninh"
+    "tọa độ": "21.738133733475237, 104.97783140387754",
+    "departer": "Kho Logos khu công nghiệp VSIP Bắc Ninh, 93 Đường Hữu Nghị, Xã Đại Đồng, Huyện Tiên Du, Tỉnh Bắc Ninh",
+    "_latitude": 21.738133733475237,
+    "_longitude": 104.97783140387754
   },
   {
     "carrier_name": "HUBTPLAICHAU_CHILD",
@@ -1219,9 +1307,10 @@
     "district_name": "Thành phố Lai Châu",
     "province_name": "Tỉnh Lai Châu",
     "destination": "",
-    "latitude": 22.389060724897778,
-    "longitude": 103.47624805971314,
-    "departer": "Kho Logos khu công nghiệp VSIP Bắc Ninh, 93 Đường Hữu Nghị, Xã Đại Đồng, Huyện Tiên Du, Tỉnh Bắc Ninh"
+    "tọa độ": "22.38175651497514, 103.47859795590564",
+    "departer": "Kho Logos khu công nghiệp VSIP Bắc Ninh, 93 Đường Hữu Nghị, Xã Đại Đồng, Huyện Tiên Du, Tỉnh Bắc Ninh",
+    "_latitude": 22.38175651497514,
+    "_longitude": 103.47859795590564
   },
   {
     "carrier_name": "HUBPHULY_HANAM_CHILD",
@@ -1231,9 +1320,10 @@
     "district_name": "Thành phố Phủ Lý",
     "province_name": "Tỉnh Hà Nam",
     "destination": "",
-    "latitude": 20.54117575889953,
-    "longitude": 105.93393091382849,
-    "departer": "Kho Logos khu công nghiệp VSIP Bắc Ninh, 93 Đường Hữu Nghị, Xã Đại Đồng, Huyện Tiên Du, Tỉnh Bắc Ninh"
+    "tọa độ": "20.541205890998594, 105.93375925026085",
+    "departer": "Kho Logos khu công nghiệp VSIP Bắc Ninh, 93 Đường Hữu Nghị, Xã Đại Đồng, Huyện Tiên Du, Tỉnh Bắc Ninh",
+    "_latitude": 20.541205890998594,
+    "_longitude": 105.93375925026085
   },
   {
     "carrier_name": "KTLS Phan Rí",
@@ -1243,9 +1333,10 @@
     "district_name": "Huyện Tuy Phong",
     "province_name": "Tỉnh Bình Thuận",
     "destination": "",
-    "latitude": 11.17514322020168,
-    "longitude": 108.5705257894203,
-    "departer": "Số 18 L1-5 (Log 19), VSIP II , Đường số 3, KCN Việt Nam Singapore II, Phường Hòa Phú, Thành Phố Thủ Dầu Một, Tỉnh Bình Dương"
+    "tọa độ": "11.175188415628012, 108.5704468371686",
+    "departer": "Số 18 L1-5 (Log 19), VSIP II , Đường số 3, KCN Việt Nam Singapore II, Phường Hòa Phú, Thành Phố Thủ Dầu Một, Tỉnh Bình Dương",
+    "_latitude": 11.175188415628012,
+    "_longitude": 108.5704468371686
   },
   {
     "carrier_name": "KTLS Đăk Hà",
@@ -1255,9 +1346,10 @@
     "district_name": "Thành phố Kon Tum",
     "province_name": "Tỉnh Kon Tum",
     "destination": "",
-    "latitude": 14.358505179063817,
-    "longitude": 108.00760239742337,
-    "departer": "Số 18 L1-5 (Log 19), VSIP II , Đường số 3, KCN Việt Nam Singapore II, Phường Hòa Phú, Thành Phố Thủ Dầu Một, Tỉnh Bình Dương"
+    "tọa độ": "14.35850514325207, 108.00761309660052",
+    "departer": "Số 18 L1-5 (Log 19), VSIP II , Đường số 3, KCN Việt Nam Singapore II, Phường Hòa Phú, Thành Phố Thủ Dầu Một, Tỉnh Bình Dương",
+    "_latitude": 14.35850514325207,
+    "_longitude": 108.00761309660052
   },
   {
     "carrier_name": "KTLSPHOYEN_THAINGUYEN_CHILD",
@@ -1267,9 +1359,10 @@
     "district_name": "Thành phố Phổ Yên",
     "province_name": "Tỉnh Thái Nguyên",
     "destination": "",
-    "latitude": 21.389393211358314,
-    "longitude": 105.88220835382765,
-    "departer": "Kho Logos khu công nghiệp VSIP Bắc Ninh, 93 Đường Hữu Nghị, Xã Đại Đồng, Huyện Tiên Du, Tỉnh Bắc Ninh"
+    "tọa độ": "21.389582173169885, 105.88480044560613",
+    "departer": "Kho Logos khu công nghiệp VSIP Bắc Ninh, 93 Đường Hữu Nghị, Xã Đại Đồng, Huyện Tiên Du, Tỉnh Bắc Ninh",
+    "_latitude": 21.389582173169885,
+    "_longitude": 105.88480044560613
   },
   {
     "carrier_name": "HUBHUONGTRA_HUE_CHILD",
@@ -1279,9 +1372,10 @@
     "district_name": "Thị xã Hương Trà",
     "province_name": "Tỉnh Thừa Thiên Huế",
     "destination": "",
-    "latitude": 16.524001556443572,
-    "longitude": 107.47816201278475,
-    "departer": "Kho Logos khu công nghiệp VSIP Bắc Ninh, 93 Đường Hữu Nghị, Xã Đại Đồng, Huyện Tiên Du, Tỉnh Bắc Ninh"
+    "tọa độ": "16.52393984198503, 107.47808690865543",
+    "departer": "Kho Logos khu công nghiệp VSIP Bắc Ninh, 93 Đường Hữu Nghị, Xã Đại Đồng, Huyện Tiên Du, Tỉnh Bắc Ninh",
+    "_latitude": 16.52393984198503,
+    "_longitude": 107.47808690865543
   },
   {
     "carrier_name": "HUBYENTHANH_NGHEAN_CHILD",
@@ -1291,9 +1385,10 @@
     "district_name": "Huyện Yên Thành",
     "province_name": "Tỉnh Nghệ An",
     "destination": "",
-    "latitude": 18.994443618070473,
-    "longitude": 105.46112643979286,
-    "departer": "Kho Logos khu công nghiệp VSIP Bắc Ninh, 93 Đường Hữu Nghị, Xã Đại Đồng, Huyện Tiên Du, Tỉnh Bắc Ninh"
+    "tọa độ": "18.99449434132835, 105.4617057946698",
+    "departer": "Kho Logos khu công nghiệp VSIP Bắc Ninh, 93 Đường Hữu Nghị, Xã Đại Đồng, Huyện Tiên Du, Tỉnh Bắc Ninh",
+    "_latitude": 18.99449434132835,
+    "_longitude": 105.4617057946698
   },
   {
     "carrier_name": "HUB Diễn Châu - Nghệ An - Child",
@@ -1303,9 +1398,10 @@
     "district_name": "Huyện Diễn Châu",
     "province_name": "Tỉnh Nghệ An",
     "destination": "",
-    "latitude": 18.965045151777495,
-    "longitude": 105.60527814084506,
-    "departer": "Kho Logos khu công nghiệp VSIP Bắc Ninh, 93 Đường Hữu Nghị, Xã Đại Đồng, Huyện Tiên Du, Tỉnh Bắc Ninh"
+    "tọa độ": "18.965213460263048, 105.60536258396999",
+    "departer": "Kho Logos khu công nghiệp VSIP Bắc Ninh, 93 Đường Hữu Nghị, Xã Đại Đồng, Huyện Tiên Du, Tỉnh Bắc Ninh",
+    "_latitude": 18.965213460263048,
+    "_longitude": 105.60536258396999
   },
   {
     "carrier_name": "HUB Hoàng Mai - Nghệ An - Child",
@@ -1315,9 +1411,10 @@
     "district_name": "Huyện Quỳnh Lưu",
     "province_name": "Tỉnh Nghệ An",
     "destination": "",
-    "latitude": 19.224609701330888,
-    "longitude": 105.69419148212334,
-    "departer": "Kho Logos khu công nghiệp VSIP Bắc Ninh, 93 Đường Hữu Nghị, Xã Đại Đồng, Huyện Tiên Du, Tỉnh Bắc Ninh"
+    "tọa độ": "19.150704401631785, 105.67325501892194",
+    "departer": "Kho Logos khu công nghiệp VSIP Bắc Ninh, 93 Đường Hữu Nghị, Xã Đại Đồng, Huyện Tiên Du, Tỉnh Bắc Ninh",
+    "_latitude": 19.150704401631785,
+    "_longitude": 105.67325501892194
   },
   {
     "carrier_name": "KTLS Quảng Ngãi",
@@ -1327,9 +1424,10 @@
     "district_name": "Thành phố Quảng Ngãi",
     "province_name": "Tỉnh Quảng Ngãi",
     "destination": "",
-    "latitude": 15.119739736334235,
-    "longitude": 108.8029916397571,
-    "departer": "Số 18 L1-5 (Log 19), VSIP II , Đường số 3, KCN Việt Nam Singapore II, Phường Hòa Phú, Thành Phố Thủ Dầu Một, Tỉnh Bình Dương"
+    "tọa độ": "15.119625804535728, 108.80299163746419",
+    "departer": "Số 18 L1-5 (Log 19), VSIP II , Đường số 3, KCN Việt Nam Singapore II, Phường Hòa Phú, Thành Phố Thủ Dầu Một, Tỉnh Bình Dương",
+    "_latitude": 15.119625804535728,
+    "_longitude": 108.80299163746419
   },
   {
     "carrier_name": "HUB Việt Trì - Phú Thọ",
@@ -1339,9 +1437,10 @@
     "district_name": "Thành phố Việt Trì",
     "province_name": "Tỉnh Phú Thọ",
     "destination": "",
-    "latitude": 21.348470619818226,
-    "longitude": 105.35540682581379,
-    "departer": "Kho Logos khu công nghiệp VSIP Bắc Ninh, 93 Đường Hữu Nghị, Xã Đại Đồng, Huyện Tiên Du, Tỉnh Bắc Ninh"
+    "tọa độ": "21.34851064103449, 105.35570724500293",
+    "departer": "Kho Logos khu công nghiệp VSIP Bắc Ninh, 93 Đường Hữu Nghị, Xã Đại Đồng, Huyện Tiên Du, Tỉnh Bắc Ninh",
+    "_latitude": 21.34851064103449,
+    "_longitude": 105.35570724500293
   },
   {
     "carrier_name": "KTLS - Nam Định",
@@ -1351,9 +1450,10 @@
     "district_name": "Thành phố Nam Định",
     "province_name": "Tỉnh Nam Định",
     "destination": "",
-    "latitude": 20.41970191837195,
-    "longitude": 106.15838062446481,
-    "departer": "Kho Logos khu công nghiệp VSIP Bắc Ninh, 93 Đường Hữu Nghị, Xã Đại Đồng, Huyện Tiên Du, Tỉnh Bắc Ninh"
+    "tọa độ": "20.438876082643514, 106.16968366408935",
+    "departer": "Kho Logos khu công nghiệp VSIP Bắc Ninh, 93 Đường Hữu Nghị, Xã Đại Đồng, Huyện Tiên Du, Tỉnh Bắc Ninh",
+    "_latitude": 20.438876082643514,
+    "_longitude": 106.16968366408935
   },
   {
     "carrier_name": "KTLS Hoa Lư - Ninh Bình",
@@ -1363,9 +1463,10 @@
     "district_name": "Huyện Hoa Lư",
     "province_name": "Tỉnh Ninh Bình",
     "destination": "",
-    "latitude": 20.290743822604664,
-    "longitude": 105.95525132631556,
-    "departer": "Kho Logos khu công nghiệp VSIP Bắc Ninh, 93 Đường Hữu Nghị, Xã Đại Đồng, Huyện Tiên Du, Tỉnh Bắc Ninh"
+    "tọa độ": "20.291198478840997, 105.95625189339908",
+    "departer": "Kho Logos khu công nghiệp VSIP Bắc Ninh, 93 Đường Hữu Nghị, Xã Đại Đồng, Huyện Tiên Du, Tỉnh Bắc Ninh",
+    "_latitude": 20.291198478840997,
+    "_longitude": 105.95625189339908
   },
   {
     "carrier_name": "KTLS Thạch Thất - Hà Nội",
@@ -1375,9 +1476,10 @@
     "district_name": "Huyện Thạch Thất",
     "province_name": "Thành phố Hà Nội",
     "destination": "",
-    "latitude": 20.288028429770097,
-    "longitude": 105.94910428213545,
-    "departer": "Kho Logos khu công nghiệp VSIP Bắc Ninh, 93 Đường Hữu Nghị, Xã Đại Đồng, Huyện Tiên Du, Tỉnh Bắc Ninh"
+    "tọa độ": "21.086543850559256, 105.5650066948912",
+    "departer": "Kho Logos khu công nghiệp VSIP Bắc Ninh, 93 Đường Hữu Nghị, Xã Đại Đồng, Huyện Tiên Du, Tỉnh Bắc Ninh",
+    "_latitude": 21.086543850559256,
+    "_longitude": 105.5650066948912
   },
   {
     "carrier_name": "KTLS Hoài Nhơn - Bình Định",
@@ -1387,9 +1489,10 @@
     "district_name": "Huyện Phù Mỹ",
     "province_name": "Tỉnh Bình Định",
     "destination": "",
-    "latitude": 14.20442164289349,
-    "longitude": 109.0105959126148,
-    "departer": "Số 18 L1-5 (Log 19), VSIP II , Đường số 3, KCN Việt Nam Singapore II, Phường Hòa Phú, Thành Phố Thủ Dầu Một, Tỉnh Bình Dương"
+    "tọa độ": "14.206464907526135, 109.01043043564118",
+    "departer": "Số 18 L1-5 (Log 19), VSIP II , Đường số 3, KCN Việt Nam Singapore II, Phường Hòa Phú, Thành Phố Thủ Dầu Một, Tỉnh Bình Dương",
+    "_latitude": 14.206464907526135,
+    "_longitude": 109.01043043564118
   },
   {
     "carrier_name": "HUBCUALO_NGHEAN_CHILD",
@@ -1399,9 +1502,10 @@
     "district_name": "Thị xã Cửa Lò",
     "province_name": "Tỉnh Nghệ An",
     "destination": "",
-    "latitude": 18.823530074816226,
-    "longitude": 105.69515937094057,
-    "departer": "Kho Logos khu công nghiệp VSIP Bắc Ninh, 93 Đường Hữu Nghị, Xã Đại Đồng, Huyện Tiên Du, Tỉnh Bắc Ninh"
+    "tọa độ": "18.823430544228184, 105.69586598279642",
+    "departer": "Kho Logos khu công nghiệp VSIP Bắc Ninh, 93 Đường Hữu Nghị, Xã Đại Đồng, Huyện Tiên Du, Tỉnh Bắc Ninh",
+    "_latitude": 18.823430544228184,
+    "_longitude": 105.69586598279642
   },
   {
     "carrier_name": "KTLS Tân Phú - Đồng Nai",
@@ -1411,9 +1515,10 @@
     "district_name": "Huyện Tân Phú",
     "province_name": "Tỉnh Đồng Nai",
     "destination": "",
-    "latitude": 11.258947458514063,
-    "longitude": 107.41766955507701,
-    "departer": "Số 18 L1-5 (Log 19), VSIP II , Đường số 3, KCN Việt Nam Singapore II, Phường Hòa Phú, Thành Phố Thủ Dầu Một, Tỉnh Bình Dương"
+    "tọa độ": "11.258978997047093, 107.41756223670808",
+    "departer": "Số 18 L1-5 (Log 19), VSIP II , Đường số 3, KCN Việt Nam Singapore II, Phường Hòa Phú, Thành Phố Thủ Dầu Một, Tỉnh Bình Dương",
+    "_latitude": 11.258978997047093,
+    "_longitude": 107.41756223670808
   },
   {
     "carrier_name": "KTLS Thái Bình",
@@ -1423,9 +1528,10 @@
     "district_name": "Thành phố Thái Bình",
     "province_name": "Tỉnh Thái Bình",
     "destination": "",
-    "latitude": 20.49204510046916,
-    "longitude": 106.36721124235119,
-    "departer": "Kho Logos khu công nghiệp VSIP Bắc Ninh, 93 Đường Hữu Nghị, Xã Đại Đồng, Huyện Tiên Du, Tỉnh Bắc Ninh"
+    "tọa độ": "20.44812090776043, 106.33628975277244",
+    "departer": "Kho Logos khu công nghiệp VSIP Bắc Ninh, 93 Đường Hữu Nghị, Xã Đại Đồng, Huyện Tiên Du, Tỉnh Bắc Ninh",
+    "_latitude": 20.44812090776043,
+    "_longitude": 106.33628975277244
   },
   {
     "carrier_name": "NVCT Hub Vinh_Child",
@@ -1435,9 +1541,10 @@
     "district_name": "Thành phố Vinh",
     "province_name": "Tỉnh Nghệ An",
     "destination": "",
-    "latitude": 18.6866092580757,
-    "longitude": 105.6752803551337,
-    "departer": "Kho Logos khu công nghiệp VSIP Bắc Ninh, 93 Đường Hữu Nghị, Xã Đại Đồng, Huyện Tiên Du, Tỉnh Bắc Ninh"
+    "tọa độ": "18.68671089072177, 105.67519452219547",
+    "departer": "Kho Logos khu công nghiệp VSIP Bắc Ninh, 93 Đường Hữu Nghị, Xã Đại Đồng, Huyện Tiên Du, Tỉnh Bắc Ninh",
+    "_latitude": 18.68671089072177,
+    "_longitude": 105.67519452219547
   },
   {
     "carrier_name": "NVCT Hub Ninh Hòa - Khánh Hòa Child",
@@ -1447,9 +1554,10 @@
     "district_name": "Thị xã Ninh Hòa",
     "province_name": "Tỉnh Khánh Hòa",
     "destination": "",
-    "latitude": 12.512598145977947,
-    "longitude": 109.12791034159162,
-    "departer": "Số 18 L1-5 (Log 19), VSIP II , Đường số 3, KCN Việt Nam Singapore II, Phường Hòa Phú, Thành Phố Thủ Dầu Một, Tỉnh Bình Dương"
+    "tọa độ": "12.504800128371139, 109.12427489509302",
+    "departer": "Số 18 L1-5 (Log 19), VSIP II , Đường số 3, KCN Việt Nam Singapore II, Phường Hòa Phú, Thành Phố Thủ Dầu Một, Tỉnh Bình Dương",
+    "_latitude": 12.504800128371139,
+    "_longitude": 109.12427489509302
   },
   {
     "carrier_name": "NVCT Hub Thanh Hóa-Child",
@@ -1459,9 +1567,10 @@
     "district_name": "Thành phố Thanh Hóa",
     "province_name": "Tỉnh Thanh Hóa",
     "destination": "",
-    "latitude": 19.818945928839256,
-    "longitude": 105.78948537049034,
-    "departer": "Kho Logos khu công nghiệp VSIP Bắc Ninh, 93 Đường Hữu Nghị, Xã Đại Đồng, Huyện Tiên Du, Tỉnh Bắc Ninh"
+    "tọa độ": "19.818452308821122, 105.78905012407218",
+    "departer": "Kho Logos khu công nghiệp VSIP Bắc Ninh, 93 Đường Hữu Nghị, Xã Đại Đồng, Huyện Tiên Du, Tỉnh Bắc Ninh",
+    "_latitude": 19.818452308821122,
+    "_longitude": 105.78905012407218
   },
   {
     "carrier_name": "KTLS Xuân Lộc - Đồng Nai",
@@ -1471,9 +1580,10 @@
     "district_name": "Huyện Xuân Lộc",
     "province_name": "Tỉnh Đồng Nai",
     "destination": "",
-    "latitude": 10.895139620997066,
-    "longitude": 107.36852111274762,
-    "departer": "Số 18 L1-5 (Log 19), VSIP II , Đường số 3, KCN Việt Nam Singapore II, Phường Hòa Phú, Thành Phố Thủ Dầu Một, Tỉnh Bình Dương"
+    "tọa độ": "10.895118550108998, 107.36842455089376",
+    "departer": "Số 18 L1-5 (Log 19), VSIP II , Đường số 3, KCN Việt Nam Singapore II, Phường Hòa Phú, Thành Phố Thủ Dầu Một, Tỉnh Bình Dương",
+    "_latitude": 10.895118550108998,
+    "_longitude": 107.36842455089376
   },
   {
     "carrier_name": "KTLS Hàm Thuận Nam - Bình Thuận",
@@ -1483,9 +1593,10 @@
     "district_name": "Huyện Hàm Thuận Nam",
     "province_name": "Tỉnh Bình Thuận",
     "destination": "",
-    "latitude": 10.90272764659504,
-    "longitude": 108.0080585243869,
-    "departer": "Số 18 L1-5 (Log 19), VSIP II , Đường số 3, KCN Việt Nam Singapore II, Phường Hòa Phú, Thành Phố Thủ Dầu Một, Tỉnh Bình Dương"
+    "tọa độ": "10.920020142324464, 107.99775205274354",
+    "departer": "Số 18 L1-5 (Log 19), VSIP II , Đường số 3, KCN Việt Nam Singapore II, Phường Hòa Phú, Thành Phố Thủ Dầu Một, Tỉnh Bình Dương",
+    "_latitude": 10.920020142324464,
+    "_longitude": 107.99775205274354
   },
   {
     "carrier_name": "KTLS Tân Châu - Tây Ninh",
@@ -1495,9 +1606,10 @@
     "district_name": "Thành phố Tây Ninh",
     "province_name": "Tỉnh Tây Ninh",
     "destination": "",
-    "latitude": 11.285153502567033,
-    "longitude": 106.13349965507726,
-    "departer": "Số 18 L1-5 (Log 19), VSIP II , Đường số 3, KCN Việt Nam Singapore II, Phường Hòa Phú, Thành Phố Thủ Dầu Một, Tỉnh Bình Dương"
+    "tọa độ": "11.285048288571431, 106.13349965274809",
+    "departer": "Số 18 L1-5 (Log 19), VSIP II , Đường số 3, KCN Việt Nam Singapore II, Phường Hòa Phú, Thành Phố Thủ Dầu Một, Tỉnh Bình Dương",
+    "_latitude": 11.285048288571431,
+    "_longitude": 106.13349965274809
   },
   {
     "carrier_name": "KTLS Buôn Hồ - Đắk Lắk",
@@ -1507,9 +1619,10 @@
     "district_name": "Thị Xã Buôn Hồ",
     "province_name": "Tỉnh Đắk Lắk",
     "destination": "",
-    "latitude": 12.941311706957515,
-    "longitude": 108.25757113788963,
-    "departer": "Số 18 L1-5 (Log 19), VSIP II , Đường số 3, KCN Việt Nam Singapore II, Phường Hòa Phú, Thành Phố Thủ Dầu Một, Tỉnh Bình Dương"
+    "tọa độ": "12.941322163284902, 108.2576462374282",
+    "departer": "Số 18 L1-5 (Log 19), VSIP II , Đường số 3, KCN Việt Nam Singapore II, Phường Hòa Phú, Thành Phố Thủ Dầu Một, Tỉnh Bình Dương",
+    "_latitude": 12.941322163284902,
+    "_longitude": 108.2576462374282
   },
   {
     "carrier_name": "NVCT Hub Di Linh - Lâm Đồng - Child",
@@ -1519,9 +1632,10 @@
     "district_name": "Huyện Di Linh",
     "province_name": "Tỉnh Lâm Đồng",
     "destination": "",
-    "latitude": 11.572849213907771,
-    "longitude": 108.04065439740636,
-    "departer": "Số 18 L1-5 (Log 19), VSIP II , Đường số 3, KCN Việt Nam Singapore II, Phường Hòa Phú, Thành Phố Thủ Dầu Một, Tỉnh Bình Dương"
+    "tọa độ": "11.572765128114229, 108.04061147973776",
+    "departer": "Số 18 L1-5 (Log 19), VSIP II , Đường số 3, KCN Việt Nam Singapore II, Phường Hòa Phú, Thành Phố Thủ Dầu Một, Tỉnh Bình Dương",
+    "_latitude": 11.572765128114229,
+    "_longitude": 108.04061147973776
   },
   {
     "carrier_name": "KTLS Chư Pưh",
@@ -1531,9 +1645,10 @@
     "district_name": "Huyện Chư Pưh",
     "province_name": "Tỉnh Gia Lai",
     "destination": "",
-    "latitude": 13.440970118916077,
-    "longitude": 108.08953422041357,
-    "departer": "Số 18 L1-5 (Log 19), VSIP II , Đường số 3, KCN Việt Nam Singapore II, Phường Hòa Phú, Thành Phố Thủ Dầu Một, Tỉnh Bình Dương"
+    "tọa độ": "13.441418438336285, 108.08987347576526",
+    "departer": "Số 18 L1-5 (Log 19), VSIP II , Đường số 3, KCN Việt Nam Singapore II, Phường Hòa Phú, Thành Phố Thủ Dầu Một, Tỉnh Bình Dương",
+    "_latitude": 13.441418438336285,
+    "_longitude": 108.08987347576526
   },
   {
     "carrier_name": "Hub VSIP II",
@@ -1543,9 +1658,10 @@
     "district_name": "Thành phố Thủ Dầu Một",
     "province_name": "Tỉnh Bình Dương",
     "destination": "",
-    "latitude": 11.075138008964224,
-    "longitude": 106.68854263569025,
-    "departer": "Số 18 L1-5 (Log 19), VSIP II , Đường số 3, KCN Việt Nam Singapore II, Phường Hòa Phú, Thành Phố Thủ Dầu Một, Tỉnh Bình Dương"
+    "tọa độ": "11.07555129655109, 106.68841227095206",
+    "departer": "Số 18 L1-5 (Log 19), VSIP II , Đường số 3, KCN Việt Nam Singapore II, Phường Hòa Phú, Thành Phố Thủ Dầu Một, Tỉnh Bình Dương",
+    "_latitude": 11.07555129655109,
+    "_longitude": 106.68841227095206
   },
   {
     "carrier_name": "NVCT - Hub Vĩnh Bảo-Child",
@@ -1555,9 +1671,10 @@
     "district_name": "Huyện Vĩnh Bảo",
     "province_name": "Thành phố Hải Phòng",
     "destination": "",
-    "latitude": 20.695239560037553,
-    "longitude": 106.48395663922986,
-    "departer": "Kho Logos khu công nghiệp VSIP Bắc Ninh, 93 Đường Hữu Nghị, Xã Đại Đồng, Huyện Tiên Du, Tỉnh Bắc Ninh"
+    "tọa độ": "20.69534459806496, 106.46389819403203",
+    "departer": "Kho Logos khu công nghiệp VSIP Bắc Ninh, 93 Đường Hữu Nghị, Xã Đại Đồng, Huyện Tiên Du, Tỉnh Bắc Ninh",
+    "_latitude": 20.69534459806496,
+    "_longitude": 106.46389819403203
   },
   {
     "carrier_name": "KTLS - MELINH",
@@ -1567,9 +1684,10 @@
     "district_name": "Huyện Đông Anh",
     "province_name": "Thành phố Hà Nội",
     "destination": "",
-    "latitude": 21.07650640081443,
-    "longitude": 105.87823749461349,
-    "departer": "Kho Logos khu công nghiệp VSIP Bắc Ninh, 93 Đường Hữu Nghị, Xã Đại Đồng, Huyện Tiên Du, Tỉnh Bắc Ninh"
+    "tọa độ": "21.076596505433432, 105.87811947801548",
+    "departer": "Kho Logos khu công nghiệp VSIP Bắc Ninh, 93 Đường Hữu Nghị, Xã Đại Đồng, Huyện Tiên Du, Tỉnh Bắc Ninh",
+    "_latitude": 21.076596505433432,
+    "_longitude": 105.87811947801548
   },
   {
     "carrier_name": "KTLS Bửu Hòa - Đồng Nai",
@@ -1579,9 +1697,10 @@
     "district_name": "Thành phố Biên Hòa",
     "province_name": "Tỉnh Đồng Nai",
     "destination": "",
-    "latitude": 10.937340141839302,
-    "longitude": 106.81265649740351,
-    "departer": "Số 18 L1-5 (Log 19), VSIP II , Đường số 3, KCN Việt Nam Singapore II, Phường Hòa Phú, Thành Phố Thủ Dầu Một, Tỉnh Bình Dương"
+    "tọa độ": "10.937192666515154, 106.8125921220585",
+    "departer": "Số 18 L1-5 (Log 19), VSIP II , Đường số 3, KCN Việt Nam Singapore II, Phường Hòa Phú, Thành Phố Thủ Dầu Một, Tỉnh Bình Dương",
+    "_latitude": 10.937192666515154,
+    "_longitude": 106.8125921220585
   },
   {
     "carrier_name": "NVCT Hub Ninh Thuận Child",
@@ -1591,9 +1710,10 @@
     "district_name": "Thành phố Phan Rang-Tháp Chàm",
     "province_name": "Tỉnh Ninh Thuận",
     "destination": "",
-    "latitude": 11.576632568564932,
-    "longitude": 108.97157462624251,
-    "departer": "Số 18 L1-5 (Log 19), VSIP II , Đường số 3, KCN Việt Nam Singapore II, Phường Hòa Phú, Thành Phố Thủ Dầu Một, Tỉnh Bình Dương"
+    "tọa độ": "11.576611547406678, 108.97157462391606",
+    "departer": "Số 18 L1-5 (Log 19), VSIP II , Đường số 3, KCN Việt Nam Singapore II, Phường Hòa Phú, Thành Phố Thủ Dầu Một, Tỉnh Bình Dương",
+    "_latitude": 11.576611547406678,
+    "_longitude": 108.97157462391606
   },
   {
     "carrier_name": "KTLS Nhơn Trạch - Đồng Nai",
@@ -1603,9 +1723,10 @@
     "district_name": "Huyện Nhơn Trạch",
     "province_name": "Tỉnh Đồng Nai",
     "destination": "",
-    "latitude": 10.728994171717673,
-    "longitude": 106.93950643642839,
-    "departer": "Số 18 L1-5 (Log 19), VSIP II , Đường số 3, KCN Việt Nam Singapore II, Phường Hòa Phú, Thành Phố Thủ Dầu Một, Tỉnh Bình Dương"
+    "tọa độ": "10.748713835659311, 106.9354204",
+    "departer": "Số 18 L1-5 (Log 19), VSIP II , Đường số 3, KCN Việt Nam Singapore II, Phường Hòa Phú, Thành Phố Thủ Dầu Một, Tỉnh Bình Dương",
+    "_latitude": 10.748713835659311,
+    "_longitude": 106.9354204
   },
   {
     "carrier_name": "KTLS Phú Yên",
@@ -1615,9 +1736,10 @@
     "district_name": "Huyện Phú Hoà",
     "province_name": "Tỉnh Phú Yên",
     "destination": "",
-    "latitude": 13.078546595917722,
-    "longitude": 109.29089263974286,
-    "departer": "Số 18 L1-5 (Log 19), VSIP II , Đường số 3, KCN Việt Nam Singapore II, Phường Hòa Phú, Thành Phố Thủ Dầu Một, Tỉnh Bình Dương"
+    "tọa độ": "13.078148810530283, 109.29095319643552",
+    "departer": "Số 18 L1-5 (Log 19), VSIP II , Đường số 3, KCN Việt Nam Singapore II, Phường Hòa Phú, Thành Phố Thủ Dầu Một, Tỉnh Bình Dương",
+    "_latitude": 13.078148810530283,
+    "_longitude": 109.29095319643552
   },
   {
     "carrier_name": "NVCT Hub Đại Từ - Thái Nguyên - Child",
@@ -1627,9 +1749,10 @@
     "district_name": "Thành phố Thái Nguyên",
     "province_name": "Tỉnh Thái Nguyên",
     "destination": "",
-    "latitude": 21.588621980169652,
-    "longitude": 105.82451549413909,
-    "departer": "Kho Logos khu công nghiệp VSIP Bắc Ninh, 93 Đường Hữu Nghị, Xã Đại Đồng, Huyện Tiên Du, Tỉnh Bắc Ninh"
+    "tọa độ": "21.58698677238171, 105.82378385877578",
+    "departer": "Kho Logos khu công nghiệp VSIP Bắc Ninh, 93 Đường Hữu Nghị, Xã Đại Đồng, Huyện Tiên Du, Tỉnh Bắc Ninh",
+    "_latitude": 21.58698677238171,
+    "_longitude": 105.82378385877578
   },
   {
     "carrier_name": "NVCT Hub Phù Ninh-Phú Thọ_Child",
@@ -1639,9 +1762,10 @@
     "district_name": "Thành phố Việt Trì",
     "province_name": "Tỉnh Phú Thọ",
     "destination": "",
-    "latitude": 21.333224760021846,
-    "longitude": 105.36698752581225,
-    "departer": "Kho Logos khu công nghiệp VSIP Bắc Ninh, 93 Đường Hữu Nghị, Xã Đại Đồng, Huyện Tiên Du, Tỉnh Bắc Ninh"
+    "tọa độ": "21.329821602611236, 105.37082847633911",
+    "departer": "Kho Logos khu công nghiệp VSIP Bắc Ninh, 93 Đường Hữu Nghị, Xã Đại Đồng, Huyện Tiên Du, Tỉnh Bắc Ninh",
+    "_latitude": 21.329821602611236,
+    "_longitude": 105.37082847633911
   },
   {
     "carrier_name": "NVCT Hub Lào Cai_Child",
@@ -1651,9 +1775,10 @@
     "district_name": "Thành phố Lào Cai",
     "province_name": "Tỉnh Lào Cai",
     "destination": "",
-    "latitude": 22.514015213787303,
-    "longitude": 103.93786218216353,
-    "departer": "Kho Logos khu công nghiệp VSIP Bắc Ninh, 93 Đường Hữu Nghị, Xã Đại Đồng, Huyện Tiên Du, Tỉnh Bắc Ninh"
+    "tọa độ": "22.497923004159954, 103.9579767720968",
+    "departer": "Kho Logos khu công nghiệp VSIP Bắc Ninh, 93 Đường Hữu Nghị, Xã Đại Đồng, Huyện Tiên Du, Tỉnh Bắc Ninh",
+    "_latitude": 22.497923004159954,
+    "_longitude": 103.9579767720968
   },
   {
     "carrier_name": "KTLS - Đông Triều",
@@ -1663,9 +1788,10 @@
     "district_name": "Thị xã Đông Triều",
     "province_name": "Tỉnh Quảng Ninh",
     "destination": "",
-    "latitude": 21.097162670646032,
-    "longitude": 106.55624627182006,
-    "departer": "Kho Logos khu công nghiệp VSIP Bắc Ninh, 93 Đường Hữu Nghị, Xã Đại Đồng, Huyện Tiên Du, Tỉnh Bắc Ninh"
+    "tọa độ": "21.106837770436023, 106.60031350344032",
+    "departer": "Kho Logos khu công nghiệp VSIP Bắc Ninh, 93 Đường Hữu Nghị, Xã Đại Đồng, Huyện Tiên Du, Tỉnh Bắc Ninh",
+    "_latitude": 21.106837770436023,
+    "_longitude": 106.60031350344032
   },
   {
     "carrier_name": "NVCT Hub Vạn Ninh-Khánh Hòa_Child",
@@ -1675,9 +1801,10 @@
     "district_name": "Huyện Vạn Ninh",
     "province_name": "Tỉnh Khánh Hòa",
     "destination": "",
-    "latitude": 12.694302218944244,
-    "longitude": 109.22672219741261,
-    "departer": "Số 18 L1-5 (Log 19), VSIP II , Đường số 3, KCN Việt Nam Singapore II, Phường Hòa Phú, Thành Phố Thủ Dầu Một, Tỉnh Bình Dương"
+    "tọa độ": "12.694208019670837, 109.22665782208198",
+    "departer": "Số 18 L1-5 (Log 19), VSIP II , Đường số 3, KCN Việt Nam Singapore II, Phường Hòa Phú, Thành Phố Thủ Dầu Một, Tỉnh Bình Dương",
+    "_latitude": 12.694208019670837,
+    "_longitude": 109.22665782208198
   },
   {
     "carrier_name": "NVCT Hub Bảo Lộc_Child",
@@ -1687,9 +1814,10 @@
     "district_name": "Thành phố Bảo Lộc",
     "province_name": "Tỉnh Lâm Đồng",
     "destination": "",
-    "latitude": 11.541535214794978,
-    "longitude": 107.82239716857043,
-    "departer": "Số 18 L1-5 (Log 19), VSIP II , Đường số 3, KCN Việt Nam Singapore II, Phường Hòa Phú, Thành Phố Thủ Dầu Một, Tỉnh Bình Dương"
+    "tọa độ": "11.541493167204655, 107.82237570857309",
+    "departer": "Số 18 L1-5 (Log 19), VSIP II , Đường số 3, KCN Việt Nam Singapore II, Phường Hòa Phú, Thành Phố Thủ Dầu Một, Tỉnh Bình Dương",
+    "_latitude": 11.541493167204655,
+    "_longitude": 107.82237570857309
   },
   {
     "carrier_name": "NVCT Hub Quảng Bình_Child",
@@ -1699,9 +1827,10 @@
     "district_name": "Thành Phố Đồng Hới",
     "province_name": "Tỉnh Quảng Bình",
     "destination": "",
-    "latitude": 17.477465189239474,
-    "longitude": 106.62340148210532,
-    "departer": "Số 18 L1-5 (Log 19), VSIP II , Đường số 3, KCN Việt Nam Singapore II, Phường Hòa Phú, Thành Phố Thủ Dầu Một, Tỉnh Bình Dương"
+    "tọa độ": "17.477332153166014, 106.62341220867528",
+    "departer": "Kho Logos khu công nghiệp VSIP Bắc Ninh, 93 Đường Hữu Nghị, Xã Đại Đồng, Huyện Tiên Du, Tỉnh Bắc Ninh",
+    "_latitude": 17.477332153166014,
+    "_longitude": 106.62341220867528
   },
   {
     "carrier_name": "NVCT Hub Cà Mau_Child",
@@ -1711,9 +1840,10 @@
     "district_name": "Thành phố Cà Mau",
     "province_name": "Tỉnh Cà Mau",
     "destination": "",
-    "latitude": 9.170970814274154,
-    "longitude": 105.26355302028557,
-    "departer": "Số 18 L1-5 (Log 19), VSIP II , Đường số 3, KCN Việt Nam Singapore II, Phường Hòa Phú, Thành Phố Thủ Dầu Một, Tỉnh Bình Dương"
+    "tọa độ": "9.171606206038652, 105.26333837600131",
+    "departer": "Mai Chí Thọ Phường Phú Thứ Quận Cái Răng Thành phố Cần Thơ",
+    "_latitude": 9.171606206038652,
+    "_longitude": 105.26333837600131
   },
   {
     "carrier_name": "NVCT Hub Đơn Dương_Child",
@@ -1723,9 +1853,10 @@
     "district_name": "Huyện Đơn Dương",
     "province_name": "Tỉnh Lâm Đồng",
     "destination": "",
-    "latitude": 11.745451972425291,
-    "longitude": 108.51598964296126,
-    "departer": "Số 18 L1-5 (Log 19), VSIP II , Đường số 3, KCN Việt Nam Singapore II, Phường Hòa Phú, Thành Phố Thủ Dầu Một, Tỉnh Bình Dương"
+    "tọa độ": "11.763326754024915, 108.50378232823256",
+    "departer": "Số 18 L1-5 (Log 19), VSIP II , Đường số 3, KCN Việt Nam Singapore II, Phường Hòa Phú, Thành Phố Thủ Dầu Một, Tỉnh Bình Dương",
+    "_latitude": 11.763326754024915,
+    "_longitude": 108.50378232823256
   },
   {
     "carrier_name": "NVCT Hub Lạc Dương_Child",
@@ -1735,9 +1866,10 @@
     "district_name": "Thành phố Đà Lạt",
     "province_name": "Tỉnh Lâm Đồng",
     "destination": "",
-    "latitude": 11.951994317112757,
-    "longitude": 108.43868100904805,
-    "departer": "Số 18 L1-5 (Log 19), VSIP II , Đường số 3, KCN Việt Nam Singapore II, Phường Hòa Phú, Thành Phố Thủ Dầu Một, Tỉnh Bình Dương"
+    "tọa độ": "11.95187240943749, 108.43892113678302",
+    "departer": "Số 18 L1-5 (Log 19), VSIP II , Đường số 3, KCN Việt Nam Singapore II, Phường Hòa Phú, Thành Phố Thủ Dầu Một, Tỉnh Bình Dương",
+    "_latitude": 11.95187240943749,
+    "_longitude": 108.43892113678302
   },
   {
     "carrier_name": "NVCT Hub Hà Tĩnh_child",
@@ -1747,9 +1879,10 @@
     "district_name": "Thành phố Hà Tĩnh",
     "province_name": "Tỉnh Hà Tĩnh",
     "destination": "",
-    "latitude": 18.356987036504584,
-    "longitude": 105.89200523505968,
-    "departer": "Kho Logos khu công nghiệp VSIP Bắc Ninh, 93 Đường Hữu Nghị, Xã Đại Đồng, Huyện Tiên Du, Tỉnh Bắc Ninh"
+    "tọa độ": "18.35703794358035, 105.89203741936274",
+    "departer": "Kho Logos khu công nghiệp VSIP Bắc Ninh, 93 Đường Hữu Nghị, Xã Đại Đồng, Huyện Tiên Du, Tỉnh Bắc Ninh",
+    "_latitude": 18.35703794358035,
+    "_longitude": 105.89203741936274
   },
   {
     "carrier_name": "KTLS - Đông Hà",
@@ -1759,9 +1892,10 @@
     "district_name": "Huyện Hải Lăng",
     "province_name": "Tỉnh Quảng Trị",
     "destination": "",
-    "latitude": 16.7105565509767,
-    "longitude": 107.19466835921959,
-    "departer": "Kho Logos khu công nghiệp VSIP Bắc Ninh, 93 Đường Hữu Nghị, Xã Đại Đồng, Huyện Tiên Du, Tỉnh Bắc Ninh"
+    "tọa độ": "16.709004025054703, 107.19465157797413",
+    "departer": "Kho Logos khu công nghiệp VSIP Bắc Ninh, 93 Đường Hữu Nghị, Xã Đại Đồng, Huyện Tiên Du, Tỉnh Bắc Ninh",
+    "_latitude": 16.709004025054703,
+    "_longitude": 107.19465157797413
   },
   {
     "carrier_name": "KTLS - Gia Nghĩa",
@@ -1771,9 +1905,10 @@
     "district_name": "Thành phố Gia Nghĩa",
     "province_name": "Tỉnh Đắk Nông",
     "destination": "",
-    "latitude": 14.122447459541101,
-    "longitude": 107.95013072440548,
-    "departer": "Số 18 L1-5 (Log 19), VSIP II , Đường số 3, KCN Việt Nam Singapore II, Phường Hòa Phú, Thành Phố Thủ Dầu Một, Tỉnh Bình Dương"
+    "tọa độ": "12.049540522249664, 107.68256007974423",
+    "departer": "Số 18 L1-5 (Log 19), VSIP II , Đường số 3, KCN Việt Nam Singapore II, Phường Hòa Phú, Thành Phố Thủ Dầu Một, Tỉnh Bình Dương",
+    "_latitude": 12.049540522249664,
+    "_longitude": 107.68256007974423
   },
   {
     "carrier_name": "KTLS - Đống Đa",
@@ -1783,9 +1918,10 @@
     "district_name": "Quận Đống Đa",
     "province_name": "Thành phố Hà Nội",
     "destination": "",
-    "latitude": 21.002878017591417,
-    "longitude": 105.82415531098003,
-    "departer": "Kho Logos khu công nghiệp VSIP Bắc Ninh, 93 Đường Hữu Nghị, Xã Đại Đồng, Huyện Tiên Du, Tỉnh Bắc Ninh"
+    "tọa độ": "21.00282793739712, 105.82416603759583",
+    "departer": "Kho Logos khu công nghiệp VSIP Bắc Ninh, 93 Đường Hữu Nghị, Xã Đại Đồng, Huyện Tiên Du, Tỉnh Bắc Ninh",
+    "_latitude": 21.00282793739712,
+    "_longitude": 105.82416603759583
   },
   {
     "carrier_name": "KTLS - TP Huế",
@@ -1795,9 +1931,10 @@
     "district_name": "Thành phố Huế",
     "province_name": "Tỉnh Thừa Thiên Huế",
     "destination": "",
-    "latitude": 16.46491508427091,
-    "longitude": 107.59283096860413,
-    "departer": "Kho Logos khu công nghiệp VSIP Bắc Ninh, 93 Đường Hữu Nghị, Xã Đại Đồng, Huyện Tiên Du, Tỉnh Bắc Ninh"
+    "tọa độ": "16.464884177096497, 107.59276656622147",
+    "departer": "Kho Logos khu công nghiệp VSIP Bắc Ninh, 93 Đường Hữu Nghị, Xã Đại Đồng, Huyện Tiên Du, Tỉnh Bắc Ninh",
+    "_latitude": 16.464884177096497,
+    "_longitude": 107.59276656622147
   },
   {
     "carrier_name": "KTLS - HỚN QUẢN",
@@ -1807,9 +1944,10 @@
     "district_name": "Huyện Hớn Quản",
     "province_name": "Tỉnh Bình Phước",
     "destination": "",
-    "latitude": 11.517500367888713,
-    "longitude": 106.61461244158626,
-    "departer": "Số 18 L1-5 (Log 19), VSIP II , Đường số 3, KCN Việt Nam Singapore II, Phường Hòa Phú, Thành Phố Thủ Dầu Một, Tỉnh Bình Dương"
+    "tọa độ": "11.517479342297506, 106.61460171042229",
+    "departer": "Số 18 L1-5 (Log 19), VSIP II , Đường số 3, KCN Việt Nam Singapore II, Phường Hòa Phú, Thành Phố Thủ Dầu Một, Tỉnh Bình Dương",
+    "_latitude": 11.517479342297506,
+    "_longitude": 106.61460171042229
   },
   {
     "carrier_name": "NVCT Hub Hải Dương-Child",
@@ -1819,9 +1957,10 @@
     "district_name": "Thành phố Hải Dương",
     "province_name": "Tỉnh Hải Dương",
     "destination": "",
-    "latitude": 20.93475634859009,
-    "longitude": 106.34511799563509,
-    "departer": "Kho Logos khu công nghiệp VSIP Bắc Ninh, 93 Đường Hữu Nghị, Xã Đại Đồng, Huyện Tiên Du, Tỉnh Bắc Ninh"
+    "tọa độ": "20.939509117481624, 106.34789627116436",
+    "departer": "Kho Logos khu công nghiệp VSIP Bắc Ninh, 93 Đường Hữu Nghị, Xã Đại Đồng, Huyện Tiên Du, Tỉnh Bắc Ninh",
+    "_latitude": 20.939509117481624,
+    "_longitude": 106.34789627116436
   },
   {
     "carrier_name": "KTLS - BUÔN MA THUỘT",
@@ -1831,9 +1970,10 @@
     "district_name": "Thành phố Buôn Ma Thuột",
     "province_name": "Tỉnh Đắk Lắk",
     "destination": "",
-    "latitude": 12.680734566310969,
-    "longitude": 108.03279172439639,
-    "departer": "Số 18 L1-5 (Log 19), VSIP II , Đường số 3, KCN Việt Nam Singapore II, Phường Hòa Phú, Thành Phố Thủ Dầu Một, Tỉnh Bình Dương"
+    "tọa độ": "12.680671731527685, 108.0327809657024",
+    "departer": "Số 18 L1-5 (Log 19), VSIP II , Đường số 3, KCN Việt Nam Singapore II, Phường Hòa Phú, Thành Phố Thủ Dầu Một, Tỉnh Bình Dương",
+    "_latitude": 12.680671731527685,
+    "_longitude": 108.0327809657024
   },
   {
     "carrier_name": "NVCT Hub Bắc Giang_Child",
@@ -1843,9 +1983,10 @@
     "district_name": "Huyện Yên Dũng",
     "province_name": "Tỉnh Bắc Giang",
     "destination": "",
-    "latitude": 21.255314912782485,
-    "longitude": 106.24480008923155,
-    "departer": "Kho Logos khu công nghiệp VSIP Bắc Ninh, 93 Đường Hữu Nghị, Xã Đại Đồng, Huyện Tiên Du, Tỉnh Bắc Ninh"
+    "tọa độ": "21.25991134385449, 106.24582446707915",
+    "departer": "Kho Logos khu công nghiệp VSIP Bắc Ninh, 93 Đường Hữu Nghị, Xã Đại Đồng, Huyện Tiên Du, Tỉnh Bắc Ninh",
+    "_latitude": 21.25991134385449,
+    "_longitude": 106.24582446707915
   },
   {
     "carrier_name": "KTLS - ĐỨC PHONG",
@@ -1855,9 +1996,10 @@
     "district_name": "Huyện Bù Đăng",
     "province_name": "Tỉnh Bình Phước",
     "destination": "",
-    "latitude": 14.122437054968017,
-    "longitude": 107.95019509742167,
-    "departer": "Số 18 L1-5 (Log 19), VSIP II , Đường số 3, KCN Việt Nam Singapore II, Phường Hòa Phú, Thành Phố Thủ Dầu Một, Tỉnh Bình Dương"
+    "tọa độ": "14.122457864118065, 107.95019509511827",
+    "departer": "Số 18 L1-5 (Log 19), VSIP II , Đường số 3, KCN Việt Nam Singapore II, Phường Hòa Phú, Thành Phố Thủ Dầu Một, Tỉnh Bình Dương",
+    "_latitude": 14.122457864118065,
+    "_longitude": 107.95019509511827
   },
   {
     "carrier_name": "NVCT Hub Hưng Yên_Child",
@@ -1867,9 +2009,10 @@
     "district_name": "Huyện Tiên Lữ",
     "province_name": "Tỉnh Hưng Yên",
     "destination": "",
-    "latitude": 20.673447799357934,
-    "longitude": 106.10910543538544,
-    "departer": "Kho Logos khu công nghiệp VSIP Bắc Ninh, 93 Đường Hữu Nghị, Xã Đại Đồng, Huyện Tiên Du, Tỉnh Bắc Ninh"
+    "tọa độ": "20.698165723250458, 106.12142899154652",
+    "departer": "Kho Logos khu công nghiệp VSIP Bắc Ninh, 93 Đường Hữu Nghị, Xã Đại Đồng, Huyện Tiên Du, Tỉnh Bắc Ninh",
+    "_latitude": 20.698165723250458,
+    "_longitude": 106.12142899154652
   },
   {
     "carrier_name": "KTLS Quy Nhơn",
@@ -1879,9 +2022,10 @@
     "district_name": "Thành phố Quy Nhơn",
     "province_name": "Tỉnh Bình Định",
     "destination": "",
-    "latitude": 13.78955187884035,
-    "longitude": 109.20344372440316,
-    "departer": "Số 18 L1-5 (Log 19), VSIP II , Đường số 3, KCN Việt Nam Singapore II, Phường Hòa Phú, Thành Phố Thủ Dầu Một, Tỉnh Bình Dương"
+    "tọa độ": "13.789520620022424, 109.20349736627709",
+    "departer": "Số 18 L1-5 (Log 19), VSIP II , Đường số 3, KCN Việt Nam Singapore II, Phường Hòa Phú, Thành Phố Thủ Dầu Một, Tỉnh Bình Dương",
+    "_latitude": 13.789520620022424,
+    "_longitude": 109.20349736627709
   },
   {
     "carrier_name": "KTLS Đà Nẵng",
@@ -1891,9 +2035,10 @@
     "district_name": "Quận Ngũ Hành Sơn",
     "province_name": "Thành phố Đà Nẵng",
     "destination": "",
-    "latitude": 16.050052397370813,
-    "longitude": 108.23720292627256,
-    "departer": "Số 18 L1-5 (Log 19), VSIP II , Đường số 3, KCN Việt Nam Singapore II, Phường Hòa Phú, Thành Phố Thủ Dầu Một, Tỉnh Bình Dương"
+    "tọa độ": "16.049860105850296, 108.2371891425871",
+    "departer": "Số 18 L1-5 (Log 19), VSIP II , Đường số 3, KCN Việt Nam Singapore II, Phường Hòa Phú, Thành Phố Thủ Dầu Một, Tỉnh Bình Dương",
+    "_latitude": 16.049860105850296,
+    "_longitude": 108.2371891425871
   },
   {
     "carrier_name": "NVCT Hub Đà Lạt_Child",
@@ -1903,9 +2048,10 @@
     "district_name": "Thành phố Đà Lạt",
     "province_name": "Tỉnh Lâm Đồng",
     "destination": "",
-    "latitude": 11.936201641278497,
-    "longitude": 108.42488982624442,
-    "departer": "Số 18 L1-5 (Log 19), VSIP II , Đường số 3, KCN Việt Nam Singapore II, Phường Hòa Phú, Thành Phố Thủ Dầu Một, Tỉnh Bình Dương"
+    "tọa độ": "11.9362436287292, 108.42483617974268",
+    "departer": "Số 18 L1-5 (Log 19), VSIP II , Đường số 3, KCN Việt Nam Singapore II, Phường Hòa Phú, Thành Phố Thủ Dầu Một, Tỉnh Bình Dương",
+    "_latitude": 11.9362436287292,
+    "_longitude": 108.42483617974268
   },
   {
     "carrier_name": "NVCT Hub Đức Trọng_Child",
@@ -1915,9 +2061,10 @@
     "district_name": "Huyện Đức Trọng",
     "province_name": "Tỉnh Lâm Đồng",
     "destination": "",
-    "latitude": 11.70259988940701,
-    "longitude": 108.37284737864374,
-    "departer": "Số 18 L1-5 (Log 19), VSIP II , Đường số 3, KCN Việt Nam Singapore II, Phường Hòa Phú, Thành Phố Thủ Dầu Một, Tỉnh Bình Dương"
+    "tọa độ": "11.670331069370745, 108.35568006335681",
+    "departer": "Số 18 L1-5 (Log 19), VSIP II , Đường số 3, KCN Việt Nam Singapore II, Phường Hòa Phú, Thành Phố Thủ Dầu Một, Tỉnh Bình Dương",
+    "_latitude": 11.670331069370745,
+    "_longitude": 108.35568006335681
   },
   {
     "carrier_name": "KTLS Bình Phước",
@@ -1927,9 +2074,10 @@
     "district_name": "Thành phố Đồng Xoài",
     "province_name": "Tỉnh Bình Phước",
     "destination": "",
-    "latitude": 11.559387468354219,
-    "longitude": 106.90129989740632,
-    "departer": "Số 18 L1-5 (Log 19), VSIP II , Đường số 3, KCN Việt Nam Singapore II, Phường Hòa Phú, Thành Phố Thủ Dầu Một, Tỉnh Bình Dương"
+    "tọa độ": "11.559303378517594, 106.9012784374089",
+    "departer": "Số 18 L1-5 (Log 19), VSIP II , Đường số 3, KCN Việt Nam Singapore II, Phường Hòa Phú, Thành Phố Thủ Dầu Một, Tỉnh Bình Dương",
+    "_latitude": 11.559303378517594,
+    "_longitude": 106.9012784374089
   },
   {
     "carrier_name": "KTLS Pleiku",
@@ -1939,9 +2087,10 @@
     "district_name": "Thành phố Pleiku",
     "province_name": "Tỉnh Gia Lai",
     "destination": "",
-    "latitude": 13.9477487365792,
-    "longitude": 108.01196923974835,
-    "departer": "Số 18 L1-5 (Log 19), VSIP II , Đường số 3, KCN Việt Nam Singapore II, Phường Hòa Phú, Thành Phố Thủ Dầu Một, Tỉnh Bình Dương"
+    "tọa độ": "13.947779974100385, 108.01204433929358",
+    "departer": "Số 18 L1-5 (Log 19), VSIP II , Đường số 3, KCN Việt Nam Singapore II, Phường Hòa Phú, Thành Phố Thủ Dầu Một, Tỉnh Bình Dương",
+    "_latitude": 13.947779974100385,
+    "_longitude": 108.01204433929358
   },
   {
     "carrier_name": "KTLS Vũng Tàu",
@@ -1951,9 +2100,10 @@
     "district_name": "Thành phố Bà Rịa",
     "province_name": "Tỉnh Bà Rịa - Vũng Tàu",
     "destination": "",
-    "latitude": 10.492877629895585,
-    "longitude": 107.1957313839097,
-    "departer": "Số 18 L1-5 (Log 19), VSIP II , Đường số 3, KCN Việt Nam Singapore II, Phường Hòa Phú, Thành Phố Thủ Dầu Một, Tỉnh Bình Dương"
+    "tọa độ": "10.492782685074447, 107.19567773739601",
+    "departer": "Số 18 L1-5 (Log 19), VSIP II , Đường số 3, KCN Việt Nam Singapore II, Phường Hòa Phú, Thành Phố Thủ Dầu Một, Tỉnh Bà Rịa - Vũng Tàu",
+    "_latitude": 10.492782685074447,
+    "_longitude": 107.19567773739601
   },
   {
     "carrier_name": "KTLS - TÂY NINH",
@@ -1963,9 +2113,10 @@
     "district_name": "Huyện Dương Minh Châu",
     "province_name": "Tỉnh Tây Ninh",
     "destination": "",
-    "latitude": 11.227265129878983,
-    "longitude": 106.24439613788066,
-    "departer": "Số 18 L1-5 (Log 19), VSIP II , Đường số 3, KCN Việt Nam Singapore II, Phường Hòa Phú, Thành Phố Thủ Dầu Một, Tỉnh Bình Dương"
+    "tọa độ": "11.227075706569638, 106.24447123740468",
+    "departer": "Số 18 L1-5 (Log 19), VSIP II , Đường số 3, KCN Việt Nam Singapore II, Phường Hòa Phú, Thành Phố Thủ Dầu Một, Tỉnh Bình Dương",
+    "_latitude": 11.227075706569638,
+    "_longitude": 106.24447123740468
   },
   {
     "carrier_name": "NVCT Hub Gò Công Tây",
@@ -1975,9 +2126,10 @@
     "district_name": "Huyện Gò Công Tây",
     "province_name": "Tỉnh Tiền Giang",
     "destination": "",
-    "latitude": 10.341212653641405,
-    "longitude": 106.64450511274507,
-    "departer": "Số 18 L1-5 (Log 19), VSIP II , Đường số 3, KCN Việt Nam Singapore II, Phường Hòa Phú, Thành Phố Thủ Dầu Một, Tỉnh Bình Dương"
+    "tọa độ": "10.34113877172787, 106.64444073739435",
+    "departer": "Số 18 L1-5 (Log 19), VSIP II , Đường số 3, KCN Việt Nam Singapore II, Phường Hòa Phú, Thành Phố Thủ Dầu Một, Tỉnh Bình Dương",
+    "_latitude": 10.34113877172787,
+    "_longitude": 106.64444073739435
   },
   {
     "carrier_name": "KTLS - HÓC MÔN",
@@ -1987,9 +2139,10 @@
     "district_name": "Huyện Hóc Môn",
     "province_name": "Thành phố Hồ Chí Minh",
     "destination": "",
-    "latitude": 10.85096649249279,
-    "longitude": 106.58839589740326,
-    "departer": "Số 18 L1-5 (Log 19), VSIP II , Đường số 3, KCN Việt Nam Singapore II, Phường Hòa Phú, Thành Phố Thủ Dầu Một, Tỉnh Bình Dương"
+    "tọa độ": "10.850903270453477, 106.58842808157836",
+    "departer": "Số 18 L1-5 (Log 19), VSIP II , Đường số 3, KCN Việt Nam Singapore II, Phường Hòa Phú, Thành Phố Thủ Dầu Một, Tỉnh Bình Dương",
+    "_latitude": 10.850903270453477,
+    "_longitude": 106.58842808157836
   },
   {
     "carrier_name": "NVCT Hub Hải Phòng",
@@ -1999,9 +2152,10 @@
     "district_name": "Huyện An Dương",
     "province_name": "Thành phố Hải Phòng",
     "destination": "",
-    "latitude": 20.848716065845576,
-    "longitude": 106.65430597235921,
-    "departer": "Kho Logos khu công nghiệp VSIP Bắc Ninh, 93 Đường Hữu Nghị, Xã Đại Đồng, Huyện Tiên Du, Tỉnh Bắc Ninh"
+    "tọa độ": "20.88605082693291, 106.57004586720713",
+    "departer": "Kho Logos khu công nghiệp VSIP Bắc Ninh, 93 Đường Hữu Nghị, Xã Đại Đồng, Huyện Tiên Du, Tỉnh Bắc Ninh",
+    "_latitude": 20.88605082693291,
+    "_longitude": 106.57004586720713
   },
   {
     "carrier_name": "NVCT Hub Bến Lức - Long An",
@@ -2011,9 +2165,10 @@
     "district_name": "Huyện Bến Lức",
     "province_name": "Tỉnh Long An",
     "destination": "",
-    "latitude": 10.634232482422544,
-    "longitude": 106.48430215832668,
-    "departer": "Số 18 L1-5 (Log 19), VSIP II , Đường số 3, KCN Việt Nam Singapore II, Phường Hòa Phú, Thành Phố Thủ Dầu Một, Tỉnh Bình Dương"
+    "tọa độ": "10.634165347314923, 106.49166895089068",
+    "departer": "Số 18 L1-5 (Log 19), VSIP II , Đường số 3, KCN Việt Nam Singapore II, Phường Hòa Phú, Thành Phố Thủ Dầu Một, Tỉnh Bình Dương",
+    "_latitude": 10.634165347314923,
+    "_longitude": 106.49166895089068
   },
   {
     "carrier_name": "NVCT Hub Tân An - Long An",
@@ -2023,9 +2178,10 @@
     "district_name": "Thành phố Tân An",
     "province_name": "Tỉnh Long An",
     "destination": "",
-    "latitude": 10.528292516420693,
-    "longitude": 106.41878675322167,
-    "departer": "Số 18 L1-5 (Log 19), VSIP II , Đường số 3, KCN Việt Nam Singapore II, Phường Hòa Phú, Thành Phố Thủ Dầu Một, Tỉnh Bình Dương"
+    "tọa độ": "10.528228560395018, 106.4187849403017",
+    "departer": "Số 18 L1-5 (Log 19), VSIP II , Đường số 3, KCN Việt Nam Singapore II, Phường Hòa Phú, Thành Phố Thủ Dầu Một, Tỉnh Bình Dương",
+    "_latitude": 10.528228560395018,
+    "_longitude": 106.4187849403017
   },
   {
     "carrier_name": "NVCT Hub Châu Thành - Long An",
@@ -2035,9 +2191,10 @@
     "district_name": "Huyện Châu Thành",
     "province_name": "Tỉnh Long An",
     "destination": "",
-    "latitude": 10.494555029641248,
-    "longitude": 106.4408056976027,
-    "departer": "Số 18 L1-5 (Log 19), VSIP II , Đường số 3, KCN Việt Nam Singapore II, Phường Hòa Phú, Thành Phố Thủ Dầu Một, Tỉnh Bình Dương"
+    "tọa độ": "10.490492461862384, 106.42457453207201",
+    "departer": "Số 18 L1-5 (Log 19), VSIP II , Đường số 3, KCN Việt Nam Singapore II, Phường Hòa Phú, Thành Phố Thủ Dầu Một, Tỉnh Bình Dương",
+    "_latitude": 10.490492461862384,
+    "_longitude": 106.42457453207201
   },
   {
     "carrier_name": "KTLS - ĐỒNG NAI",
@@ -2047,9 +2204,10 @@
     "district_name": "Huyện Thống Nhất",
     "province_name": "Tỉnh Đồng Nai",
     "destination": "",
-    "latitude": 10.92652996047521,
-    "longitude": 107.11132890879198,
-    "departer": "Số 18 L1-5 (Log 19), VSIP II , Đường số 3, KCN Việt Nam Singapore II, Phường Hòa Phú, Thành Phố Thủ Dầu Một, Tỉnh Bình Dương"
+    "tọa độ": "10.929676293682023, 107.11293154523143",
+    "departer": "Số 18 L1-5 (Log 19), VSIP II , Đường số 3, KCN Việt Nam Singapore II, Phường Hòa Phú, Thành Phố Thủ Dầu Một, Tỉnh Bình Dương",
+    "_latitude": 10.929676293682023,
+    "_longitude": 107.11293154523143
   },
   {
     "carrier_name": "NV công ty - Hub Tiên Du",
@@ -2059,9 +2217,10 @@
     "district_name": "Huyện Tiên Du",
     "province_name": "Tỉnh Bắc Ninh",
     "destination": "",
-    "latitude": 21.14706953897249,
-    "longitude": 106.02389415516204,
-    "departer": "Kho Logos khu công nghiệp VSIP Bắc Ninh, 93 Đường Hữu Nghị, Xã Đại Đồng, Huyện Tiên Du, Tỉnh Bắc Ninh"
+    "tọa độ": "21.146955196765923, 106.02384187632477",
+    "departer": "Kho Logos khu công nghiệp VSIP Bắc Ninh, 93 Đường Hữu Nghị, Xã Đại Đồng, Huyện Tiên Du, Tỉnh Bắc Ninh",
+    "_latitude": 21.146955196765923,
+    "_longitude": 106.02384187632477
   },
   {
     "carrier_name": "KTLS - BÌNH DƯƠNG",
@@ -2071,9 +2230,10 @@
     "district_name": "Thành phố Thủ Dầu Một",
     "province_name": "Tỉnh Bình Dương",
     "destination": "",
-    "latitude": 10.99703026655846,
-    "longitude": 106.67498518391184,
-    "departer": "Số 18 L1-5 (Log 19), VSIP II , Đường số 3, KCN Việt Nam Singapore II, Phường Hòa Phú, Thành Phố Thủ Dầu Một, Tỉnh Bình Dương"
+    "tọa độ": "10.997051330208274, 106.67489935089492",
+    "departer": "Số 18 L1-5 (Log 19), VSIP II , Đường số 3, KCN Việt Nam Singapore II, Phường Hòa Phú, Thành Phố Thủ Dầu Một, Tỉnh Bình Dương",
+    "_latitude": 10.997051330208274,
+    "_longitude": 106.67489935089492
   },
   {
     "carrier_name": "KTLS Long An",
@@ -2083,9 +2243,10 @@
     "district_name": "Huyện Cần Đước",
     "province_name": "Tỉnh Long An",
     "destination": "",
-    "latitude": 10.62989751564173,
-    "longitude": 106.48509495507429,
-    "departer": "Số 18 L1-5 (Log 19), VSIP II , Đường số 3, KCN Việt Nam Singapore II, Phường Hòa Phú, Thành Phố Thủ Dầu Một, Tỉnh Bình Dương"
+    "tọa độ": "10.629939667504425, 106.4850520096581",
+    "departer": "Số 18 L1-5 (Log 19), VSIP II , Đường số 3, KCN Việt Nam Singapore II, Phường Hòa Phú, Thành Phố Thủ Dầu Một, Tỉnh Bình Dương",
+    "_latitude": 10.629939667504425,
+    "_longitude": 106.4850520096581
   },
   {
     "carrier_name": "KTLS - QUẬN 2",
@@ -2095,9 +2256,10 @@
     "district_name": "Thành phố Thủ Đức",
     "province_name": "Thành phố Hồ Chí Minh",
     "destination": "",
-    "latitude": 10.795060251937052,
-    "longitude": 106.74518845507494,
-    "departer": "Số 18 L1-5 (Log 19), VSIP II , Đường số 3, KCN Việt Nam Singapore II, Phường Hòa Phú, Thành Phố Thủ Dầu Một, Tỉnh Bình Dương"
+    "tọa độ": "10.795081329884809, 106.74514553739951",
+    "departer": "Số 18 L1-5 (Log 19), VSIP II , Đường số 3, KCN Việt Nam Singapore II, Phường Hòa Phú, Thành Phố Thủ Dầu Một, Tỉnh Bình Dương",
+    "_latitude": 10.795081329884809,
+    "_longitude": 106.74514553739951
   },
   {
     "carrier_name": "NVCT Hub Cần Thơ-Child",
@@ -2107,9 +2269,10 @@
     "district_name": "Quận Cái Răng",
     "province_name": "Thành phố Cần Thơ",
     "destination": "",
-    "latitude": 10.0340913,
-    "longitude": 105.7718758,
-    "departer": "Số 18 L1-5 (Log 19), VSIP II , Đường số 3, KCN Việt Nam Singapore II, Phường Hòa Phú, Thành Phố Thủ Dầu Một, Tỉnh Bình Dương"
+    "tọa độ": "10.01473776665822, 105.80783639321257",
+    "departer": "Số 18 L1-5 (Log 19), VSIP II , Đường số 3, KCN Việt Nam Singapore II, Phường Hòa Phú, Thành Phố Thủ Dầu Một, Tỉnh Bình Dương",
+    "_latitude": 10.01473776665822,
+    "_longitude": 105.80783639321257
   },
   {
     "carrier_name": "NV Công ty - Hub Minh Khai",
@@ -2119,9 +2282,10 @@
     "district_name": "Quận Hai Bà Trưng",
     "province_name": "Thành phố Hà Nội",
     "destination": "",
-    "latitude": 105.86894702577769,
-    "longitude": 20.99862957368421,
-    "departer": "Kho Logos khu công nghiệp VSIP Bắc Ninh, 93 Đường Hữu Nghị, Xã Đại Đồng, Huyện Tiên Du, Tỉnh Bắc Ninh"
+    "tọa độ": "20.99957294411018, 105.86875773941763",
+    "departer": "Kho Logos khu công nghiệp VSIP Bắc Ninh, 93 Đường Hữu Nghị, Xã Đại Đồng, Huyện Tiên Du, Tỉnh Bắc Ninh",
+    "_latitude": 20.99957294411018,
+    "_longitude": 105.86875773941763
   },
   {
     "carrier_name": "Nadyphar",
@@ -2131,8 +2295,9 @@
     "district_name": "Quận 11",
     "province_name": "Thành phố Hồ Chí Minh",
     "destination": "",
-    "latitude": 10.77497396,
-    "longitude": 106.65425753,
-    "departer": "Số 18 L1-5 (Log 19), VSIP II , Đường số 3, KCN Việt Nam Singapore II, Phường Hòa Phú, Thành Phố Thủ Dầu Một, Tỉnh Bình Dương"
+    "tọa độ": "10.775300914059555, 106.65405840967246",
+    "departer": "Số 18 L1-5 (Log 19), VSIP II , Đường số 3, KCN Việt Nam Singapore II, Phường Hòa Phú, Thành Phố Thủ Dầu Một, Tỉnh Bình Dương",
+    "_latitude": 10.775300914059555,
+    "_longitude": 106.65405840967246
   }
 ]

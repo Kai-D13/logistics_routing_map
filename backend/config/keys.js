@@ -9,7 +9,7 @@ module.exports = {
   SUPABASE_URL: process.env.SUPABASE_URL,
   SUPABASE_ANON_KEY: process.env.SUPABASE_ANON_KEY,
 
-  // Goong API Configuration
+  // Goong API Configuration Hub Last Mile
   GOONG_API_KEY: process.env.GOONG_API_KEY,
   GOONG_MAPTILES_KEY: process.env.GOONG_MAPTILES_KEY,
 };

@@ -213,35 +213,71 @@ const HubEditor = {
     const lat = parseFloat(document.getElementById('hub-edit-lat').value) || 21.0285;
     const lng = parseFloat(document.getElementById('hub-edit-lng').value) || 105.8542;
 
-    // Create map
-    this.previewMap = L.map('hub-edit-map-preview').setView([lat, lng], 13);
+    // Get container
+    const container = document.getElementById('hub-edit-map-preview');
+    if (!container) {
+      console.error('Map preview container not found!');
+      return;
+    }
 
-    // Add tile layer
-    L.tileLayer('https://{s}.basemaps.cartocdn.com/light_all/{z}/{x}/{y}{r}.png', {
-      attribution: '&copy; OpenStreetMap contributors &copy; CARTO',
-      subdomains: 'abcd',
-      maxZoom: 20
-    }).addTo(this.previewMap);
+    // Destroy existing map completely
+    if (this.previewMap) {
+      try {
+        this.previewMap.off();
+        this.previewMap.remove();
+        this.previewMap = null;
+        this.previewMarker = null;
+      } catch (e) {
+        console.warn('Error removing existing map:', e);
+      }
+    }
 
-    // Add draggable marker
-    this.previewMarker = L.marker([lat, lng], {
-      draggable: true,
-      icon: L.icon({
-        iconUrl: 'https://raw.githubusercontent.com/pointhi/leaflet-color-markers/master/img/marker-icon-2x-red.png',
-        shadowUrl: 'https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.7.1/images/marker-shadow.png',
-        iconSize: [25, 41],
-        iconAnchor: [12, 41],
-        popupAnchor: [1, -34],
-        shadowSize: [41, 41]
-      })
-    }).addTo(this.previewMap);
+    // Force clear Leaflet's internal state
+    delete container._leaflet_id;
+    container.innerHTML = '';
+    
+    // Add a small delay to ensure DOM is ready
+    setTimeout(() => {
+      try {
+        // Create map
+        this.previewMap = L.map('hub-edit-map-preview', {
+          center: [lat, lng],
+          zoom: 13,
+          zoomControl: true
+        });
 
-    // Update coordinates when marker is dragged
-    this.previewMarker.on('dragend', (e) => {
-      const pos = e.target.getLatLng();
-      document.getElementById('hub-edit-lat').value = pos.lat.toFixed(6);
-      document.getElementById('hub-edit-lng').value = pos.lng.toFixed(6);
-    });
+        // Add tile layer
+        L.tileLayer('https://{s}.basemaps.cartocdn.com/light_all/{z}/{x}/{y}{r}.png', {
+          attribution: '&copy; OpenStreetMap contributors &copy; CARTO',
+          subdomains: 'abcd',
+          maxZoom: 20
+        }).addTo(this.previewMap);
+
+        // Add draggable marker
+        this.previewMarker = L.marker([lat, lng], {
+          draggable: true,
+          icon: L.icon({
+            iconUrl: 'https://raw.githubusercontent.com/pointhi/leaflet-color-markers/master/img/marker-icon-2x-red.png',
+            shadowUrl: 'https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.7.1/images/marker-shadow.png',
+            iconSize: [25, 41],
+            iconAnchor: [12, 41],
+            popupAnchor: [1, -34],
+            shadowSize: [41, 41]
+          })
+        }).addTo(this.previewMap);
+
+        // Update coordinates when marker is dragged
+        this.previewMarker.on('dragend', (e) => {
+          const pos = e.target.getLatLng();
+          document.getElementById('hub-edit-lat').value = pos.lat.toFixed(6);
+          document.getElementById('hub-edit-lng').value = pos.lng.toFixed(6);
+        });
+
+        console.log('✅ Map preview initialized');
+      } catch (error) {
+        console.error('❌ Error initializing map preview:', error);
+      }
+    }, 100);
   },
 
   /**
