@@ -402,7 +402,8 @@ body {
     margin-top: 8px;
 }
 
-/* Modal */
+/* Modal - OLD STYLES (Commented out - using new styles at line 1249) */
+/*
 .modal {
     display: none;
     position: fixed;
@@ -455,6 +456,7 @@ body {
 .modal-body {
     padding: 20px;
 }
+*/
 
 /* Form Styles */
 .form-group {

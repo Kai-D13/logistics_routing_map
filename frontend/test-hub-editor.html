@@ -1,0 +1,251 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Test Hub Editor</title>
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" />
+    <link rel="stylesheet" href="css/styles.css?v=3" />
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            padding: 20px;
+            background: #f5f5f5;
+        }
+        .test-container {
+            max-width: 800px;
+            margin: 0 auto;
+            background: white;
+            padding: 30px;
+            border-radius: 10px;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+        }
+        h1 {
+            color: #333;
+            margin-bottom: 20px;
+        }
+        .test-button {
+            padding: 12px 24px;
+            background: #3b82f6;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 16px;
+            margin: 10px 5px;
+        }
+        .test-button:hover {
+            background: #2563eb;
+        }
+        .test-result {
+            margin-top: 20px;
+            padding: 15px;
+            background: #f0f9ff;
+            border-left: 4px solid #3b82f6;
+            border-radius: 5px;
+        }
+        .console-log {
+            background: #1e293b;
+            color: #10b981;
+            padding: 15px;
+            border-radius: 5px;
+            font-family: 'Courier New', monospace;
+            font-size: 13px;
+            margin-top: 20px;
+            max-height: 400px;
+            overflow-y: auto;
+        }
+        .console-log div {
+            margin: 3px 0;
+        }
+    </style>
+</head>
+<body>
+    <div class="test-container">
+        <h1>🧪 Test Hub Editor Module</h1>
+        
+        <div class="test-result">
+            <h3>Test Cases:</h3>
+            <button class="test-button" onclick="testHubEditorExists()">
+                1️⃣ Check HubEditor Exists
+            </button>
+            <button class="test-button" onclick="testModalExists()">
+                2️⃣ Check Modal HTML Exists
+            </button>
+            <button class="test-button" onclick="testOpenModal()">
+                3️⃣ Test Open Modal (Departer)
+            </button>
+            <button class="test-button" onclick="testOpenModalDestination()">
+                4️⃣ Test Open Modal (Destination)
+            </button>
+            <button class="test-button" onclick="clearConsole()">
+                🗑️ Clear Console
+            </button>
+        </div>
+
+        <div class="console-log" id="console-output">
+            <div>📋 Console Output:</div>
+        </div>
+    </div>
+
+    <!-- Leaflet JS -->
+    <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+
+    <!-- Custom JS -->
+    <script src="js/api.js?v=3"></script>
+    <script src="js/hub-editor.js?v=3"></script>
+
+    <script>
+        // Mock showNotification function
+        window.showNotification = function(message, type, duration) {
+            log(`📢 Notification: ${message} (${type})`);
+        };
+
+        // Console logging
+        function log(message) {
+            const output = document.getElementById('console-output');
+            const div = document.createElement('div');
+            div.textContent = `[${new Date().toLocaleTimeString()}] ${message}`;
+            output.appendChild(div);
+            output.scrollTop = output.scrollHeight;
+        }
+
+        function clearConsole() {
+            document.getElementById('console-output').innerHTML = '<div>📋 Console Output:</div>';
+        }
+
+        // Override console.log to capture logs
+        const originalLog = console.log;
+        console.log = function(...args) {
+            originalLog.apply(console, args);
+            log(args.join(' '));
+        };
+
+        const originalError = console.error;
+        console.error = function(...args) {
+            originalError.apply(console, args);
+            log('❌ ERROR: ' + args.join(' '));
+        };
+
+        // Test 1: Check HubEditor exists
+        function testHubEditorExists() {
+            log('🧪 Test 1: Checking if HubEditor exists...');
+            if (typeof HubEditor !== 'undefined') {
+                log('✅ HubEditor object exists');
+                log('   Methods: ' + Object.keys(HubEditor).join(', '));
+            } else {
+                log('❌ HubEditor not found!');
+            }
+        }
+
+        // Test 2: Check modal HTML exists
+        function testModalExists() {
+            log('🧪 Test 2: Checking if modal HTML exists...');
+            const modal = document.getElementById('hub-edit-modal');
+            if (modal) {
+                log('✅ Modal element found');
+                log('   ID: ' + modal.id);
+                log('   Classes: ' + modal.className);
+                log('   Display: ' + window.getComputedStyle(modal).display);
+            } else {
+                log('❌ Modal element not found!');
+            }
+
+            // Check form elements
+            const formElements = [
+                'hub-edit-id',
+                'hub-edit-type',
+                'hub-edit-name',
+                'hub-edit-address',
+                'hub-edit-province',
+                'hub-edit-lat',
+                'hub-edit-lng',
+                'hub-edit-map-preview'
+            ];
+
+            formElements.forEach(id => {
+                const el = document.getElementById(id);
+                if (el) {
+                    log(`   ✅ ${id} found`);
+                } else {
+                    log(`   ❌ ${id} NOT found`);
+                }
+            });
+        }
+
+        // Test 3: Test open modal with departer data
+        function testOpenModal() {
+            log('🧪 Test 3: Testing openModal() with departer data...');
+            
+            const mockDeparter = {
+                id: 'test-departer-123',
+                name: 'Hub VSIP Bắc Ninh',
+                address: 'Khu công nghiệp VSIP Bắc Ninh',
+                lat: 21.1213,
+                lng: 106.0992
+            };
+
+            try {
+                HubEditor.openModal(mockDeparter, 'departer', null);
+                log('✅ openModal() called successfully');
+                
+                // Check if modal is visible
+                setTimeout(() => {
+                    const modal = document.getElementById('hub-edit-modal');
+                    const isVisible = modal.classList.contains('active');
+                    log(`   Modal visible: ${isVisible}`);
+                    log(`   Modal classes: ${modal.className}`);
+                }, 200);
+            } catch (error) {
+                log('❌ Error calling openModal(): ' + error.message);
+            }
+        }
+
+        // Test 4: Test open modal with destination data
+        function testOpenModalDestination() {
+            log('🧪 Test 4: Testing openModal() with destination data...');
+            
+            const mockDestination = {
+                id: 'test-dest-456',
+                carrier_name: 'KTLS Hà Nội',
+                address: '123 Đường ABC, Hà Nội',
+                province_name: 'Hà Nội',
+                lat: 21.0285,
+                lng: 105.8542
+            };
+
+            try {
+                HubEditor.openModal(mockDestination, 'destination', null);
+                log('✅ openModal() called successfully');
+                
+                // Check if modal is visible
+                setTimeout(() => {
+                    const modal = document.getElementById('hub-edit-modal');
+                    const isVisible = modal.classList.contains('active');
+                    log(`   Modal visible: ${isVisible}`);
+                    log(`   Modal classes: ${modal.className}`);
+                    
+                    // Check form values
+                    log(`   Name: ${document.getElementById('hub-edit-name').value}`);
+                    log(`   Address: ${document.getElementById('hub-edit-address').value}`);
+                    log(`   Province: ${document.getElementById('hub-edit-province').value}`);
+                    log(`   Lat: ${document.getElementById('hub-edit-lat').value}`);
+                    log(`   Lng: ${document.getElementById('hub-edit-lng').value}`);
+                }, 200);
+            } catch (error) {
+                log('❌ Error calling openModal(): ' + error.message);
+            }
+        }
+
+        // Auto-run Test 1 and 2 on load
+        window.addEventListener('DOMContentLoaded', () => {
+            log('🚀 Page loaded, running initial tests...');
+            setTimeout(() => {
+                testHubEditorExists();
+                testModalExists();
+            }, 500);
+        });
+    </script>
+</body>
+</html>
+
