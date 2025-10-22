@@ -21,7 +21,7 @@ const HubEditor = {
    */
   createEditModal() {
     const modalHTML = `
-      <div id="hub-edit-modal" class="modal" style="display: none;">
+      <div id="hub-edit-modal" class="modal">
         <div class="modal-overlay" onclick="HubEditor.closeModal()"></div>
         <div class="modal-content" style="max-width: 600px;">
           <div class="modal-header">
