@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Test Routes API</title>
+</head>
+<body>
+    <h1>Testing Routes API</h1>
+    <div id="output"></div>
+
+    <script>
+        async function testRoutesAPI() {
+            const output = document.getElementById('output');
+            output.innerHTML = '<p>Loading routes...</p>';
+
+            try {
+                const response = await fetch('http://localhost:5000/api/routes');
+                const result = await response.json();
+
+                console.log('API Response:', result);
+
+                if (result.success) {
+                    output.innerHTML = `
+                        <h2>✅ Success! Found ${result.total} routes</h2>
+                        <h3>Routes:</h3>
+                        <ul>
+                            ${result.data.slice(0, 10).map(route => `
+                                <li>
+                                    <strong>${route.route_name}</strong><br>
+                                    From: ${route.hub_departer}<br>
+                                    Destinations: ${route.total_destinations}<br>
+                                    Distance: ${route.total_distance_km || 'N/A'} km
+                                </li>
+                            `).join('')}
+                        </ul>
+                        ${result.total > 10 ? `<p>...and ${result.total - 10} more routes</p>` : ''}
+                    `;
+                } else {
+                    output.innerHTML = `<p style="color: red;">❌ Error: ${result.error}</p>`;
+                }
+            } catch (error) {
+                console.error('Error:', error);
+                output.innerHTML = `<p style="color: red;">❌ Error: ${error.message}</p>`;
+            }
+        }
+
+        testRoutesAPI();
+    </script>
+</body>
+</html>
